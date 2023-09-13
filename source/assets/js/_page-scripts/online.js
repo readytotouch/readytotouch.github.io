@@ -23,7 +23,7 @@ function createData() {
 
 const data = createData()
 
-const options = {
+const onlineOptions = {
     series: [{
         name: "Views",
         data: data.map(item => item.x),
@@ -79,7 +79,7 @@ const options = {
     },
 };
 
-const registration = {
+const registrationOptions = {
     series: [{
         name: "Views",
         data: data.map(item => item.x),
@@ -135,14 +135,14 @@ const registration = {
     },
 };
 
-const chartArea = document.querySelector(".js-chart-online-statistics")
-if (chartArea) {
-    const chartApex = new ApexCharts(chartArea, options);
-    chartApex.render();
+const $online = document.querySelector(".js-chart-online-statistics")
+if ($online) {
+    const chart = new ApexCharts($online, onlineOptions);
+    chart.render();
 }
 
-const chartRows = document.querySelector(".js-chart-registration-statistics")
-if (chartRows) {
-    const chartRowsApex = new ApexCharts(chartRows, registration);
-    chartRowsApex.render();
+const $registrations = document.querySelector(".js-chart-registration-statistics")
+if ($registrations) {
+    const chart = new ApexCharts($registrations, registrationOptions);
+    chart.render();
 }

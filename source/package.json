@@ -74,8 +74,5 @@
 		"vinyl-buffer": "1.0.1",
 		"vinyl-source-stream": "2.0.0"
 	},
-	"dependencies": {
-		"glightbox": "3.0.6",
-		"libphonenumber-js": "^1.10.14"
-	}
+	"dependencies": {}
 }
