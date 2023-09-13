@@ -1,0 +1,141 @@
+.header {
+    background: #fff;
+    display: flex;
+    align-items: center;
+    height: 64px;
+
+    &__wrapper {
+        display: flex;
+        align-items: center;
+        width: 1216px;
+        height: 100%;
+        margin: 0 auto;
+    }
+
+    &__logo {
+        display: flex;
+        gap: 12px;
+        align-items: center;
+    }
+
+    &__logo-title {
+        color: #1A1B26;
+        font-size: 19px;
+        font-weight: 700;
+    }
+
+    &__profile {
+        position: relative;
+    }
+
+    &__stars {
+        margin-left: auto;
+        display: flex;
+        align-items: center;
+    }
+
+    &__profile-button {
+        width: 48px;
+        height: 48px;
+        overflow: hidden;
+
+        img {
+            width: inherit;
+            height: inherit;
+        }
+    }
+}
+
+.modal.active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.modal {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    width: 540px;
+    right: -57%;
+    top: 136%;
+    border-radius: 8px;
+    background: #fff;
+    opacity: 0;
+    pointer-events: none;
+    filter: drop-shadow(0px 6px 16px rgba(17, 16, 40, 0.1));
+
+    &::after {
+        content: "";
+        position: absolute;
+        right: 40px;
+        top: -11px;
+        width: 0;
+        height: 0;
+        border-left: 12px solid transparent;
+        border-right: 12px solid transparent;
+        border-bottom: 12px solid #fff;
+        border-radius: 1px;
+    }
+
+    &__profile {
+        display: flex;
+        gap: 16px;
+        padding: 24px;
+        border-bottom: 1px solid #dddce4;
+    }
+
+    &__profile-info {
+        width: 100%;
+        padding-top: 15px;
+    }
+
+    &__profile-name {
+        font-weight: 600;
+        font-size: 22px;
+        line-height: 120%;
+        color: #020111;
+        width: 100%;
+        margin-bottom: 21px;
+    }
+
+    &__user-photo {
+        width: 48px;
+        height: 48px;
+    }
+
+    &__link {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 140%;
+        color: #575d65;
+        margin-bottom: 16px;
+        transition: color 0.3s;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        &:hover {
+            color: #0057ff;
+        }
+    }
+
+    &__log-out {
+        padding: 24px;
+    }
+
+    &__button {
+        display: flex;
+        align-items: center;
+        gap: 11px;
+        transition: color 0.3s;
+        color: #575d65;
+
+        &:hover {
+            color: #0057ff;
+        }
+    }
+}

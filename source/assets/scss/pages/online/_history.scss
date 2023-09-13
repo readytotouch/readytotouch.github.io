@@ -1,0 +1,95 @@
+.history {
+    border-radius: 16px;
+    margin-bottom: 104px;
+    overflow: hidden;
+
+    &__title {
+        font-size: 26px;
+        font-weight: 500;
+        padding: 24px;
+        background: #FFF;
+    }
+
+    &__table {
+        background: #FFF;
+
+    }
+
+    &__table-header {
+        display: flex;
+        background: #F9F9FB;
+        border-top: 1px solid #EDEDF8;
+        border-bottom: 1px solid #EDEDF8;
+
+    }
+
+    &__header-item {
+        text-align: left;
+        padding: 24px 24px;
+        color: #404C5F;
+        font-weight: 600;
+        display: block;
+    }
+
+    &__name, &__user-group {
+        width: 320px;
+    }
+
+    &__profile, &__user-link {
+        width: 656px;
+    }
+
+    &__user-link {
+        transition: color 0.3s;
+
+        &:hover {
+            color: #0057ff;
+        }
+    }
+
+    &__date, &__user-date {
+        width: 240px;
+    }
+
+    &__table-list {
+        height: 648px;
+        overflow: auto;
+
+        &::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        &::-webkit-scrollbar-track {
+            background-color: transparent;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background-color: #b8b6e2;
+            border-radius: 8px;
+        }
+    }
+
+    &__table-user {
+        display: flex;
+        align-items: center;
+        color: #404C5F;
+        border-bottom: 1px solid #EDEDF8;
+    }
+
+    &__table-user:last-child {
+        border-bottom: none;
+    }
+
+    &__user-item {
+        padding: 12px 24px;
+    }
+
+    &__user-group {
+        display: flex;
+        align-items: center;
+        padding: 12px 24px;
+        gap: 12px;
+    }
+
+
+}

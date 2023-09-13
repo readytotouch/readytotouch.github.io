@@ -1,0 +1,11 @@
+@import "hero";
+@import "stats";
+@import "history";
+@import "projects";
+@import "articles";
+
+.container {
+    max-width: 1216px;
+    margin: 0 auto;
+    overflow: hidden;
+}
