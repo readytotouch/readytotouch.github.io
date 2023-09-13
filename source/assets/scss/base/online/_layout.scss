@@ -1,0 +1,18 @@
+.wrapper-u8 {
+	max-width: 1216px;
+	margin: 0 auto;
+	color: #020111;
+}
+
+body {
+	font-family: $base-font-family;
+	font-size: $base-font-size;
+	color: $primary-color;
+	display: grid;
+	grid-template-rows: auto 1fr auto;
+	min-height: 100%;
+}
+
+.main-wrapper {
+	background: #F2F3F8;
+}
