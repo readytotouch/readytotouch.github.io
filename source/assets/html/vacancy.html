@@ -1,0 +1,761 @@
+@@include('base/base-online.html', {
+"page-lang": "en",
+"page-title": "Yet another anonymous work search",
+"page-description": "Yet another anonymous work search",
+"style": "vacancy.html",
+"header": "base/layout/online/header.html",
+"page-class": "authorized"
+})
+
+<!-- vacancy -->
+<div class="main-container">
+    @@include('partials/common/breadcrumbs-vacancy.html')
+
+    <section class="vacancy">
+        <div class="wrapper vacancy__wrapper">
+            <div class="vacancy__content">
+                <div class="vacancy__top-info vacancy__card">
+                    <div class="vacancy__top-info-group">
+                        <time class="vacancy__time"
+                              datetime="2021-05-09T21:00"
+                        >Yesterday
+                        </time>
+                        <header class="vacancy__header">
+                            <h1 class="headline headline--lvl1">Middle UI/UX Designer</h1>
+                            <p class="vacancy__salary">$2000</p>
+                        </header>
+                        <figure class="vacancy__company">
+                            <div class="vacancy__company-logo-overlay">
+                                <img class="vacancy__company-image"
+                                     alt="card image preview icon"
+                                     src="/assets/images/pages/vacancy/company-logo.svg"
+                                />
+                            </div>
+                            <figcaption class="vacancy__company-caption">
+                                <div class="vacancy__company-name-group">
+                                    <a href="#" class="headline headline--lvl2 vacancy__company-name">Wirex</a>
+                                    <img class="vacancy__company-status"
+                                         width="16"
+                                         height="16"
+                                         alt="status"
+                                         src="/assets/images/pages/common/company-status.svg"
+                                    />
+                                </div>
+                                <figure class="vacancy__company-address">
+                                    <img class="vacancy__address-icon"
+                                         alt="Location icon"
+                                         width="16"
+                                         height="16"
+                                         src="/assets/images/pages/common/building.svg"
+                                    />
+                                    <figcaption class="vacancy__address-caption">
+                                        <span class="vacancy__address-truncate">Product</span>
+                                    </figcaption>
+                                </figure>
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <aside class="button-group vacancy__action-group">
+                        <button class="favorite button-group__item">
+                            <svg class="favorite__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 28 28"
+                                 xml:space="preserve"><path d="m14.5 22.1-.5-.3-.5.3-6.8 4.2c-.5.3-1.1-.1-.9-.7L7.5 18l.1-.6-.4-.4-5.9-5.2c-.3-.3-.3-.6-.2-.8.1-.2.3-.4.5-.4l7.9-.7.6-.1.2-.6 2.9-7.4c.2-.5 1-.5 1.2 0l3.1 7.3.2.5.6.1 7.9.7c.2 0 .4.2.5.5.1.3 0 .6-.2.7l-5.9 5.2-.4.4.1.6 1.8 7.7c.1.3 0 .5-.2.6-.2.1-.5.2-.8 0l-6.6-4z"/></svg>
+                        </button>
+                        <button class="button-group__item">
+                            <img width="24"
+                                 height="24"
+                                 alt="icon stats"
+                                 src="/assets/images/pages/common/stats.svg"
+                            >
+                        </button>
+                        <button class="button-group__item">
+                            <img width="24"
+                                 height="24"
+                                 alt="icon pencil"
+                                 src="/assets/images/pages/common/pencil.svg"
+                            >
+                        </button>
+                    </aside>
+                </div>
+                <!-- vacancy info -->
+                <div class="vacancy__info">
+                    <div class="vacancy__top-info">
+                        <div class="vacancy__info-group">
+                            <div class="vacancy__info-row">
+                                <figure class="vacancy__info-key">
+                                    <img class="vacancy__info-icon"
+                                         alt="align-left icon"
+                                         width="16"
+                                         height="16"
+                                         src="@@images_vacancy2__align-left.svg"
+                                    />
+                                    <figcaption class="vacancy__info-value">Category</figcaption>
+                                </figure>
+                                <div class="vacancy__info-data">C# / .NET</div>
+                            </div>
+                            <div class="vacancy__info-row">
+                                <figure class="vacancy__info-key">
+                                    <img class="vacancy__info-icon"
+                                         alt="stethoscope icon"
+                                         width="16"
+                                         height="16"
+                                         src="@@images_vacancy2__stethoscope.svg"
+                                    />
+                                    <figcaption class="vacancy__info-value">Sick leaves</figcaption>
+                                </figure>
+                                <div class="vacancy__info-data">Undefined</div>
+                            </div>
+                            <div class="vacancy__info-row">
+                                <figure class="vacancy__info-key">
+                                    <img class="vacancy__info-icon"
+                                         alt="dollar icon"
+                                         width="16"
+                                         height="16"
+                                         src="@@images_vacancy2__dollar.svg"
+                                    />
+                                    <figcaption class="vacancy__info-value">Salary</figcaption>
+                                </figure>
+                                <div class="vacancy__info-data">$2500–2800</div>
+                            </div>
+                            <div class="vacancy__info-row">
+                                <figure class="vacancy__info-key">
+                                    <img class="vacancy__info-icon"
+                                         alt="following icon"
+                                         width="16"
+                                         height="16"
+                                         src="@@images_vacancy2__following.svg"
+                                    />
+                                    <figcaption class="vacancy__info-value">Державні вихідні</figcaption>
+                                </figure>
+                                <div class="vacancy__info-data">
+                                    <img class="vacancy__info-data-icon"
+                                         alt="yes icon"
+                                         width="24"
+                                         height="24"
+                                         src="@@images_vacancy2__yes.svg"
+                                    />
+                                </div>
+                            </div>
+                            <div class="vacancy__info-row">
+                                <figure class="vacancy__info-key">
+                                    <img class="vacancy__info-icon"
+                                         alt="carrot icon"
+                                         width="16"
+                                         height="16"
+                                         src="@@images_vacancy2__carrot.svg"
+                                    />
+                                    <figcaption class="vacancy__info-value">Signing bonus</figcaption>
+                                </figure>
+                                <div class="vacancy__info-data">10%</div>
+                            </div>
+                            <div class="vacancy__info-row">
+                                <figure class="vacancy__info-key">
+                                    <img class="vacancy__info-icon"
+                                         alt="home icon"
+                                         width="16"
+                                         height="16"
+                                         src="@@images_vacancy2__home.svg"
+                                    />
+                                    <figcaption class="vacancy__info-value">Employment remote</figcaption>
+                                </figure>
+                                <div class="vacancy__info-data">Fully remote</div>
+                            </div>
+                            <div class="vacancy__info-row">
+                                <figure class="vacancy__info-key">
+                                    <img class="vacancy__info-icon"
+                                         alt="cube icon"
+                                         width="16"
+                                         height="16"
+                                         src="@@images_vacancy2__cube.svg" q
+                                    />
+                                    <figcaption class="vacancy__info-value">Experience</figcaption>
+                                </figure>
+                                <div class="vacancy__info-data">2 years</div>
+                            </div>
+                            <div class="vacancy__info-row">
+                                <figure class="vacancy__info-key">
+                                    <img class="vacancy__info-icon"
+                                         alt="building icon"
+                                         width="16"
+                                         height="16"
+                                         src="@@images_vacancy2__building.svg"
+                                    />
+                                    <figcaption class="vacancy__info-value">Employment office</figcaption>
+                                </figure>
+                                <div class="vacancy__info-data">Partially onsite</div>
+                            </div>
+                            <div class="vacancy__info-row">
+                                <figure class="vacancy__info-key">
+                                    <img class="vacancy__info-icon"
+                                         alt="globe icon"
+                                         width="16"
+                                         height="16"
+                                         src="@@images_vacancy2__globe.svg"
+                                    />
+                                    <figcaption class="vacancy__info-value">English level</figcaption>
+                                </figure>
+                                <div class="vacancy__info-data">Upper Intermediate (B2)</div>
+                            </div>
+                            <div class="vacancy__info-row">
+                                <figure class="vacancy__info-key">
+                                    <img class="vacancy__info-icon"
+                                         alt="time-forward icon"
+                                         width="16"
+                                         height="16"
+                                         src="@@images_vacancy2__time-forward.svg"
+                                    />
+                                    <figcaption class="vacancy__info-value">Employment schedule</figcaption>
+                                </figure>
+                                <div class="vacancy__info-data">Full-time</div>
+                            </div>
+                            <div class="vacancy__info-row">
+                                <figure class="vacancy__info-key">
+                                    <img class="vacancy__info-icon"
+                                         alt="briefcase icon"
+                                         width="16"
+                                         height="16"
+                                         src="@@images_vacancy2__briefcase.svg"
+                                    />
+                                    <figcaption class="vacancy__info-value">Labor week</figcaption>
+                                </figure>
+                                <div class="vacancy__info-data">5-day</div>
+                            </div>
+                            <div class="vacancy__info-row">
+                                <figure class="vacancy__info-key">
+                                    <img class="vacancy__info-icon"
+                                         alt="leaf icon"
+                                         width="16"
+                                         height="16"
+                                         src="@@images_vacancy2__leaf.svg"
+                                    />
+                                    <figcaption class="vacancy__info-value">Overtime pay rate</figcaption>
+                                </figure>
+                                <div class="vacancy__info-data">None</div>
+                            </div>
+                            <div class="vacancy__info-row">
+                                <figure class="vacancy__info-key">
+                                    <img class="vacancy__info-icon"
+                                         alt="hourglass-end icon"
+                                         width="16"
+                                         height="16"
+                                         src="@@images_vacancy2__hourglass-end.svg"
+                                    />
+                                    <figcaption class="vacancy__info-value">Probation period</figcaption>
+                                </figure>
+                                <div class="vacancy__info-data">3 month</div>
+                            </div>
+                            <div class="vacancy__info-row">
+                                <figure class="vacancy__info-key">
+                                    <img class="vacancy__info-icon"
+                                         alt="stopwatch icon"
+                                         width="16"
+                                         height="16"
+                                         src="@@images_vacancy2__stopwatch.svg"
+                                    />
+                                    <figcaption class="vacancy__info-value">Time tracker</figcaption>
+                                </figure>
+                                <div class="vacancy__info-data">Undefined</div>
+                            </div>
+                            <div class="vacancy__info-row">
+                                <figure class="vacancy__info-key">
+                                    <img class="vacancy__info-icon"
+                                         alt="calendar icon"
+                                         width="16"
+                                         height="16"
+                                         src="@@images_vacancy2__calendar.svg"
+                                    />
+                                    <figcaption class="vacancy__info-value">Salary review</figcaption>
+                                </figure>
+                                <div class="vacancy__info-data">Every 6 months</div>
+                            </div>
+                            <div class="vacancy__info-row">
+                                <figure class="vacancy__info-key">
+                                    <img class="vacancy__info-icon"
+                                         alt="bug icon"
+                                         width="16"
+                                         height="16"
+                                         src="@@images_vacancy2__bug.svg"
+                                    />
+                                    <figcaption class="vacancy__info-value">Polygraph</figcaption>
+                                </figure>
+                                <div class="vacancy__info-data">Undefined</div>
+                            </div>
+                            <div class="vacancy__info-row">
+                                <figure class="vacancy__info-key">
+                                    <img class="vacancy__info-icon"
+                                         alt="plane icon"
+                                         width="16"
+                                         height="16"
+                                         src="@@images_vacancy2__plane.svg"
+                                    />
+                                    <figcaption class="vacancy__info-value">Vacation (working days)</figcaption>
+                                </figure>
+                                <div class="vacancy__info-data">
+                                    <div class="vacation" data-vacation-value="14">
+                                        <div class="vacation__days-line">
+                                            <div class="vacation__day-count">14</div>
+                                            <div class="vacation__day vacation__day--0">0</div>
+                                            <div class="vacation__day vacation__day--5">5</div>
+                                            <div class="vacation__day vacation__day--10">10</div>
+                                            <div class="vacation__day vacation__day--15">15</div>
+                                            <div class="vacation__day vacation__day--20">20</div>
+                                            <div class="vacation__day vacation__day--25">25</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="vacancy__info-row">
+                                <figure class="vacancy__info-key">
+                                    <img class="vacancy__info-icon"
+                                         alt="car icon"
+                                         width="16"
+                                         height="16"
+                                         src="@@images_vacancy2__car.svg"
+                                    />
+                                    <figcaption class="vacancy__info-value">Parking</figcaption>
+                                </figure>
+                                <div class="vacancy__info-data">
+                                    <img class="vacancy__info-data-icon"
+                                         alt="no icon"
+                                         width="24"
+                                         height="24"
+                                         src="@@images_vacancy2__no.svg"
+                                    />
+                                </div>
+                            </div>
+                            <div class="vacancy__info-row">
+                                <figure class="vacancy__info-key">
+                                    <img class="vacancy__info-icon"
+                                         alt="shield-check icon"
+                                         width="16"
+                                         height="16"
+                                         src="@@images_vacancy2__shield-check.svg"
+                                    />
+                                    <figcaption class="vacancy__info-value">Medical insurance</figcaption>
+                                </figure>
+                                <div class="vacancy__info-data">Exists</div>
+                            </div>
+                        </div>
+
+                        <figure class="vacancy__sphere">
+                            <img class="vacancy__sphere-icon"
+                                 alt="important icon"
+                                 width="16"
+                                 height="16"
+                                 src="@@images_vacancy2__important.svg"
+                            />
+                            <figcaption class="vacancy__sphere-caption">eCommerce, fintech, gamedev, embedded
+                            </figcaption>
+                        </figure>
+                    </div>
+                </div>
+                <!-- /vacancy info -->
+
+                <!-- vacancy description -->
+                <div class="vacancy__section vacancy__description">
+                    <h2 class="headline headline--lvl2">Description</h2>
+                    <p class="text">One of the world’s largest providers of products and services to the energy industry
+                        has a need to develop and support enterprise information system in Oil & Gas domain.</p>
+                    <p class="text">We are looking for several experienced C# developers to join a new team to help us
+                        take the first steps on that journey by helping us to decouple existing C++ algorithms into a
+                        number of C#.NET microservices talking to a cloud-based database engine and use these
+                        microservices from a C#.NET desktop client.</p>
+                    <div class="skills vacancy__description-skills">
+                        <figure class="skills__item">
+                            <figcaption class="skills__caption">Required skills</figcaption>
+                            <div class="skills__images">
+                                <img class="skills__image"
+                                     width="40"
+                                     height="40"
+                                     alt="icon html5"
+                                     src="@@images_devicon__html5-plain.svg"
+                                >
+                                <img class="skills__image"
+                                     width="40"
+                                     height="40"
+                                     alt="icon css3"
+                                     src="@@images_devicon__css3-plain.svg"
+                                >
+                                <img class="skills__image"
+                                     width="40"
+                                     height="40"
+                                     alt="icon cplusplus"
+                                     src="@@images_devicon__cplusplus-plain.svg"
+                                >
+                                <img class="skills__image"
+                                     width="40"
+                                     height="40"
+                                     alt="icon c"
+                                     src="@@images_devicon__c-plain.svg"
+                                >
+                                <img class="skills__image"
+                                     width="40"
+                                     height="40"
+                                     alt="icon python"
+                                     src="@@images_devicon__python-original.svg"
+                                >
+                                <img class="skills__image"
+                                     width="40"
+                                     height="40"
+                                     alt="icon javascript"
+                                     src="@@images_devicon__javascript-plain.svg"
+                                >
+                            </div>
+                        </figure>
+                        <figure class="skills__item">
+                            <figcaption class="skills__caption">Preferred skills</figcaption>
+                            <div class="skills__images">
+                                <img class="skills__image"
+                                     width="40"
+                                     height="40"
+                                     alt="icon postgresql"
+                                     src="@@images_devicon__postgresql-plain.svg"
+                                >
+                                <img class="skills__image"
+                                     width="40"
+                                     height="40"
+                                     alt="icon go"
+                                     src="@@images_devicon__go-original-wordmark.svg"
+                                >
+                            </div>
+                        </figure>
+                        <figure class="skills__item">
+                            <figcaption class="skills__caption">Desired skills</figcaption>
+                            <div class="skills__images">
+                                <img class="skills__image"
+                                     width="40"
+                                     height="40"
+                                     alt="icon android"
+                                     src="@@images_devicon__android-plain.svg"
+                                >
+                                <img class="skills__image"
+                                     width="40"
+                                     height="40"
+                                     alt="icon mysql"
+                                     src="@@images_devicon__mysql-original-wordmark.svg"
+                                >
+                            </div>
+                        </figure>
+                    </div>
+                </div>
+                <!-- /vacancy description -->
+
+                <!-- Interview process description -->
+                <div class="vacancy__section vacancy__interview">
+                    <h2 class="headline headline--lvl2">Interview process description</h2>
+                    <p class="text">Interviews are typically broken down into these 5 stages of the interview
+                        process:</p>
+                    <ol class="list">
+                        <li class="list__item">Introductions</li>
+                        <li class="list__item">Small Talk</li>
+                        <li class="list__item">Information Gathering</li>
+                        <li class="list__item">Question/Answer</li>
+                        <li class="list__item">Wrapping Up</li>
+                        <li class="list__item">Understanding the steps in the interview process will help your company
+                            standardize its interview process; leading to better, more qualified hires over the long
+                            term.
+                        </li>
+                    </ol>
+                    <div class="info vacancy__interview-info">
+                        <div class="info__item">
+                            <div class="info__row">
+                                <p class="info__name">Тестове завдання</p>
+                                <p class="info__value">Payed only when accept offer</p>
+                            </div>
+                            <div class="info__row">
+                                <p class="info__name">Тестове завдання з реального проєкту</p>
+                                <p class="info__value">Unknown</p>
+                            </div>
+                        </div>
+                        <div class="info__item">
+                            <div class="info__row">
+                                <p class="info__name">Technical interview</p>
+                                <p class="info__value">Optional</p>
+                            </div>
+                            <div class="info__row">
+                                <p class="info__name">Technical interview duration</p>
+                                <p class="info__value">15–60</p>
+                            </div>
+                        </div>
+                        <div class="info__item">
+                            <div class="info__row">
+                                <p class="info__name">Live coding</p>
+                                <p class="info__value">Required</p>
+                            </div>
+                            <div class="info__row">
+                                <p class="info__name">Live coding duration</p>
+                                <p class="info__value">30–210</p>
+                            </div>
+                        </div>
+                        <div class="info__item">
+                            <div class="info__row">
+                                <p class="info__name">Test task</p>
+                                <p class="info__value">One of step</p>
+                            </div>
+                            <div class="info__row">
+                                <p class="info__name">Test task duration</p>
+                                <p class="info__value">0–0</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- /Interview process description -->
+
+                <!-- Team description -->
+                <div class="vacancy__section vacancy__team">
+                    <h2 class="headline headline--lvl2">Team description</h2>
+                    <p class="text">We are a fast-growing product company developing solutions in the FinTech area.</p>
+                    <p class="text">Our company headquarter is in Tel Aviv, Israel, while the R&D office is in Kyiv,
+                        Ukraine. Recently we started the development of CRM product and are looking for high-skilled
+                        experts ready to bring their knowledge and contribute to building the new, best in the class
+                        software product.</p>
+                    <p class="text">We follow Lean-Agile practices and selected Scrum for our project. Our feature teams
+                        consist of Scrum Master, Product Owner, Automation and Manual QA’s, Front-End and Back-End
+                        developers. Additionally, we have an Architecture Team, UX/UI and Marketing designers and DevOps
+                        supporting the feature teams to achieve the maximum results.</p>
+                    <p class="text">All together we are here to build Continuous Delivery culture for quick and
+                        cost-efficient business features implementation.</p>
+                    <div class="vacancy__team-info">
+                        <div class="vacancy__team-row">
+                            <p class="vacancy__team-data">Employer vacancy source URL</p>
+                            <p class="vacancy__team-value">
+                                <a href="https://www.softserveinc.com/en-us/contact">https://www.softserveinc.com/en-us/contact</a>
+                            </p>
+                        </div>
+                        <div class="vacancy__team-row">
+                            <p class="vacancy__team-data">Employer vacancy source code</p>
+                            <p class="vacancy__team-value">87521</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- /Team description -->
+
+                <!-- vacancy footer -->
+                <footer class="vacancy__footer">
+                    <button type="button"
+                            class="button button--black js-feedback-button"
+                    >Відгукнутись
+                    </button>
+                    <button class="button button--bordered-black vacancy__button-favorite"
+                            type="button"
+                    >
+                        <svg class="vacancy__icon-favorite" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                            <path d="M256 403.7l158.2 95.5-42-180L512 198.1l-184.1-15.9L256 12.8l-71.9 169.5L0 198.1l139.5 121.1-41.7 180L256 403.7z"/>
+                        </svg>
+                        Додати до обраного
+                    </button>
+                    <a class="vacancy__strike" href="javascript:">Поскаржитись на вакансію</a>
+                </footer>
+                <!-- /vacancy footer -->
+
+            </div>
+            <div class="vacancy__about">
+                <h2 class="vacancy__about-headline">Про проєкти та компанію</h2>
+                <div class="vacancy__about-list">
+
+                    <!-- card project -->
+                    <div class="card">
+                        <aside class="card__action">
+                            <button class="favorite card__action-button">
+                                <svg class="favorite__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 28 28"
+                                     xml:space="preserve"><path d="m14.5 22.1-.5-.3-.5.3-6.8 4.2c-.5.3-1.1-.1-.9-.7L7.5 18l.1-.6-.4-.4-5.9-5.2c-.3-.3-.3-.6-.2-.8.1-.2.3-.4.5-.4l7.9-.7.6-.1.2-.6 2.9-7.4c.2-.5 1-.5 1.2 0l3.1 7.3.2.5.6.1 7.9.7c.2 0 .4.2.5.5.1.3 0 .6-.2.7l-5.9 5.2-.4.4.1.6 1.8 7.7c.1.3 0 .5-.2.6-.2.1-.5.2-.8 0l-6.6-4z"/></svg>
+                            </button>
+                        </aside>
+                        <figure class="card__info">
+                            <div class="card__image-overlay">
+                                <img class="card__image"
+                                     alt="card image preview icon"
+                                     width="64"
+                                     height="48"
+                                     src="/assets/images/pages/vacancy2/card-preview.svg"
+                                />
+                            </div>
+                            <figcaption class="card__info-caption">
+                                <a href="#"
+                                   class="card__headline"
+                                >Project Name</a>
+                                <a href="#"
+                                   class="card__sub-headline"
+                                >Wirex</a>
+                            </figcaption>
+                        </figure>
+                        <p class="card__text">Wix.com is a leading cloud-based development platform with millions of
+                            users worldwide. We make it easy for everyone to create a beautiful, professional web
+                            presence. Our work environment is one of the most unique places on the planet. Wix.com is a
+                            leading cloud-based development platform with millions of users worldwide. We make it easy
+                            for everyone to create a beautiful, professional web presence. Our work environment is one
+                            of the most unique places on the planet. Wix.com is a leading cloud-based development
+                            platform with millions of users worldwide. We make it easy for everyone to create a
+                            beautiful, professional web presence. Our work environment is one of the most unique places
+                            on the planet.</p>
+                        <footer class="card__footer">
+                            <figure class="card__figure">
+                                <img class="card__icon"
+                                     alt="card type icon"
+                                     width="16"
+                                     height="16"
+                                     src="/assets/images/pages/vacancy2/type.svg"
+                                />
+                                <figcaption class="card__figcaption">Fintech</figcaption>
+                            </figure>
+                            <a class="card__link" href="javascript:">Активних вакансій 16</a>
+                            <figure class="card__figure">
+                                <img class="card__icon"
+                                     alt="card building icon"
+                                     width="16"
+                                     height="16"
+                                     src="/assets/images/pages/vacancy2/building.svg"
+                                />
+                                <figcaption class="card__figcaption">Outsource</figcaption>
+                            </figure>
+                        </footer>
+                    </div>
+                    <!-- /card project -->
+
+                    <!-- card project -->
+                    <div class="card">
+                        <aside class="card__action">
+                            <button class="favorite card__action-button">
+                                <svg class="favorite__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 28 28"
+                                     xml:space="preserve"><path d="m14.5 22.1-.5-.3-.5.3-6.8 4.2c-.5.3-1.1-.1-.9-.7L7.5 18l.1-.6-.4-.4-5.9-5.2c-.3-.3-.3-.6-.2-.8.1-.2.3-.4.5-.4l7.9-.7.6-.1.2-.6 2.9-7.4c.2-.5 1-.5 1.2 0l3.1 7.3.2.5.6.1 7.9.7c.2 0 .4.2.5.5.1.3 0 .6-.2.7l-5.9 5.2-.4.4.1.6 1.8 7.7c.1.3 0 .5-.2.6-.2.1-.5.2-.8 0l-6.6-4z"/></svg>
+                            </button>
+                        </aside>
+                        <figure class="card__info">
+                            <div class="card__image-overlay">
+                                <img class="card__image"
+                                     alt="card image preview icon"
+                                     width="64"
+                                     height="48"
+                                     src="/assets/images/pages/vacancy2/card-preview.svg"
+                                />
+                            </div>
+                            <figcaption class="card__info-caption">
+                                <a href="#"
+                                   class="card__headline"
+                                >Project Name</a>
+                                <a href="#"
+                                   class="card__sub-headline"
+                                >Wirex</a>
+                            </figcaption>
+                        </figure>
+                        <p class="card__text">Wix.com is a leading cloud-based development platform with millions of
+                            users worldwide. We make it easy for everyone to create a beautiful, professional web
+                            presence. Our work environment is one of the most unique places on the planet. Wix.com is a
+                            leading cloud-based development platform with millions of users worldwide. We make it easy
+                            for everyone to create a beautiful, professional web presence. Our work environment is one
+                            of the most unique places on the planet. Wix.com is a leading cloud-based development
+                            platform with millions of users worldwide. We make it easy for everyone to create a
+                            beautiful, professional web presence. Our work environment is one of the most unique places
+                            on the planet.</p>
+                        <footer class="card__footer">
+                            <figure class="card__figure">
+                                <img class="card__icon"
+                                     alt="card type icon"
+                                     width="16"
+                                     height="16"
+                                     src="/assets/images/pages/vacancy2/type.svg"
+                                />
+                                <figcaption class="card__figcaption">eCommerce</figcaption>
+                            </figure>
+                            <a class="card__link" href="javascript:">Активних вакансій 8</a>
+                            <figure class="card__figure">
+                                <img class="card__icon"
+                                     alt="card building icon"
+                                     width="16"
+                                     height="16"
+                                     src="/assets/images/pages/vacancy2/building.svg"
+                                />
+                                <figcaption class="card__figcaption">Outsource</figcaption>
+                            </figure>
+                        </footer>
+                    </div>
+                    <!-- /card project -->
+
+                    <!-- card company -->
+                    <div class="card">
+                        <aside class="card__action">
+                            <button class="favorite in-favorite card__action-button">
+                                <svg class="favorite__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 28 28"
+                                     xml:space="preserve"><path d="m14.5 22.1-.5-.3-.5.3-6.8 4.2c-.5.3-1.1-.1-.9-.7L7.5 18l.1-.6-.4-.4-5.9-5.2c-.3-.3-.3-.6-.2-.8.1-.2.3-.4.5-.4l7.9-.7.6-.1.2-.6 2.9-7.4c.2-.5 1-.5 1.2 0l3.1 7.3.2.5.6.1 7.9.7c.2 0 .4.2.5.5.1.3 0 .6-.2.7l-5.9 5.2-.4.4.1.6 1.8 7.7c.1.3 0 .5-.2.6-.2.1-.5.2-.8 0l-6.6-4z"/></svg>
+                            </button>
+                        </aside>
+                        <figure class="card__info">
+                            <div class="card__image-overlay">
+                                <img class="card__image"
+                                     alt="card image preview icon"
+                                     width="64"
+                                     height="48"
+                                     src="/assets/images/pages/vacancy2/card-preview.svg"
+                                />
+                            </div>
+                            <figcaption class="card__info-caption">
+                                <a href="#"
+                                   class="card__headline"
+                                >
+                                    Wirex
+                                    <img class="card__verify"
+                                         width="16"
+                                         height="16"
+                                         src="/assets/images/pages/vacancy2/verify.svg"
+                                         alt="verify icon"
+                                    >
+                                </a>
+                                <figure class="card__address">
+                                    <img class="card__address-icon"
+                                         alt="Location icon"
+                                         width="16"
+                                         height="16"
+                                         src="@@images_vacancy2__marker.svg"
+                                    />
+                                    <figcaption class="card__address-caption">
+                                        <span class="card__address-truncate">Київ, Львів, Атланта (США), Вроцлав (Польща)</span>
+                                    </figcaption>
+                                    <figcaption class="card__address-count">+4</figcaption>
+                                </figure>
+                            </figcaption>
+                        </figure>
+                        <p class="card__text">We’re a FinTech company based in the UK, with an extensive R&D center in
+                            Kyiv and offices around the world (Atlanta, Toronto, Tokyo, and Singapore). We are the first
+                            payment platform to seamlessly integrate digital and traditional currencies and to support
+                            multi-currency accounts, blockchain-powered cross-border transfers, and exchange services.
+                            Our mission is to give everyone the power to use one single global platform for traditional
+                            financial and digital assets from anywhere in the world. We have more than 3 mln users in
+                            130 countries and we’re constantly expanding. It’s an exciting time to get on board!</p>
+                        <footer class="card__footer">
+                            <p>200...800 спеціалістів</p>
+                            <a class="card__link" href="javascript:">Активних вакансій 24</a>
+                            <figure class="card__figure">
+                                <img class="card__icon"
+                                     alt="card type icon"
+                                     width="16"
+                                     height="16"
+                                     src="/assets/images/pages/vacancy2/type.svg"
+                                />
+                                <figcaption class="card__figcaption">eCommerce, Fintech</figcaption>
+                            </figure>
+                            <a class="card__link" href="javascript:">Проєктів 2</a>
+                            <figure class="card__figure">
+                                <img class="card__icon"
+                                     alt="card building icon"
+                                     width="16"
+                                     height="16"
+                                     src="/assets/images/pages/vacancy2/building.svg"
+                                />
+                                <figcaption class="card__figcaption">Outsource</figcaption>
+                            </figure>
+                            <a class="card__link" href="javascript:">Офіси 11</a>
+                        </footer>
+                    </div>
+                    <!-- /card company -->
+
+                </div>
+            </div>`
+        </div>
+    </section>
+</div>
+
+<!-- /vacancy -->
+
+
+@@include('base/layout/online/footer.html', {
+"script": "online.html"
+})

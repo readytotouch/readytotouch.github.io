@@ -1,0 +1,32 @@
+.info {
+	column-count: 2;
+	column-gap: 44px;
+
+	&__item {
+		display: grid;
+		row-gap: 16px;
+		padding: 24px;
+		border-radius: 4px;
+		border: 1px solid #dddce4;
+		break-inside: avoid;
+		margin-bottom: 32px;
+	}
+
+	&__row {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		column-gap: 16px;
+	}
+
+	&__name {
+		font-size: 18px;
+		line-height: 25px;
+		color: #7c7b88;
+	}
+
+	&__value {
+		font-size: 18px;
+		line-height: 25px;
+		color: #111028;
+	}
+}

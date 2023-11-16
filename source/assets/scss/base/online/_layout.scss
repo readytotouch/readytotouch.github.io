@@ -1,7 +1,8 @@
-.wrapper-u8 {
+.wrapper-u8, .main-container {
 	max-width: 1216px;
 	margin: 0 auto;
 	color: #020111;
+	z-index: 40;
 }
 
 body {

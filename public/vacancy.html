@@ -1,0 +1,874 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Yet another anonymous work search</title>
+    <meta name="description" content="Yet another anonymous work search">
+
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+	<link rel="manifest" href="/manifest.json">
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+	<meta name="theme-color" content="#ffffff">
+
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+
+    <style>html{box-sizing:border-box}*,:before,:after{box-sizing:inherit}html{-webkit-text-size-adjust:100%;-moz-text-size-adjust:100%;text-size-adjust:100%}body{-webkit-overflow-scrolling:touch}html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0}article,aside,details,figcaption,figure,footer,header,main,menu,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block}audio:not([controls]){display:none;height:0}a{background-color:transparent;color:#21212b}abbr[title]{border-bottom:none;text-decoration:underline;-webkit-text-decoration:underline dotted;text-decoration:underline dotted}b,strong{font-weight:bolder}dfn{font-style:italic}mark{background-color:#ff0;color:#000}svg:not(:root){overflow:hidden}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}hr{box-sizing:content-box;height:0;overflow:visible}button,input,select,textarea{font:inherit;margin:0}button,input{overflow:visible}button,select{text-transform:none}button,[type=button],[type=reset],[type=submit]{-webkit-appearance:button;-moz-appearance:button;appearance:button}input,textarea,button,select,a{-webkit-tap-highlight-color:transparent}address{font-style:normal}a:focus:not(:focus-visible),select:focus:not(:focus-visible),input:focus:not(:focus-visible),textarea:focus:not(:focus-visible){outline:0}button::-moz-focus-inner,[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner{border-style:none;padding:0}button,input[type=reset],input[type=button],input[type=submit]{cursor:pointer}button[disabled],input[disabled]{cursor:default}button{-webkit-appearance:none;-moz-appearance:none;appearance:none;background:0 0;padding:0;border:0;border-radius:0;line-height:1}button:focus:not(:focus-visible){outline:0}a,a:hover{text-decoration:none}[href="javascript:void();"],[href="javascript:"]{cursor:default}ul,ol{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:none}table{border-collapse:collapse;border-spacing:0}input[type=text],input[type=password],input[type=date],input[type=datetime],input[type=datetime-local],input[type=email],input[type=month],input[type=number],input[type=search],input[type=tel],input[type=time],input[type=url],input[type=week],textarea{box-sizing:border-box}[type=checkbox],[type=radio]{box-sizing:border-box;margin:0;padding:0}input[type=search]{-webkit-appearance:textfield;-moz-appearance:textfield;appearance:textfield;outline-offset:-2px}input[type=search]::-webkit-search-decoration,input[type=search]::-webkit-search-cancel-button{-webkit-appearance:none;appearance:none}input[type=number]::-webkit-inner-spin-button,input[type=number]::-webkit-outer-spin-button{height:auto;-webkit-appearance:none;appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;appearance:button;font:inherit}input[type=number]{-webkit-appearance:textfield;-moz-appearance:textfield;appearance:textfield}select{width:100%;height:20px;border:0;background:0 0}textarea{resize:none;border:0;overflow:auto}::-webkit-input-placeholder{color:#777;line-height:normal}::-moz-placeholder{color:#777;line-height:normal}::placeholder{color:#777;line-height:normal}[hidden]{display:none}.button{font-family:"Inter",arial,helvetica neue,helvetica,sans-serif;font-size:18px;font-weight:600;display:-webkit-inline-flex;display:inline-flex;-webkit-align-items:center;align-items:center;-webkit-justify-content:center;justify-content:center;height:50px;border-radius:8px;padding-left:32px;padding-right:32px;border:1px solid transparent;transition:background-color .225s ease,box-shadow .225s ease,border-color .225s ease,color .225s ease}.button:focus-visible{outline:0;box-shadow:0 0 0 2px #000,0 0 0 3px #fff;border-radius:4px}.button--small{height:40px;padding-left:24px;padding-right:24px}.button--medium{height:44px;padding-left:20px;padding-right:20px}.button--black{color:#fff;background-color:#111028;border-color:#111028;border-width:2px}.button--black:hover{background-color:#3f3a92;border-color:#3f3a92}.button--black:active{background-color:#2f2c6d;border-color:#2f2c6d}.button--black:focus-visible{background-color:#3f3a92;border-color:#b8b6e2;box-shadow:none}.button--black:disabled{color:#9695a5;background-color:#ededf8;border-color:#ededf8}.button--secondary{border:2px solid #111028;padding:0 24px}.button--secondary:hover{border-color:#3f3a92;color:#3f3a92}.button--secondary:active{border-color:#2f2c6d;color:#2f2c6d}.button--secondary:focus-visible{border-color:#b8b6e2;box-shadow:none;color:#111028}.button--secondary:disabled{color:#96969c;border-color:#96969c}.button--empty{color:#525168;font-weight:400;border-width:2px;-webkit-column-gap:8px;-moz-column-gap:8px;column-gap:8px}.button--empty:hover{color:#3f3a92;background-color:#ededf8}.button--empty:hover svg{fill:#3f3a92}.button--empty:active{color:#2f2c6d;background-color:transparent}.button--empty:active svg{fill:#2f2c6d}.button--empty:focus-visible{color:#3f3a92;border-color:#b8b6e2;background-color:#ededf8;box-shadow:none}.button--empty:focus-visible svg{fill:#3f3a92}.button--empty:disabled,.button--empty.disabled{color:#9695a5}.button--empty:disabled svg,.button--empty.disabled svg{fill:#9695a5}.button--gray{color:#111028;background-color:#ededf8;border-color:#ededf8;border-width:2px}.button--gray:hover{color:#3f3a92}.button--gray:active{color:#2f2c6d}.button--gray:focus-visible{color:#3f3a92;border-color:#b8b6e2;box-shadow:none}.button--gray:disabled,.button--gray.disabled{color:#b5b5be}.button--gray2{color:#111028;background-color:#ededf8;border-color:#ededf8;border-radius:4px;padding-left:24px;padding-right:24px;border-width:2px}.button--gray2:hover{color:#3f3a92}.button--gray2:active{color:#2f2c6d}.button--gray2:focus-visible{color:#3f3a92;border:2px solid #b8b6e2;box-shadow:none}.button--gray2:disabled{color:#9695a5;background-color:#ededf8}.button--gray3{color:#111028;background-color:#dcdbf0;border-color:#dcdbf0;border-radius:4px;border-width:2px}.button--gray3:hover{color:#3f3a92}.button--gray3:active{color:#2f2c6d}.button--gray3:focus-visible{color:#3f3a92;border:2px solid #b8b6e2;box-shadow:none}.button--gray3:disabled{color:#9695a5;background-color:#ededf8}.button--white{color:#000;background-color:#fff;border-color:#fff;box-shadow:0 0 40px rgba(0,0,0,.15)}.button--white:hover,.button--white:active{background-color:#f2f2f2;border-color:#f2f2f2}.button--white-shadow{color:#000;background-color:#fff;border-color:#fff}.button--white-shadow:hover,.button--white-shadow:active{box-shadow:0 6px 16px #e1e1e1}.button--bordered-black{color:#000;background-color:#fff;border-width:3px;border-color:#000}.button--bordered-black:hover,.button--bordered-black:active{color:#fff;background-color:#000}.button--bordered-black-blank{color:#000;border-width:3px;border-color:#000}.button--bordered-black-blank:hover,.button--bordered-black-blank:active{color:#fff;background-color:#000}.button.in-respond{color:#828282;border-color:#eeeff1;background-color:#eeeff1}.favorite{width:48px;height:48px;display:-webkit-flex;display:flex;-webkit-align-items:center;align-items:center;-webkit-justify-content:center;justify-content:center;cursor:pointer}.favorite .favorite__icon path{fill:none;stroke:#000;stroke-width:2px;transition:fill .225s ease}.favorite.in-favorite .favorite__icon path{fill:#000}.favorite__icon{width:28px;height:28px}.action{width:50px;height:50px;display:-webkit-flex;display:flex;-webkit-align-items:center;align-items:center;-webkit-justify-content:center;justify-content:center;border-radius:3px;border:2px solid #000;cursor:pointer}.action__button-img{pointer-events:none}.custom-icon{display:inline-block;width:16px;height:16px;stroke-width:0;stroke:currentcolor;fill:currentcolor;transition:color .225s ease,fill .225s ease}.bold{font-weight:700}.footer{background:#1a1b26}.footer__wrapper{padding:104px 0 24px}.footer__group-u8{display:-webkit-flex;display:flex;-webkit-justify-content:space-between;justify-content:space-between}.footer__info{color:#fff}.footer__title{display:block;font-weight:600;font-size:24px;line-height:120%;margin-bottom:16px;color:#fff}.footer__subtitle{line-height:140%;margin-bottom:55px;width:275px;color:#c6cad2}.footer__map{margin-bottom:56px}.footer__copyrights{display:-webkit-flex;display:flex;gap:14px;color:#cfd2d7;font-size:14px;border-top:1px solid #262a30;padding-top:16px}.footer__middle-section{display:-webkit-flex;display:flex;-webkit-flex-direction:column;flex-direction:column;color:#fff;font-size:18px;width:300px}.footer__statistics-link{margin-bottom:24px;color:#c6cad2;transition:color .3s;border-bottom:1px solid #fff;width:-webkit-fit-content;width:-moz-fit-content;width:fit-content}.footer__statistics-link:hover{color:#fff;border-bottom:1px solid #fff}.footer__stars{margin-bottom:32px}.footer__github-link{color:#c6cad2;display:-webkit-flex;display:flex;-webkit-align-items:center;align-items:center;gap:15px;width:-webkit-fit-content;width:-moz-fit-content;width:fit-content;transition:color .3s;border-bottom:1px solid #c6cad2}.footer__github-link:hover{color:#fff;border-bottom:1px solid #fff}.footer__support{display:-webkit-flex;display:flex;-webkit-flex-direction:column;flex-direction:column;gap:16px;background:0 0}.footer__link{padding:16px 32px 16px 40px;border-radius:8px;border:2px solid #575d65;color:#fff;transition:border .2s;width:100%}.footer__link:hover{border:2px solid #fff}.footer__figure{display:-webkit-flex;display:flex;gap:16px}.footer__figure:last-child{-webkit-justify-content:space-between;justify-content:space-between}.header{background:#fff;display:-webkit-flex;display:flex;-webkit-align-items:center;align-items:center;height:64px;box-shadow:0 4px 16px 0 rgba(78,84,102,.12);z-index:50}.header__wrapper{display:-webkit-flex;display:flex;-webkit-align-items:center;align-items:center;width:1216px;height:100%;margin:0 auto}.header__logo{display:-webkit-flex;display:flex;gap:12px;-webkit-align-items:center;align-items:center}.header__logo-title{color:#1a1b26;font-size:19px;font-weight:700}.header__profile{position:relative}.header__stars{margin-left:auto;display:-webkit-flex;display:flex;-webkit-align-items:center;align-items:center}.header__profile-button{width:48px;height:48px;overflow:hidden}.header__profile-button img{width:inherit;height:inherit}.modal.active{opacity:1;pointer-events:all}.modal{position:absolute;display:-webkit-flex;display:flex;-webkit-flex-direction:column;flex-direction:column;width:540px;right:-57%;top:136%;border-radius:8px;background:#fff;opacity:0;pointer-events:none;-webkit-filter:drop-shadow(0 6px 16px rgba(17,16,40,.1));filter:drop-shadow(0 6px 16px rgba(17,16,40,.1))}.modal::after{content:"";position:absolute;right:40px;top:-11px;width:0;height:0;border-left:12px solid transparent;border-right:12px solid transparent;border-bottom:12px solid #fff;border-radius:1px}.modal__profile{display:-webkit-flex;display:flex;gap:16px;padding:24px;border-bottom:1px solid #dddce4}.modal__profile-info{width:100%;padding-top:15px}.modal__profile-name{font-weight:600;font-size:22px;line-height:120%;color:#020111;width:100%;margin-bottom:21px}.modal__user-photo{width:48px;height:48px}.modal__link{display:-webkit-flex;display:flex;-webkit-align-items:center;align-items:center;gap:10px;font-weight:400;font-size:18px;line-height:140%;color:#575d65;margin-bottom:16px;transition:color .3s}.modal__link:last-child{margin-bottom:0}.modal__link:hover{color:#0057ff}.modal__log-out{padding:24px}.modal__button{display:-webkit-flex;display:flex;-webkit-align-items:center;align-items:center;gap:11px;transition:color .3s;color:#575d65}.modal__button:hover{color:#0057ff}.wrapper-u8,.main-container{max-width:1216px;margin:0 auto;color:#020111;z-index:40}body{font-family:"Inter",arial,helvetica neue,helvetica,sans-serif;font-size:16px;color:#21212b;display:grid;grid-template-rows:auto 1fr auto;min-height:100%}.main-wrapper{background:#f2f3f8}</style>
+    <style>html{box-sizing:border-box}*,:before,:after{box-sizing:inherit}html{-webkit-text-size-adjust:100%;-moz-text-size-adjust:100%;text-size-adjust:100%}body{-webkit-overflow-scrolling:touch}html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0}article,aside,details,figcaption,figure,footer,header,main,menu,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block}audio:not([controls]){display:none;height:0}a{background-color:transparent;color:#21212b}abbr[title]{border-bottom:none;text-decoration:underline;-webkit-text-decoration:underline dotted;text-decoration:underline dotted}b,strong{font-weight:bolder}dfn{font-style:italic}mark{background-color:#ff0;color:#000}svg:not(:root){overflow:hidden}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}hr{box-sizing:content-box;height:0;overflow:visible}button,input,select,textarea{font:inherit;margin:0}button,input{overflow:visible}button,select{text-transform:none}button,[type=button],[type=reset],[type=submit]{-webkit-appearance:button;-moz-appearance:button;appearance:button}input,textarea,button,select,a{-webkit-tap-highlight-color:transparent}address{font-style:normal}a:focus:not(:focus-visible),select:focus:not(:focus-visible),input:focus:not(:focus-visible),textarea:focus:not(:focus-visible){outline:0}button::-moz-focus-inner,[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner{border-style:none;padding:0}button,input[type=reset],input[type=button],input[type=submit]{cursor:pointer}button[disabled],input[disabled]{cursor:default}button{-webkit-appearance:none;-moz-appearance:none;appearance:none;background:0 0;padding:0;border:0;border-radius:0;line-height:1}button:focus:not(:focus-visible){outline:0}a,a:hover{text-decoration:none}[href="javascript:void();"],[href="javascript:"]{cursor:default}ul,ol{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:none}table{border-collapse:collapse;border-spacing:0}input[type=text],input[type=password],input[type=date],input[type=datetime],input[type=datetime-local],input[type=email],input[type=month],input[type=number],input[type=search],input[type=tel],input[type=time],input[type=url],input[type=week],textarea{box-sizing:border-box}[type=checkbox],[type=radio]{box-sizing:border-box;margin:0;padding:0}input[type=search]{-webkit-appearance:textfield;-moz-appearance:textfield;appearance:textfield;outline-offset:-2px}input[type=search]::-webkit-search-decoration,input[type=search]::-webkit-search-cancel-button{-webkit-appearance:none;appearance:none}input[type=number]::-webkit-inner-spin-button,input[type=number]::-webkit-outer-spin-button{height:auto;-webkit-appearance:none;appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;appearance:button;font:inherit}input[type=number]{-webkit-appearance:textfield;-moz-appearance:textfield;appearance:textfield}select{width:100%;height:20px;border:0;background:0 0}textarea{resize:none;border:0;overflow:auto}::-webkit-input-placeholder{color:#777;line-height:normal}::-moz-placeholder{color:#777;line-height:normal}::placeholder{color:#777;line-height:normal}[hidden]{display:none}.button{font-family:"Inter",arial,helvetica neue,helvetica,sans-serif;font-size:18px;font-weight:600;display:-webkit-inline-flex;display:inline-flex;-webkit-align-items:center;align-items:center;-webkit-justify-content:center;justify-content:center;height:50px;border-radius:8px;padding-left:32px;padding-right:32px;border:1px solid transparent;transition:background-color .225s ease,box-shadow .225s ease,border-color .225s ease,color .225s ease}.button:focus-visible{outline:0;box-shadow:0 0 0 2px #000,0 0 0 3px #fff;border-radius:4px}.button--small{height:40px;padding-left:24px;padding-right:24px}.button--medium{height:44px;padding-left:20px;padding-right:20px}.button--black{color:#fff;background-color:#111028;border-color:#111028;border-width:2px}.button--black:hover{background-color:#3f3a92;border-color:#3f3a92}.button--black:active{background-color:#2f2c6d;border-color:#2f2c6d}.button--black:focus-visible{background-color:#3f3a92;border-color:#b8b6e2;box-shadow:none}.button--black:disabled{color:#9695a5;background-color:#ededf8;border-color:#ededf8}.button--secondary{border:2px solid #111028;padding:0 24px}.button--secondary:hover{border-color:#3f3a92;color:#3f3a92}.button--secondary:active{border-color:#2f2c6d;color:#2f2c6d}.button--secondary:focus-visible{border-color:#b8b6e2;box-shadow:none;color:#111028}.button--secondary:disabled{color:#96969c;border-color:#96969c}.button--empty{color:#525168;font-weight:400;border-width:2px;-webkit-column-gap:8px;-moz-column-gap:8px;column-gap:8px}.button--empty:hover{color:#3f3a92;background-color:#ededf8}.button--empty:hover svg{fill:#3f3a92}.button--empty:active{color:#2f2c6d;background-color:transparent}.button--empty:active svg{fill:#2f2c6d}.button--empty:focus-visible{color:#3f3a92;border-color:#b8b6e2;background-color:#ededf8;box-shadow:none}.button--empty:focus-visible svg{fill:#3f3a92}.button--empty:disabled,.button--empty.disabled{color:#9695a5}.button--empty:disabled svg,.button--empty.disabled svg{fill:#9695a5}.button--gray{color:#111028;background-color:#ededf8;border-color:#ededf8;border-width:2px}.button--gray:hover{color:#3f3a92}.button--gray:active{color:#2f2c6d}.button--gray:focus-visible{color:#3f3a92;border-color:#b8b6e2;box-shadow:none}.button--gray:disabled,.button--gray.disabled{color:#b5b5be}.button--gray2{color:#111028;background-color:#ededf8;border-color:#ededf8;border-radius:4px;padding-left:24px;padding-right:24px;border-width:2px}.button--gray2:hover{color:#3f3a92}.button--gray2:active{color:#2f2c6d}.button--gray2:focus-visible{color:#3f3a92;border:2px solid #b8b6e2;box-shadow:none}.button--gray2:disabled{color:#9695a5;background-color:#ededf8}.button--gray3{color:#111028;background-color:#dcdbf0;border-color:#dcdbf0;border-radius:4px;border-width:2px}.button--gray3:hover{color:#3f3a92}.button--gray3:active{color:#2f2c6d}.button--gray3:focus-visible{color:#3f3a92;border:2px solid #b8b6e2;box-shadow:none}.button--gray3:disabled{color:#9695a5;background-color:#ededf8}.button--white{color:#000;background-color:#fff;border-color:#fff;box-shadow:0 0 40px rgba(0,0,0,.15)}.button--white:hover,.button--white:active{background-color:#f2f2f2;border-color:#f2f2f2}.button--white-shadow{color:#000;background-color:#fff;border-color:#fff}.button--white-shadow:hover,.button--white-shadow:active{box-shadow:0 6px 16px #e1e1e1}.button--bordered-black{color:#000;background-color:#fff;border-width:3px;border-color:#000}.button--bordered-black:hover,.button--bordered-black:active{color:#fff;background-color:#000}.button--bordered-black-blank{color:#000;border-width:3px;border-color:#000}.button--bordered-black-blank:hover,.button--bordered-black-blank:active{color:#fff;background-color:#000}.button.in-respond{color:#828282;border-color:#eeeff1;background-color:#eeeff1}.favorite{width:48px;height:48px;display:-webkit-flex;display:flex;-webkit-align-items:center;align-items:center;-webkit-justify-content:center;justify-content:center;cursor:pointer}.favorite .favorite__icon path{fill:none;stroke:#000;stroke-width:2px;transition:fill .225s ease}.favorite.in-favorite .favorite__icon path{fill:#000}.favorite__icon{width:28px;height:28px}.action{width:50px;height:50px;display:-webkit-flex;display:flex;-webkit-align-items:center;align-items:center;-webkit-justify-content:center;justify-content:center;border-radius:3px;border:2px solid #000;cursor:pointer}.action__button-img{pointer-events:none}.breadcrumb{margin-top:24px;margin-bottom:24px;color:#4d515c}.breadcrumb__list{display:-webkit-flex;display:flex;-webkit-flex-wrap:wrap;flex-wrap:wrap}.breadcrumb__item{font-size:0}.breadcrumb__item+.breadcrumb__item{position:relative}.breadcrumb__item+.breadcrumb__item:before{content:">";font-size:14px;line-height:130%;color:#4d515c;margin-left:8px;margin-right:8px}.breadcrumb__link{cursor:pointer;position:relative}.breadcrumb__link:after{content:"";position:absolute;right:0;bottom:0;opacity:0;width:100%;height:2px;background-color:#4d515c;transition:opacity .225s ease}.breadcrumb__link:hover{-webkit-text-decoration-skip-ink:none;text-decoration-skip-ink:none}.breadcrumb__link:hover:after{opacity:1}.breadcrumb__link,.breadcrumb__page{font-size:14px;font-weight:500;line-height:130%;color:#4d515c;white-space:nowrap}.breadcrumb__page{color:#96969c}.vacation{display:-webkit-flex;display:flex;-webkit-justify-content:center;justify-content:center;-webkit-align-items:flex-end;align-items:flex-end;width:176px;height:68px;padding-top:8px;padding-left:8px;padding-right:8px;padding-bottom:26px;border-radius:4px;border:1px solid transparent}.vacation[data-vacation-value="0"]{--value0:#e74242;--shadow-color:var(--value0);border-color:var(--value0)}.vacation[data-vacation-value="0"] .vacation__day-count{left:-8px;background-color:var(--value0)}.vacation[data-vacation-value="0"] .vacation__day-count:before{border-top-color:var(--value0)}.vacation[data-vacation-value="0"] .vacation__days-line{background-color:#fce8e8}.vacation[data-vacation-value="0"] .vacation__day{color:#f4a4a4}.vacation[data-vacation-value="0"] .vacation__day:before{background-color:#fce8e8}.vacation[data-vacation-value="0"] .vacation__day--0{color:var(--value0)}.vacation[data-vacation-value="1"],.vacation[data-vacation-value="2"],.vacation[data-vacation-value="3"],.vacation[data-vacation-value="4"],.vacation[data-vacation-value="5"]{--value12345:#e74242;--shadow-color:var(--value12345)}.vacation[data-vacation-value="1"] .vacation__days-line:before,.vacation[data-vacation-value="2"] .vacation__days-line:before,.vacation[data-vacation-value="3"] .vacation__days-line:before,.vacation[data-vacation-value="4"] .vacation__days-line:before,.vacation[data-vacation-value="5"] .vacation__days-line:before{width:32px;background-color:var(--value12345)}.vacation[data-vacation-value="1"] .vacation__day--5,.vacation[data-vacation-value="2"] .vacation__day--5,.vacation[data-vacation-value="3"] .vacation__day--5,.vacation[data-vacation-value="4"] .vacation__day--5,.vacation[data-vacation-value="5"] .vacation__day--5{color:#7c7b88}.vacation[data-vacation-value="1"] .vacation__day-count{left:-2px}.vacation[data-vacation-value="2"] .vacation__day-count{left:2px}.vacation[data-vacation-value="3"] .vacation__day-count{left:8px}.vacation[data-vacation-value="4"] .vacation__day-count{left:12px}.vacation[data-vacation-value="5"] .vacation__day-count{left:21px}.vacation[data-vacation-value="6"],.vacation[data-vacation-value="7"],.vacation[data-vacation-value="8"],.vacation[data-vacation-value="9"],.vacation[data-vacation-value="10"]{--value678910:#ff956d;--shadow-color:var(--value678910)}.vacation[data-vacation-value="6"] .vacation__days-line:before,.vacation[data-vacation-value="7"] .vacation__days-line:before,.vacation[data-vacation-value="8"] .vacation__days-line:before,.vacation[data-vacation-value="9"] .vacation__days-line:before,.vacation[data-vacation-value="10"] .vacation__days-line:before{width:60px;background-color:var(--value678910)}.vacation[data-vacation-value="6"] .vacation__day--10,.vacation[data-vacation-value="7"] .vacation__day--10,.vacation[data-vacation-value="8"] .vacation__day--10,.vacation[data-vacation-value="9"] .vacation__day--10,.vacation[data-vacation-value="10"] .vacation__day--10{color:#7c7b88}.vacation[data-vacation-value="6"] .vacation__day-count{left:26px}.vacation[data-vacation-value="7"] .vacation__day-count{left:32px}.vacation[data-vacation-value="8"] .vacation__day-count{left:38px}.vacation[data-vacation-value="9"] .vacation__day-count{left:44px}.vacation[data-vacation-value="10"] .vacation__day-count{left:50px}.vacation[data-vacation-value="11"],.vacation[data-vacation-value="12"],.vacation[data-vacation-value="13"],.vacation[data-vacation-value="14"],.vacation[data-vacation-value="15"]{--value1112131415:#ffde66;--shadow-color:var(--value1112131415)}.vacation[data-vacation-value="11"] .vacation__days-line:before,.vacation[data-vacation-value="12"] .vacation__days-line:before,.vacation[data-vacation-value="13"] .vacation__days-line:before,.vacation[data-vacation-value="14"] .vacation__days-line:before,.vacation[data-vacation-value="15"] .vacation__days-line:before{width:90px;background-color:var(--value1112131415)}.vacation[data-vacation-value="11"] .vacation__day--15,.vacation[data-vacation-value="12"] .vacation__day--15,.vacation[data-vacation-value="13"] .vacation__day--15,.vacation[data-vacation-value="14"] .vacation__day--15,.vacation[data-vacation-value="15"] .vacation__day--15{color:#7c7b88}.vacation[data-vacation-value="11"] .vacation__day-count{left:54px}.vacation[data-vacation-value="12"] .vacation__day-count{left:60px}.vacation[data-vacation-value="13"] .vacation__day-count{left:66px}.vacation[data-vacation-value="14"] .vacation__day-count{left:72px}.vacation[data-vacation-value="15"] .vacation__day-count{left:78px}.vacation[data-vacation-value="16"],.vacation[data-vacation-value="17"],.vacation[data-vacation-value="18"],.vacation[data-vacation-value="19"],.vacation[data-vacation-value="20"]{--value1617181920:#b9ea9d;--shadow-color:var(--value1617181920)}.vacation[data-vacation-value="16"] .vacation__days-line:before,.vacation[data-vacation-value="17"] .vacation__days-line:before,.vacation[data-vacation-value="18"] .vacation__days-line:before,.vacation[data-vacation-value="19"] .vacation__days-line:before,.vacation[data-vacation-value="20"] .vacation__days-line:before{width:120px;background-color:var(--value1617181920)}.vacation[data-vacation-value="16"] .vacation__day--20,.vacation[data-vacation-value="17"] .vacation__day--20,.vacation[data-vacation-value="18"] .vacation__day--20,.vacation[data-vacation-value="19"] .vacation__day--20,.vacation[data-vacation-value="20"] .vacation__day--20{color:#7c7b88}.vacation[data-vacation-value="16"] .vacation__day-count{left:84px}.vacation[data-vacation-value="17"] .vacation__day-count{left:90px}.vacation[data-vacation-value="18"] .vacation__day-count{left:96px}.vacation[data-vacation-value="19"] .vacation__day-count{left:102px}.vacation[data-vacation-value="20"] .vacation__day-count{left:108px}.vacation[data-vacation-value="21"],.vacation[data-vacation-value="22"],.vacation[data-vacation-value="23"],.vacation[data-vacation-value="24"],.vacation[data-vacation-value="25"]{--value2122232425:#24a887;--shadow-color:var(--value2122232425)}.vacation[data-vacation-value="21"] .vacation__days-line:before,.vacation[data-vacation-value="22"] .vacation__days-line:before,.vacation[data-vacation-value="23"] .vacation__days-line:before,.vacation[data-vacation-value="24"] .vacation__days-line:before,.vacation[data-vacation-value="25"] .vacation__days-line:before{width:148px;background-color:var(--value2122232425)}.vacation[data-vacation-value="21"] .vacation__day--25,.vacation[data-vacation-value="22"] .vacation__day--25,.vacation[data-vacation-value="23"] .vacation__day--25,.vacation[data-vacation-value="24"] .vacation__day--25,.vacation[data-vacation-value="25"] .vacation__day--25{color:#7c7b88}.vacation[data-vacation-value="21"] .vacation__day-count{left:111px}.vacation[data-vacation-value="22"] .vacation__day-count{left:117px}.vacation[data-vacation-value="23"] .vacation__day-count{left:123px}.vacation[data-vacation-value="24"] .vacation__day-count{left:129px}.vacation[data-vacation-value="25"] .vacation__day-count{left:135px}.vacation__days-line{position:relative;width:148px;height:4px;border-radius:4px;background-color:#ededf8}.vacation__days-line:before{content:" ";position:absolute;left:0;top:0;height:4px;border-radius:4px}.vacation__day-count{font-family:"Montserrat",verdana,roboto,sans-serif;font-weight:600;font-size:16px;line-height:16px;color:#fff;padding-left:4px;padding-right:4px;padding-top:2px;padding-bottom:2px;background:#111028;border-radius:3px;position:absolute;left:0;bottom:calc(100% + 9px)}.vacation__day-count:before{content:" ";position:absolute;top:100%;left:50%;-webkit-transform:translateX(-50%);transform:translateX(-50%);width:0;height:0;border-left:4px solid transparent;border-right:4px solid transparent;border-top:5px solid #111028}.vacation__day-count:after{content:" ";position:absolute;width:4px;height:4px;border-radius:50%;top:calc(100% + 9px);left:50%;-webkit-transform:translateX(-50%);transform:translateX(-50%);background-color:#fff;box-shadow:0 0 0 2px var(--shadow-color)}.vacation__day{font-family:"Montserrat",verdana,roboto,sans-serif;font-size:12px;line-height:11px;color:#b5b5be;position:absolute;top:11px}.vacation__day:before{content:" ";position:absolute;left:50%;bottom:calc(100% + 1px);width:1px;height:4px;background-color:#ededf8}.vacation__day--0{left:-2px}.vacation__day--5{left:26px}.vacation__day--10{left:53px}.vacation__day--15{left:83px}.vacation__day--20{left:112px}.vacation__day--25{right:-5px}.button-group{display:grid;grid-template-rows:repeat(auto-fit,48px);row-gap:8px}.button-group__item{display:-webkit-flex;display:flex;-webkit-align-items:center;align-items:center;-webkit-justify-content:center;justify-content:center;width:48px;height:48px;transition:.225s ease}.button-group__item:hover{border-radius:4px;background:#eff2fa}.card{display:grid;grid-template-columns:1fr 48px;grid-template-rows:repeat(3,auto);-webkit-column-gap:26px;-moz-column-gap:26px;column-gap:26px;max-width:1008px;padding:32px;border-radius:16px;background-color:#fff}.card__action{display:grid;grid-template-rows:repeat(auto-fit,48px);row-gap:8px;grid-column:2;grid-row:1/-1}.card__info{grid-column:1;display:-webkit-flex;display:flex}.card__image-overlay{-webkit-flex-shrink:0;flex-shrink:0;display:-webkit-flex;display:flex;-webkit-align-items:center;align-items:center;-webkit-justify-content:center;justify-content:center;width:128px;height:64px;background:#f2f2f8;border-radius:4px}.card__info-caption{display:-webkit-flex;display:flex;-webkit-flex-direction:column;flex-direction:column;-webkit-justify-content:center;justify-content:center;margin-left:12px}.card__headline{font-size:24px;line-height:29px;font-weight:700;color:#111028;-webkit-align-self:flex-start;align-self:flex-start;display:-webkit-flex;display:flex;-webkit-align-items:center;align-items:center;transition:color .225s ease}.card__headline:hover{color:#3f3a92}.card__verify{margin-left:8px}.card__sub-headline{font-size:18px;line-height:25px;color:#b5b5be;margin-top:4px;-webkit-align-self:flex-start;align-self:flex-start;transition:color .225s ease}.card__sub-headline:hover{color:#3f3a92}.card__address{display:-webkit-flex;display:flex;-webkit-align-items:center;align-items:center;margin-top:4px}.card__address-caption{font-size:18px;line-height:25px;color:#b5b5be;display:table;table-layout:fixed;width:100%;margin-left:4px}.card__address-truncate{display:table-cell;white-space:nowrap;text-overflow:ellipsis;overflow:hidden}.card__address-count{font-size:18px;line-height:25px;color:#b5b5be;margin-left:4px}.card__text{font-size:18px;line-height:25px;color:#7c7b88;margin-top:16px;grid-column:1;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}.card__footer{font-size:18px;line-height:25px;color:#7c7b88;display:grid;grid-template-columns:repeat(2,1fr);row-gap:16px;margin-top:24px;grid-column:1}.card__figure{display:-webkit-flex;display:flex;-webkit-align-items:center;align-items:center}.card__figcaption{margin-left:8px}.card__link{display:inline-block;color:#0d1dab}.card--filled .card__image-overlay{background-color:transparent}.radio{font-size:18px;color:#3c3a59;display:-webkit-flex;display:flex;-webkit-align-items:center;align-items:center;height:24px;cursor:pointer}.radio__input{position:absolute;-webkit-appearance:none;-moz-appearance:none;appearance:none}.radio__input:focus-visible{width:24px;height:24px;outline:0;box-shadow:0 0 0 2px #b8b6e2,0 0 0 3px #fff;border-radius:50%}.radio__input:checked+.radio__element{border-width:9px}.radio__element{width:24px;height:24px;border:1px solid #3c3a59;border-radius:50%;background-color:#fff;margin-right:12px;transition:border-width .1s ease}.headline{color:#1c1f29;font-weight:700}.headline--lvl1{font-size:38px;font-weight:500;line-height:130%}.headline--lvl2{font-size:28px;font-weight:500;line-height:120%}.text,.list__item:before,.list__item{font-size:18px;line-height:25px;color:#6d6c7c;margin-top:16px}.list{margin-top:16px;counter-reset:list}.list__item{counter-increment:list;position:relative;padding-left:26px;margin-top:0}.list__item:before{content:counter(list) ". ";margin-top:0;position:absolute;left:3px;top:0}.skills{display:grid;row-gap:16px}.skills__item{display:grid;grid-template-columns:auto 1fr;-webkit-column-gap:16px;-moz-column-gap:16px;column-gap:16px}.skills__caption{font-size:18px;line-height:25px;color:#6d6c7c;white-space:nowrap;min-width:136px}.skills__images{display:grid;grid-template-columns:repeat(auto-fill,40px);gap:16px}.info{-webkit-column-count:2;-moz-column-count:2;column-count:2;-webkit-column-gap:44px;-moz-column-gap:44px;column-gap:44px}.info__item{display:grid;row-gap:16px;padding:24px;border-radius:4px;border:1px solid #dddce4;-webkit-column-break-inside:avoid;-moz-column-break-inside:avoid;break-inside:avoid;margin-bottom:32px}.info__row{display:grid;grid-template-columns:1fr 1fr;-webkit-column-gap:16px;-moz-column-gap:16px;column-gap:16px}.info__name{font-size:18px;line-height:25px;color:#7c7b88}.info__value{font-size:18px;line-height:25px;color:#111028}.vacancy__content{max-width:1008px}.vacancy__card{padding:32px;align-self:stretch;border-radius:16px;background:#fff;display:grid;grid-template-columns:1fr 48px;-webkit-column-gap:26px;-moz-column-gap:26px;column-gap:26px;position:relative}.vacancy__info{display:grid;grid-template-columns:1fr 48px;-webkit-column-gap:26px;-moz-column-gap:26px;column-gap:26px;padding-bottom:56px;position:relative}.vacancy__header{display:-webkit-flex;display:flex;-webkit-align-items:center;align-items:center;margin-top:8px}.vacancy__time{font-size:16px;line-height:24px;color:#6f727a}.vacancy__salary{font-size:32px;line-height:120%;color:#1c1f29;margin-left:16px}.vacancy__salary-hidden{font-size:18px;line-height:140%;padding:2px 8px;color:#1c1f29;border-radius:4px;margin-left:16px}.vacancy__company{display:-webkit-flex;display:flex;margin-top:24px}.vacancy__company-logo-overlay{-webkit-flex-shrink:0;flex-shrink:0;display:-webkit-flex;display:flex;width:96px;height:48px;-webkit-align-items:center;align-items:center;-webkit-justify-content:center;justify-content:center;background:#f2f2f8;border-radius:8px}.vacancy__company-image{padding:2px 0 2px}.vacancy__company-caption{width:100%;margin-left:16px}.vacancy__company-name-group{display:-webkit-flex;display:flex;-webkit-align-items:center;align-items:center;gap:8px}.vacancy__company-name{font-size:17px;font-weight:500;line-height:150%;color:#303647;transition:color .225s ease}.vacancy__company-name:hover{color:#3f3a92}.vacancy__company-address{display:-webkit-flex;display:flex;-webkit-align-items:center;align-items:center}.vacancy__address-caption{font-size:18px;line-height:25px;color:#6f727a;display:table;table-layout:fixed;width:100%;margin-left:8px}.vacancy__address-truncate{display:table-cell;white-space:nowrap;text-overflow:ellipsis;overflow:hidden}.vacancy__address-count{font-size:18px;line-height:25px;color:#b5b5be;margin-left:4px}.vacancy__info-group{display:grid;grid-template-columns:1fr 1fr;-webkit-column-gap:68px;-moz-column-gap:68px;column-gap:68px;row-gap:16px;margin-top:32px}.vacancy__info-row{display:grid;grid-template-columns:1fr 1fr;-webkit-column-gap:16px;-moz-column-gap:16px;column-gap:16px}.vacancy__info-key{display:-webkit-flex;display:flex}.vacancy__info-icon{margin-top:4px}.vacancy__info-value{font-size:18px;line-height:25px;color:#7c7b88;margin-left:8px}.vacancy__info-value-hidden{font-size:16px;line-height:130%;padding:2px 8px;color:#4e5fca;background:#ebedf9;border-radius:4px;width:-webkit-max-content;width:-moz-max-content;width:max-content;display:-webkit-flex;display:flex;-webkit-align-items:center;align-items:center}.vacancy__info-data{font-size:18px;line-height:25px;color:#111028}.vacancy__sphere{display:-webkit-flex;display:flex;-webkit-align-items:center;align-items:center;margin-top:56px}.vacancy__sphere-caption{font-size:18px;line-height:25px;color:#111028;margin-left:8px}.vacancy__section{padding-top:56px;padding-bottom:56px;position:relative}.vacancy__section:before{content:" ";position:absolute;left:-32px;top:0;height:1px;width:calc(100% + 64px);background-color:#dddce4}.vacancy__description-skills{margin-top:40px}.vacancy__interview-info{margin-top:32px}.vacancy__team-info{display:grid;row-gap:16px;margin-top:40px}.vacancy__team-row{font-size:18px;line-height:25px;display:grid;grid-template-columns:168px 1fr;-webkit-column-gap:16px;-moz-column-gap:16px;column-gap:16px}.vacancy__team-data{color:#b5b5be}.vacancy__team-value{color:#7c7b88}.vacancy__footer{display:-webkit-flex;display:flex;-webkit-align-items:center;align-items:center}.vacancy__button-favorite{margin-left:32px}.vacancy__button-favorite.in-favorite{color:#8d8d8d;border-color:#8d8d8d}.vacancy__button-favorite.in-favorite .vacancy__icon-favorite{fill:#8d8d8d}.vacancy__button-favorite:hover .vacancy__icon-favorite{fill:#fff}.vacancy__icon-favorite{width:20px;height:auto;margin-right:10px;transition:all .225s ease}.vacancy__strike{font-size:16px;font-weight:500;line-height:20px;color:#8d8d8d;cursor:pointer;margin-left:auto}.vacancy__strike:hover{text-decoration:underline;-webkit-text-decoration-skip-ink:none;text-decoration-skip-ink:none}.vacancy__about{padding-top:104px;padding-bottom:104px}.vacancy__about-headline{font-size:38px;line-height:46px;font-weight:700;color:#111028}.vacancy__about-list{display:grid;row-gap:16px;margin-top:24px}.header{background:#fff;display:-webkit-flex;display:flex;-webkit-align-items:center;align-items:center;height:64px;box-shadow:0 4px 16px 0 rgba(78,84,102,.12);z-index:50}.header__wrapper{display:-webkit-flex;display:flex;-webkit-align-items:center;align-items:center;width:1216px;height:100%;margin:0 auto}.header__logo{display:-webkit-flex;display:flex;gap:12px;-webkit-align-items:center;align-items:center}.header__logo-title{color:#1a1b26;font-size:19px;font-weight:700}.header__profile{position:relative}.header__stars{margin-left:auto;display:-webkit-flex;display:flex;-webkit-align-items:center;align-items:center}.header__profile-button{width:48px;height:48px;overflow:hidden}.header__profile-button img{width:inherit;height:inherit}.modal.active{opacity:1;pointer-events:all}.modal{position:absolute;display:-webkit-flex;display:flex;-webkit-flex-direction:column;flex-direction:column;width:540px;right:-57%;top:136%;border-radius:8px;background:#fff;opacity:0;pointer-events:none;-webkit-filter:drop-shadow(0 6px 16px rgba(17,16,40,.1));filter:drop-shadow(0 6px 16px rgba(17,16,40,.1))}.modal::after{content:"";position:absolute;right:40px;top:-11px;width:0;height:0;border-left:12px solid transparent;border-right:12px solid transparent;border-bottom:12px solid #fff;border-radius:1px}.modal__profile{display:-webkit-flex;display:flex;gap:16px;padding:24px;border-bottom:1px solid #dddce4}.modal__profile-info{width:100%;padding-top:15px}.modal__profile-name{font-weight:600;font-size:22px;line-height:120%;color:#020111;width:100%;margin-bottom:21px}.modal__user-photo{width:48px;height:48px}.modal__link{display:-webkit-flex;display:flex;-webkit-align-items:center;align-items:center;gap:10px;font-weight:400;font-size:18px;line-height:140%;color:#575d65;margin-bottom:16px;transition:color .3s}.modal__link:last-child{margin-bottom:0}.modal__link:hover{color:#0057ff}.modal__log-out{padding:24px}.modal__button{display:-webkit-flex;display:flex;-webkit-align-items:center;align-items:center;gap:11px;transition:color .3s;color:#575d65}.modal__button:hover{color:#0057ff}.footer{background:#1a1b26}.footer__wrapper{padding:104px 0 24px}.footer__group-u8{display:-webkit-flex;display:flex;-webkit-justify-content:space-between;justify-content:space-between}.footer__info{color:#fff}.footer__title{display:block;font-weight:600;font-size:24px;line-height:120%;margin-bottom:16px;color:#fff}.footer__subtitle{line-height:140%;margin-bottom:55px;width:275px;color:#c6cad2}.footer__map{margin-bottom:56px}.footer__copyrights{display:-webkit-flex;display:flex;gap:14px;color:#cfd2d7;font-size:14px;border-top:1px solid #262a30;padding-top:16px}.footer__middle-section{display:-webkit-flex;display:flex;-webkit-flex-direction:column;flex-direction:column;color:#fff;font-size:18px;width:300px}.footer__statistics-link{margin-bottom:24px;color:#c6cad2;transition:color .3s;border-bottom:1px solid #fff;width:-webkit-fit-content;width:-moz-fit-content;width:fit-content}.footer__statistics-link:hover{color:#fff;border-bottom:1px solid #fff}.footer__stars{margin-bottom:32px}.footer__github-link{color:#c6cad2;display:-webkit-flex;display:flex;-webkit-align-items:center;align-items:center;gap:15px;width:-webkit-fit-content;width:-moz-fit-content;width:fit-content;transition:color .3s;border-bottom:1px solid #c6cad2}.footer__github-link:hover{color:#fff;border-bottom:1px solid #fff}.footer__support{display:-webkit-flex;display:flex;-webkit-flex-direction:column;flex-direction:column;gap:16px;background:0 0}.footer__link{padding:16px 32px 16px 40px;border-radius:8px;border:2px solid #575d65;color:#fff;transition:border .2s;width:100%}.footer__link:hover{border:2px solid #fff}.footer__figure{display:-webkit-flex;display:flex;gap:16px}.footer__figure:last-child{-webkit-justify-content:space-between;justify-content:space-between}.wrapper-u8,.main-container{max-width:1216px;margin:0 auto;color:#020111;z-index:40}body{font-family:"Inter",arial,helvetica neue,helvetica,sans-serif;font-size:16px;color:#21212b;display:grid;grid-template-rows:auto 1fr auto;min-height:100%}.main-wrapper{background:#f2f3f8}</style>
+</head>
+
+<body>
+<header class="header">
+	<div class="header__wrapper">
+		<a href="#" class="header__logo">
+			<img class="header__logo-img" src="/assets/images/pages/online/logo.svg" alt="logo">
+			<h3 class="header__logo-title">Ready To Touch</h3>
+		</a>
+		<div class="header__stars">
+			<iframe src="https://ghbtns.com/github-btn.html?user=readytotouch-yaaws&repo=readytotouch-yaaws.github.io&type=star&count=true&size=large"
+				frameborder="0" scrolling="0" width="170" height="30" title="GitHub"></iframe>
+		</div>
+	</div>
+</header>
+
+
+    <main class="main-wrapper">
+
+
+<!-- vacancy -->
+<div class="main-container">
+    <nav aria-label="хлібні крихти"
+     aria-labelledby="навігація по хлібним крихтам"
+     class="breadcrumb"
+>
+	<ul class="breadcrumb__list">
+		<li class="breadcrumb__item">
+			<a class="breadcrumb__link"
+			   href="javascript:"
+			>Main</a>
+		</li>
+		<li class="breadcrumb__item">
+			<a class="breadcrumb__link"
+			   href="javascript:"
+			>All vacancies</a>
+		</li>
+		<li class="breadcrumb__item">
+			<span class="breadcrumb__page"
+			      aria-current="page"
+			>Middle UI/UX Designer</span>
+		</li>
+	</ul>
+</nav>
+
+    <section class="vacancy">
+        <div class="wrapper vacancy__wrapper">
+            <div class="vacancy__content">
+                <div class="vacancy__top-info vacancy__card">
+                    <div class="vacancy__top-info-group">
+                        <time class="vacancy__time"
+                              datetime="2021-05-09T21:00"
+                        >Yesterday
+                        </time>
+                        <header class="vacancy__header">
+                            <h1 class="headline headline--lvl1">Middle UI/UX Designer</h1>
+                            <p class="vacancy__salary">$2000</p>
+                        </header>
+                        <figure class="vacancy__company">
+                            <div class="vacancy__company-logo-overlay">
+                                <img class="vacancy__company-image"
+                                     alt="card image preview icon"
+                                     src="/assets/images/pages/vacancy/company-logo.svg"
+                                />
+                            </div>
+                            <figcaption class="vacancy__company-caption">
+                                <div class="vacancy__company-name-group">
+                                    <a href="#" class="headline headline--lvl2 vacancy__company-name">Wirex</a>
+                                    <img class="vacancy__company-status"
+                                         width="16"
+                                         height="16"
+                                         alt="status"
+                                         src="/assets/images/pages/common/company-status.svg"
+                                    />
+                                </div>
+                                <figure class="vacancy__company-address">
+                                    <img class="vacancy__address-icon"
+                                         alt="Location icon"
+                                         width="16"
+                                         height="16"
+                                         src="/assets/images/pages/common/building.svg"
+                                    />
+                                    <figcaption class="vacancy__address-caption">
+                                        <span class="vacancy__address-truncate">Product</span>
+                                    </figcaption>
+                                </figure>
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <aside class="button-group vacancy__action-group">
+                        <button class="favorite button-group__item">
+                            <svg class="favorite__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 28 28"
+                                 xml:space="preserve"><path d="m14.5 22.1-.5-.3-.5.3-6.8 4.2c-.5.3-1.1-.1-.9-.7L7.5 18l.1-.6-.4-.4-5.9-5.2c-.3-.3-.3-.6-.2-.8.1-.2.3-.4.5-.4l7.9-.7.6-.1.2-.6 2.9-7.4c.2-.5 1-.5 1.2 0l3.1 7.3.2.5.6.1 7.9.7c.2 0 .4.2.5.5.1.3 0 .6-.2.7l-5.9 5.2-.4.4.1.6 1.8 7.7c.1.3 0 .5-.2.6-.2.1-.5.2-.8 0l-6.6-4z"/></svg>
+                        </button>
+                        <button class="button-group__item">
+                            <img width="24"
+                                 height="24"
+                                 alt="icon stats"
+                                 src="/assets/images/pages/common/stats.svg"
+                            >
+                        </button>
+                        <button class="button-group__item">
+                            <img width="24"
+                                 height="24"
+                                 alt="icon pencil"
+                                 src="/assets/images/pages/common/pencil.svg"
+                            >
+                        </button>
+                    </aside>
+                </div>
+                <!-- vacancy info -->
+                <div class="vacancy__info">
+                    <div class="vacancy__top-info">
+                        <div class="vacancy__info-group">
+                            <div class="vacancy__info-row">
+                                <figure class="vacancy__info-key">
+                                    <img class="vacancy__info-icon"
+                                         alt="align-left icon"
+                                         width="16"
+                                         height="16"
+                                         src="@@images_vacancy2__align-left.svg"
+                                    />
+                                    <figcaption class="vacancy__info-value">Category</figcaption>
+                                </figure>
+                                <div class="vacancy__info-data">C# / .NET</div>
+                            </div>
+                            <div class="vacancy__info-row">
+                                <figure class="vacancy__info-key">
+                                    <img class="vacancy__info-icon"
+                                         alt="stethoscope icon"
+                                         width="16"
+                                         height="16"
+                                         src="@@images_vacancy2__stethoscope.svg"
+                                    />
+                                    <figcaption class="vacancy__info-value">Sick leaves</figcaption>
+                                </figure>
+                                <div class="vacancy__info-data">Undefined</div>
+                            </div>
+                            <div class="vacancy__info-row">
+                                <figure class="vacancy__info-key">
+                                    <img class="vacancy__info-icon"
+                                         alt="dollar icon"
+                                         width="16"
+                                         height="16"
+                                         src="@@images_vacancy2__dollar.svg"
+                                    />
+                                    <figcaption class="vacancy__info-value">Salary</figcaption>
+                                </figure>
+                                <div class="vacancy__info-data">$2500–2800</div>
+                            </div>
+                            <div class="vacancy__info-row">
+                                <figure class="vacancy__info-key">
+                                    <img class="vacancy__info-icon"
+                                         alt="following icon"
+                                         width="16"
+                                         height="16"
+                                         src="@@images_vacancy2__following.svg"
+                                    />
+                                    <figcaption class="vacancy__info-value">Державні вихідні</figcaption>
+                                </figure>
+                                <div class="vacancy__info-data">
+                                    <img class="vacancy__info-data-icon"
+                                         alt="yes icon"
+                                         width="24"
+                                         height="24"
+                                         src="@@images_vacancy2__yes.svg"
+                                    />
+                                </div>
+                            </div>
+                            <div class="vacancy__info-row">
+                                <figure class="vacancy__info-key">
+                                    <img class="vacancy__info-icon"
+                                         alt="carrot icon"
+                                         width="16"
+                                         height="16"
+                                         src="@@images_vacancy2__carrot.svg"
+                                    />
+                                    <figcaption class="vacancy__info-value">Signing bonus</figcaption>
+                                </figure>
+                                <div class="vacancy__info-data">10%</div>
+                            </div>
+                            <div class="vacancy__info-row">
+                                <figure class="vacancy__info-key">
+                                    <img class="vacancy__info-icon"
+                                         alt="home icon"
+                                         width="16"
+                                         height="16"
+                                         src="@@images_vacancy2__home.svg"
+                                    />
+                                    <figcaption class="vacancy__info-value">Employment remote</figcaption>
+                                </figure>
+                                <div class="vacancy__info-data">Fully remote</div>
+                            </div>
+                            <div class="vacancy__info-row">
+                                <figure class="vacancy__info-key">
+                                    <img class="vacancy__info-icon"
+                                         alt="cube icon"
+                                         width="16"
+                                         height="16"
+                                         src="@@images_vacancy2__cube.svg" q
+                                    />
+                                    <figcaption class="vacancy__info-value">Experience</figcaption>
+                                </figure>
+                                <div class="vacancy__info-data">2 years</div>
+                            </div>
+                            <div class="vacancy__info-row">
+                                <figure class="vacancy__info-key">
+                                    <img class="vacancy__info-icon"
+                                         alt="building icon"
+                                         width="16"
+                                         height="16"
+                                         src="@@images_vacancy2__building.svg"
+                                    />
+                                    <figcaption class="vacancy__info-value">Employment office</figcaption>
+                                </figure>
+                                <div class="vacancy__info-data">Partially onsite</div>
+                            </div>
+                            <div class="vacancy__info-row">
+                                <figure class="vacancy__info-key">
+                                    <img class="vacancy__info-icon"
+                                         alt="globe icon"
+                                         width="16"
+                                         height="16"
+                                         src="@@images_vacancy2__globe.svg"
+                                    />
+                                    <figcaption class="vacancy__info-value">English level</figcaption>
+                                </figure>
+                                <div class="vacancy__info-data">Upper Intermediate (B2)</div>
+                            </div>
+                            <div class="vacancy__info-row">
+                                <figure class="vacancy__info-key">
+                                    <img class="vacancy__info-icon"
+                                         alt="time-forward icon"
+                                         width="16"
+                                         height="16"
+                                         src="@@images_vacancy2__time-forward.svg"
+                                    />
+                                    <figcaption class="vacancy__info-value">Employment schedule</figcaption>
+                                </figure>
+                                <div class="vacancy__info-data">Full-time</div>
+                            </div>
+                            <div class="vacancy__info-row">
+                                <figure class="vacancy__info-key">
+                                    <img class="vacancy__info-icon"
+                                         alt="briefcase icon"
+                                         width="16"
+                                         height="16"
+                                         src="@@images_vacancy2__briefcase.svg"
+                                    />
+                                    <figcaption class="vacancy__info-value">Labor week</figcaption>
+                                </figure>
+                                <div class="vacancy__info-data">5-day</div>
+                            </div>
+                            <div class="vacancy__info-row">
+                                <figure class="vacancy__info-key">
+                                    <img class="vacancy__info-icon"
+                                         alt="leaf icon"
+                                         width="16"
+                                         height="16"
+                                         src="@@images_vacancy2__leaf.svg"
+                                    />
+                                    <figcaption class="vacancy__info-value">Overtime pay rate</figcaption>
+                                </figure>
+                                <div class="vacancy__info-data">None</div>
+                            </div>
+                            <div class="vacancy__info-row">
+                                <figure class="vacancy__info-key">
+                                    <img class="vacancy__info-icon"
+                                         alt="hourglass-end icon"
+                                         width="16"
+                                         height="16"
+                                         src="@@images_vacancy2__hourglass-end.svg"
+                                    />
+                                    <figcaption class="vacancy__info-value">Probation period</figcaption>
+                                </figure>
+                                <div class="vacancy__info-data">3 month</div>
+                            </div>
+                            <div class="vacancy__info-row">
+                                <figure class="vacancy__info-key">
+                                    <img class="vacancy__info-icon"
+                                         alt="stopwatch icon"
+                                         width="16"
+                                         height="16"
+                                         src="@@images_vacancy2__stopwatch.svg"
+                                    />
+                                    <figcaption class="vacancy__info-value">Time tracker</figcaption>
+                                </figure>
+                                <div class="vacancy__info-data">Undefined</div>
+                            </div>
+                            <div class="vacancy__info-row">
+                                <figure class="vacancy__info-key">
+                                    <img class="vacancy__info-icon"
+                                         alt="calendar icon"
+                                         width="16"
+                                         height="16"
+                                         src="@@images_vacancy2__calendar.svg"
+                                    />
+                                    <figcaption class="vacancy__info-value">Salary review</figcaption>
+                                </figure>
+                                <div class="vacancy__info-data">Every 6 months</div>
+                            </div>
+                            <div class="vacancy__info-row">
+                                <figure class="vacancy__info-key">
+                                    <img class="vacancy__info-icon"
+                                         alt="bug icon"
+                                         width="16"
+                                         height="16"
+                                         src="@@images_vacancy2__bug.svg"
+                                    />
+                                    <figcaption class="vacancy__info-value">Polygraph</figcaption>
+                                </figure>
+                                <div class="vacancy__info-data">Undefined</div>
+                            </div>
+                            <div class="vacancy__info-row">
+                                <figure class="vacancy__info-key">
+                                    <img class="vacancy__info-icon"
+                                         alt="plane icon"
+                                         width="16"
+                                         height="16"
+                                         src="@@images_vacancy2__plane.svg"
+                                    />
+                                    <figcaption class="vacancy__info-value">Vacation (working days)</figcaption>
+                                </figure>
+                                <div class="vacancy__info-data">
+                                    <div class="vacation" data-vacation-value="14">
+                                        <div class="vacation__days-line">
+                                            <div class="vacation__day-count">14</div>
+                                            <div class="vacation__day vacation__day--0">0</div>
+                                            <div class="vacation__day vacation__day--5">5</div>
+                                            <div class="vacation__day vacation__day--10">10</div>
+                                            <div class="vacation__day vacation__day--15">15</div>
+                                            <div class="vacation__day vacation__day--20">20</div>
+                                            <div class="vacation__day vacation__day--25">25</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="vacancy__info-row">
+                                <figure class="vacancy__info-key">
+                                    <img class="vacancy__info-icon"
+                                         alt="car icon"
+                                         width="16"
+                                         height="16"
+                                         src="@@images_vacancy2__car.svg"
+                                    />
+                                    <figcaption class="vacancy__info-value">Parking</figcaption>
+                                </figure>
+                                <div class="vacancy__info-data">
+                                    <img class="vacancy__info-data-icon"
+                                         alt="no icon"
+                                         width="24"
+                                         height="24"
+                                         src="@@images_vacancy2__no.svg"
+                                    />
+                                </div>
+                            </div>
+                            <div class="vacancy__info-row">
+                                <figure class="vacancy__info-key">
+                                    <img class="vacancy__info-icon"
+                                         alt="shield-check icon"
+                                         width="16"
+                                         height="16"
+                                         src="@@images_vacancy2__shield-check.svg"
+                                    />
+                                    <figcaption class="vacancy__info-value">Medical insurance</figcaption>
+                                </figure>
+                                <div class="vacancy__info-data">Exists</div>
+                            </div>
+                        </div>
+
+                        <figure class="vacancy__sphere">
+                            <img class="vacancy__sphere-icon"
+                                 alt="important icon"
+                                 width="16"
+                                 height="16"
+                                 src="@@images_vacancy2__important.svg"
+                            />
+                            <figcaption class="vacancy__sphere-caption">eCommerce, fintech, gamedev, embedded
+                            </figcaption>
+                        </figure>
+                    </div>
+                </div>
+                <!-- /vacancy info -->
+
+                <!-- vacancy description -->
+                <div class="vacancy__section vacancy__description">
+                    <h2 class="headline headline--lvl2">Description</h2>
+                    <p class="text">One of the world’s largest providers of products and services to the energy industry
+                        has a need to develop and support enterprise information system in Oil & Gas domain.</p>
+                    <p class="text">We are looking for several experienced C# developers to join a new team to help us
+                        take the first steps on that journey by helping us to decouple existing C++ algorithms into a
+                        number of C#.NET microservices talking to a cloud-based database engine and use these
+                        microservices from a C#.NET desktop client.</p>
+                    <div class="skills vacancy__description-skills">
+                        <figure class="skills__item">
+                            <figcaption class="skills__caption">Required skills</figcaption>
+                            <div class="skills__images">
+                                <img class="skills__image"
+                                     width="40"
+                                     height="40"
+                                     alt="icon html5"
+                                     src="@@images_devicon__html5-plain.svg"
+                                >
+                                <img class="skills__image"
+                                     width="40"
+                                     height="40"
+                                     alt="icon css3"
+                                     src="@@images_devicon__css3-plain.svg"
+                                >
+                                <img class="skills__image"
+                                     width="40"
+                                     height="40"
+                                     alt="icon cplusplus"
+                                     src="@@images_devicon__cplusplus-plain.svg"
+                                >
+                                <img class="skills__image"
+                                     width="40"
+                                     height="40"
+                                     alt="icon c"
+                                     src="@@images_devicon__c-plain.svg"
+                                >
+                                <img class="skills__image"
+                                     width="40"
+                                     height="40"
+                                     alt="icon python"
+                                     src="@@images_devicon__python-original.svg"
+                                >
+                                <img class="skills__image"
+                                     width="40"
+                                     height="40"
+                                     alt="icon javascript"
+                                     src="@@images_devicon__javascript-plain.svg"
+                                >
+                            </div>
+                        </figure>
+                        <figure class="skills__item">
+                            <figcaption class="skills__caption">Preferred skills</figcaption>
+                            <div class="skills__images">
+                                <img class="skills__image"
+                                     width="40"
+                                     height="40"
+                                     alt="icon postgresql"
+                                     src="@@images_devicon__postgresql-plain.svg"
+                                >
+                                <img class="skills__image"
+                                     width="40"
+                                     height="40"
+                                     alt="icon go"
+                                     src="@@images_devicon__go-original-wordmark.svg"
+                                >
+                            </div>
+                        </figure>
+                        <figure class="skills__item">
+                            <figcaption class="skills__caption">Desired skills</figcaption>
+                            <div class="skills__images">
+                                <img class="skills__image"
+                                     width="40"
+                                     height="40"
+                                     alt="icon android"
+                                     src="@@images_devicon__android-plain.svg"
+                                >
+                                <img class="skills__image"
+                                     width="40"
+                                     height="40"
+                                     alt="icon mysql"
+                                     src="@@images_devicon__mysql-original-wordmark.svg"
+                                >
+                            </div>
+                        </figure>
+                    </div>
+                </div>
+                <!-- /vacancy description -->
+
+                <!-- Interview process description -->
+                <div class="vacancy__section vacancy__interview">
+                    <h2 class="headline headline--lvl2">Interview process description</h2>
+                    <p class="text">Interviews are typically broken down into these 5 stages of the interview
+                        process:</p>
+                    <ol class="list">
+                        <li class="list__item">Introductions</li>
+                        <li class="list__item">Small Talk</li>
+                        <li class="list__item">Information Gathering</li>
+                        <li class="list__item">Question/Answer</li>
+                        <li class="list__item">Wrapping Up</li>
+                        <li class="list__item">Understanding the steps in the interview process will help your company
+                            standardize its interview process; leading to better, more qualified hires over the long
+                            term.
+                        </li>
+                    </ol>
+                    <div class="info vacancy__interview-info">
+                        <div class="info__item">
+                            <div class="info__row">
+                                <p class="info__name">Тестове завдання</p>
+                                <p class="info__value">Payed only when accept offer</p>
+                            </div>
+                            <div class="info__row">
+                                <p class="info__name">Тестове завдання з реального проєкту</p>
+                                <p class="info__value">Unknown</p>
+                            </div>
+                        </div>
+                        <div class="info__item">
+                            <div class="info__row">
+                                <p class="info__name">Technical interview</p>
+                                <p class="info__value">Optional</p>
+                            </div>
+                            <div class="info__row">
+                                <p class="info__name">Technical interview duration</p>
+                                <p class="info__value">15–60</p>
+                            </div>
+                        </div>
+                        <div class="info__item">
+                            <div class="info__row">
+                                <p class="info__name">Live coding</p>
+                                <p class="info__value">Required</p>
+                            </div>
+                            <div class="info__row">
+                                <p class="info__name">Live coding duration</p>
+                                <p class="info__value">30–210</p>
+                            </div>
+                        </div>
+                        <div class="info__item">
+                            <div class="info__row">
+                                <p class="info__name">Test task</p>
+                                <p class="info__value">One of step</p>
+                            </div>
+                            <div class="info__row">
+                                <p class="info__name">Test task duration</p>
+                                <p class="info__value">0–0</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- /Interview process description -->
+
+                <!-- Team description -->
+                <div class="vacancy__section vacancy__team">
+                    <h2 class="headline headline--lvl2">Team description</h2>
+                    <p class="text">We are a fast-growing product company developing solutions in the FinTech area.</p>
+                    <p class="text">Our company headquarter is in Tel Aviv, Israel, while the R&D office is in Kyiv,
+                        Ukraine. Recently we started the development of CRM product and are looking for high-skilled
+                        experts ready to bring their knowledge and contribute to building the new, best in the class
+                        software product.</p>
+                    <p class="text">We follow Lean-Agile practices and selected Scrum for our project. Our feature teams
+                        consist of Scrum Master, Product Owner, Automation and Manual QA’s, Front-End and Back-End
+                        developers. Additionally, we have an Architecture Team, UX/UI and Marketing designers and DevOps
+                        supporting the feature teams to achieve the maximum results.</p>
+                    <p class="text">All together we are here to build Continuous Delivery culture for quick and
+                        cost-efficient business features implementation.</p>
+                    <div class="vacancy__team-info">
+                        <div class="vacancy__team-row">
+                            <p class="vacancy__team-data">Employer vacancy source URL</p>
+                            <p class="vacancy__team-value">
+                                <a href="https://www.softserveinc.com/en-us/contact">https://www.softserveinc.com/en-us/contact</a>
+                            </p>
+                        </div>
+                        <div class="vacancy__team-row">
+                            <p class="vacancy__team-data">Employer vacancy source code</p>
+                            <p class="vacancy__team-value">87521</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- /Team description -->
+
+                <!-- vacancy footer -->
+                <footer class="vacancy__footer">
+                    <button type="button"
+                            class="button button--black js-feedback-button"
+                    >Відгукнутись
+                    </button>
+                    <button class="button button--bordered-black vacancy__button-favorite"
+                            type="button"
+                    >
+                        <svg class="vacancy__icon-favorite" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                            <path d="M256 403.7l158.2 95.5-42-180L512 198.1l-184.1-15.9L256 12.8l-71.9 169.5L0 198.1l139.5 121.1-41.7 180L256 403.7z"/>
+                        </svg>
+                        Додати до обраного
+                    </button>
+                    <a class="vacancy__strike" href="javascript:">Поскаржитись на вакансію</a>
+                </footer>
+                <!-- /vacancy footer -->
+
+            </div>
+            <div class="vacancy__about">
+                <h2 class="vacancy__about-headline">Про проєкти та компанію</h2>
+                <div class="vacancy__about-list">
+
+                    <!-- card project -->
+                    <div class="card">
+                        <aside class="card__action">
+                            <button class="favorite card__action-button">
+                                <svg class="favorite__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 28 28"
+                                     xml:space="preserve"><path d="m14.5 22.1-.5-.3-.5.3-6.8 4.2c-.5.3-1.1-.1-.9-.7L7.5 18l.1-.6-.4-.4-5.9-5.2c-.3-.3-.3-.6-.2-.8.1-.2.3-.4.5-.4l7.9-.7.6-.1.2-.6 2.9-7.4c.2-.5 1-.5 1.2 0l3.1 7.3.2.5.6.1 7.9.7c.2 0 .4.2.5.5.1.3 0 .6-.2.7l-5.9 5.2-.4.4.1.6 1.8 7.7c.1.3 0 .5-.2.6-.2.1-.5.2-.8 0l-6.6-4z"/></svg>
+                            </button>
+                        </aside>
+                        <figure class="card__info">
+                            <div class="card__image-overlay">
+                                <img class="card__image"
+                                     alt="card image preview icon"
+                                     width="64"
+                                     height="48"
+                                     src="/assets/images/pages/vacancy2/card-preview.svg"
+                                />
+                            </div>
+                            <figcaption class="card__info-caption">
+                                <a href="#"
+                                   class="card__headline"
+                                >Project Name</a>
+                                <a href="#"
+                                   class="card__sub-headline"
+                                >Wirex</a>
+                            </figcaption>
+                        </figure>
+                        <p class="card__text">Wix.com is a leading cloud-based development platform with millions of
+                            users worldwide. We make it easy for everyone to create a beautiful, professional web
+                            presence. Our work environment is one of the most unique places on the planet. Wix.com is a
+                            leading cloud-based development platform with millions of users worldwide. We make it easy
+                            for everyone to create a beautiful, professional web presence. Our work environment is one
+                            of the most unique places on the planet. Wix.com is a leading cloud-based development
+                            platform with millions of users worldwide. We make it easy for everyone to create a
+                            beautiful, professional web presence. Our work environment is one of the most unique places
+                            on the planet.</p>
+                        <footer class="card__footer">
+                            <figure class="card__figure">
+                                <img class="card__icon"
+                                     alt="card type icon"
+                                     width="16"
+                                     height="16"
+                                     src="/assets/images/pages/vacancy2/type.svg"
+                                />
+                                <figcaption class="card__figcaption">Fintech</figcaption>
+                            </figure>
+                            <a class="card__link" href="javascript:">Активних вакансій 16</a>
+                            <figure class="card__figure">
+                                <img class="card__icon"
+                                     alt="card building icon"
+                                     width="16"
+                                     height="16"
+                                     src="/assets/images/pages/vacancy2/building.svg"
+                                />
+                                <figcaption class="card__figcaption">Outsource</figcaption>
+                            </figure>
+                        </footer>
+                    </div>
+                    <!-- /card project -->
+
+                    <!-- card project -->
+                    <div class="card">
+                        <aside class="card__action">
+                            <button class="favorite card__action-button">
+                                <svg class="favorite__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 28 28"
+                                     xml:space="preserve"><path d="m14.5 22.1-.5-.3-.5.3-6.8 4.2c-.5.3-1.1-.1-.9-.7L7.5 18l.1-.6-.4-.4-5.9-5.2c-.3-.3-.3-.6-.2-.8.1-.2.3-.4.5-.4l7.9-.7.6-.1.2-.6 2.9-7.4c.2-.5 1-.5 1.2 0l3.1 7.3.2.5.6.1 7.9.7c.2 0 .4.2.5.5.1.3 0 .6-.2.7l-5.9 5.2-.4.4.1.6 1.8 7.7c.1.3 0 .5-.2.6-.2.1-.5.2-.8 0l-6.6-4z"/></svg>
+                            </button>
+                        </aside>
+                        <figure class="card__info">
+                            <div class="card__image-overlay">
+                                <img class="card__image"
+                                     alt="card image preview icon"
+                                     width="64"
+                                     height="48"
+                                     src="/assets/images/pages/vacancy2/card-preview.svg"
+                                />
+                            </div>
+                            <figcaption class="card__info-caption">
+                                <a href="#"
+                                   class="card__headline"
+                                >Project Name</a>
+                                <a href="#"
+                                   class="card__sub-headline"
+                                >Wirex</a>
+                            </figcaption>
+                        </figure>
+                        <p class="card__text">Wix.com is a leading cloud-based development platform with millions of
+                            users worldwide. We make it easy for everyone to create a beautiful, professional web
+                            presence. Our work environment is one of the most unique places on the planet. Wix.com is a
+                            leading cloud-based development platform with millions of users worldwide. We make it easy
+                            for everyone to create a beautiful, professional web presence. Our work environment is one
+                            of the most unique places on the planet. Wix.com is a leading cloud-based development
+                            platform with millions of users worldwide. We make it easy for everyone to create a
+                            beautiful, professional web presence. Our work environment is one of the most unique places
+                            on the planet.</p>
+                        <footer class="card__footer">
+                            <figure class="card__figure">
+                                <img class="card__icon"
+                                     alt="card type icon"
+                                     width="16"
+                                     height="16"
+                                     src="/assets/images/pages/vacancy2/type.svg"
+                                />
+                                <figcaption class="card__figcaption">eCommerce</figcaption>
+                            </figure>
+                            <a class="card__link" href="javascript:">Активних вакансій 8</a>
+                            <figure class="card__figure">
+                                <img class="card__icon"
+                                     alt="card building icon"
+                                     width="16"
+                                     height="16"
+                                     src="/assets/images/pages/vacancy2/building.svg"
+                                />
+                                <figcaption class="card__figcaption">Outsource</figcaption>
+                            </figure>
+                        </footer>
+                    </div>
+                    <!-- /card project -->
+
+                    <!-- card company -->
+                    <div class="card">
+                        <aside class="card__action">
+                            <button class="favorite in-favorite card__action-button">
+                                <svg class="favorite__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 28 28"
+                                     xml:space="preserve"><path d="m14.5 22.1-.5-.3-.5.3-6.8 4.2c-.5.3-1.1-.1-.9-.7L7.5 18l.1-.6-.4-.4-5.9-5.2c-.3-.3-.3-.6-.2-.8.1-.2.3-.4.5-.4l7.9-.7.6-.1.2-.6 2.9-7.4c.2-.5 1-.5 1.2 0l3.1 7.3.2.5.6.1 7.9.7c.2 0 .4.2.5.5.1.3 0 .6-.2.7l-5.9 5.2-.4.4.1.6 1.8 7.7c.1.3 0 .5-.2.6-.2.1-.5.2-.8 0l-6.6-4z"/></svg>
+                            </button>
+                        </aside>
+                        <figure class="card__info">
+                            <div class="card__image-overlay">
+                                <img class="card__image"
+                                     alt="card image preview icon"
+                                     width="64"
+                                     height="48"
+                                     src="/assets/images/pages/vacancy2/card-preview.svg"
+                                />
+                            </div>
+                            <figcaption class="card__info-caption">
+                                <a href="#"
+                                   class="card__headline"
+                                >
+                                    Wirex
+                                    <img class="card__verify"
+                                         width="16"
+                                         height="16"
+                                         src="/assets/images/pages/vacancy2/verify.svg"
+                                         alt="verify icon"
+                                    >
+                                </a>
+                                <figure class="card__address">
+                                    <img class="card__address-icon"
+                                         alt="Location icon"
+                                         width="16"
+                                         height="16"
+                                         src="@@images_vacancy2__marker.svg"
+                                    />
+                                    <figcaption class="card__address-caption">
+                                        <span class="card__address-truncate">Київ, Львів, Атланта (США), Вроцлав (Польща)</span>
+                                    </figcaption>
+                                    <figcaption class="card__address-count">+4</figcaption>
+                                </figure>
+                            </figcaption>
+                        </figure>
+                        <p class="card__text">We’re a FinTech company based in the UK, with an extensive R&D center in
+                            Kyiv and offices around the world (Atlanta, Toronto, Tokyo, and Singapore). We are the first
+                            payment platform to seamlessly integrate digital and traditional currencies and to support
+                            multi-currency accounts, blockchain-powered cross-border transfers, and exchange services.
+                            Our mission is to give everyone the power to use one single global platform for traditional
+                            financial and digital assets from anywhere in the world. We have more than 3 mln users in
+                            130 countries and we’re constantly expanding. It’s an exciting time to get on board!</p>
+                        <footer class="card__footer">
+                            <p>200...800 спеціалістів</p>
+                            <a class="card__link" href="javascript:">Активних вакансій 24</a>
+                            <figure class="card__figure">
+                                <img class="card__icon"
+                                     alt="card type icon"
+                                     width="16"
+                                     height="16"
+                                     src="/assets/images/pages/vacancy2/type.svg"
+                                />
+                                <figcaption class="card__figcaption">eCommerce, Fintech</figcaption>
+                            </figure>
+                            <a class="card__link" href="javascript:">Проєктів 2</a>
+                            <figure class="card__figure">
+                                <img class="card__icon"
+                                     alt="card building icon"
+                                     width="16"
+                                     height="16"
+                                     src="/assets/images/pages/vacancy2/building.svg"
+                                />
+                                <figcaption class="card__figcaption">Outsource</figcaption>
+                            </figure>
+                            <a class="card__link" href="javascript:">Офіси 11</a>
+                        </footer>
+                    </div>
+                    <!-- /card company -->
+
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+<!-- /vacancy -->
+
+
+</main>
+<footer class="footer">
+    <div class="footer__wrapper wrapper-u8">
+        <div class="footer__group-u8">
+            <div class="footer__info">
+                <a href="#" class="footer__title">
+                    <h3 class="footer__title-link">Ready To Touch</h3>
+                </a>
+                <p class="footer__subtitle">Anonymous job search</p>
+                <div class="footer__map">
+                    <img class="footer__map-Ukraine" src="/assets/images/pages/online/map-of-Ukraine.png"
+                         alt="Map of Ukraine">
+                </div>
+            </div>
+            <div class="footer__middle-section">
+                <iframe class="footer__stars" src="https://ghbtns.com/github-btn.html?user=readytotouch-yaaws&repo=readytotouch-yaaws.github.io&type=star&count=true&size=large"
+                        frameborder="0" scrolling="0" width="170" height="30" title="GitHub"></iframe>
+                <a href="https://github.com/readytotouch-yaaws/readytotouch-yaaws.github.io" target="_blank" class="footer__statistics-link">View the project on GitHub</a>
+                <a href="https://readytotouch.com/" target="_blank" class="footer__github-link">
+                    readytotouch.com
+                </a>
+            </div>
+            <div class="footer__support">
+                <a href="https://savelife.in.ua/en/" target="_blank" class="footer__link">
+                    <figure class="footer__figure">
+                        <img width="60" height="24" src="https://savelife.in.ua/wp-content/themes/savelife/assets/images/new-logo-en.svg" alt="support">
+                        <figcaption class="footer__caption">Support</figcaption>
+                        <img src="/assets/images/pages/online/arrow-up.svg" alt="arrow">
+                    </figure>
+                </a>
+                <a href="https://war.ukraine.ua/" target="_blank" class="footer__link">
+                    <figure class="footer__figure">
+                        <figcaption class="footer__caption">war.ukraine.ua</figcaption>
+                        <img src="/assets/images/pages/online/arrow-up.svg"  alt="arrow">
+                    </figure>
+                </a>
+            </div>
+        </div>
+        <div class="footer__copyrights">
+            <span>© 2023 Yaroslav Podorvanov</span>
+            <img class="footer__flag-UA" src="/assets/images/pages/online/flag-of-Ukraine.svg" alt="Flag of Ukraine">
+        </div>
+    </div>
+</footer>
+<script src="/assets/js/online_0dcfcaff04a5fdaa2a31bca03d657e1d.js"></script>
+</body>
+</html>
+

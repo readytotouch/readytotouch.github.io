@@ -1,0 +1,295 @@
+.vacancy {
+    $_this: &;
+
+    &__content {
+        max-width: 1008px;
+    }
+
+    &__card {
+        padding: 32px;
+        align-self: stretch;
+        border-radius: 16px;
+        background: $white;
+        display: grid;
+        grid-template-columns: 1fr 48px;
+        column-gap: 26px;
+        position: relative;
+    }
+
+    &__info {
+        display: grid;
+        grid-template-columns: 1fr 48px;
+        column-gap: 26px;
+        padding-bottom: 56px;
+        position: relative;
+    }
+
+    &__header {
+        display: flex;
+        align-items: center;
+        margin-top: 8px;
+    }
+
+    &__time {
+        font-size: 16px;
+        line-height: 24px;
+        color: $body-light;
+    }
+
+    &__salary {
+        font-size: 32px;
+        line-height: 120%;
+        color: $title-dark;
+        margin-left: 16px;
+    }
+
+    &__salary-hidden {
+        font-size: 18px;
+        line-height: 140%;
+        padding: 2px 8px;
+        color: $title-dark;
+        border-radius: 4px;
+        margin-left: 16px;
+    }
+
+    &__company {
+        display: flex;
+        margin-top: 24px;
+    }
+
+    &__company-logo-overlay {
+        flex-shrink: 0;
+        display: flex;
+        width: 96px;
+        height: 48px;
+        align-items: center;
+        justify-content: center;
+        background: #f2f2f8;
+        border-radius: 8px;
+    }
+
+    &__company-image {
+        padding: 2px 0 2px;
+    }
+
+    &__company-caption {
+        width: 100%;
+        margin-left: 16px;
+    }
+
+    &__company-name-group {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    &__company-name {
+        font-size: $font-md;
+        font-weight: 500;
+        line-height: 150%;
+        color: $title-light;
+        transition: color 0.225s ease;
+
+        &:hover {
+            color: #3f3a92;
+        }
+    }
+
+    &__company-address {
+        display: flex;
+        align-items: center;
+    }
+
+    &__address-caption {
+        font-size: 18px;
+        line-height: 25px;
+        color: $body-light;
+        display: table;
+        table-layout: fixed;
+        width: 100%;
+        margin-left: 8px;
+    }
+
+    &__address-truncate {
+        display: table-cell;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+    }
+
+    &__address-count {
+        font-size: 18px;
+        line-height: 25px;
+        color: #b5b5be;
+        margin-left: 4px;
+    }
+
+    &__info-group {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 68px;
+        row-gap: 16px;
+        margin-top: 32px;
+    }
+
+    &__info-row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 16px;
+    }
+
+    &__info-key {
+        display: flex;
+    }
+
+    &__info-icon {
+        margin-top: 4px;
+    }
+
+    &__info-value {
+        font-size: 18px;
+        line-height: 25px;
+        color: #7c7b88;
+        margin-left: 8px;
+    }
+
+    &__info-value-hidden {
+        font-size: 16px;
+        line-height: 130%;
+        padding: 2px 8px;
+        color: #4e5fca;
+        background: #ebedf9;
+        border-radius: 4px;
+        width: max-content;
+        display: flex;
+        align-items: center;
+    }
+
+    &__info-data {
+        font-size: 18px;
+        line-height: 25px;
+        color: #111028;
+    }
+
+    &__sphere {
+        display: flex;
+        align-items: center;
+        margin-top: 56px;
+    }
+
+    &__sphere-caption {
+        font-size: 18px;
+        line-height: 25px;
+        color: #111028;
+        margin-left: 8px;
+    }
+
+    &__section {
+        padding-top: 56px;
+        padding-bottom: 56px;
+        position: relative;
+
+        &:before {
+            content: " ";
+            position: absolute;
+            left: -32px;
+            top: 0;
+            height: 1px;
+            width: calc(100% + 64px);
+            background-color: #dddce4;
+        }
+    }
+
+    &__description-skills {
+        margin-top: 40px;
+    }
+
+    &__interview-info {
+        margin-top: 32px;
+    }
+
+    &__team-info {
+        display: grid;
+        row-gap: 16px;
+        margin-top: 40px;
+    }
+
+    &__team-row {
+        font-size: 18px;
+        line-height: 25px;
+        display: grid;
+        grid-template-columns: 168px 1fr;
+        column-gap: 16px;
+    }
+
+    &__team-data {
+        color: #b5b5be;
+    }
+
+    &__team-value {
+        color: #7c7b88;
+    }
+
+    &__footer {
+        display: flex;
+        align-items: center;
+    }
+
+    &__button-favorite {
+        margin-left: 32px;
+
+        &.in-favorite {
+            color: #8d8d8d;
+            border-color: #8d8d8d;
+
+            #{$_this}__icon-favorite {
+                fill: #8d8d8d;
+            }
+        }
+
+        &:hover {
+            #{$_this}__icon-favorite {
+                fill: #ffffff;
+            }
+        }
+    }
+
+    &__icon-favorite {
+        width: 20px;
+        height: auto;
+        margin-right: 10px;
+        transition: all 0.225s ease;
+    }
+
+    &__strike {
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 20px;
+        color: #8d8d8d;
+        cursor: pointer;
+        margin-left: auto;
+
+        &:hover {
+            text-decoration: underline;
+            text-decoration-skip-ink: none;
+        }
+    }
+
+    &__about {
+        padding-top: 104px;
+        padding-bottom: 104px;
+    }
+
+    &__about-headline {
+        font-size: 38px;
+        line-height: 46px;
+        font-weight: 700;
+        color: #111028;
+    }
+
+    &__about-list {
+        display: grid;
+        row-gap: 16px;
+        margin-top: 24px;
+    }
+}
