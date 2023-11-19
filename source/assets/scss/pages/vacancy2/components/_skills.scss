@@ -1,24 +1,35 @@
 .skills {
-	display: grid;
-	row-gap: 16px;
 
-	&__item {
-		display: grid;
-		grid-template-columns: auto 1fr;
-		column-gap: 16px;
-	}
+    &__group {
+        display: flex;
+        flex-direction: column;
+        margin-top: 24px;
+    }
 
-	&__caption {
-		font-size: 18px;
-		line-height: 25px;
-		color: #6d6c7c;
-		white-space: nowrap;
-		min-width: 136px;
-	}
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+    }
 
-	&__images {
-		display: grid;
-		grid-template-columns: repeat(auto-fill, 40px);
-		gap: 16px;
-	}
+    &__item {
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0 12px;
+        background: $bg-light;
+        border-radius: 8px;
+    }
+
+    &__item-img {
+        margin-right: 8px;
+    }
+
+    &__item-title {
+        font-size: $font-md;
+        font-weight: 500;
+        line-height: 130%;
+    }
+
 }

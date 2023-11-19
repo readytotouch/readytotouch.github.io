@@ -1,0 +1,128 @@
+.card {
+    $_this: &;
+
+    display: grid;
+    grid-template-columns: 1fr 48px;
+    grid-template-rows: repeat(3, auto);
+    column-gap: 26px;
+    max-width: 1008px;
+    padding: 32px;
+    border-radius: 16px;
+    background-color: #ffffff;
+    z-index: 20;
+    position: relative;
+
+    &__action {
+        display: grid;
+        grid-template-rows: repeat(auto-fit, 48px);
+        row-gap: 8px;
+        grid-column: 2;
+        grid-row: 1/-1;
+    }
+
+    &__header {
+        grid-column: 1;
+        display: flex;
+        margin-bottom: 16px;
+    }
+
+    &__image-overlay {
+        flex-shrink: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #f2f2f8;
+        border-radius: 4px;
+    }
+
+    &__header-caption {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-left: 12px;
+
+        &--project {
+            flex-direction: row;
+        }
+    }
+
+    &__headline {
+        font-size: 26px;
+        line-height: 120%;
+        font-weight: 500;
+        color: $title-light;
+        align-self: flex-start;
+        display: flex;
+        align-items: center;
+        transition: border 0.225s ease, color 0.225s ease;
+
+        &:hover {
+            border-bottom: 1px solid $body-dark;
+        }
+    }
+
+    &__verify {
+        margin-left: 8px;
+    }
+
+    &__sub-headline {
+        font-size: $font-md;
+        line-height: 25px;
+        color: $body-dark;
+        margin-top: 4px;
+        align-self: flex-start;
+        display: flex;
+        align-items: center;
+    }
+
+    &__text {
+        font-size: $font-md;
+        line-height: 25px;
+        color: $body-dark;
+        margin: 24px 0;
+        grid-column: 1;
+        @include trim(2);
+        position: relative;
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    &__figure {
+        display: flex;
+        align-items: center;
+    }
+
+    &__figcaption {
+        font-size: $font-md;
+        line-height: 25px;
+        color: $body-dark;
+        margin-left: 12px;
+    }
+
+    &--filled {
+        #{$_this}__image-overlay {
+            background-color: transparent;
+        }
+    }
+
+    &__company-links {
+        font-size: $font-md;
+        line-height: 25px;
+        color: $title-dark;
+        display: flex;
+        border-top: 2px solid $body-color;
+    }
+
+    &__link-item {
+        margin: 24px 24px 0 0;
+    }
+
+    &__link-value {
+        margin-right: 8px;
+    }
+
+}
