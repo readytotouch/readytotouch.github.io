@@ -3,7 +3,7 @@
 "page-title": "Yet another anonymous work search",
 "page-description": "Yet another anonymous work search",
 "style": "vacancy.html",
-"header": "base/layout/online/header.html",
+"header": "base/layout/header-auth-nav.html",
 "page-class": "authorized"
 })
 
@@ -33,7 +33,9 @@
                             </div>
                             <figcaption class="vacancy__company-caption">
                                 <div class="vacancy__company-name-group">
-                                    <a href="#" class="headline headline--lvl2 vacancy__company-name vacancy__link">Wirex</a>
+                                    <a href="/page-stub.html"
+                                       class="headline headline--lvl2 vacancy__company-name vacancy__link">Ready
+                                        to touch</a>
                                     <img class="vacancy__company-status"
                                          width="16"
                                          height="16"
@@ -61,15 +63,15 @@
                                  xml:space="preserve"><path d="m14.5 22.1-.5-.3-.5.3-6.8 4.2c-.5.3-1.1-.1-.9-.7L7.5 18l.1-.6-.4-.4-5.9-5.2c-.3-.3-.3-.6-.2-.8.1-.2.3-.4.5-.4l7.9-.7.6-.1.2-.6 2.9-7.4c.2-.5 1-.5 1.2 0l3.1 7.3.2.5.6.1 7.9.7c.2 0 .4.2.5.5.1.3 0 .6-.2.7l-5.9 5.2-.4.4.1.6 1.8 7.7c.1.3 0 .5-.2.6-.2.1-.5.2-.8 0l-6.6-4z"/></svg>
                         </button>
                         <button class="button-group__item">
-                            <img width="24"
-                                 height="24"
+                            <img width="20"
+                                 height="20"
                                  alt="icon stats"
                                  src="/assets/images/pages/common/stats.svg"
                             >
                         </button>
                         <button class="button-group__item">
-                            <img width="24"
-                                 height="24"
+                            <img width="20"
+                                 height="20"
                                  alt="icon pencil"
                                  src="/assets/images/pages/common/pencil.svg"
                             >
@@ -137,19 +139,7 @@
                                 />
                                 <figcaption class="vacancy__info-value">Signing</figcaption>
                             </figure>
-                            <div class="vacancy__info-data">10%</div>
-                        </div>
-                        <div class="vacancy__info-row">
-                            <figure class="vacancy__info-key">
-                                <img class="vacancy__info-icon"
-                                     alt="hourglass-end icon"
-                                     width="16"
-                                     height="16"
-                                     src="/assets/images/pages/vacancy/hourglass-end.svg"
-                                />
-                                <figcaption class="vacancy__info-value">Probation period</figcaption>
-                            </figure>
-                            <div class="vacancy__info-data">3 month</div>
+                            <div class="vacancy__info-data">None</div>
                         </div>
                         <div class="vacancy__info-row">
                             <figure class="vacancy__info-key">
@@ -166,12 +156,24 @@
                         <div class="vacancy__info-row">
                             <figure class="vacancy__info-key">
                                 <img class="vacancy__info-icon"
+                                     alt="hourglass-end icon"
+                                     width="16"
+                                     height="16"
+                                     src="/assets/images/pages/vacancy/hourglass-end.svg"
+                                />
+                                <figcaption class="vacancy__info-value">Probation period</figcaption>
+                            </figure>
+                            <div class="vacancy__info-data">3 month</div>
+                        </div>
+                        <div class="vacancy__info-row">
+                            <figure class="vacancy__info-key">
+                                <img class="vacancy__info-icon"
                                      alt="credit-card icon"
                                      width="16"
                                      height="16"
                                      src="/assets/images/pages/vacancy/credit-card.svg"
                                 />
-                                <figcaption class="vacancy__info-value">Salary pay frequency</figcaption>
+                                <figcaption class="vacancy__info-value">Payment frequency</figcaption>
                             </figure>
                             <div class="vacancy__info-data">Monthly</div>
                         </div>
@@ -264,7 +266,7 @@
                                      width="16"
                                      height="16"
                                      alt="yes icon">
-                                <span>Exists</span>
+                                <span>Yes</span>
                             </div>
                         </div>
                         <div class="vacancy__info-row">
@@ -278,9 +280,9 @@
                                 <figcaption class="vacancy__info-value">Vacation (working days)</figcaption>
                             </figure>
                             <div class="vacancy__info-data">
-                                <div class="vacation" data-vacation-value="14">
+                                <div class="vacation" data-vacation-value="10">
                                     <div class="vacation__days-line">
-                                        <div class="vacation__day-count">14</div>
+                                        <div class="vacation__day-count">10</div>
                                         <div class="vacation__day vacation__day--0">0</div>
                                         <div class="vacation__day vacation__day--5">5</div>
                                         <div class="vacation__day vacation__day--10">10</div>
@@ -301,7 +303,7 @@
                                 />
                                 <figcaption class="vacancy__info-value">Overtime</figcaption>
                             </figure>
-                            <div class="vacancy__info-data">None</div>
+                            <div class="vacancy__info-data">Never 0%</div>
                         </div>
                         <div class="vacancy__info-row">
                             <figure class="vacancy__info-key">
@@ -325,7 +327,7 @@
                                 />
                                 <figcaption class="vacancy__info-value">Time tracker</figcaption>
                             </figure>
-                            <div class="vacancy__info-data">Undefined</div>
+                            <div class="vacancy__info-data">None</div>
                         </div>
                         <div class="vacancy__info-row">
                             <figure class="vacancy__info-key">
@@ -337,7 +339,7 @@
                                 />
                                 <figcaption class="vacancy__info-value">Polygraph</figcaption>
                             </figure>
-                            <div class="vacancy__info-data">Undefined</div>
+                            <div class="vacancy__info-data">None</div>
                         </div>
                         <div class="vacancy__info-row">
                             <figure class="vacancy__info-key">
@@ -359,11 +361,10 @@
                 <div class="vacancy__description vacancy__card">
                     <h2 class="headline headline--lvl2 vacancy__description-title">Vacancy description</h2>
                     <p class="text vacancy__text-content">We are seeking a talented Middle UI/UX Designer with a minimum
-                        of 2 years of
-                        experience to join our creative team. We need a designer who can create design ideas, make our
-                        design system better, have an impact on product metrics, make decisions on their own, and stay
-                        in touch with the team. You will work on designing and enhancing our digital products to provide
-                        an outstanding user experience.
+                        of 2 years of experience to join our creative team. We need a designer who can create design
+                        ideas, make our design system better, have an impact on product metrics, make decisions on their
+                        own, and stay in touch with the team. You will work on designing and enhancing our digital
+                        products to provide an outstanding user experience.
                     </p>
 
                     <h3 class="headline headline--lvl3 vacancy__description-title">What we offer</h3>
@@ -412,14 +413,6 @@
                                     <span class="skills__item-title">Figma</span>
                                 </li>
                                 <li class="skills__item">
-                                    <img src="/assets/images/pages/skills-logo/figma-black.svg"
-                                         class="skills__item-img"
-                                         width="24"
-                                         height="24"
-                                         alt="FigJam">
-                                    <span class="skills__item-title">FigJam</span>
-                                </li>
-                                <li class="skills__item">
                                     <span class="skills__item-title">UX</span>
                                 </li>
                                 <li class="skills__item">
@@ -454,7 +447,7 @@
                                          width="24"
                                          height="24"
                                          alt="HTML logo">
-                                    <span class="skills__item-title">Understanding the principles of HTML</span>
+                                    <span class="skills__item-title">Understanding HTML</span>
                                 </li>
                                 <li class="skills__item">
                                     <img src="/assets/images/pages/skills-logo/css3.svg"
@@ -462,10 +455,7 @@
                                          width="24"
                                          height="24"
                                          alt="CSS logo">
-                                    <span class="skills__item-title">Understanding the principles of CSS</span>
-                                </li>
-                                <li class="skills__item">
-                                    <span class="skills__item-title">Experience in graphic design</span>
+                                    <span class="skills__item-title">Understanding CSS</span>
                                 </li>
                                 <li class="skills__item">
                                     <span class="skills__item-title">Experience in graphic design</span>
@@ -484,12 +474,12 @@
                                     <span class="skills__item-title">Jira</span>
                                 </li>
                                 <li class="skills__item">
-                                    <img src="/assets/images/pages/skills-logo/notion.svg"
+                                    <img src="/assets/images/pages/skills-logo/sketch.svg"
                                          class="skills__item-img"
                                          width="24"
                                          height="24"
                                          alt="notion logo">
-                                    <span class="skills__item-title">Notion</span>
+                                    <span class="skills__item-title">Sketch</span>
                                 </li>
                             </ul>
                         </div>
@@ -497,8 +487,8 @@
                 </div>
                 <!-- /vacancy description -->
 
-                <!-- Interview process description -->
-                <div class="vacancy__card vacancy__interview">
+                <!-- vacancy interview process -->
+                <div class="vacancy__interview-process vacancy__card ">
                     <h2 class="headline headline--lvl2">Interview process</h2>
                     <ol class="list">
                         <li class="list__item">Intro call with a Recruiter</li>
@@ -510,101 +500,102 @@
                         </li>
                     </ol>
                 </div>
+                <!-- /vacancy interview process -->
 
-                <div class="vacancy__interview">
-                    <div class="info vacancy__interview-info">
-                        <div class="info__card vacancy__card">
-                            <div class="info__item">
-                                <img class="info__item-img"
-                                     src="/assets/images/pages/vacancy/mic.svg"
-                                     alt="mic icon"
-                                     width="16"
-                                     height="16"
-                                >
-                                <div class="info__item-group">
-                                    <div class="info__item-value">Technical interview</div>
-                                    <div class="info__item-data">Exists</div>
-                                </div>
-                            </div>
-                            <div class="info__item">
-                                <img class="info__item-img"
-                                     src="/assets/images/pages/vacancy/document.svg"
-                                     alt="document icon"
-                                     width="16"
-                                     height="16"
-                                >
-                                <div class="info__item-group">
-                                    <div class="info__item-value">Technical interview duration</div>
-                                    <div class="info__item-data">1 h</div>
-                                </div>
+                <!-- vacancy interview info -->
+                <div class="vacancy__interview-info info">
+                    <div class="info__card vacancy__card">
+                        <div class="info__item">
+                            <img class="info__item-img"
+                                 src="/assets/images/pages/vacancy/mic.svg"
+                                 alt="mic icon"
+                                 width="16"
+                                 height="16"
+                            >
+                            <div class="info__item-group">
+                                <div class="info__item-value">Technical interview</div>
+                                <div class="info__item-data">Exists</div>
                             </div>
                         </div>
-                        <div class="info__card vacancy__card">
-                            <div class="info__item">
-                                <img class="info__item-img"
-                                     src="/assets/images/pages/vacancy/code.svg"
-                                     alt="code icon"
-                                     width="16"
-                                     height="16"
-                                >
-                                <div class="info__item-group">
-                                    <div class="info__item-value">Test task</div>
-                                    <div class="info__item-data">Exists</div>
-                                </div>
-                            </div>
-                            <div class="info__item">
-                                <img class="info__item-img"
-                                     src="/assets/images/pages/vacancy/time.svg"
-                                     alt="time icon"
-                                     width="16"
-                                     height="16"
-                                >
-                                <div class="info__item-group">
-                                    <div class="info__item-value">Test task duration</div>
-                                    <div class="info__item-data">2-4 h</div>
-                                </div>
+                        <div class="info__item">
+                            <img class="info__item-img"
+                                 src="/assets/images/pages/vacancy/time.svg"
+                                 alt="document icon"
+                                 width="16"
+                                 height="16"
+                            >
+                            <div class="info__item-group">
+                                <div class="info__item-value">Technical interview duration</div>
+                                <div class="info__item-data">1 h</div>
                             </div>
                         </div>
-                        <div class="info__card vacancy__card">
-                            <div class="info__item">
-                                <img class="info__item-img"
-                                     src="/assets/images/pages/vacancy/time.svg"
-                                     alt="time icon"
-                                     width="16"
-                                     height="16"
-                                >
-                                <div class="info__item-group">
-                                    <div class="info__item-value">Live coding</div>
-                                    <div class="info__item-data">None</div>
-                                </div>
+                    </div>
+                    <div class="info__card vacancy__card">
+                        <div class="info__item">
+                            <img class="info__item-img"
+                                 src="/assets/images/pages/vacancy/document.svg"
+                                 alt="code icon"
+                                 width="16"
+                                 height="16"
+                            >
+                            <div class="info__item-group">
+                                <div class="info__item-value">Test task</div>
+                                <div class="info__item-data">Exists</div>
                             </div>
-                            <div class="info__item">
-                                <img class="info__item-img"
-                                     src="/assets/images/pages/vacancy/time.svg"
-                                     alt="time icon"
-                                     width="16"
-                                     height="16"
-                                >
-                                <div class="info__item-group">
-                                    <div class="info__item-value">Live coding duration</div>
-                                    <div class="info__item-data">0</div>
-                                </div>
+                        </div>
+                        <div class="info__item">
+                            <img class="info__item-img"
+                                 src="/assets/images/pages/vacancy/time.svg"
+                                 alt="time icon"
+                                 width="16"
+                                 height="16"
+                            >
+                            <div class="info__item-group">
+                                <div class="info__item-value">Test task duration</div>
+                                <div class="info__item-data">2-4 h</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="info__card vacancy__card">
+                        <div class="info__item">
+                            <img class="info__item-img"
+                                 src="/assets/images/pages/vacancy/code.svg"
+                                 alt="time icon"
+                                 width="16"
+                                 height="16"
+                            >
+                            <div class="info__item-group">
+                                <div class="info__item-value">Live coding</div>
+                                <div class="info__item-data">None</div>
+                            </div>
+                        </div>
+                        <div class="info__item">
+                            <img class="info__item-img"
+                                 src="/assets/images/pages/vacancy/time.svg"
+                                 alt="time icon"
+                                 width="16"
+                                 height="16"
+                            >
+                            <div class="info__item-group">
+                                <div class="info__item-value">Live coding duration</div>
+                                <div class="info__item-data">0</div>
                             </div>
                         </div>
                     </div>
                 </div>
+                <!-- /vacancy interview info -->
 
-                <div class="vacancy__team-desription">
-                    <div class="vacancy__description vacancy__card">
-                        <h2 class="headline headline--lvl2 vacancy__description-title">Team description</h2>
-                        <p class="text vacancy__text-content">Our team is small, close-knit and works well together.
-                            Designers and developers work together to create a creative and dynamic environment.
-                        </p>
-                    </div>
-                </div>
-                <!-- /Interview process description -->
-
+                <!-- vacancy team description -->
                 <div class="vacancy__team-description vacancy__card">
+                    <h2 class="headline headline--lvl2 vacancy__description-title">Team description</h2>
+                    <p class="text vacancy__text-content">Our team is small, close-knit and works well together.
+                        Designers and developers work together to create a creative and dynamic environment.
+                    </p>
+                </div>
+                <!-- /vacancy team description -->
+
+                <!-- vacancy first year work description -->
+                <div class="vacancy__first-year vacancy__card">
                     <h2 class="headline headline--lvl2 vacancy__description-title">First year work description</h2>
                     <ul class="vacancy__description-list vacancy__text-content">
                         <li class="vacancy__description-list-item">Collaborate closely with our senior designers and
@@ -629,8 +620,9 @@
                         products.
                     </p>
                 </div>
+                <!-- /vacancy first year work description -->
 
-                <!-- vacancy footer -->
+                <!-- vacancy content footer -->
                 <footer class="vacancy__footer">
                     <div class="vacancy__footer-group">
                         <button type="button"
@@ -651,10 +643,11 @@
                         <span class="vacancy__strike">Report</span>
                     </a>
                 </footer>
-                <!-- /vacancy footer -->
-
+                <!-- /vacancy content footer -->
             </div>
-            <div class="vacancy__about">
+
+            <!-- vacancy about company -->
+            <div class="vacancy__about about-company">
                 <h2 class="vacancy__about-headline">About the company</h2>
                 <div class="vacancy__about-list">
                     <!-- card project -->
@@ -676,13 +669,11 @@
                             <div class="card__image-overlay">
                                 <img class="card__image"
                                      alt="card image preview icon"
-                                     width="96"
-                                     height="48"
                                      src="/assets/images/pages/vacancy/company-logo.svg"
                                 />
                             </div>
                             <figcaption class="card__header-caption">
-                                <a href="#"
+                                <a href="/page-stub.html"
                                    class="card__headline vacancy__link"
                                 >
                                     ReadyToTouch
@@ -729,11 +720,11 @@
                             creating a platform for anonymous job searching.
                         </p>
                         <div class="card__company-links">
-                            <a href="#" class="card__link-item vacancy__link">
+                            <a href="/page-stub.html" class="card__link-item vacancy__link">
                                 <span class="card__link-value">Vacancies</span>
                                 <span class="card__link-data">1</span>
                             </a>
-                            <a href="#" class="card__link-item vacancy__link">
+                            <a href="/page-stub.html" class="card__link-item vacancy__link">
                                 <span class="card__link-value">Projects</span>
                                 <span class="card__link-data">2</span>
                             </a>
@@ -742,9 +733,10 @@
                     <!-- /card project -->
                 </div>
             </div>
+            <!-- /vacancy about company -->
 
-
-            <div class="vacancy__about">
+            <!-- vacancy related projects-->
+            <div class="vacancy__about related-projects">
                 <h2 class="vacancy__about-headline">Projects related to the vacancy</h2>
                 <div class="vacancy__about-list">
                     <!-- card project -->
@@ -755,8 +747,8 @@
                                      xml:space="preserve"><path d="m14.5 22.1-.5-.3-.5.3-6.8 4.2c-.5.3-1.1-.1-.9-.7L7.5 18l.1-.6-.4-.4-5.9-5.2c-.3-.3-.3-.6-.2-.8.1-.2.3-.4.5-.4l7.9-.7.6-.1.2-.6 2.9-7.4c.2-.5 1-.5 1.2 0l3.1 7.3.2.5.6.1 7.9.7c.2 0 .4.2.5.5.1.3 0 .6-.2.7l-5.9 5.2-.4.4.1.6 1.8 7.7c.1.3 0 .5-.2.6-.2.1-.5.2-.8 0l-6.6-4z"/></svg>
                             </button>
                             <button class="button-group__item">
-                                <img width="24"
-                                     height="24"
+                                <img width="20"
+                                     height="20"
                                      alt="icon stats"
                                      src="/assets/images/pages/common/stats.svg"
                                 >
@@ -766,17 +758,15 @@
                             <div class="card__image-overlay">
                                 <img class="card__image"
                                      alt="card image preview icon"
-                                     width="96"
-                                     height="48"
-                                     src="/assets/images/pages/vacancy/company-logo.svg"
+                                     src="/assets/images/pages/vacancy/u8views.png"
                                 />
                             </div>
                             <figcaption class="card__header-caption card__header-caption ">
-                                <a href="#"
+                                <a href="/page-stub.html"
                                    class="card__headline vacancy__link">
                                     u8views
                                 </a>
-                                <a href="#"
+                                <a href="/page-stub.html"
                                    class="card__sub-headline vacancy__link">
                                     ReadyToTouch
                                     <img class="card__verify"
@@ -807,24 +797,87 @@
                                      height="16"
                                      src="/assets/images/pages/vacancy/company-type.svg"
                                 />
-                                <figcaption class="card__figcaption">Information</figcaption>
+                                <figcaption class="card__figcaption">Information Services</figcaption>
                             </figure>
                         </div>
-                        <p class="card__text">A free and simple tool to track and analyze views of your GitHub profile.
-                            Profile view counter is an easy-to-use tool that allows you to quickly and accurately track
-                            the number of views on your GitHub profile. You can use the profile views counter to analyze
-                            the dynamics of views of your profile, such as the impact of any development, blogging or
-                            participation in a conference. Also, you can use the profile views counter to see the
-                            statistics of referral registrations from your profile and their effect on the number of
-                            profile views.
-                        </p>
+                        <p class="card__text">ReadyToTouch is a startup that was founded in early 2020 with the goal of
+                            creating a platform for anonymous job searching. Our goal is to facilitate the job search
+                            process for candidates by providing convenient and effective communication tools between
+                            candidates and recruiters. We strive to create a simple and effective job search algorithm
+                            that meets the needs of candidates.</p>
                         <div class="card__company-links">
-                            <a href="#" class="card__link-item vacancy__link">
+                            <a href="/page-stub.html" class="card__link-item vacancy__link">
                                 <span class="card__link-value">Vacancies</span>
-                                <span class="card__link-data">1</span>
+                                <span class="card__link-data">2</span>
                             </a>
-                            <a href="#" class="card__link-item vacancy__link">
-                                <span class="card__link-value">Projects</span>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <aside class="card__action">
+                            <button class="favorite card__action-button button-group__item">
+                                <svg class="favorite__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 28 28"
+                                     xml:space="preserve"><path d="m14.5 22.1-.5-.3-.5.3-6.8 4.2c-.5.3-1.1-.1-.9-.7L7.5 18l.1-.6-.4-.4-5.9-5.2c-.3-.3-.3-.6-.2-.8.1-.2.3-.4.5-.4l7.9-.7.6-.1.2-.6 2.9-7.4c.2-.5 1-.5 1.2 0l3.1 7.3.2.5.6.1 7.9.7c.2 0 .4.2.5.5.1.3 0 .6-.2.7l-5.9 5.2-.4.4.1.6 1.8 7.7c.1.3 0 .5-.2.6-.2.1-.5.2-.8 0l-6.6-4z"/></svg>
+                            </button>
+                            <button class="button-group__item">
+                                <img width="20"
+                                     height="20"
+                                     alt="icon stats"
+                                     src="/assets/images/pages/common/stats.svg"
+                                >
+                            </button>
+                        </aside>
+                        <figure class="card__header">
+                            <div class="card__image-overlay">
+                                <img class="card__image"
+                                     alt="card image preview icon"
+                                     src="/assets/images/pages/vacancy/company-logo.svg"
+                                />
+                            </div>
+                            <figcaption class="card__header-caption card__header-caption ">
+                                <a href="/page-stub.html"
+                                   class="card__headline vacancy__link">
+                                    ReadyToTouch
+                                </a>
+                                <a href="/page-stub.html"
+                                   class="card__sub-headline vacancy__link">
+                                    ReadyToTouch
+                                    <img class="card__verify"
+                                         width="16"
+                                         height="16"
+                                         alt="status"
+                                         src="/assets/images/pages/common/company-status.svg"
+                                    />
+                                </a>
+                            </figcaption>
+                        </figure>
+                        <div class="card__info">
+                            <figure class="card__figure">
+                                <img class="card__icon"
+                                     alt="card type icon"
+                                     width="16"
+                                     height="16"
+                                     src="/assets/images/pages/vacancy/building.svg"
+                                />
+                                <figcaption class="card__figcaption">Product</figcaption>
+                            </figure>
+                            <figure class="card__figure">
+                                <img class="card__icon"
+                                     alt="card type icon"
+                                     width="16"
+                                     height="16"
+                                     src="/assets/images/pages/vacancy/company-type.svg"
+                                />
+                                <figcaption class="card__figcaption">Information Services</figcaption>
+                            </figure>
+                        </div>
+                        <p class="card__text">ReadyToTouch is a startup that was founded in early 2020 with the goal of
+                            creating a platform for anonymous job searching. Our goal is to facilitate the job search
+                            process for candidates by providing convenient and effective communication tools between
+                            candidates and recruiters. We strive to create a simple and effective job search algorithm
+                            that meets the needs of candidates.</p>
+                        <div class="card__company-links">
+                            <a href="/page-stub.html" class="card__link-item vacancy__link">
+                                <span class="card__link-value">Vacancies</span>
                                 <span class="card__link-data">2</span>
                             </a>
                         </div>
@@ -832,7 +885,7 @@
                     <!-- /card project -->
                 </div>
             </div>
-
+            <!-- /vacancy related projects -->
 
         </div>
     </section>
@@ -841,6 +894,6 @@
 <!-- /vacancy -->
 
 
-@@include('base/layout/online/footer.html', {
-"script": "online.html"
+@@include('base/layout/footer.html', {
+"script": ""
 })

@@ -9,7 +9,7 @@
     &__top-info {
         align-self: stretch;
         display: grid;
-        grid-template-columns: 1fr 48px;
+        grid-template-columns: 1fr 40px;
         column-gap: 26px;
         position: relative;
     }
@@ -59,7 +59,7 @@
     &__info-value {
         font-size: $font-md;
         line-height: 25px;
-        color: $title-dark;
+        color: $title-light;
         margin-left: 8px;
     }
 
@@ -79,7 +79,7 @@
         font-size: $font-md;
         line-height: 150%;
         font-weight: 400;
-        color: $body-light;
+        color: $body-dark;
     }
 
     &__header {
@@ -146,11 +146,6 @@
         font-weight: 500;
         line-height: 150%;
         color: $title-light;
-        transition: color 0.225s ease;
-
-        &:hover {
-            color: #3f3a92;
-        }
     }
 
     &__company-address {
@@ -298,19 +293,11 @@
 
     &__link {
         position: relative;
+        border-bottom: 1px solid transparent;
+        transition: border .225s ease;
 
-        &:after {
-            content: '';
-            display: block;
-            width: 100%;
-            height: 1px;
-            opacity: 0;
-            background: $title-light;
-            transition: opacity .225s ease;
-        }
-
-        &:hover:after {
-            opacity: 1;
+        &:hover {
+            border-color: $body-light;
         }
     }
 

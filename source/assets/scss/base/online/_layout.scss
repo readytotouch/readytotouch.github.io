@@ -1,4 +1,4 @@
-.wrapper-u8, .main-container {
+.main-container {
 	max-width: 1216px;
 	margin: 0 auto;
 	color: #020111;
@@ -16,4 +16,5 @@ body {
 
 .main-wrapper {
 	background: #F2F3F8;
+	min-height: calc(100vh - 300px);
 }

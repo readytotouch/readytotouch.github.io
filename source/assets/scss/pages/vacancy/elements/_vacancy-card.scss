@@ -2,7 +2,6 @@
     $_this: &;
 
     display: grid;
-    grid-template-columns: 1fr 48px;
     grid-template-rows: repeat(3, auto);
     column-gap: 26px;
     max-width: 1008px;
@@ -14,10 +13,13 @@
 
     &__action {
         display: grid;
-        grid-template-rows: repeat(auto-fit, 48px);
+        grid-template-rows: repeat(auto-fit, 40px);
         row-gap: 8px;
         grid-column: 2;
         grid-row: 1/-1;
+        position: absolute;
+        top: 0;
+        right: 32px;
     }
 
     &__header {
@@ -69,7 +71,6 @@
         font-size: $font-md;
         line-height: 25px;
         color: $body-dark;
-        margin-top: 4px;
         align-self: flex-start;
         display: flex;
         align-items: center;
@@ -123,6 +124,11 @@
 
     &__link-value {
         margin-right: 8px;
+    }
+
+    &__image {
+        width: 112px;
+        height: 56px;
     }
 
 }

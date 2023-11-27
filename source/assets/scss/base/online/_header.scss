@@ -1,4 +1,6 @@
 .header {
+    $_this: &;
+
     background: #fff;
     display: flex;
     align-items: center;
@@ -9,6 +11,7 @@
     &__wrapper {
         display: flex;
         align-items: center;
+        justify-content: space-between;
         width: 1216px;
         height: 100%;
         margin: 0 auto;
@@ -28,6 +31,26 @@
 
     &__profile {
         position: relative;
+    }
+
+    &__nav {
+        display: flex;
+        gap: 32px;
+        margin-left: 260px;
+    }
+
+    &__nav-link {
+        font-size: $font-md;
+        font-weight: 500;
+        line-height: 150%;
+        color: $body-dark;
+        position: relative;
+        border-bottom: 1px solid transparent;
+        transition: border .225s ease;
+
+        &:hover {
+            border-color: $body-light;
+        }
     }
 
     &__stars {
