@@ -1,0 +1,22 @@
+.headline {
+	color: $title-dark;
+	font-weight: 700;
+
+	&--lvl1 {
+		font-size: 38px;
+		font-weight: 500;
+		line-height: 130%;
+	}
+
+	&--lvl2 {
+		font-size: 28px;
+		font-weight: 500;
+		line-height: 120%;
+	}
+
+	&--lvl3 {
+		font-size: 19px;
+		font-weight: 500;
+		line-height: 120%
+	}
+}

@@ -1,0 +1,31 @@
+.info {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 4px;
+
+	&__card {
+		display: flex;
+		flex-direction: column;
+		gap: 8px;
+		padding: 32px 24px;
+	}
+
+	&__item {
+		display: flex;
+		align-items: flex-start;
+	}
+	&__item-img {
+		margin: 4px 12px 0 0;
+	}
+
+	&__item-value, &__item-data  {
+		font-size: $font-md;
+		font-weight: 400;
+		line-height: 150%;
+		color: $body-light;
+		margin-bottom: 4px;
+	}
+	&__item-data {
+		color: $title-dark;
+	}
+}
