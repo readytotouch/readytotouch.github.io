@@ -1,0 +1,39 @@
+.radio {
+	$_this: &;
+
+	font-size: 18px;
+	color: #3c3a59;
+	display: flex;
+	align-items: center;
+	height: 24px;
+	cursor: pointer;
+
+	&__input {
+		position: absolute;
+		appearance: none;
+
+		&:focus-visible {
+			width: 24px;
+			height: 24px;
+			outline: none;
+			box-shadow: 0 0 0 2px #b8b6e2, 0 0 0 3px #ffffff;
+			border-radius: 50%;
+		}
+
+		&:checked {
+			& + #{$_this}__element {
+				border-width: 9px;
+			}
+		}
+	}
+
+	&__element {
+		width: 24px;
+		height: 24px;
+		border: 1px solid #3c3a59;
+		border-radius: 50%;
+		background-color: #ffffff;
+		margin-right: 12px;
+		transition: border-width 0.1s ease;
+	}
+}

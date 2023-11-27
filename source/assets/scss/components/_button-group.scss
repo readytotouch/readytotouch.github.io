@@ -1,0 +1,19 @@
+.button-group {
+    display: grid;
+    grid-template-rows: repeat(auto-fit, 40px);
+    row-gap: 8px;
+
+    &__item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        transition: 0.225s ease;
+
+        &:hover {
+            border-radius: 4px;
+            background: #EFF2FA;
+        }
+    }
+}

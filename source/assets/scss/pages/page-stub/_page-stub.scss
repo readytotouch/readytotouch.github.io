@@ -1,0 +1,81 @@
+.page-stub {
+    display: flex;
+    height: 100%;
+
+    &__content {
+        margin-top: 81px;
+    }
+
+    &__hero {
+        margin-bottom: 40px;
+    }
+
+    &__status-group {
+        margin-bottom: 25px;
+    }
+
+    &__status-title {
+        display: inline-block;
+        margin-right: 12px;
+        font-size: $font-md;
+        color: $body-light;
+        font-weight: 400;
+        line-height: 150%;
+    }
+
+    &__status-data {
+        padding: 2px 16px;
+        font-size: 16px;
+        background-color: $white;
+        border-radius: 100px;
+    }
+
+    &__title {
+        font-size: 72px;
+        font-weight: 500;
+        line-height: 110%;
+        color: $title-dark;
+        margin-bottom: 20px;
+    }
+
+    &__subtitle {
+        font-size: $font-lg;
+        line-height: 140%;
+        color: $body-light;
+        margin-bottom: 20px;
+    }
+
+    &__buttons-group {
+        display: flex;
+        gap: 24px;
+    }
+
+    &__button {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        padding: 0 24px;
+        height: 48px;
+        background: transparent;
+        border-radius: 8px;
+        border: 2px solid $title-dark;
+        color: $title-dark;
+        font-weight: 500;
+        font-size: $font-md;
+        line-height: 130%;
+        transition: border 0.225s;
+
+        &:hover {
+            border: 2px solid #8993c1;
+        }
+    }
+
+    &__button-icon {
+        width: 24px;
+        height: 24px;
+    }
+}
+
+.main-wrapper {
+    background: linear-gradient(230deg, rgba(255, 255, 255, 0.50) 54.78%, rgba(134, 99, 245, 0.50) 146.52%), linear-gradient(105deg, rgba(255, 255, 255, 0.40) 0%, rgba(134, 99, 245, 0.40) 104.98%), #EDEDF8;
+}
