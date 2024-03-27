@@ -1,5 +1,5 @@
 {
-	"name": "readytotouch-yaaws.github.io",
+	"name": "readytotouch.github.io",
 	"version": "0.0.1",
 	"description": "Yet another anonymous work search",
 	"main": "gulpfile.babel.js",
@@ -24,7 +24,7 @@
 	],
 	"author": "Yaroslav Podorvanov",
 	"license": "MIT",
-	"homepage": "https://readytotouch-yaaws.github.io/",
+	"homepage": "https://readytotouch.github.io/",
 	"devDependencies": {
 		"@babel/core": "7.18.2",
 		"@babel/eslint-parser": "7.18.2",

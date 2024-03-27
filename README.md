@@ -1,4 +1,4 @@
-# readytotouch-yaaws.github.io
+# readytotouch.github.io
 Yet another anonymous work search
 
 ### Development
