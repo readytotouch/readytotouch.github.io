@@ -1,0 +1,463 @@
+@@include('base/base-online.html', {
+"page-lang": "en",
+"page-title": "Yet another anonymous work search",
+"page-description": "Yet another anonymous work search",
+"style": "companies.html",
+"header": "base/layout/header-auth-nav.html",
+"page-class": "authorized"
+})
+
+<!-- search section -->
+<div class="main-container">
+    <section class="search-container">
+        <div class="search search--profile search--companies">
+            <div class="search__input-group">
+                <input class="search__input"
+                       id="company"
+                       type="text"
+                       placeholder="Company name or keywords"
+                >
+                <img class="search__icon"
+                     alt="Search icon"
+                     width="20"
+                     height="20"
+                     src="/assets/images/pages/common/search.svg"
+                />
+            </div>
+
+            <select class="search__select" name="cities">
+                <option selected>All cities</option>
+            </select>
+
+            <button class="button button--black"
+                    type="button"
+                    aria-label="Search"
+            >
+                Search
+            </button>
+        </div>
+    </section>
+    <!-- /search section -->
+
+    <!-- search result -->
+    <div class="search-result">
+
+        <p class="search-result__vacancies-found">72 companies</p>
+
+        <div class="search-result__wrapper">
+            <aside class="search-result__filters">
+                <div class="search-result__filter-group">
+                    <div class="search-result__filter-header">
+                        <h2 class="search-result__filter-headline">Filters:</h2>
+                        <button class="button button--light-link">Reset all</button>
+                    </div>
+                    <div class="filters">
+
+                        <!-- Company type -->
+                        <div class="filters__group">
+                            <header class="filters__header">
+                                <h4 class="filters__headline">Company type</h4>
+                            </header>
+                            <div class="filters__elements">
+                                <label class="checkbox filters__element">
+                                    <input class="checkbox__input" type="checkbox">
+                                    <span class="checkbox__element"></span>
+                                    Product
+                                </label>
+                                <label class="checkbox filters__element">
+                                    <input class="checkbox__input" type="checkbox">
+                                    <span class="checkbox__element"></span>
+                                    Startup
+                                </label>
+                                <label class="checkbox filters__element">
+                                    <input class="checkbox__input" type="checkbox">
+                                    <span class="checkbox__element"></span>
+                                    Outstuff
+                                </label>
+                                <label class="checkbox filters__element">
+                                    <input class="checkbox__input" type="checkbox">
+                                    <span class="checkbox__element"></span>
+                                    Outsource
+                                </label>
+                            </div>
+                        </div>
+                        <!-- /Company type -->
+
+                        <!-- Direction -->
+                        <div class="filters__group">
+                            <header class="filters__header">
+                                <h4 class="filters__headline">Direction</h4>
+                            </header>
+
+
+                            <div class="filters__elements">
+                                <label class="checkbox filters__element">
+                                    <input class="checkbox__input" type="checkbox">
+                                    <span class="checkbox__element"></span>
+                                    CyberSecurity
+                                </label>
+                                <label class="checkbox filters__element">
+                                    <input class="checkbox__input" type="checkbox">
+                                    <span class="checkbox__element"></span>
+                                    Embedded
+                                </label>
+                                <label class="checkbox filters__element">
+                                    <input class="checkbox__input" type="checkbox">
+                                    <span class="checkbox__element"></span>
+                                    EdTech
+                                </label>
+                            </div>
+                        </div>
+                        <!-- /Direction -->
+
+                        <!-- Other -->
+                        <div class="filters__group">
+                            <header class="filters__header">
+                                <h4 class="filters__headline">Other</h4>
+                            </header>
+                            <div class="filters__elements">
+                                <label class="checkbox filters__element">
+                                    <input class="checkbox__input" type="checkbox">
+                                    <span class="checkbox__element"></span>
+                                    Has active vacancies
+                                </label>
+                                <label class="checkbox filters__element">
+                                    <input class="checkbox__input" type="checkbox">
+                                    <span class="checkbox__element"></span>
+                                    With office
+                                </label>
+                                <label class="checkbox filters__element">
+                                    <input class="checkbox__input" type="checkbox">
+                                    <span class="checkbox__element"></span>
+                                    With parking
+                                </label>
+                                <label class="checkbox filters__element">
+                                    <input class="checkbox__input" type="checkbox">
+                                    <span class="checkbox__element"></span>
+                                    Favorite vacancies
+                                </label>
+                            </div>
+                        </div>
+                        <!-- /Other -->
+
+                    </div>
+                </div>
+
+            </aside>
+            <div class="search-result__list">
+                <!-- selected filters -->
+                <div class="filter-used">
+                    <ul class="filter-used__list">
+                        <li class="filter-used__item">
+                            FinTech
+                            <button class="filter-used__link" type="button"></button>
+                        </li>
+                        <li class="filter-used__item">
+                            Security
+                            <button class="filter-used__link" type="button"></button>
+                        </li>
+                        <li class="filter-used__item">
+                            Outsource
+                            <button class="filter-used__link" type="button"></button>
+                        </li>
+                        <li class="filter-used__item">
+                            з активними вакансіями
+                            <button class="filter-used__link" type="button"></button>
+                            </button>
+                        </li>
+                        <li class="filter-used__item">
+                            з парковкою
+                            <button class="filter-used__link" type="button"></button>
+                        </li>
+                    </ul>
+                </div>
+                <!-- /selected filters -->
+
+                <!-- card list -->
+                <div class="search-result__cards">
+                    <div class="card">
+                        <aside class="card__action">
+                            <button class="favorite card__action-button button-group__item">
+                                <svg class="favorite__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 28 28"
+                                     xml:space="preserve"><path d="m14.5 22.1-.5-.3-.5.3-6.8 4.2c-.5.3-1.1-.1-.9-.7L7.5 18l.1-.6-.4-.4-5.9-5.2c-.3-.3-.3-.6-.2-.8.1-.2.3-.4.5-.4l7.9-.7.6-.1.2-.6 2.9-7.4c.2-.5 1-.5 1.2 0l3.1 7.3.2.5.6.1 7.9.7c.2 0 .4.2.5.5.1.3 0 .6-.2.7l-5.9 5.2-.4.4.1.6 1.8 7.7c.1.3 0 .5-.2.6-.2.1-.5.2-.8 0l-6.6-4z"/></svg>
+                            </button>
+                            <button class="button-group__item">
+                                <img width="20"
+                                     height="20"
+                                     alt="icon stats"
+                                     src="/assets/images/pages/common/stats.svg"
+                                >
+                            </button>
+                        </aside>
+                        <figure class="card__header">
+                            <div class="card__image-overlay">
+                                <img class="card__image"
+                                     alt="card image preview icon"
+                                     src="/assets/images/pages/vacancy/company-logo.svg"
+                                />
+                            </div>
+                            <figcaption class="card__header-caption">
+                                <a href="/page-stub.html"
+                                   class="card__headline vacancy__link"
+                                >
+                                    ReadyToTouch
+                                    <img class="card__verify"
+                                         width="16"
+                                         height="16"
+                                         alt="status"
+                                         src="/assets/images/pages/common/company-status.svg"
+                                    />
+                                </a>
+                                <a href="/page-stub.html"
+                                   class="card__sub-headline vacancy__link">
+                                    <img class="card__verify"
+                                         width="16"
+                                         height="16"
+                                         alt="status"
+                                         src="/assets/images/pages/common/marker.svg"
+                                    />All cities
+                                </a>
+                            </figcaption>
+                        </figure>
+                        <div class="card__info">
+                            <figure class="card__figure">
+                                <img class="card__icon"
+                                     alt="card type icon"
+                                     width="16"
+                                     height="16"
+                                     src="/assets/images/pages/vacancy/building.svg"
+                                />
+                                <figcaption class="card__figcaption">Product</figcaption>
+                            </figure>
+                            <figure class="card__figure">
+                                <img class="card__icon"
+                                     alt="card type icon"
+                                     width="16"
+                                     height="16"
+                                     src="/assets/images/pages/vacancy/company-type.svg"
+                                />
+                                <figcaption class="card__figcaption">HRTech</figcaption>
+                            </figure>
+                            <figure class="card__figure">
+                                <img class="card__icon"
+                                     alt="card building icon"
+                                     width="16"
+                                     height="16"
+                                     src="/assets/images/pages/vacancy/user.svg"
+                                />
+                                <figcaption class="card__figcaption">3</figcaption>
+                            </figure>
+                        </div>
+                        <p class="card__text">
+                            ReadyToTouch is a product project that was founded in early 2020 with the goal of creating a
+                            platform for anonymous job searching.
+                            Our goal is to facilitate the job search process for candidates by providing convenient and
+                            effective communication tools between candidates
+                            and recruiters. We strive to create a simple and effective job search algorithm that meets
+                            the needs of candidates.
+                        </p>
+                        <div class="card__company-links">
+                            <a href="/page-stub.html" class="card__link-item vacancy__link">
+                                <span class="card__link-value">Vacancies</span>
+                                <span class="card__link-data">1</span>
+                            </a>
+                            <a href="/page-stub.html" class="card__link-item vacancy__link">
+                                <span class="card__link-value">Projects</span>
+                                <span class="card__link-data">2</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <aside class="card__action">
+                            <button class="favorite card__action-button button-group__item">
+                                <svg class="favorite__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 28 28"
+                                     xml:space="preserve"><path d="m14.5 22.1-.5-.3-.5.3-6.8 4.2c-.5.3-1.1-.1-.9-.7L7.5 18l.1-.6-.4-.4-5.9-5.2c-.3-.3-.3-.6-.2-.8.1-.2.3-.4.5-.4l7.9-.7.6-.1.2-.6 2.9-7.4c.2-.5 1-.5 1.2 0l3.1 7.3.2.5.6.1 7.9.7c.2 0 .4.2.5.5.1.3 0 .6-.2.7l-5.9 5.2-.4.4.1.6 1.8 7.7c.1.3 0 .5-.2.6-.2.1-.5.2-.8 0l-6.6-4z"/></svg>
+                            </button>
+                            <button class="button-group__item">
+                                <img width="20"
+                                     height="20"
+                                     alt="icon stats"
+                                     src="/assets/images/pages/common/stats.svg"
+                                >
+                            </button>
+                        </aside>
+                        <figure class="card__header">
+                            <div class="card__image-overlay">
+                                <img class="card__image"
+                                     alt="card image preview icon"
+                                     src="/assets/images/pages/entitys-logo/Logo-2.png"
+                                />
+                            </div>
+                            <figcaption class="card__header-caption card__header-caption ">
+                                <a href="/page-stub.html"
+                                   class="card__headline vacancy__link">
+                                    Finsolut
+                                </a>
+                                <a href="/page-stub.html"
+                                   class="card__sub-headline vacancy__link">
+                                    ReadyToTouch
+                                    <img class="card__verify"
+                                         width="16"
+                                         height="16"
+                                         alt="status"
+                                         src="/assets/images/pages/common/company-status.svg"
+                                    />
+                                </a>
+                            </figcaption>
+                        </figure>
+                        <div class="card__info">
+                            <figure class="card__figure">
+                                <img class="card__icon"
+                                     alt="card type icon"
+                                     width="16"
+                                     height="16"
+                                     src="/assets/images/pages/vacancy/building.svg"
+                                />
+                                <figcaption class="card__figcaption">Product</figcaption>
+                            </figure>
+                            <figure class="card__figure">
+                                <img class="card__icon"
+                                     alt="card type icon"
+                                     width="16"
+                                     height="16"
+                                     src="/assets/images/pages/vacancy/company-type.svg"
+                                />
+                                <figcaption class="card__figcaption">Information Services</figcaption>
+                            </figure>
+                            <figure class="card__figure">
+                                <img class="card__icon"
+                                     alt="card type icon"
+                                     width="16"
+                                     height="16"
+                                     src="/assets/images/pages/vacancy/user.svg"
+                                />
+                                <figcaption class="card__figcaption">200</figcaption>
+                            </figure>
+                        </div>
+                        <p class="card__text">
+                            Finіsolut provides innovative fintech solutions, including digital payment platforms
+                            and advanced analytics, to streamline and enhance financial services for the modern
+                            financial landscape.
+                        </p>
+                        <div class="card__company-links">
+                            <a href="/page-stub.html" class="card__link-item vacancy__link">
+                                <span class="card__link-value">Vacancies</span>
+                                <span class="card__link-data">4</span>
+                            </a>
+                            <a href="/page-stub.html" class="card__link-item vacancy__link">
+                                <span class="card__link-value">Projects</span>
+                                <span class="card__link-data">2</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <aside class="card__action">
+                            <button class="favorite card__action-button button-group__item">
+                                <svg class="favorite__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 28 28"
+                                     xml:space="preserve"><path d="m14.5 22.1-.5-.3-.5.3-6.8 4.2c-.5.3-1.1-.1-.9-.7L7.5 18l.1-.6-.4-.4-5.9-5.2c-.3-.3-.3-.6-.2-.8.1-.2.3-.4.5-.4l7.9-.7.6-.1.2-.6 2.9-7.4c.2-.5 1-.5 1.2 0l3.1 7.3.2.5.6.1 7.9.7c.2 0 .4.2.5.5.1.3 0 .6-.2.7l-5.9 5.2-.4.4.1.6 1.8 7.7c.1.3 0 .5-.2.6-.2.1-.5.2-.8 0l-6.6-4z"/></svg>
+                            </button>
+                            <button class="button-group__item">
+                                <img width="20"
+                                     height="20"
+                                     alt="icon stats"
+                                     src="/assets/images/pages/common/stats.svg"
+                                >
+                            </button>
+                        </aside>
+                        <figure class="card__header">
+                            <div class="card__image-overlay">
+                                <img class="card__image"
+                                     alt="card image preview icon"
+                                     src="/assets/images/pages/entitys-logo/Logo-3.png"
+                                />
+                            </div>
+                            <figcaption class="card__header-caption card__header-caption ">
+                                <a href="/page-stub.html"
+                                   class="card__headline vacancy__link">
+                                    RoboSoft
+                                </a>
+                                <a href="/page-stub.html"
+                                   class="card__sub-headline vacancy__link">
+                                    ReadyToTouch
+                                    <img class="card__verify"
+                                         width="16"
+                                         height="16"
+                                         alt="status"
+                                         src="/assets/images/pages/common/company-status.svg"
+                                    />
+                                </a>
+                            </figcaption>
+                        </figure>
+                        <div class="card__info">
+                            <figure class="card__figure">
+                                <img class="card__icon"
+                                     alt="card type icon"
+                                     width="16"
+                                     height="16"
+                                     src="/assets/images/pages/vacancy/building.svg"
+                                />
+                                <figcaption class="card__figcaption">Product</figcaption>
+                            </figure>
+                            <figure class="card__figure">
+                                <img class="card__icon"
+                                     alt="card type icon"
+                                     width="16"
+                                     height="16"
+                                     src="/assets/images/pages/vacancy/company-type.svg"
+                                />
+                                <figcaption class="card__figcaption">Cyber Security</figcaption>
+                            </figure>
+                            <figure class="card__figure">
+                                <img class="card__icon"
+                                     alt="card type icon"
+                                     width="16"
+                                     height="16"
+                                     src="/assets/images/pages/vacancy/user.svg"
+                                />
+                                <figcaption class="card__figcaption">120</figcaption>
+                            </figure>
+                        </div>
+                        <p class="card__text">
+                            RoboSoft is a company that develops customized software solutions for businesses.
+                            Our team of expert developers, designers, and project managers collaborate to deliver
+                            innovative and scalable products.
+                        </p>
+                        <div class="card__company-links">
+                            <a href="/page-stub.html" class="card__link-item vacancy__link">
+                                <span class="card__link-value">Vacancies</span>
+                                <span class="card__link-data">0</span>
+                            </a>
+                            <a href="/page-stub.html" class="card__link-item vacancy__link">
+                                <span class="card__link-value">Projects</span>
+                                <span class="card__link-data">4</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- /card list -->
+
+                <!-- search footer -->
+                <footer class="search-result__footer">
+                    <button class="button button--bordered-black" type="button">
+                        More
+                    </button>
+
+                    <!-- pagination -->
+                    @@include('partials/common/pagination.html')
+                    <!-- /pagination -->
+
+                </footer>
+                <!-- /search footer -->
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- /search result -->
+
+@@include('base/layout/footer.html', {
+"script": "companies.html"
+})

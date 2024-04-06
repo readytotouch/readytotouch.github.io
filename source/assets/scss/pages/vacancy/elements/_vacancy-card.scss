@@ -5,7 +5,7 @@
     grid-template-rows: repeat(3, auto);
     column-gap: 26px;
     max-width: 1008px;
-    padding: 32px;
+    padding: 24px;
     border-radius: 16px;
     background-color: #ffffff;
     z-index: 20;
@@ -14,12 +14,11 @@
     &__action {
         display: grid;
         grid-template-rows: repeat(auto-fit, 40px);
-        row-gap: 8px;
         grid-column: 2;
         grid-row: 1/-1;
         position: absolute;
         top: 0;
-        right: 32px;
+        right: 24px;
     }
 
     &__header {
@@ -33,8 +32,8 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        background: #f2f2f8;
         border-radius: 4px;
+        overflow: hidden;
     }
 
     &__header-caption {
@@ -54,6 +53,8 @@
         font-weight: 500;
         color: $title-light;
         align-self: flex-start;
+        border-bottom: 1px solid transparent;
+        gap: 8px;
         display: flex;
         align-items: center;
         transition: border 0.225s ease, color 0.225s ease;
@@ -63,16 +64,13 @@
         }
     }
 
-    &__verify {
-        margin-left: 8px;
-    }
-
     &__sub-headline {
         font-size: $font-md;
         line-height: 25px;
         color: $body-dark;
         align-self: flex-start;
         display: flex;
+        gap: 8px;
         align-items: center;
     }
 
@@ -80,7 +78,7 @@
         font-size: $font-md;
         line-height: 25px;
         color: $body-dark;
-        margin: 24px 0;
+        margin: 16px 0;
         grid-column: 1;
         @include trim(2);
         position: relative;
@@ -89,7 +87,7 @@
     &__info {
         display: flex;
         flex-direction: column;
-        gap: 12px;
+        gap: 8px;
     }
 
     &__figure {
@@ -120,15 +118,21 @@
 
     &__link-item {
         margin: 24px 24px 0 0;
-    }
+        display: flex;
+        gap: 8px;
+        position: relative;
+        color: $link-blue;
+        border-bottom: 1px solid transparent;
+        transition: border .225s ease;
 
-    &__link-value {
-        margin-right: 8px;
+        &:hover {
+            border-color: $link-blue;
+        }
     }
 
     &__image {
         width: 112px;
-        height: 56px;
+        height: 100%;
     }
 
 }

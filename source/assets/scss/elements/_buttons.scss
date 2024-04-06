@@ -305,6 +305,18 @@
         border-color: #eeeff1;
         background-color: #eeeff1;
     }
+
+    &--light-link {
+        padding: 0;
+        font-weight: 500;
+        color: $disabled;
+        height: auto;
+
+        &:hover,
+        &:active {
+            color: #3f3a92;
+        }
+    }
 }
 
 .favorite {
@@ -318,6 +330,8 @@
     cursor: pointer;
 
     #{$_this}__icon {
+        pointer-events: none;
+
         path {
             fill: none;
             stroke: #000000;

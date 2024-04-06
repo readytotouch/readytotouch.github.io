@@ -1,0 +1,73 @@
+.search {
+    $_this: &;
+
+    position: relative;
+
+    &__input, &__select {
+        font-family: $base-font-family;
+        font-size: $font-md;
+        color: #7c7b88;
+        height: 50px;
+        width: 100%;
+        padding: 12px 48px 12px 12px;
+        border: 1px solid $border-color-light;
+        border-radius: 8px;
+        background: transparent;
+
+        &::placeholder {
+            color: $body-light;
+        }
+
+        //@include focus-visible;
+    }
+
+    &__input-group {
+        position: relative;
+        width: 690px;
+    }
+
+    &__icon {
+        color: #8d8d8d;
+        position: absolute;
+        right: 12px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    &__button {
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+
+    &__select {
+        max-width: 400px;
+    }
+
+    &--profile {
+        //#{$_this}__input {
+        //	border-radius: 4px;
+        //	padding-right: 270px;
+        //	padding-left: 40px;
+        //}
+
+        #{$_this}__button {
+            font-weight: 600;
+        }
+    }
+
+    &--vacancies {
+        #{$_this}__input {
+            padding-right: 490px;
+        }
+    }
+
+    &--companies,
+    &--projects {
+        display: flex;
+        gap: 8px;
+        #{$_this}__input {
+            max-width: 692px;
+        }
+    }
+}

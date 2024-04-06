@@ -1,0 +1,91 @@
+.filters {
+	$_this: &;
+
+	&__group {
+		padding-top: 24px;
+		padding-bottom: 24px;
+
+		& + #{$_this}__group {
+			border-top: 1px solid #dddce4;
+		}
+	}
+
+	&__header {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	&__headline {
+		font-size: 18px;
+		line-height: 25px;
+		font-weight: 600;
+	}
+
+	&__sub-headline {
+		font-size: 18px;
+		font-weight: 600;
+		color: #3c3a59;
+		height: 24px;
+		line-height: 24px;
+	}
+
+	&__visibility {
+		width: 28px;
+		height: 28px;
+		position: relative;
+		cursor: pointer;
+
+		@include focus-visible;
+
+		&:before {
+			content: "";
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			width: 14px;
+			height: 2px;
+			margin-left: -7px;
+			margin-top: -1px;
+			background-color: #828282;
+		}
+	}
+
+	&__elements {
+		margin-top: 16px;
+		max-height: 160px;
+		overflow: auto;
+
+		&--no-scroll {
+			overflow: initial;
+		}
+
+		&::-webkit-scrollbar {
+			width: 4px;
+		}
+
+		&::-webkit-scrollbar-track {
+			border-radius: 8px;
+			background-color: #dddce4;
+		}
+
+		&::-webkit-scrollbar-thumb {
+			border-radius: 8px;
+			background-color: #b8b6e2;
+		}
+	}
+
+	&__filled-elements {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 8px;
+		margin-top: 16px;
+	}
+
+	&__element {
+
+		&:not(:first-child) {
+			margin-top: 16px;
+		}
+	}
+}

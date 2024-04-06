@@ -1,0 +1,40 @@
+.checkbox {
+	$_this: &;
+
+	font-size: 18px;
+	color: #3c3a59;
+	display: flex;
+	align-items: center;
+	height: 24px;
+	cursor: pointer;
+
+	&__input {
+		position: absolute;
+		appearance: none;
+
+		@include focus-visible {
+			width: 18px;
+			height: 18px;
+		}
+
+		&:checked {
+			& + #{$_this}__element {
+				background-color: #3c3a59;
+				background-size: 17px 14px;
+				background-repeat: no-repeat;
+				background-position: 3px center;
+				background-image: url("data:image/svg+xml,%3Csvg width='17' height='14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M16.173.26a1 1 0 0 1 .067 1.413L5.534 13.449.293 8.207a1 1 0 1 1 1.414-1.414l3.759 3.758L14.76.327A1 1 0 0 1 16.173.26Z' fill='%23fff'/%3E%3C/svg%3E");
+			}
+		}
+	}
+
+	&__element {
+		width: 24px;
+		height: 24px;
+		border: 1px solid #3c3a59;
+		border-radius: 4px;
+		background-color: #ffffff;
+		margin-right: 12px;
+		transition: background-color 0.225s ease;
+	}
+}

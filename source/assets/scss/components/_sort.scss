@@ -1,0 +1,28 @@
+.sort {
+	$_this: &;
+
+	display: flex;
+	padding-bottom: 24px;
+
+	&__headline {
+		font-size: 18px;
+		line-height: 25px;
+		font-weight: 400;
+		color: #3c3a59;
+	}
+
+	&__select {
+		margin-left: 24px;
+		border-left: 0 none;
+	}
+
+	&__select-item {
+		color: #3c3a59;
+		height: 25px;
+	}
+
+	&__clear-filters {
+		min-height: 25px;
+		margin-left: auto;
+	}
+}

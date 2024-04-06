@@ -1,0 +1,91 @@
+.pagination {
+	$_this: &;
+
+	display: flex;
+	align-items: center;
+	height: 30px;
+
+	&__button, &__item {
+		display: flex;
+		padding: 8px;
+        border-radius: 8px;
+        border: 2px solid $border-color-light;
+		cursor: pointer;
+        text-align: center;
+        justify-content: center;
+        min-width: 40px;
+        margin: 0 1px;
+        transition: all 0.225s ease;
+
+        &:hover {
+            color: #000000;
+            border-color: #1C1F29;
+        }
+
+        &--active {
+            font-weight: 600;
+            color: #3c3a59;
+        }
+
+		&--prev-group,
+		&--next-group {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			position: relative;
+			width: 24px;
+			height: 24px;
+			padding-left: initial;
+			padding-right: initial;
+
+			#{$_this}__icon {
+				position: absolute;
+			}
+		}
+
+		&--prev-group {
+			#{$_this}__icon {
+
+				&:nth-child(1) {
+					left: 2px;
+				}
+
+				&:nth-child(2) {
+					left: 8px;
+				}
+			}
+		}
+
+		&--next-group {
+			#{$_this}__icon {
+
+				&:nth-child(1) {
+					right: 2px;
+				}
+
+				&:nth-child(2) {
+					right: 8px;
+				}
+			}
+		}
+	}
+
+	&__icon {
+		width: 20px;
+		height: 20px;
+
+		&--next,
+		&--next-group {
+			transform: rotate(180deg);
+		}
+	}
+
+	&__item {
+        font-style: $font-md;
+		color: #7c7b88;
+		padding-left: 8px;
+		padding-right: 8px;
+		cursor: pointer;
+		position: relative;
+	}
+}
