@@ -288,6 +288,18 @@
         }
     }
 
+    &--bordered-light{
+        color: $title-dark;
+        border-width: 2px;
+        border-color: $title-dark;
+
+        &:hover,
+        &:active {
+            color: $title-dark;
+            background-color: #EBEDF5;
+        }
+    }
+
     &--bordered-black-blank {
         color: #000000;
         border-width: 3px;
