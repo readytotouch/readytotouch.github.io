@@ -61,13 +61,26 @@
             padding-right: 490px;
         }
     }
+    &--projects {
+        #{$_this}__input-group {
+            position: relative;
+            width: 100%;
+        }
+
+        #{$_this}__input {
+            max-width: 100%;
+        }
+    }
+
+    &--companies {
+        #{$_this}__input {
+            max-width: 692px;
+        }
+    }
 
     &--companies,
     &--projects {
         display: flex;
         gap: 8px;
-        #{$_this}__input {
-            max-width: 692px;
-        }
     }
 }
