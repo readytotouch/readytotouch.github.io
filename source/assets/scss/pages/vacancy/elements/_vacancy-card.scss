@@ -1,15 +1,27 @@
 .card {
     $_this: &;
-
-    display: grid;
-    grid-template-rows: repeat(3, auto);
-    column-gap: 26px;
-    max-width: 1008px;
     padding: 24px;
     border-radius: 16px;
     background-color: #ffffff;
-    z-index: 20;
     position: relative;
+
+    &__vacancy {
+        display: grid;
+        grid-template-rows: repeat(3, auto);
+        column-gap: 26px;
+        max-width: 1008px;
+        z-index: 20;
+    }
+
+    &.hidden {
+        #{$_this}__vacancy {
+            display: none;
+        }
+
+        .card-hidden {
+            display: block;
+        }
+    }
 
     &__action {
         display: grid;
@@ -17,8 +29,8 @@
         grid-column: 2;
         grid-row: 1/-1;
         position: absolute;
-        top: 0;
-        right: 24px;
+        top: 16px;
+        right: 16px;
     }
 
     &__header {
@@ -102,6 +114,23 @@
         margin-left: 12px;
     }
 
+    &__figure-salary {
+        #{$_this}__figcaption {
+            font-weight: 500;
+            color: $title-dark;
+        }
+    }
+
+    &__hidden-salary {
+        padding: 2px 12px;
+        margin-left: 8px;
+        line-height: 27px;
+        background-color: $bg-light;
+        border-radius: 8px;
+        color: $body-dark;
+    }
+
+
     &--filled {
         #{$_this}__image-overlay {
             background-color: transparent;
@@ -133,5 +162,47 @@
     &__image {
         width: 112px;
         height: 56px;
+    }
+
+    &__footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 8px;
+    }
+
+    &__details {
+        display: flex;
+        gap: 24px;
+
+        #{$_this}__figcaption {
+            color: $body-light;
+        }
+    }
+
+    &__action-button-sloth {
+        background-image: url("/assets/images/pages/vacancy/sloth.svg");
+        background-position: center center;
+        background-repeat: no-repeat;
+        transition: background-image 0.3s, background-color 0.3s;
+
+        &:hover {
+            background-image: url("/assets/images/pages/vacancy/sloth-hide.svg");
+            background-color: #ededf8;
+            border-radius: 4px;
+        }
+
+        &:active {
+            background-image: url("/assets/images/pages/vacancy/sloth-hide.svg");
+            background-color: transparent;
+            border-radius: 0;
+        }
+
+        &:focus-visible {
+            outline: none;
+            background-color: #ededf8;
+            border: 2px solid #b8b6e2;
+            border-radius: 4px;
+        }
     }
 }

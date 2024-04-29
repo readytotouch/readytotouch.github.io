@@ -1,91 +1,99 @@
 .filters {
-	$_this: &;
+    $_this: &;
+    color: $title-dark;
 
-	&__group {
-		padding-top: 24px;
-		padding-bottom: 24px;
+    &__group {
+        padding-top: 24px;
+        padding-bottom: 24px;
 
-		& + #{$_this}__group {
-			border-top: 1px solid #dddce4;
-		}
-	}
+        & + #{$_this}__group {
+            border-top: 1px solid #dddce4;
+        }
+    }
 
-	&__header {
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
-	}
+    &__header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
 
-	&__headline {
-		font-size: 18px;
-		line-height: 25px;
-		font-weight: 600;
-	}
+        &--sub-headline {
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: space-between;
+        }
+    }
 
-	&__sub-headline {
-		font-size: 18px;
-		font-weight: 600;
-		color: #3c3a59;
-		height: 24px;
-		line-height: 24px;
-	}
+    &__headline {
+        font-size: $font-md;
+        line-height: 25px;
+        font-weight: 500;
+    }
 
-	&__visibility {
-		width: 28px;
-		height: 28px;
-		position: relative;
-		cursor: pointer;
+    &__sub-headline {
+        font-size: 16px;
+        font-weight: 400;
+        color: $body-light;
+        height: 24px;
+        line-height: 24px;
+        margin-top: 12px;
+    }
 
-		@include focus-visible;
+    &__visibility {
+        width: 28px;
+        height: 28px;
+        position: relative;
+        cursor: pointer;
 
-		&:before {
-			content: "";
-			position: absolute;
-			top: 50%;
-			left: 50%;
-			width: 14px;
-			height: 2px;
-			margin-left: -7px;
-			margin-top: -1px;
-			background-color: #828282;
-		}
-	}
+        @include focus-visible;
 
-	&__elements {
-		margin-top: 16px;
-		max-height: 190px;
-		overflow: auto;
+        &:before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 14px;
+            height: 2px;
+            margin-left: -7px;
+            margin-top: -1px;
+            background-color: #828282;
+        }
+    }
 
-		&--no-scroll {
-			overflow: initial;
-		}
+    &__elements {
+        margin-top: 16px;
+        max-height: 190px;
+        overflow: auto;
 
-		&::-webkit-scrollbar {
-			width: 4px;
-		}
+        &--no-scroll {
+            overflow: initial;
+        }
 
-		&::-webkit-scrollbar-track {
-			border-radius: 8px;
-			background-color: #dddce4;
-		}
+        &::-webkit-scrollbar {
+            width: 4px;
+        }
 
-		&::-webkit-scrollbar-thumb {
-			border-radius: 8px;
-			background-color: #b8b6e2;
-		}
-	}
+        &::-webkit-scrollbar-track {
+            border-radius: 8px;
+            background-color: #dddce4;
+        }
 
-	&__filled-elements {
-		display: flex;
-		flex-wrap: wrap;
-		gap: 8px;
-		margin-top: 16px;
-	}
+        &::-webkit-scrollbar-thumb {
+            border-radius: 8px;
+            background-color: #b8b6e2;
+        }
+    }
 
-	&__element {
+    &__filled-elements {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-top: 16px;
+    }
 
-		&:not(:first-child) {
-			margin-top: 16px;
-		}
-	}
+    &__element {
+
+        &:not(:first-child) {
+            margin-top: 16px;
+        }
+    }
 }

@@ -1,11 +1,12 @@
 .button {
     font-family: $base-font-family;
     font-size: 18px;
-    font-weight: 600;
+    font-weight: 500;
     display: inline-flex;
     align-items: center;
     justify-content: center;
     height: 48px;
+    width: fit-content;
     border-radius: 8px;
     padding-left: 32px;
     padding-right: 32px;
@@ -288,7 +289,7 @@
         }
     }
 
-    &--bordered-light{
+    &--bordered-light {
         color: $title-dark;
         border-width: 2px;
         border-color: $title-dark;
@@ -297,6 +298,18 @@
         &:active {
             color: $title-dark;
             background-color: #EBEDF5;
+        }
+    }
+
+    &--bordered-white {
+        color: $title-dark;
+        border-width: 2px;
+        border-color: #DDDDE0;
+
+        &:hover,
+        &:active {
+            color: $title-dark;
+            border-color: $title-dark;
         }
     }
 

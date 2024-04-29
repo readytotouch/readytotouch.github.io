@@ -43,12 +43,6 @@
     <div class="search-result">
 
         <p class="search-result__vacancies-found">72 companies</p>
-
-        <div class="state-buttons filter-used" style="display: flex; gap: 10px">
-            <button id="show_list" class="show-list button button--bordered-light">Show list</button>
-            <button id="show_empty_search" class="show-list button button--bordered-light">Show empty search</button>
-            <button id="show_empty_companies" class="show-list button button--bordered-light">Show empty companies</button>
-        </div>
         <div class="search-result__wrapper">
             <aside class="search-result__filters">
                 <div class="search-result__filter-group">
@@ -151,7 +145,7 @@
             </aside>
             <div class="search-result--group">
                 <!-- selected filters -->
-                <div id="search_result_filter_used" class="filter-used">
+                <div id="search_result_filter_used" class="filter-used d-none">
                     <ul class="filter-used__list">
                         <li class="filter-used__item">
                             FinTech
@@ -168,7 +162,6 @@
                         <li class="filter-used__item">
                             з активними вакансіями
                             <button class="filter-used__link" type="button"><span></span></button>
-                            </button>
                         </li>
                         <li class="filter-used__item">
                             з парковкою
