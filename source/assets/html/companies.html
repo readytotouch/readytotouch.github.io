@@ -1,0 +1,222 @@
+@@include('base/base-online.html', {
+"page-lang": "en",
+"page-title": "Yet another anonymous work search",
+"page-description": "Yet another anonymous work search",
+"style": "companies.html",
+"header": "base/layout/header-auth-nav.html",
+"page-class": "authorized"
+})
+
+<!-- search section -->
+<div class="main-container">
+    <section class="search-container">
+        <div class="search search--profile search--companies">
+            <div class="search__input-group">
+                <input class="search__input"
+                       id="company"
+                       type="text"
+                       placeholder="Company name or keywords"
+                >
+                <img class="search__icon"
+                     alt="Search icon"
+                     width="20"
+                     height="20"
+                     src="/assets/images/pages/common/search.svg"
+                />
+            </div>
+
+            <select class="search__select" name="cities">
+                <option selected>All cities</option>
+            </select>
+
+            <button class="button button--black"
+                    type="button"
+                    aria-label="Search"
+            >
+                Search
+            </button>
+        </div>
+    </section>
+    <!-- /search section -->
+
+    <!-- search result -->
+    <div class="search-result">
+
+        <p class="search-result__vacancies-found">72 companies</p>
+        <div class="search-result__wrapper">
+            <aside class="search-result__filters">
+                <div class="search-result__filter-group">
+                    <div class="search-result__filter-header">
+                        <h2 class="search-result__filter-headline">Filters:</h2>
+                        <button class="button button--light-link">Reset all</button>
+                    </div>
+                    <div class="filters">
+
+                        <!-- Company type -->
+                        <div class="filters__group">
+                            <header class="filters__header">
+                                <h4 class="filters__headline">Company type</h4>
+                            </header>
+                            <div class="filters__elements">
+                                <label class="checkbox filters__element">
+                                    <input class="checkbox__input" type="checkbox">
+                                    <span class="checkbox__element"></span>
+                                    Product
+                                </label>
+                                <label class="checkbox filters__element">
+                                    <input class="checkbox__input" type="checkbox">
+                                    <span class="checkbox__element"></span>
+                                    Startup
+                                </label>
+                                <label class="checkbox filters__element">
+                                    <input class="checkbox__input" type="checkbox">
+                                    <span class="checkbox__element"></span>
+                                    Outstuff
+                                </label>
+                                <label class="checkbox filters__element">
+                                    <input class="checkbox__input" type="checkbox">
+                                    <span class="checkbox__element"></span>
+                                    Outsource
+                                </label>
+                            </div>
+                        </div>
+                        <!-- /Company type -->
+
+                        <!-- Direction -->
+                        <div class="filters__group">
+                            <header class="filters__header">
+                                <h4 class="filters__headline">Direction</h4>
+                            </header>
+
+
+                            <div class="filters__elements">
+                                <label class="checkbox filters__element">
+                                    <input class="checkbox__input" type="checkbox">
+                                    <span class="checkbox__element"></span>
+                                    CyberSecurity
+                                </label>
+                                <label class="checkbox filters__element">
+                                    <input class="checkbox__input" type="checkbox">
+                                    <span class="checkbox__element"></span>
+                                    Embedded
+                                </label>
+                                <label class="checkbox filters__element">
+                                    <input class="checkbox__input" type="checkbox">
+                                    <span class="checkbox__element"></span>
+                                    EdTech
+                                </label>
+                            </div>
+                        </div>
+                        <!-- /Direction -->
+
+                        <!-- Other -->
+                        <div class="filters__group">
+                            <header class="filters__header">
+                                <h4 class="filters__headline">Other</h4>
+                            </header>
+                            <div class="filters__elements">
+                                <label class="checkbox filters__element">
+                                    <input class="checkbox__input" type="checkbox">
+                                    <span class="checkbox__element"></span>
+                                    Has active vacancies
+                                </label>
+                                <label class="checkbox filters__element">
+                                    <input class="checkbox__input" type="checkbox">
+                                    <span class="checkbox__element"></span>
+                                    With office
+                                </label>
+                                <label class="checkbox filters__element">
+                                    <input class="checkbox__input" type="checkbox">
+                                    <span class="checkbox__element"></span>
+                                    With parking
+                                </label>
+                                <label class="checkbox filters__element">
+                                    <input class="checkbox__input" type="checkbox">
+                                    <span class="checkbox__element"></span>
+                                    Favorite vacancies
+                                </label>
+                            </div>
+                        </div>
+                        <!-- /Other -->
+
+                    </div>
+                </div>
+
+            </aside>
+            <div class="search-result--group">
+                <!-- selected filters -->
+                <div id="search_result_filter_used" class="filter-used d-none">
+                    <ul class="filter-used__list">
+                        <li class="filter-used__item">
+                            FinTech
+                            <button class="filter-used__link" type="button"><span></span></button>
+                        </li>
+                        <li class="filter-used__item">
+                            Security
+                            <button class="filter-used__link" type="button"><span></span></button>
+                        </li>
+                        <li class="filter-used__item">
+                            Outsource
+                            <button class="filter-used__link" type="button"><span></span></button>
+                        </li>
+                        <li class="filter-used__item">
+                            з активними вакансіями
+                            <button class="filter-used__link" type="button"><span></span></button>
+                        </li>
+                        <li class="filter-used__item">
+                            з парковкою
+                            <button class="filter-used__link" type="button"><span></span></button>
+                        </li>
+                    </ul>
+                </div>
+                <!-- /selected filters -->
+                <div id="search_result_list" class="search-result__list">
+                    <!-- card list -->
+                    <div class="search-result__cards">
+                        @@include('partials/companies/companies-card1.html')
+                        @@include('partials/companies/companies-card2.html')
+                        @@include('partials/companies/companies-card3.html')
+                        @@include('partials/companies/companies-card1.html')
+                        @@include('partials/companies/companies-card2.html')
+                        @@include('partials/companies/companies-card3.html')
+                        @@include('partials/companies/companies-card3.html')
+                        @@include('partials/companies/companies-card1.html')
+                        @@include('partials/companies/companies-card2.html')
+                        @@include('partials/companies/companies-card3.html')
+                    </div>
+                    <!-- /card list -->
+
+                    <!-- search footer -->
+                    <footer class="search-result__footer">
+                        <button class="button button--bordered-light" type="button">
+                            More
+                        </button>
+
+                        <!-- pagination -->
+                        @@include('partials/common/pagination.html')
+                        <!-- /pagination -->
+
+                    </footer>
+                    <!-- /search footer -->
+
+                </div>
+                <div id="search_result_empty_block" class="search-result__empty d-none">
+                    <div id="search_result_no_companies" class="search-result__empty-content d-none">
+                        <img class="search-result__empty-image" src="/assets/images/pages/common-images/📂.png" alt="">
+                        <h2 class="search-result__title">No companies yet</h2>
+                    </div>
+                    <div id="search_result_no_result" class="search-result__empty-content d-none">
+                        <h2 class="search-result__title">No results</h2>
+                        <p class="search-result__subtitle">Please update your search criteria.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- /search result -->
+
+@@include('base/layout/footer.html', {
+"script": "companies.html"
+})

@@ -1,0 +1,401 @@
+@@include('base/base-online.html', {
+"page-lang": "en",
+"page-title": "Yet another anonymous work search",
+"page-description": "Yet another anonymous work search",
+"style": "vacancies.html",
+"header": "base/layout/header-auth-nav.html",
+"page-class": "authorized"
+})
+
+<!-- search section -->
+<div class="main-container">
+    <section class="search-container">
+        <div class="search search--profile search--companies">
+            <div class="search__input-group">
+                <input class="search__input"
+                       id="company"
+                       type="text"
+                       placeholder="Company name or keywords"
+                >
+                <img class="search__icon"
+                     alt="Search icon"
+                     width="20"
+                     height="20"
+                     src="/assets/images/pages/common/search.svg"
+                />
+            </div>
+
+            <select class="search__select" name="cities">
+                <option selected>All cities</option>
+            </select>
+
+            <button class="button button--black"
+                    type="button"
+                    aria-label="Search"
+            >
+                Search
+            </button>
+        </div>
+    </section>
+    <!-- /search section -->
+
+    <!-- search result -->
+    <div class="search-result">
+
+        <p class="search-result__vacancies-found">72 companies</p>
+        <div class="search-result__wrapper">
+            <aside class="search-result__filters">
+                <div class="search-result__filter-group">
+                    <div class="search-result__filter-header">
+                        <h2 class="search-result__filter-headline">Filters:</h2>
+                        <button class="button button--light-link">Reset all</button>
+                    </div>
+
+                    <div class="filters">
+                        <div class="filters__group">
+                            <header class="filters__header">
+                                <h4 class="filters__headline">Company type</h4>
+                            </header>
+                            <div class="filters__elements">
+                                <div class="filters__element stepper">
+                                    <div class="stepper__group">
+                                        <label class="stepper__label" for="salary_from">from</label>
+                                        <div class="stepper__element-group">
+                                            <span class="stepper__currency">$</span>
+                                            <input id="salary_from"
+                                                   class="stepper__element"
+                                                   placeholder="500"
+                                                   type="number"
+                                            >
+                                        </div>
+                                    </div>
+                                    <div class="stepper__group">
+                                        <label class="stepper__label" for="salary_to">to</label>
+                                        <div class="stepper__element-group">
+                                            <span class="stepper__currency">$</span>
+                                            <input id="salary_to"
+                                                   class="stepper__element"
+                                                   placeholder="500"
+                                                   type="number"
+                                            >
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <label class="checkbox filters__element">
+                                    <input class="checkbox__input" type="checkbox">
+                                    <span class="checkbox__element"></span>
+                                    Salary range is indicated
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="filters__group">
+                            <header class="filters__header filters__header--sub-headline">
+                                <h4 class="filters__headline">Category</h4>
+                                <p class="filters__sub-headline">Category name</p>
+                            </header>
+                            <div class="filters__elements">
+                                <label class="checkbox filters__element">
+                                    <input class="checkbox__input" type="checkbox">
+                                    <span class="checkbox__element"></span>
+                                    Category
+                                </label>
+                                <label class="checkbox filters__element">
+                                    <input class="checkbox__input" type="checkbox">
+                                    <span class="checkbox__element"></span>
+                                    Category
+                                </label>
+                                <label class="checkbox filters__element">
+                                    <input class="checkbox__input" type="checkbox">
+                                    <span class="checkbox__element"></span>
+                                    Category
+                                </label>
+                                <label class="checkbox filters__element">
+                                    <input class="checkbox__input" type="checkbox">
+                                    <span class="checkbox__element"></span>
+                                    Category
+                                </label>
+                                <label class="checkbox filters__element">
+                                    <input class="checkbox__input" type="checkbox">
+                                    <span class="checkbox__element"></span>
+                                    Category
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="filters__group">
+                            <header class="filters__header">
+                                <h4 class="filters__headline">Experience</h4>
+                            </header>
+                            <div class="filters__filled-elements">
+                                <div class="checkbox-filled filters__filled-element js-checkbox-filled">
+                                    <input class="checkbox-filled__input" type="checkbox">
+                                    <span class="checkbox-filled__element js-checkbox-filled-element"></span>
+                                    None
+                                </div>
+                                <div class="checkbox-filled filters__filled-element js-checkbox-filled">
+                                    <input class="checkbox-filled__input" type="checkbox">
+                                    <span class="checkbox-filled__element js-checkbox-filled-element"></span>
+                                    6 months
+                                </div>
+                                <div class="checkbox-filled filters__filled-element js-checkbox-filled">
+                                    <input class="checkbox-filled__input" type="checkbox">
+                                    <span class="checkbox-filled__element js-checkbox-filled-element"></span>
+                                    1 year
+                                </div>
+                                <div class="checkbox-filled filters__filled-element js-checkbox-filled">
+                                    <input class="checkbox-filled__input" type="checkbox">
+                                    <span class="checkbox-filled__element js-checkbox-filled-element"></span>
+                                    2 years
+                                </div>
+                                <div class="checkbox-filled filters__filled-element js-checkbox-filled">
+                                    <input class="checkbox-filled__input" type="checkbox">
+                                    <span class="checkbox-filled__element js-checkbox-filled-element"></span>
+                                    3 years
+                                </div>
+                                <div class="checkbox-filled filters__filled-element js-checkbox-filled">
+                                    <input class="checkbox-filled__input" type="checkbox">
+                                    <span class="checkbox-filled__element js-checkbox-filled-element"></span>
+                                    4 years
+                                </div>
+                                <div class="checkbox-filled filters__filled-element js-checkbox-filled">
+                                    <input class="checkbox-filled__input" type="checkbox">
+                                    <span class="checkbox-filled__element js-checkbox-filled-element"></span>
+                                    5 years
+                                </div>
+                                <div class="checkbox-filled filters__filled-element js-checkbox-filled">
+                                    <input class="checkbox-filled__input" type="checkbox">
+                                    <span class="checkbox-filled__element js-checkbox-filled-element"></span>
+                                    6 years
+                                </div>
+                                <div class="checkbox-filled filters__filled-element js-checkbox-filled">
+                                    <input class="checkbox-filled__input" type="checkbox">
+                                    <span class="checkbox-filled__element js-checkbox-filled-element"></span>
+                                    7 years
+                                </div>
+                                <div class="checkbox-filled filters__filled-element js-checkbox-filled">
+                                    <input class="checkbox-filled__input" type="checkbox">
+                                    <span class="checkbox-filled__element js-checkbox-filled-element"></span>
+                                    8+ years
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <!-- English level -->
+                        <div class="filters__group">
+                            <header class="filters__header">
+                                <h4 class="filters__headline">English level</h4>
+                            </header>
+                            <div class="filters__elements">
+                                <label class="checkbox filters__element">
+                                    <input class="checkbox__input" type="checkbox">
+                                    <span class="checkbox__element"></span>
+                                    Without
+                                </label>
+                                <label class="checkbox filters__element">
+                                    <input class="checkbox__input" type="checkbox">
+                                    <span class="checkbox__element"></span>
+                                    Beginner (A1)
+                                </label>
+                                <label class="checkbox filters__element">
+                                    <input class="checkbox__input" type="checkbox">
+                                    <span class="checkbox__element"></span>
+                                    Elementary (A2)
+                                </label>
+                                <label class="checkbox filters__element">
+                                    <input class="checkbox__input" type="checkbox">
+                                    <span class="checkbox__element"></span>
+                                    Intermediate (B1)
+                                </label>
+                                <label class="checkbox filters__element">
+                                    <input class="checkbox__input" type="checkbox">
+                                    <span class="checkbox__element"></span>
+                                    Upper Intermediate (B2)
+                                </label>
+                            </div>
+                        </div>
+                        <!-- /English level -->
+
+                        <!-- Direction -->
+                        <div class="filters__group">
+                            <header class="filters__header">
+                                <h4 class="filters__headline">Direction</h4>
+                            </header>
+
+
+                            <div class="filters__elements">
+                                <label class="checkbox filters__element">
+                                    <input class="checkbox__input" type="checkbox">
+                                    <span class="checkbox__element"></span>
+                                    CyberSecurity
+                                </label>
+                                <label class="checkbox filters__element">
+                                    <input class="checkbox__input" type="checkbox">
+                                    <span class="checkbox__element"></span>
+                                    Embedded
+                                </label>
+                                <label class="checkbox filters__element">
+                                    <input class="checkbox__input" type="checkbox">
+                                    <span class="checkbox__element"></span>
+                                    EdTech
+                                </label>
+                            </div>
+                        </div>
+                        <!-- /Direction -->
+
+                        <!-- Company type -->
+                        <div class="filters__group">
+                            <header class="filters__header">
+                                <h4 class="filters__headline">Company type</h4>
+                            </header>
+                            <div class="filters__elements">
+                                <label class="checkbox filters__element">
+                                    <input class="checkbox__input" type="checkbox">
+                                    <span class="checkbox__element"></span>
+                                    Product
+                                </label>
+                                <label class="checkbox filters__element">
+                                    <input class="checkbox__input" type="checkbox">
+                                    <span class="checkbox__element"></span>
+                                    Startup
+                                </label>
+                                <label class="checkbox filters__element">
+                                    <input class="checkbox__input" type="checkbox">
+                                    <span class="checkbox__element"></span>
+                                    Outstuff
+                                </label>
+                                <label class="checkbox filters__element">
+                                    <input class="checkbox__input" type="checkbox">
+                                    <span class="checkbox__element"></span>
+                                    Outsource
+                                </label>
+                            </div>
+                        </div>
+                        <!-- /Company type -->
+
+                        <!-- Labor week -->
+                        <div class="filters__group">
+                            <header class="filters__header">
+                                <h4 class="filters__headline">Labor week</h4>
+                            </header>
+                            <div class="filters__filled-elements">
+                                <div class="checkbox-filled filters__filled-element js-checkbox-filled">
+                                    <input class="checkbox-filled__input" type="checkbox">
+                                    <span class="checkbox-filled__element js-checkbox-filled-element"></span>
+                                    3-day
+                                </div>
+                                <div class="checkbox-filled filters__filled-element js-checkbox-filled">
+                                    <input class="checkbox-filled__input" type="checkbox">
+                                    <span class="checkbox-filled__element js-checkbox-filled-element"></span>
+                                    4-day
+                                </div>
+                                <div class="checkbox-filled filters__filled-element js-checkbox-filled">
+                                    <input class="checkbox-filled__input" type="checkbox">
+                                    <span class="checkbox-filled__element js-checkbox-filled-element"></span>
+                                    5-day
+                                </div>
+                                <div class="checkbox-filled filters__filled-element js-checkbox-filled">
+                                    <input class="checkbox-filled__input" type="checkbox">
+                                    <span class="checkbox-filled__element js-checkbox-filled-element"></span>
+                                    6-day
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /Labor week -->
+
+                        <!-- Other -->
+                        <div class="filters__group">
+                            <header class="filters__header">
+                                <h4 class="filters__headline">Other</h4>
+                            </header>
+                            <div class="filters__elements">
+                                <label class="checkbox filters__element">
+                                    <input class="checkbox__input" type="checkbox">
+                                    <span class="checkbox__element"></span>
+                                    Without a test task
+                                </label>
+                                <label class="checkbox filters__element">
+                                    <input class="checkbox__input" type="checkbox">
+                                    <span class="checkbox__element"></span>
+                                    Without live coding
+                                </label>
+                                <label class="checkbox filters__element">
+                                    <input class="checkbox__input" type="checkbox">
+                                    <span class="checkbox__element"></span>
+                                    Team description
+                                </label>
+                                <label class="checkbox filters__element">
+                                    <input class="checkbox__input" type="checkbox">
+                                    <span class="checkbox__element"></span>
+                                    Description of interview stages
+                                </label>
+                                <label class="checkbox filters__element">
+                                    <input class="checkbox__input" type="checkbox">
+                                    <span class="checkbox__element"></span>
+                                    Medical insurance
+                                </label>
+                                <label class="checkbox filters__element">
+                                    <input class="checkbox__input" type="checkbox">
+                                    <span class="checkbox__element"></span>
+                                    Favorite vacancies
+                                </label>
+                            </div>
+                        </div>
+                        <!-- /Other -->
+
+                    </div>
+                </div>
+
+            </aside>
+            <div class="search-result--group">
+                <div id="search_result_list" class="search-result__list">
+                    <!-- card list -->
+                    <div class="search-result__cards">
+                        @@include('partials/vacancies/vacancy-card1.html')
+                        @@include('partials/vacancies/vacancy-card2.html')
+                        @@include('partials/vacancies/vacancy-card3.html')
+                        @@include('partials/vacancies/vacancy-card1.html')
+                        @@include('partials/vacancies/vacancy-card2.html')
+                        @@include('partials/vacancies/vacancy-card3.html')
+                        @@include('partials/vacancies/vacancy-card3.html')
+                        @@include('partials/vacancies/vacancy-card1.html')
+                        @@include('partials/vacancies/vacancy-card2.html')
+                        @@include('partials/vacancies/vacancy-card3.html')
+                    </div>
+                    <!-- /card list -->
+
+                    <!-- search footer -->
+                    <footer class="search-result__footer">
+                        <button class="button button--bordered-light" type="button">
+                            More
+                        </button>
+
+                        <!-- pagination -->
+                        @@include('partials/common/pagination.html')
+                        <!-- /pagination -->
+
+                    </footer>
+                    <!-- /search footer -->
+
+                </div>
+                <div id="search_result_empty_block" class="search-result__empty d-none">
+                    <div id="search_result_no_companies" class="search-result__empty-content d-none">
+                        <img class="search-result__empty-image" src="/assets/images/pages/common-images/📂.png" alt="">
+                        <h2 class="search-result__title">No companies yet</h2>
+                    </div>
+                    <div id="search_result_no_result" class="search-result__empty-content d-none">
+                        <h2 class="search-result__title">No results</h2>
+                        <p class="search-result__subtitle">Please update your search criteria.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    <!-- /search result -->
+
+@@include('base/layout/footer.html', {
+"script": "vacancies.html"
+})
