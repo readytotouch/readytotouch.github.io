@@ -9,6 +9,8 @@ $primary-blue: #7388ff;
 $header-color: #b0baeb;
 $body-color: #f2f2f8;
 
+$border-color-light: #D8DDEB;
+
 $bg-light: #F5F5F9;
 
 $disabled: #96969C;
@@ -34,3 +36,7 @@ $font-sm: 14px;
 $font-md: 18px;
 $font-lg: 22px;
 $font-xl: 32px;
+
+.d-none {
+    display: none !important;
+}
