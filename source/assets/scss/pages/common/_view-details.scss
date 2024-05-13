@@ -1,0 +1,141 @@
+.detail-view {
+    $_this: &;
+
+    &__content {
+        max-width: 1008px;
+        margin-bottom: 104px;
+    }
+
+    &__card {
+        padding: 32px;
+        margin-bottom: 4px;
+        border-radius: 16px;
+        background: $white;
+    }
+
+    .card__company-links {
+        border: none;
+    }
+
+    &__info {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 4px;
+    }
+
+    &__info-card {
+        padding: 16px;
+        margin-bottom: 4px;
+        border-radius: 16px;
+        background: $white;
+    }
+
+    &__info-group {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    &__info-row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 18px;
+        padding: 16px;
+    }
+
+    &__info-group:nth-child(2) {
+        #{$_this}__info-value {
+            margin: 0;
+        }
+
+        #{$_this}__info-row {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+    }
+
+    &__info-key {
+        display: flex;
+    }
+
+    &__info-icon {
+        margin-top: 3px;
+    }
+
+    &__info-value {
+        font-size: $font-md;
+        line-height: 25px;
+        color: $body-light;
+        margin-left: 8px;
+    }
+
+    &__info-value-hidden {
+        font-size: 16px;
+        line-height: 130%;
+        padding: 2px 8px;
+        color: #4e5fca;
+        background: #ebedf9;
+        border-radius: 4px;
+        width: max-content;
+        display: flex;
+        align-items: center;
+    }
+
+    &__info-data {
+        font-size: $font-md;
+        line-height: 150%;
+        font-weight: 400;
+        color: $body-dark;
+
+        a {
+            font-weight: 500;
+            color: $link-blue;
+        }
+    }
+
+    &__social-link {
+        margin-right: 12px;
+        height: 100%;
+    }
+
+    &__social-img {
+        width: 40px;
+        height: 40px;
+        border-radius: 8px;
+    }
+
+    &__description-title {
+        margin-bottom: 16px;
+    }
+
+    &__text-content {
+        margin-bottom: 24px;
+        line-height: 27px;
+    }
+
+    &__footer {
+        margin-top: 28px;
+        display: flex;
+        align-items: center;
+    }
+
+    &__footer-report {
+        margin-left: auto;
+        cursor: pointer;
+    }
+
+    &__strike {
+        font-size: $font-md;
+        font-weight: 500;
+        line-height: 20px;
+        color: $body-light;
+        margin-left: 8px;
+
+        &:hover {
+            text-decoration: underline;
+            text-decoration-skip-ink: none;
+        }
+    }
+}
