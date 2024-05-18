@@ -1,0 +1,31 @@
+@@include('base/base-online.html', {
+"page-lang": "en",
+"page-title": "Yet another anonymous work search",
+"page-description": "Yet another anonymous work search",
+"style": "company.html",
+"header": "base/layout/header-auth-nav.html",
+"page-class": "authorized"
+})
+
+<div class="main-container">
+    @@include('partials/common/breadcrumbs-company.html')
+    <section class="company-vacancies">
+        <div class="wrapper">
+            <h3 class="company-vacancies__headline headline">Company projects</h3>
+            <div class="wrapper-content company-vacancies__list">
+                @@include('partials/projects/project-card1.html')
+                @@include('partials/projects/project-card2.html')
+                @@include('partials/projects/project-card3.html')
+            </div>
+            <div class="search-result__empty-content d-none">
+                <img class="search-result__empty-image" src="/assets/images/pages/common-images/📂.png" alt="folder">
+                <h2 class="search-result__title">No projects yet</h2>
+            </div>
+        </div>
+    </section>
+</div>
+
+
+@@include('base/layout/footer.html', {
+"script": "vacancies.html"
+})

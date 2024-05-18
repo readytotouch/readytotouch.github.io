@@ -284,6 +284,13 @@
         color: $title-dark;
     }
 
+    &__about-headline--v2 {
+        font-size: 26px;
+        line-height: 130%;
+        font-weight: 500;
+        color: $title-dark;
+    }
+
     &__about-list {
         display: grid;
         row-gap: 16px;
@@ -296,7 +303,7 @@
         transition: border .225s ease;
 
         &:hover {
-            border-color: $body-light;
+            border-color: inherit;
         }
     }
 

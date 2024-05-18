@@ -9,11 +9,11 @@
 
 <!-- vacancy -->
 <div class="main-container">
-    @@include('partials/common/breadcrumbs-company.html')
+    @@include('partials/common/breadcrumbs-project.html')
 
-    <section class="company">
+    <section class="project">
         <div class="wrapper detail-view">
-            <div class="detail-view__content">
+            <div class="detail-view__content-without-margin partial-block">
                 <div class="card detail-view__card">
                     <aside class="card__action">
                         <button class="favorite card__action-button button-group__item">
@@ -39,6 +39,10 @@
                             <a href="/page-stub.html"
                                class="card__headline detail-view__link"
                             >
+                                u8views
+                            </a>
+                            <a href="/page-stub.html"
+                               class="card__sub-headline detail-view__link">
                                 ReadyToTouch
                                 <img class="card__verify"
                                      width="16"
@@ -47,15 +51,6 @@
                                      src="/assets/images/pages/common/company-status.svg"
                                 />
                             </a>
-                            <a href="/page-stub.html"
-                               class="card__sub-headline detail-view__link">
-                                <img class="card__verify"
-                                     width="16"
-                                     height="16"
-                                     alt="status"
-                                     src="/assets/images/pages/common/marker.svg"
-                                />All cities
-                            </a>
                         </figcaption>
                     </figure>
                     <div class="card__company-links">
@@ -63,13 +58,9 @@
                             <span class="card__link-value">Vacancies</span>
                             <span class="card__link-data">1</span>
                         </a>
-                        <a href="/page-stub.html" class="card__link-item detail-view__link">
-                            <span class="card__link-value">Projects</span>
-                            <span class="card__link-data">2</span>
-                        </a>
                     </div>
                 </div>
-                <!-- vacancy info -->
+                <!-- project info -->
                 <div class="detail-view__info">
                     <div class="detail-view__info-group detail-view__info-card">
                         <div class="detail-view__info-row">
@@ -94,19 +85,7 @@
                                 />
                                 <figcaption class="detail-view__info-value">Direction</figcaption>
                             </figure>
-                            <div class="detail-view__info-data">HRTech</div>
-                        </div>
-                        <div class="detail-view__info-row">
-                            <figure class="detail-view__info-key">
-                                <img class="detail-view__info-icon"
-                                     alt="user"
-                                     width="16"
-                                     height="16"
-                                     src="/assets/images/pages/vacancy/user.svg"
-                                />
-                                <figcaption class="detail-view__info-value">Employees</figcaption>
-                            </figure>
-                            <div class="detail-view__info-data">3</div>
+                            <div class="detail-view__info-data">Information Services</div>
                         </div>
                     </div>
                     <div class="detail-view__info-group detail-view__info-card">
@@ -115,7 +94,7 @@
                                 <figcaption class="detail-view__info-value">Website</figcaption>
                             </figure>
                             <div class="detail-view__info-data">
-                                <a href="https://readytotouch.netlify.app/">readytotouch.com</a>
+                                <a class="vacancy__link" href="https://readytotouch.netlify.app/">readytotouch.com</a>
                             </div>
                         </div>
                         <div class="detail-view__info-row">
@@ -132,68 +111,26 @@
                                 </a>
                                 <a href="/" class="detail-view__social-link">
                                     <img class="detail-view__social-img"
-                                         title="dou.com"
-                                         src="/assets/images/pages/common-images/dou.svg"
-                                         alt="dou"
-                                    >
-                                </a>
-                                <a href="/" class="detail-view__social-link">
-                                    <img class="detail-view__social-img"
-                                         title="linkedin.com"
-                                         src="/assets/images/pages/common-images/linkedin.svg"
-                                         alt="linkedin"
-                                    >
-                                </a>
-                                <a href="/" class="detail-view__social-link">
-                                    <img class="detail-view__social-img"
                                          title="facebook.com"
                                          src="/assets/images/pages/common-images/Facebook.svg"
                                          alt="facebook"
-                                    >
-                                </a>
-                                <a href="/" class="detail-view__social-link">
-                                    <img class="detail-view__social-img"
-                                         title="unknown.com"
-                                         src="/assets/images/pages/common-images/unknown.svg"
-                                         alt="unknown"
                                     >
                                 </a>
                             </div>
                         </div>
                     </div>
                 </div>
-                <!-- /vacancy info -->
+                <!-- /project info -->
 
-                <!-- vacancy description -->
+                <!-- project description -->
                 <div class="detail-view__description detail-view__card">
                     <h2 class="headline headline--lvl2 details-view_description-title">Vacancy description</h2>
                     <p class="text detail-view__text-content">
-                        ReadyToTouch is a product project that was founded in early 2020 with the goal of creating a
-                        platform for anonymous job searching.
+                        A free and simple tool to track and analyze views of your GitHub profile. Profile view counter is an easy-to-use tool that allows you to quickly and accurately track the number of views on your GitHub profile.
                         <br>
                         <br>
-                        Our goal is to facilitate the job search process for candidates by providing convenient and
-                        effective communication tools between candidates and recruiters. We strive to create a simple
-                        and effective job search algorithm that meets the needs of candidates.
-                        <br>
-                        <br>
-                        We emphasize the search by projects. Furthermore, we understand how much work depends on the
-                        project and interest in the direction of the project.
-                        <br>
-                        <br>
-                        Our project is at the stage of active development, and there is already a design and
-                        functionality that meet the expectations of our founder. Our team consists of three members
-                        responsible for design, layout, and backend development.
-                        <br>
-                        <br>
-                        Our technology stack includes design in Figma, front-end in TypeScript, back-end in Go, and a
-                        PostgreSQL database. Interaction between clients and the server is implemented using code
-                        generation through grpc-web.
-                        <br>
-                        <br>
-                        Our future plans include publishing the project publicly on GitHub, developing and promoting the
-                        project through technical articles, and a public version of the site that will be updated
-                        gradually.
+                        You can use the profile views counter to analyze the dynamics of views of your profile, such as the impact of any development, blogging or participation in a conference.
+                        Also, you can use the profile views counter to see the statistics of referral registrations from your profile and their effect on the number of profile views.
                         <br>
                         <br>
                         Also, an important element of our activity is social responsibility, and we plan to direct
@@ -201,9 +138,9 @@
                     </p>
 
                 </div>
-                <!-- /vacancy description -->
+                <!-- /project description -->
 
-                <!-- vacancy content footer -->
+                <!-- project content footer -->
                 <footer class="detail-view__footer">
                     <button href="javascript:" class="detail-view__footer-report button button--empty">
                         <img src="/assets/images/pages/vacancy/report.svg"
@@ -213,15 +150,21 @@
                         <span class="detail-view__strike">Report</span>
                     </button>
                 </footer>
-                <!-- /vacancy content footer -->
+                <!-- /project content footer -->
             </div>
-        </div>
+            <!-- vacancy about company -->
+            <div class="vacancy__about about-company partial-block">
+                <h2 class="vacancy__about-headline--v2">About the company</h2>
+                <div class="vacancy__about-list">
+                    @@include('partials/projects/project-card1.html')
+                </div>
+            </div>
+            <!-- /vacancy about company -->
+
+
     </section>
 </div>
 
-<!-- /vacancy -->
-
-
 @@include('base/layout/footer.html', {
-"script": ""
+"script": "companies.html"
 })

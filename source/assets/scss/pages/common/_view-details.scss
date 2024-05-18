@@ -6,6 +6,10 @@
         margin-bottom: 104px;
     }
 
+    &__content-without-margin {
+        margin-bottom: 0;
+    }
+
     &__card {
         padding: 32px;
         margin-bottom: 4px;
@@ -34,7 +38,7 @@
     &__info-group {
         display: flex;
         flex-direction: column;
-        justify-content: space-around;
+        row-gap: 8px;
     }
 
     &__info-row {
@@ -87,7 +91,9 @@
         font-size: $font-md;
         line-height: 150%;
         font-weight: 400;
-        color: $body-dark;
+        color: $title-dark;
+        text-overflow: ellipsis;
+        overflow: hidden;
 
         a {
             font-weight: 500;
@@ -112,6 +118,7 @@
 
     &__text-content {
         margin-bottom: 24px;
+        color: $body-dark;
         line-height: 27px;
     }
 
