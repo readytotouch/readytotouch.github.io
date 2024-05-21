@@ -58,7 +58,7 @@
     &__info-value {
         font-size: $font-md;
         line-height: 25px;
-        color: $title-light;
+        color: $body-light;
         margin-left: 8px;
     }
 
@@ -78,7 +78,7 @@
         font-size: $font-md;
         line-height: 150%;
         font-weight: 400;
-        color: $body-dark;
+        color: $title-dark;
     }
 
     &__header {
@@ -112,6 +112,12 @@
     &__company {
         display: flex;
         margin-top: 24px;
+    }
+
+    &__action-group {
+        position: absolute;
+        top: 24px;
+        right: 24px;
     }
 
     &__company-logo-overlay {
@@ -278,7 +284,7 @@
     }
 
     &__about-headline {
-        font-size: 44px;
+        font-size: 32px;
         line-height: 130%;
         font-weight: 500;
         color: $title-dark;

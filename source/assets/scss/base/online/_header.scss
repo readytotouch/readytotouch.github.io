@@ -71,21 +71,20 @@
     }
 }
 
-.modal.active {
-    opacity: 1;
+.modal-profile.active {
+    display: flex;
     pointer-events: all;
 }
 
-.modal {
+.modal-profile {
     position: absolute;
-    display: flex;
+    display: none;
     flex-direction: column;
     width: 540px;
     right: -57%;
     top: 136%;
     border-radius: 8px;
     background: #fff;
-    opacity: 0;
     pointer-events: none;
     filter: drop-shadow(0px 6px 16px rgba(17, 16, 40, 0.1));
 

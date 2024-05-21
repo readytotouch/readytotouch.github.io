@@ -1,0 +1,53 @@
+<div id="modal-feedback-result"
+     class="modal micromodal-slide feedback-modal"
+     aria-hidden="true"
+>
+
+	<div class="modal__overlay"
+	     tabindex="-1"
+	     data-micromodal-close
+	>
+
+		<div class="modal__container feedback-modal__container feedback-modal__container--result"
+		     role="dialog"
+		     aria-modal="true"
+		     aria-labelledby="modal-feedback-result-title"
+		>
+			<button class="feedback-modal__button-close"
+			        type="button"
+			        aria-label="Close modal"
+			        data-micromodal-close
+			>
+				<svg class="feedback-modal__cross-icon" width="16" height="16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M15.805.195a.667.667 0 0 0-.943 0L8 7.057 1.138.195a.667.667 0 0 0-.943 0 .667.667 0 0 0 0 .943L7.057 8 .195 14.862a.667.667 0 0 0 0 .943.667.667 0 0 0 .943 0L8 8.943l6.862 6.862a.666.666 0 1 0 .943-.943L8.943 8l6.862-6.862a.667.667 0 0 0 0-.943Z"/></svg>
+			</button>
+			<header>
+				<h2 class="feedback-modal__title"
+				    id="modal-feedback-result-title"
+				>Відправлено!</h2>
+			</header>
+
+			<div class="feedback-modal__content feedback-modal__content--result"
+			     id="modal-feedback-result-content"
+			>
+				<ul class="feedback-modal__result">
+					<li>
+						<p class="feedback-modal__result-text">Ви успішно відгукнутись на вакансію:</p>
+						<a class="feedback-modal__result-link" href="#">Senior C# Developer</a>
+					</li>
+					<li>
+						<p class="feedback-modal__result-text">профілем:</p>
+						<a class="feedback-modal__result-link" href="#">DevOps Engineer</a>
+					</li>
+				</ul>
+			</div>
+
+			<footer class="feedback-modal__footer">
+				<button class="button button--gray button--small"
+				        type="button"
+				        data-micromodal-close
+				>Скасувати</button>
+			</footer>
+
+		</div>
+	</div>
+</div>
