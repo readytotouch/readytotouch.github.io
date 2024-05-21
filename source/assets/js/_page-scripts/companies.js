@@ -8,8 +8,8 @@ const showEmptyCompaniesListButton = document.querySelector(
 	"#show_empty_companies",
 );
 
-function listener(selector, callback) {
-	selector?.addEventListener("click", (event) => callback(event));
+function listener($element, callback) {
+	$element?.addEventListener("click", (event) => callback(event));
 }
 
 function showBlock(selectors) {

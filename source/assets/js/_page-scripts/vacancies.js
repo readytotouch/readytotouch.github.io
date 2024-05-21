@@ -2,30 +2,30 @@ import favorite from "../common/favorite";
 
 favorite();
 
-function toggleCheckbox(target, child) {
-	target.forEach((element) => {
-		element.addEventListener("click", (event) => {
-			let target = event.target;
+function toggleCheckbox($elements, child) {
+	$elements.forEach(($element) => {
+		$element.addEventListener("click", (event) => {
+			const $target = event.target;
 
 			if (
-				!target.classList.contains("is-checked") &&
-				target !== element.querySelector(child)
+				!$target.classList.contains("is-checked") &&
+				$target !== $element.querySelector(child)
 			) {
-				target.classList.add("is-checked");
-			} else if (target === element.querySelector(child)) {
-				target.parentElement.classList.remove("is-checked");
+				$target.classList.add("is-checked");
+			} else if ($target === $element.querySelector(child)) {
+				$target.parentElement.classList.remove("is-checked");
 			} else {
-				target.classList.remove("is-checked");
+				$target.classList.remove("is-checked");
 			}
 		});
 	});
 }
 
-const checkboxFilled = document.querySelectorAll(".js-checkbox-filled");
+const $checkboxFilled = document.querySelectorAll(".js-checkbox-filled");
 const checkboxFilledElementClassName = ".js-checkbox-filled-element";
 
-if (checkboxFilled.length > 0) {
-	toggleCheckbox(checkboxFilled, checkboxFilledElementClassName);
+if ($checkboxFilled.length > 0) {
+	toggleCheckbox($checkboxFilled, checkboxFilledElementClassName);
 }
 
 const $hideVacancyButtons = document.querySelectorAll(".js-hide-vacancy");
