@@ -1,0 +1,22 @@
+.company-vacancies {
+    &__list {
+        display: flex;
+        flex-direction: column;
+        row-gap: 16px;
+    }
+
+    &__headline {
+        font-size: 32px;
+        margin: 16px 0 32px;
+        font-weight: 500;
+    }
+
+    .search-result__empty-content {
+        min-height: 500px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
