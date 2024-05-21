@@ -1,0 +1,98 @@
+<div id="modal-feedback-list"
+     class="modal micromodal-slide feedback-modal"
+     aria-hidden="true"
+>
+
+	<div class="modal__overlay"
+	     tabindex="-1"
+	     data-micromodal-close
+	>
+
+		<div class="modal__container feedback-modal__container"
+		     role="dialog"
+		     aria-modal="true"
+		     aria-labelledby="modal-feedback-list-title"
+		>
+			<button class="feedback-modal__button-close"
+			        type="button"
+			        aria-label="Close modal"
+			        data-micromodal-close
+			>
+				<svg class="feedback-modal__cross-icon" width="16" height="16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M15.805.195a.667.667 0 0 0-.943 0L8 7.057 1.138.195a.667.667 0 0 0-.943 0 .667.667 0 0 0 0 .943L7.057 8 .195 14.862a.667.667 0 0 0 0 .943.667.667 0 0 0 .943 0L8 8.943l6.862 6.862a.666.666 0 1 0 .943-.943L8.943 8l6.862-6.862a.667.667 0 0 0 0-.943Z"/></svg>
+			</button>
+			<header>
+				<h2 class="feedback-modal__title"
+				    id="modal-feedback-list-title"
+				>Відгук на вакансію</h2>
+				<figure class="feedback-modal__info">
+					<img width="16"
+					     height="16"
+					     alt="info icon"
+                         src="/"
+					>
+					Ви відгукуєтесь без відкриття контактів
+				</figure>
+			</header>
+
+			<div class="feedback-modal__content"
+			     id="modal-feedback-list-content"
+			>
+				<section class="feedback-modal__list">
+					<h3 class="feedback-modal__content-title">Оберіть профіль:</h3>
+					<div class="feedback-modal__profiles">
+						<label class="radio js-profile-radio">
+							<input class="radio__input"
+							       name="profile"
+							       type="radio"
+							>
+							<span class="radio__element"></span>
+							DevOps Engineer
+						</label>
+						<label class="radio js-profile-radio">
+							<input class="radio__input"
+							       name="profile"
+							       type="radio"
+							>
+							<span class="radio__element"></span>
+							Senior Full Stack Developer
+						</label>
+						<label class="radio js-profile-radio">
+							<input class="radio__input"
+							       name="profile"
+							       type="radio"
+							>
+							<span class="radio__element"></span>
+							.NET Developer
+						</label>
+					</div>
+				</section>
+				<div class="feedback-modal__action-group">
+					<a class="button button--empty"
+					   href="#"
+					>
+						<svg class="feedback-modal__add-icon" width="16" height="16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M15.333 7.334H14V6a.666.666 0 1 0-1.333 0v1.334h-1.334a.667.667 0 0 0 0 1.333h1.334V10A.667.667 0 0 0 14 10V8.667h1.333a.667.667 0 1 0 0-1.333ZM6 8a4 4 0 1 0 0-8 4 4 0 0 0 0 8Zm0-6.667a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334ZM6 9.334a6.007 6.007 0 0 0-6 6 .667.667 0 1 0 1.333 0 4.666 4.666 0 1 1 9.334 0 .667.667 0 1 0 1.333 0 6.007 6.007 0 0 0-6-6Z" fill="#7C7B88"/></svg>
+						Додати профіль
+					</a>
+					<button class="button button--empty"
+					        type="button"
+					>
+						<svg class="feedback-modal__update-icon" width="16" height="16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M14.641 8.583a6.687 6.687 0 1 1-1.893-5.25h-2.081a.667.667 0 1 0 0 1.334h2.762a1.239 1.239 0 0 0 1.238-1.238V.667A.667.667 0 0 0 14 0a.667.667 0 0 0-.667.667v1.385a7.99 7.99 0 1 0 2.634 6.681.67.67 0 0 0-1.109-.568.655.655 0 0 0-.217.418Z"/></svg>
+						Оновити профілі
+					</button>
+				</div>
+			</div>
+
+			<footer class="feedback-modal__footer">
+				<button class="button button--empty button--small"
+				        type="button"
+				        data-micromodal-close
+				>Скасувати</button>
+				<button type="button"
+				        class="button button--black button--small js-send-profile"
+				        disabled
+				>Відправити</button>
+			</footer>
+
+		</div>
+	</div>
+</div>

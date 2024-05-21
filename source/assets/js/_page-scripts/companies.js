@@ -1,8 +1,6 @@
-document.querySelectorAll(".card__action-button").forEach((button) => {
-	button.addEventListener("click", (event) => {
-		event.target.classList.toggle("in-favorite");
-	});
-});
+import favorite from "../common/favorite";
+
+favorite();
 
 const showListButton = document.querySelector("#show_list");
 const showEmptySearchButton = document.querySelector("#show_empty_search");
@@ -11,7 +9,7 @@ const showEmptyCompaniesListButton = document.querySelector(
 );
 
 function listener(selector, callback) {
-	selector.addEventListener("click", (event) => callback(event));
+	selector?.addEventListener("click", (event) => callback(event));
 }
 
 function showBlock(selectors) {

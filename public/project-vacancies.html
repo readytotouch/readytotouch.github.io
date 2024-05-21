@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Yet another anonymous work search</title>
+    <meta name="description" content="Yet another anonymous work search">
+
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+	<link rel="manifest" href="/manifest.json">
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+	<meta name="theme-color" content="#ffffff">
+
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+
+    <style>.d-none{display:none!important}html{height:100%}body{font-family:"Inter",arial,helvetica neue,helvetica,sans-serif;font-size:16px;color:#21212b;display:grid;grid-template-rows:auto 1fr auto;min-height:100%}.main-wrapper.authorized{background-color:#f2f2f8}.disabled-scroll{overflow-y:hidden}.wrapper-content{max-width:1008px;margin-bottom:104px}.partial-block{max-width:1008px}.search-container{margin-top:24px}.visually-hidden:not(:focus):not(:active){position:absolute;width:1px;height:1px;margin:-1px;border:0;padding:0;white-space:nowrap;-webkit-clip-path:inset(100%);clip-path:inset(100%);clip:rect(0 0 0 0);overflow:hidden}html{box-sizing:border-box}*,:before,:after{box-sizing:inherit}html{-webkit-text-size-adjust:100%;-moz-text-size-adjust:100%;text-size-adjust:100%}body{-webkit-overflow-scrolling:touch}html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0}article,aside,details,figcaption,figure,footer,header,main,menu,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block}audio:not([controls]){display:none;height:0}a{background-color:transparent;color:#21212b}abbr[title]{border-bottom:none;text-decoration:underline;-webkit-text-decoration:underline dotted;text-decoration:underline dotted}b,strong{font-weight:bolder}dfn{font-style:italic}mark{background-color:#ff0;color:#000}svg:not(:root){overflow:hidden}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}hr{box-sizing:content-box;height:0;overflow:visible}button,input,select,textarea{font:inherit;margin:0}button,input{overflow:visible}button,select{text-transform:none}button,[type=button],[type=reset],[type=submit]{-webkit-appearance:button;-moz-appearance:button;appearance:button}input,textarea,button,select,a{-webkit-tap-highlight-color:transparent}address{font-style:normal}a:focus:not(:focus-visible),select:focus:not(:focus-visible),input:focus:not(:focus-visible),textarea:focus:not(:focus-visible){outline:0}button::-moz-focus-inner,[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner{border-style:none;padding:0}button,input[type=reset],input[type=button],input[type=submit]{cursor:pointer}button[disabled],input[disabled]{cursor:default}button{-webkit-appearance:none;-moz-appearance:none;appearance:none;background:0 0;padding:0;border:0;border-radius:0;line-height:1}button:focus:not(:focus-visible){outline:0}a,a:hover{text-decoration:none}[href="javascript:void();"],[href="javascript:"]{cursor:default}ul,ol{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:none}table{border-collapse:collapse;border-spacing:0}input[type=text],input[type=password],input[type=date],input[type=datetime],input[type=datetime-local],input[type=email],input[type=month],input[type=number],input[type=search],input[type=tel],input[type=time],input[type=url],input[type=week],textarea{box-sizing:border-box}[type=checkbox],[type=radio]{box-sizing:border-box;margin:0;padding:0}input[type=search]{-webkit-appearance:textfield;-moz-appearance:textfield;appearance:textfield;outline-offset:-2px}input[type=search]::-webkit-search-decoration,input[type=search]::-webkit-search-cancel-button{-webkit-appearance:none;appearance:none}input[type=number]::-webkit-inner-spin-button,input[type=number]::-webkit-outer-spin-button{height:auto;-webkit-appearance:none;appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;appearance:button;font:inherit}input[type=number]{-webkit-appearance:textfield;-moz-appearance:textfield;appearance:textfield}select{width:100%;height:20px;border:0;background:0 0}textarea{resize:none;border:0;overflow:auto}::-webkit-input-placeholder{color:#777;line-height:normal}::-moz-placeholder{color:#777;line-height:normal}::placeholder{color:#777;line-height:normal}[hidden]{display:none}.button{font-family:"Inter",arial,helvetica neue,helvetica,sans-serif;font-size:18px;font-weight:500;display:-webkit-inline-flex;display:inline-flex;-webkit-align-items:center;align-items:center;-webkit-justify-content:center;justify-content:center;height:48px;width:-webkit-fit-content;width:-moz-fit-content;width:fit-content;border-radius:8px;padding-left:32px;padding-right:32px;border:1px solid transparent;transition:background-color .225s ease,box-shadow .225s ease,border-color .225s ease,color .225s ease}.button:focus-visible{outline:0;box-shadow:0 0 0 2px #000,0 0 0 3px #fff;border-radius:4px}.button--small{height:40px;padding-left:24px;padding-right:24px}.button--medium{height:44px;padding-left:20px;padding-right:20px}.button--black{color:#fff;background-color:#1c1f29;border-color:#1c1f29;border-width:2px}.button--black:hover{background-color:#303647;border-color:#303647}.button--black:active{background-color:#2f2c6d;border-color:#2f2c6d}.button--black:focus-visible{background-color:#3f3a92;border-color:#b8b6e2;box-shadow:none}.button--black:disabled{color:#9695a5;background-color:#ededf8;border-color:#ededf8}.button--secondary{border:2px solid #1c1f29;padding:0 24px;background-color:transparent}.button--secondary:hover{border-color:#3f3a92;color:#3f3a92}.button--secondary:active{border-color:#2f2c6d;color:#2f2c6d}.button--secondary:focus-visible{border-color:#b8b6e2;box-shadow:none;color:#111028}.button--secondary:disabled{color:#96969c;border-color:#96969c}.button--empty,.button--empty-icon{color:#1c1f29;font-weight:400;border-width:2px;-webkit-column-gap:8px;-moz-column-gap:8px;column-gap:8px}.button--empty:hover,.button--empty-icon:hover{color:#3f3a92;background-color:#ebedf5}.button--empty:hover svg,.button--empty-icon:hover svg{fill:#3f3a92}.button--empty:active,.button--empty-icon:active{color:#2f2c6d;background-color:transparent}.button--empty:active svg,.button--empty-icon:active svg{fill:#2f2c6d}.button--empty:focus-visible,.button--empty-icon:focus-visible{color:#3f3a92;border-color:#b8b6e2;background-color:#ededf8;box-shadow:none}.button--empty:focus-visible svg,.button--empty-icon:focus-visible svg{fill:#3f3a92}.button--empty:disabled,.button--empty.disabled,.button--empty-icon:disabled,.button--empty-icon.disabled{color:#9695a5}.button--empty:disabled svg,.button--empty.disabled svg,.button--empty-icon:disabled svg,.button--empty-icon.disabled svg{fill:#9695a5}.button--empty-icon{padding:0}.button--empty-icon svg{width:20px;height:20px}.button--outline-icon{border:2px solid #dddde0;background-color:transparent;padding:0}.button--outline-icon svg{width:20px;height:20px}.button--outline-icon:hover{border-color:#1c1f29;color:#1c1f29}.button--outline-icon:active{border-color:#dddde0;color:#1c1f29}.button--outline-icon:focus-visible{border-color:#b8b6e2;box-shadow:none;color:#111028}.button--outline-icon:disabled{color:#96969c;border-color:#96969c}.button--gray{color:#111028;background-color:#ededf8;border-color:#ededf8;border-width:2px}.button--gray:hover{color:#3f3a92}.button--gray:active{color:#2f2c6d}.button--gray:focus-visible{color:#3f3a92;border-color:#b8b6e2;box-shadow:none}.button--gray:disabled,.button--gray.disabled{color:#b5b5be}.button--gray2{color:#111028;background-color:#ededf8;border-color:#ededf8;border-radius:4px;padding-left:24px;padding-right:24px;border-width:2px}.button--gray2:hover{color:#3f3a92}.button--gray2:active{color:#2f2c6d}.button--gray2:focus-visible{color:#3f3a92;border:2px solid #b8b6e2;box-shadow:none}.button--gray2:disabled{color:#9695a5;background-color:#ededf8}.button--gray3{color:#111028;background-color:#dcdbf0;border-color:#dcdbf0;border-radius:4px;border-width:2px}.button--gray3:hover{color:#3f3a92}.button--gray3:active{color:#2f2c6d}.button--gray3:focus-visible{color:#3f3a92;border:2px solid #b8b6e2;box-shadow:none}.button--gray3:disabled{color:#9695a5;background-color:#ededf8}.button--white{color:#000;background-color:#fff;border-color:#fff;box-shadow:0 0 40px rgba(0,0,0,.15)}.button--white:hover,.button--white:active{background-color:#f2f2f2;border-color:#f2f2f2}.button--white-shadow{color:#000;background-color:#fff;border-color:#fff}.button--white-shadow:hover,.button--white-shadow:active{box-shadow:0 6px 16px #e1e1e1}.button--bordered-black{color:#000;background-color:#fff;border-width:3px;border-color:#000}.button--bordered-black:hover,.button--bordered-black:active{color:#fff;background-color:#000}.button--bordered-light{color:#1c1f29;border-width:2px;border-color:#1c1f29}.button--bordered-light:hover,.button--bordered-light:active{color:#1c1f29;background-color:#ebedf5}.button--bordered-white{color:#1c1f29;border-width:2px;border-color:#dddde0}.button--bordered-white:hover,.button--bordered-white:active{color:#1c1f29;border-color:#1c1f29}.button--bordered-black-blank{color:#000;border-width:3px;border-color:#000}.button--bordered-black-blank:hover,.button--bordered-black-blank:active{color:#fff;background-color:#000}.button.in-respond{color:#828282;border-color:#eeeff1;background-color:#eeeff1}.button--light-link{padding:0;font-weight:500;color:#96969c;height:auto}.button--light-link:hover,.button--light-link:active{color:#3f3a92}.favorite{width:48px;height:48px;display:-webkit-flex;display:flex;-webkit-align-items:center;align-items:center;-webkit-justify-content:center;justify-content:center;cursor:pointer}.favorite .favorite__icon{pointer-events:none}.favorite .favorite__icon path{fill:none;stroke:#000;stroke-width:2px;transition:fill .225s ease}.favorite.in-favorite .favorite__icon path{fill:#000}.favorite__icon{width:20px;height:20px}.action{width:50px;height:50px;display:-webkit-flex;display:flex;-webkit-align-items:center;align-items:center;-webkit-justify-content:center;justify-content:center;border-radius:3px;border:2px solid #000;cursor:pointer}.action__button-img{pointer-events:none}.custom-icon{display:inline-block;width:16px;height:16px;stroke-width:0;stroke:currentcolor;fill:currentcolor;transition:color .225s ease,fill .225s ease}.bold{font-weight:700}.footer{background:#1a1b26;height:410px}.footer__wrapper{height:100%;padding:104px 0 24px}.footer__group-u8{display:-webkit-flex;display:flex;-webkit-justify-content:space-between;justify-content:space-between}.footer__info{color:#fff}.footer__title{display:block;font-weight:600;font-size:24px;line-height:120%;margin-bottom:16px;color:#fff}.footer__subtitle{line-height:140%;margin-bottom:55px;width:275px;color:#c6cad2}.footer__map{margin-bottom:56px}.footer__copyrights{display:-webkit-flex;display:flex;gap:14px;color:#cfd2d7;font-size:14px;border-top:1px solid #262a30;padding-top:16px}.footer__middle-section{display:-webkit-flex;display:flex;-webkit-flex-direction:column;flex-direction:column;color:#fff;font-size:18px;width:300px}.footer__statistics-link{margin-bottom:24px;color:#c6cad2;transition:color .3s;border-bottom:1px solid #fff;width:-webkit-fit-content;width:-moz-fit-content;width:fit-content}.footer__statistics-link:hover{color:#fff;border-bottom:1px solid #fff}.footer__stars{margin-bottom:32px}.footer__github-link{color:#c6cad2;display:-webkit-flex;display:flex;-webkit-align-items:center;align-items:center;gap:15px;width:-webkit-fit-content;width:-moz-fit-content;width:fit-content;transition:color .3s;border-bottom:1px solid #c6cad2}.footer__github-link:hover{color:#fff;border-bottom:1px solid #fff}.footer__support{display:-webkit-flex;display:flex;-webkit-flex-direction:column;flex-direction:column;gap:16px;background:0 0}.footer__link{padding:16px 32px 16px 40px;border-radius:8px;border:2px solid #575d65;color:#fff;transition:border .2s;width:100%}.footer__link:hover{border:2px solid #fff}.footer__figure{display:-webkit-flex;display:flex;gap:16px}.footer__figure:last-child{-webkit-justify-content:space-between;justify-content:space-between}.header{background:#fff;display:-webkit-flex;display:flex;-webkit-align-items:center;align-items:center;height:64px;box-shadow:0 4px 16px 0 rgba(78,84,102,.12);z-index:50}.header__wrapper{display:-webkit-flex;display:flex;-webkit-align-items:center;align-items:center;-webkit-justify-content:space-between;justify-content:space-between;width:1216px;height:100%;margin:0 auto}.header__logo{display:-webkit-flex;display:flex;gap:12px;-webkit-align-items:center;align-items:center}.header__logo-title{color:#1a1b26;font-size:19px;font-weight:700}.header__profile{position:relative}.header__nav{display:-webkit-flex;display:flex;gap:32px;margin-left:260px}.header__nav-link{font-size:18px;font-weight:500;line-height:150%;color:#4d515c;position:relative;border-bottom:1px solid transparent;transition:border .225s ease}.header__nav-link:hover{border-color:#6f727a}.header__stars{margin-left:auto;display:-webkit-flex;display:flex;-webkit-align-items:center;align-items:center}.header__profile-button{width:48px;height:48px;overflow:hidden}.header__profile-button img{width:inherit;height:inherit}.modal-profile.active{display:-webkit-flex;display:flex;pointer-events:all}.modal-profile{position:absolute;display:none;-webkit-flex-direction:column;flex-direction:column;width:540px;right:-57%;top:136%;border-radius:8px;background:#fff;pointer-events:none;-webkit-filter:drop-shadow(0 6px 16px rgba(17,16,40,.1));filter:drop-shadow(0 6px 16px rgba(17,16,40,.1))}.modal-profile::after{content:"";position:absolute;right:40px;top:-11px;width:0;height:0;border-left:12px solid transparent;border-right:12px solid transparent;border-bottom:12px solid #fff;border-radius:1px}.modal-profile__profile{display:-webkit-flex;display:flex;gap:16px;padding:24px;border-bottom:1px solid #dddce4}.modal-profile__profile-info{width:100%;padding-top:15px}.modal-profile__profile-name{font-weight:600;font-size:22px;line-height:120%;color:#020111;width:100%;margin-bottom:21px}.modal-profile__user-photo{width:48px;height:48px}.modal-profile__link{display:-webkit-flex;display:flex;-webkit-align-items:center;align-items:center;gap:10px;font-weight:400;font-size:18px;line-height:140%;color:#575d65;margin-bottom:16px;transition:color .3s}.modal-profile__link:last-child{margin-bottom:0}.modal-profile__link:hover{color:#0057ff}.modal-profile__log-out{padding:24px}.modal-profile__button{display:-webkit-flex;display:flex;-webkit-align-items:center;align-items:center;gap:11px;transition:color .3s;color:#575d65}.modal-profile__button:hover{color:#0057ff}.main-container{max-width:1216px;margin:0 auto;color:#020111;z-index:40}body{font-family:"Inter",arial,helvetica neue,helvetica,sans-serif;font-size:16px;color:#21212b;display:grid;grid-template-rows:auto 1fr auto;min-height:100%}.main-wrapper{background:#f2f3f8;min-height:calc(100vh - 300px)}</style>
+    <style>.d-none{display:none!important}html{height:100%}body{font-family:"Inter",arial,helvetica neue,helvetica,sans-serif;font-size:16px;color:#21212b;display:grid;grid-template-rows:auto 1fr auto;min-height:100%}.main-wrapper.authorized{background-color:#f2f2f8}.disabled-scroll{overflow-y:hidden}.wrapper-content{max-width:1008px;margin-bottom:104px}.partial-block{max-width:1008px}.search-container{margin-top:24px}.visually-hidden:not(:focus):not(:active){position:absolute;width:1px;height:1px;margin:-1px;border:0;padding:0;white-space:nowrap;-webkit-clip-path:inset(100%);clip-path:inset(100%);clip:rect(0 0 0 0);overflow:hidden}.breadcrumb{margin-top:24px;margin-bottom:24px;color:#4d515c}.breadcrumb__list{display:-webkit-flex;display:flex;-webkit-flex-wrap:wrap;flex-wrap:wrap}.breadcrumb__item{font-size:0}.breadcrumb__item+.breadcrumb__item{position:relative}.breadcrumb__item+.breadcrumb__item:before{content:">";font-size:14px;line-height:130%;color:#4d515c;margin-left:8px;margin-right:8px}.breadcrumb__link{cursor:pointer;position:relative}.breadcrumb__link:after{content:"";position:absolute;right:0;bottom:0;opacity:0;width:100%;height:2px;background-color:#4d515c;transition:opacity .225s ease}.breadcrumb__link:hover{-webkit-text-decoration-skip-ink:none;text-decoration-skip-ink:none}.breadcrumb__link:hover:after{opacity:1}.breadcrumb__link,.breadcrumb__page{font-size:14px;font-weight:500;line-height:130%;color:#4d515c;white-space:nowrap}.breadcrumb__page{color:#96969c}.button-group{display:grid;grid-template-rows:repeat(auto-fit,40px);row-gap:8px}.button-group__item{display:-webkit-flex;display:flex;-webkit-align-items:center;align-items:center;-webkit-justify-content:center;justify-content:center;width:40px;height:40px;transition:.225s ease}.button-group__item:hover{border-radius:4px;background-color:#eff2fa}.radio{font-size:18px;color:#3c3a59;display:-webkit-flex;display:flex;-webkit-align-items:center;align-items:center;height:24px;cursor:pointer}.radio__input{position:absolute;-webkit-appearance:none;-moz-appearance:none;appearance:none}.radio__input:focus-visible{width:24px;height:24px;outline:0;box-shadow:0 0 0 2px #b8b6e2,0 0 0 3px #fff;border-radius:50%}.radio__input:checked+.radio__element{border-width:9px}.radio__element{width:24px;height:24px;border:1px solid #3c3a59;border-radius:50%;background-color:#fff;margin-right:12px;transition:border-width .1s ease}.headline{color:#1c1f29;font-weight:700}.headline--lvl1{font-size:38px;font-weight:500;line-height:130%}.headline--lvl2{font-size:28px;font-weight:500;line-height:120%}.headline--lvl3{font-size:19px;font-weight:500;line-height:120%}.text,.list__item:before,.list__item{font-size:18px;line-height:25px;color:#6d6c7c;margin-top:16px}.list{margin-top:16px;counter-reset:list}.list__item{counter-increment:list;position:relative;padding-left:26px;margin-top:0}.list__item:before{content:counter(list) ". ";margin-top:0;position:absolute;left:3px;top:0}.card{padding:24px;border-radius:16px;background-color:#fff;position:relative}.card__vacancy{display:grid;grid-template-rows:repeat(3,auto);-webkit-column-gap:26px;-moz-column-gap:26px;column-gap:26px;max-width:1008px;z-index:20}.card.hidden .card__vacancy{display:none}.card.hidden .card-hidden{display:block}.card__action{display:grid;grid-template-rows:repeat(auto-fit,40px);grid-column:2;grid-row:1/-1;position:absolute;top:16px;right:16px}.card__header{grid-column:1;display:-webkit-flex;display:flex;margin-bottom:16px}.card__image-overlay{-webkit-flex-shrink:0;flex-shrink:0;display:-webkit-flex;display:flex;-webkit-align-items:flex-start;align-items:flex-start;-webkit-justify-content:center;justify-content:center;border-radius:4px;overflow:hidden}.card__header-caption{display:-webkit-flex;display:flex;-webkit-flex-direction:column;flex-direction:column;-webkit-justify-content:center;justify-content:center;margin-left:12px}.card__header-caption--project{-webkit-flex-direction:row;flex-direction:row}.card__headline{margin-bottom:4px;font-size:26px;line-height:120%;font-weight:500;color:#303647;-webkit-align-self:flex-start;align-self:flex-start;border-bottom:1px solid transparent;gap:8px;display:-webkit-flex;display:flex;-webkit-align-items:center;align-items:center;transition:border .225s ease,color .225s ease}.card__headline:hover{text-decoration:underline}.card__sub-headline{font-size:18px;line-height:25px;color:#4d515c;-webkit-align-self:flex-start;align-self:flex-start;display:-webkit-flex;display:flex;gap:8px;-webkit-align-items:center;align-items:center}.card__text{font-size:18px;line-height:25px;color:#4d515c;margin:16px 0;grid-column:1;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;position:relative}.card__info{display:-webkit-flex;display:flex;-webkit-flex-direction:column;flex-direction:column;gap:8px}.card__figure{display:-webkit-flex;display:flex;-webkit-align-items:center;align-items:center}.card__figcaption{font-size:18px;line-height:25px;color:#4d515c;margin-left:12px}.card__figure-salary .card__figcaption{font-weight:500;color:#1c1f29}.card__hidden-salary{padding:2px 12px;margin-left:8px;line-height:27px;background-color:#f5f5f9;border-radius:8px;color:#4d515c}.card--filled .card__image-overlay{background-color:transparent}.card__company-links{font-size:18px;line-height:25px;color:#1c1f29;display:-webkit-flex;display:flex;border-top:2px solid #f2f2f8}.card__link-item{margin:24px 24px 0 0;display:-webkit-flex;display:flex;gap:8px;position:relative;color:#2955cc;border-bottom:1px solid transparent;transition:border .225s ease}.card__link-item:hover{border-color:#2955cc}.card__image{width:112px;height:56px}.card__footer{display:-webkit-flex;display:flex;-webkit-justify-content:space-between;justify-content:space-between;-webkit-align-items:center;align-items:center;margin-top:8px}.card__details{display:-webkit-flex;display:flex;gap:24px}.card__details .card__figcaption{color:#6f727a}.card__action-button-sloth{background-image:url(/assets/images/pages/vacancy/sloth.svg);background-position:center center;background-repeat:no-repeat;transition:background-image .3s,background-color .3s}.card__action-button-sloth:hover{background-image:url(/assets/images/pages/vacancy/sloth-hide.svg);background-color:#ededf8;border-radius:4px}.card__action-button-sloth:active{background-image:url(/assets/images/pages/vacancy/sloth-hide.svg);background-color:transparent;border-radius:0}.card__action-button-sloth:focus-visible{outline:0;background-color:#ededf8;border:2px solid #b8b6e2;border-radius:4px}.card-hidden{display:none;color:#111028}.card-hidden__main{display:-webkit-flex;display:flex}.card-hidden__title{display:-webkit-flex;display:flex;gap:12px;font-size:18px;line-height:140%;width:90%}.card-hidden__close-button{width:40px;height:40px;border-radius:4px;transition:background-color .3s}.card-hidden__close-button:hover{background-color:#ededf8}.card-hidden__close-img{width:24px;height:24px}.card-hidden__hide-all-group{margin-top:24px;padding-top:24px;border-top:1px solid #dddce4}.card-hidden__hide-all-group .card-hidden__hide-all-vacancy-group{display:none}.card-hidden__hide-all-group.hidden-all .card-hidden__question-group{display:none}.card-hidden__hide-all-group.hidden-all .card-hidden__hide-all-vacancy-group{display:-webkit-flex;display:flex}.card-hidden__hide-all-group.hidden{display:none}.card-hidden__icon{width:24px;height:24px}.card-hidden__question-group{display:grid;grid-template-columns:auto 48px;-webkit-align-items:center;align-items:center;row-gap:16px}.card-hidden__question-text{font-size:21px;line-height:120%}.card-hidden__hide-all-button{font-weight:600;font-size:18px;line-height:140%;padding:11.5px 24px;border:1px solid #3c3a59;border-radius:4px;justify-self:flex-start;transition:.3s;transition-property:color,background,border}.card-hidden__hide-all-button:hover{background:#ededf8;border:1px solid #3f3a92;color:#3f3a92}.card-hidden__hide-all-button:active{background:#ededf8;border:1px solid #2f2c6d;color:#2f2c6d}.skills__group{display:-webkit-flex;display:flex;-webkit-flex-direction:column;flex-direction:column;margin-top:24px}.skills__list{display:-webkit-flex;display:flex;-webkit-flex-wrap:wrap;flex-wrap:wrap;gap:8px}.skills__item{height:40px;display:-webkit-flex;display:flex;-webkit-justify-content:center;justify-content:center;-webkit-align-items:center;align-items:center;padding:0 12px;background:#f5f5f9;border-radius:8px}.skills__item-img{margin-right:8px}.skills__item-title{font-size:16px;font-weight:500;line-height:130%}.info{display:grid;grid-template-columns:repeat(3,1fr);gap:4px}.info__card{display:-webkit-flex;display:flex;-webkit-flex-direction:column;flex-direction:column;gap:8px;padding:32px 24px}.info__item{display:-webkit-flex;display:flex;-webkit-align-items:flex-start;align-items:flex-start}.info__item-img{margin:4px 12px 0 0}.info__item-value,.info__item-data{font-size:18px;font-weight:400;line-height:150%;color:#6f727a;margin-bottom:4px}.info__item-data{color:#1c1f29}.vacation{display:-webkit-flex;display:flex;-webkit-align-items:flex-start;align-items:flex-start;-webkit-flex-direction:column;flex-direction:column;width:176px;height:68px;border-radius:4px;border:1px solid transparent}.vacation[data-vacation-value="0"]{--value0:#e74242;--shadow-color:var(--value0);border-color:var(--value0)}.vacation[data-vacation-value="0"] .vacation__days-line{background-color:#fce8e8}.vacation[data-vacation-value="0"] .vacation__day{color:#f4a4a4}.vacation[data-vacation-value="0"] .vacation__day:before{background-color:#fce8e8}.vacation[data-vacation-value="0"] .vacation__day--0{color:var(--value0)}.vacation[data-vacation-value="1"],.vacation[data-vacation-value="2"],.vacation[data-vacation-value="3"],.vacation[data-vacation-value="4"],.vacation[data-vacation-value="5"]{--value12345:#e74242;--shadow-color:var(--value12345)}.vacation[data-vacation-value="1"] .vacation__days-line:before,.vacation[data-vacation-value="2"] .vacation__days-line:before,.vacation[data-vacation-value="3"] .vacation__days-line:before,.vacation[data-vacation-value="4"] .vacation__days-line:before,.vacation[data-vacation-value="5"] .vacation__days-line:before{width:32px;background-color:var(--value12345)}.vacation[data-vacation-value="1"] .vacation__day--5,.vacation[data-vacation-value="2"] .vacation__day--5,.vacation[data-vacation-value="3"] .vacation__day--5,.vacation[data-vacation-value="4"] .vacation__day--5,.vacation[data-vacation-value="5"] .vacation__day--5{color:#7c7b88}.vacation[data-vacation-value="6"],.vacation[data-vacation-value="7"],.vacation[data-vacation-value="8"],.vacation[data-vacation-value="9"],.vacation[data-vacation-value="10"]{--value678910:#ff956d;--shadow-color:var(--value678910)}.vacation[data-vacation-value="6"] .vacation__days-line:before,.vacation[data-vacation-value="7"] .vacation__days-line:before,.vacation[data-vacation-value="8"] .vacation__days-line:before,.vacation[data-vacation-value="9"] .vacation__days-line:before,.vacation[data-vacation-value="10"] .vacation__days-line:before{width:60px;background-color:var(--value678910)}.vacation[data-vacation-value="6"] .vacation__day--10,.vacation[data-vacation-value="7"] .vacation__day--10,.vacation[data-vacation-value="8"] .vacation__day--10,.vacation[data-vacation-value="9"] .vacation__day--10,.vacation[data-vacation-value="10"] .vacation__day--10{color:#7c7b88}.vacation[data-vacation-value="11"],.vacation[data-vacation-value="12"],.vacation[data-vacation-value="13"],.vacation[data-vacation-value="14"],.vacation[data-vacation-value="15"]{--value1112131415:#ffde66;--shadow-color:var(--value1112131415)}.vacation[data-vacation-value="11"] .vacation__days-line:before,.vacation[data-vacation-value="12"] .vacation__days-line:before,.vacation[data-vacation-value="13"] .vacation__days-line:before,.vacation[data-vacation-value="14"] .vacation__days-line:before,.vacation[data-vacation-value="15"] .vacation__days-line:before{width:90px;background-color:var(--value1112131415)}.vacation[data-vacation-value="11"] .vacation__day--15,.vacation[data-vacation-value="12"] .vacation__day--15,.vacation[data-vacation-value="13"] .vacation__day--15,.vacation[data-vacation-value="14"] .vacation__day--15,.vacation[data-vacation-value="15"] .vacation__day--15{color:#7c7b88}.vacation[data-vacation-value="16"],.vacation[data-vacation-value="17"],.vacation[data-vacation-value="18"],.vacation[data-vacation-value="19"],.vacation[data-vacation-value="20"]{--value1617181920:#24A887;--shadow-color:var(--value1617181920)}.vacation[data-vacation-value="16"] .vacation__days-line:before,.vacation[data-vacation-value="17"] .vacation__days-line:before,.vacation[data-vacation-value="18"] .vacation__days-line:before,.vacation[data-vacation-value="19"] .vacation__days-line:before,.vacation[data-vacation-value="20"] .vacation__days-line:before{width:120px;background-color:var(--value1617181920)}.vacation[data-vacation-value="16"] .vacation__day--20,.vacation[data-vacation-value="17"] .vacation__day--20,.vacation[data-vacation-value="18"] .vacation__day--20,.vacation[data-vacation-value="19"] .vacation__day--20,.vacation[data-vacation-value="20"] .vacation__day--20{color:#7c7b88}.vacation[data-vacation-value="21"],.vacation[data-vacation-value="22"],.vacation[data-vacation-value="23"],.vacation[data-vacation-value="24"],.vacation[data-vacation-value="25"]{--value2122232425:#24A887;--shadow-color:var(--value2122232425)}.vacation[data-vacation-value="21"] .vacation__days-line:before,.vacation[data-vacation-value="22"] .vacation__days-line:before,.vacation[data-vacation-value="23"] .vacation__days-line:before,.vacation[data-vacation-value="24"] .vacation__days-line:before,.vacation[data-vacation-value="25"] .vacation__days-line:before{width:148px;background-color:var(--value2122232425)}.vacation[data-vacation-value="21"] .vacation__day--25,.vacation[data-vacation-value="22"] .vacation__day--25,.vacation[data-vacation-value="23"] .vacation__day--25,.vacation[data-vacation-value="24"] .vacation__day--25,.vacation[data-vacation-value="25"] .vacation__day--25{color:#7c7b88}.vacation__days-line{position:relative;width:148px;height:4px;border-radius:4px;background-color:#ededf8}.vacation__days-line:before{content:" ";position:absolute;left:0;top:0;height:4px;border-radius:4px}.vacation__day-count{font-family:"Montserrat",verdana,roboto,sans-serif;color:#1c1f29;font-weight:600;font-size:18px;line-height:21px;margin-bottom:6px}.vacation__day{font-family:"Montserrat",verdana,roboto,sans-serif;font-size:12px;line-height:11px;color:#b5b5be;position:absolute;top:15px}.vacation__day:before{content:" ";position:absolute;left:50%;bottom:calc(100% + 1px);width:1px;height:6px;background-color:#ededf8}.vacation__day--0{left:-2px}.vacation__day--5{left:26px}.vacation__day--10{left:53px}.vacation__day--15{left:83px}.vacation__day--20{left:112px}.vacation__day--25{right:-5px}.vacancy__content{max-width:1008px;margin-bottom:104px}.vacancy__top-info{align-self:stretch;display:grid;grid-template-columns:1fr 40px;-webkit-column-gap:26px;-moz-column-gap:26px;column-gap:26px;position:relative}.vacancy__info{width:100%;display:grid;grid-template-columns:1fr 1fr;grid-gap:4px}.vacancy__card{padding:32px;margin-bottom:4px;border-radius:16px;background:#fff}.vacancy__info-card{padding:16px;margin-bottom:4px;border-radius:16px;background:#fff}.vacancy__info-left,.vacancy__info-right{display:-webkit-flex;display:flex;-webkit-flex-direction:column;flex-direction:column}.vacancy__info-row{display:grid;grid-template-columns:1fr 1fr;-webkit-column-gap:18px;-moz-column-gap:18px;column-gap:18px;padding:16px}.vacancy__info-key{display:-webkit-flex;display:flex}.vacancy__info-icon{margin-top:3px}.vacancy__info-value{font-size:18px;line-height:25px;color:#6f727a;margin-left:8px}.vacancy__info-value-hidden{font-size:16px;line-height:130%;padding:2px 8px;color:#4e5fca;background:#ebedf9;border-radius:4px;width:-webkit-max-content;width:-moz-max-content;width:max-content;display:-webkit-flex;display:flex;-webkit-align-items:center;align-items:center}.vacancy__info-data{font-size:18px;line-height:150%;font-weight:400;color:#1c1f29}.vacancy__header{display:-webkit-flex;display:flex;-webkit-align-items:center;align-items:center;margin-top:8px}.vacancy__time{font-size:16px;line-height:24px;color:#6f727a}.vacancy__salary{font-size:32px;line-height:120%;color:#1c1f29;margin-left:16px}.vacancy__salary-hidden{font-size:18px;line-height:140%;padding:2px 8px;color:#1c1f29;border-radius:4px;margin-left:16px}.vacancy__company{display:-webkit-flex;display:flex;margin-top:24px}.vacancy__action-group{position:absolute;top:24px;right:24px}.vacancy__company-logo-overlay{-webkit-flex-shrink:0;flex-shrink:0;display:-webkit-flex;display:flex;width:96px;height:48px;-webkit-align-items:center;align-items:center;-webkit-justify-content:center;justify-content:center;background:#f2f2f8;border-radius:8px}.vacancy__company-image{padding:2px 0 2px}.vacancy__company-caption{width:100%;margin-left:16px}.vacancy__company-name-group{display:-webkit-flex;display:flex;-webkit-align-items:center;align-items:center;gap:8px}.vacancy__company-name{font-size:18px;font-weight:500;line-height:150%;color:#303647}.vacancy__company-address{display:-webkit-flex;display:flex;-webkit-align-items:center;align-items:center}.vacancy__address-caption{font-size:18px;line-height:25px;color:#6f727a;display:table;table-layout:fixed;width:100%;margin-left:8px}.vacancy__address-truncate{display:table-cell;white-space:nowrap;text-overflow:ellipsis;overflow:hidden}.vacancy__address-count{font-size:18px;line-height:25px;color:#b5b5be;margin-left:4px}.vacancy__sphere{display:-webkit-flex;display:flex;-webkit-align-items:center;align-items:center;margin-top:56px}.vacancy__sphere-caption{font-size:18px;line-height:25px;color:#111028;margin-left:8px}.vacancy__description-title{margin-bottom:16px}.vacancy__text-content{margin-bottom:24px}.vacancy__description-list{list-style:disc;padding-left:30px}.vacancy__description-list-item{padding:2px 0;color:#4d515c;font-size:18px;font-weight:400;line-height:150%}.vacancy__description-skills{margin-top:40px}.vacancy__team-info{display:grid;row-gap:16px;margin-top:40px}.vacancy__team-row{font-size:18px;line-height:25px;display:grid;grid-template-columns:168px 1fr;-webkit-column-gap:16px;-moz-column-gap:16px;column-gap:16px}.vacancy__team-data{color:#b5b5be}.vacancy__team-value{color:#1c1f29}.vacancy__footer{margin-top:28px;display:-webkit-flex;display:flex;-webkit-align-items:center;align-items:center}.vacancy__footer-group{height:100%;display:-webkit-flex;display:flex;gap:12px}.vacancy__icon-favorite{width:20px;height:auto;margin-right:10px;transition:all .225s ease}.vacancy__footer-report{margin-left:auto;cursor:pointer}.vacancy__strike{font-size:18px;font-weight:500;line-height:20px;color:#6f727a;margin-left:8px}.vacancy__strike:hover{text-decoration:underline;-webkit-text-decoration-skip-ink:none;text-decoration-skip-ink:none}.vacancy__about{margin-bottom:104px}.vacancy__about-headline{font-size:32px;line-height:130%;font-weight:500;color:#1c1f29}.vacancy__about-headline--v2{font-size:26px;line-height:130%;font-weight:500;color:#1c1f29}.vacancy__about-list{display:grid;row-gap:16px;margin-top:24px}.vacancy__link{position:relative;border-bottom:1px solid transparent;transition:border .225s ease}.vacancy__link:hover{border-color:inherit}.detail-view__content{max-width:1008px;margin-bottom:104px}.detail-view__content-without-margin{margin-bottom:0}.detail-view__card{padding:32px;margin-bottom:4px;border-radius:16px;background:#fff}.detail-view .card__company-links{border:0}.detail-view__info{width:100%;display:grid;grid-template-columns:1fr 1fr;grid-gap:4px}.detail-view__info-card{padding:16px;margin-bottom:4px;border-radius:16px;background:#fff}.detail-view__info-group{display:-webkit-flex;display:flex;-webkit-flex-direction:column;flex-direction:column;row-gap:8px}.detail-view__info-row{display:grid;grid-template-columns:1fr 1fr;-webkit-column-gap:18px;-moz-column-gap:18px;column-gap:18px;padding:16px}.detail-view__info-group:nth-child(2) .detail-view__info-value{margin:0}.detail-view__info-group:nth-child(2) .detail-view__info-row{display:-webkit-flex;display:flex;-webkit-flex-direction:column;flex-direction:column;gap:8px}.detail-view__info-key{display:-webkit-flex;display:flex}.detail-view__info-icon{margin-top:3px}.detail-view__info-value{font-size:18px;line-height:25px;color:#6f727a;margin-left:8px}.detail-view__info-value-hidden{font-size:16px;line-height:130%;padding:2px 8px;color:#4e5fca;background:#ebedf9;border-radius:4px;width:-webkit-max-content;width:-moz-max-content;width:max-content;display:-webkit-flex;display:flex;-webkit-align-items:center;align-items:center}.detail-view__info-data{font-size:18px;line-height:150%;font-weight:400;color:#1c1f29;text-overflow:ellipsis;overflow:hidden}.detail-view__info-data a{font-weight:500;color:#2955cc}.detail-view__social-link{margin-right:12px;height:100%}.detail-view__social-img{width:40px;height:40px;border-radius:8px}.detail-view__description-title{margin-bottom:16px}.detail-view__text-content{margin-bottom:24px;color:#4d515c;line-height:27px}.detail-view__footer{margin-top:28px;display:-webkit-flex;display:flex;-webkit-align-items:center;align-items:center}.detail-view__footer-report{margin-left:auto;cursor:pointer}.detail-view__strike{font-size:18px;font-weight:500;line-height:20px;color:#6f727a;margin-left:8px}.detail-view__strike:hover{text-decoration:underline;-webkit-text-decoration-skip-ink:none;text-decoration-skip-ink:none}.common-entities__list{display:-webkit-flex;display:flex;-webkit-flex-direction:column;flex-direction:column;row-gap:16px}.common-entities__headline{font-size:32px;margin:16px 0 32px;font-weight:500}.common-entities .search-result__empty-content{min-height:500px;text-align:center;display:-webkit-flex;display:flex;-webkit-flex-direction:column;flex-direction:column;-webkit-justify-content:center;justify-content:center;-webkit-align-items:center;align-items:center}.search-result__wrapper{display:grid;grid-template-columns:minmax(auto,384px) minmax(auto,1fr);gap:32px;margin-bottom:100px}.search-result__filter-group{background-color:#fff;padding:24px;border-radius:16px}.search-result__vacancies-found{font-size:18px;color:#3c3a59;margin-top:24px;line-height:25px;margin-bottom:24px}.search-result__filter-header{display:-webkit-flex;display:flex;-webkit-justify-content:space-between;justify-content:space-between}.search-result__filter-headline{font-size:22px;line-height:26px;font-weight:500;color:#1c1f29}.search-result__cards{display:-webkit-flex;display:flex;-webkit-flex-direction:column;flex-direction:column;row-gap:16px}.search-result__footer{display:-webkit-flex;display:flex;-webkit-flex-direction:column;flex-direction:column;-webkit-align-items:center;align-items:center;margin-top:56px}.search-result__pagination{padding-top:56px}.search-result__empty{height:100%;width:100%;display:-webkit-flex;display:flex;-webkit-flex-direction:column;flex-direction:column;-webkit-align-items:center;align-items:center;-webkit-justify-content:center;justify-content:center;text-align:center}.search-result__title{font-size:22px;font-weight:500;line-height:26px}.search-result__empty-image{margin-bottom:8px;width:60px;height:60px}.search-result__subtitle{font-size:18px;color:#303647;margin-top:8px}</style>
+</head>
+
+<body>
+<header class="header">
+	<div class="header__wrapper">
+		<a href="#" class="header__logo">
+			<img class="header__logo-img" src="/assets/images/pages/online/logo.svg" alt="logo">
+			<h3 class="header__logo-title">Ready To Touch</h3>
+		</a>
+		<ul class="header__nav">
+			<li class="header__nav-item">
+				<a href="/companies" class="header__nav-link">Companies</a>
+			</li>
+			<li class="header__nav-item">
+				<a href="/projects" class="header__nav-link">Projects</a>
+			</li>
+			<li class="header__nav-item">
+				<a href="/vacancies" class="header__nav-link">Vacancies</a>
+			</li>
+		</ul>
+		<div class="header__stars">
+			<iframe src="https://ghbtns.com/github-btn.html?user=readytotouch&repo=readytotouch.github.io&type=star&count=true&size=large"
+				frameborder="0" scrolling="0" width="170" height="30" title="GitHub"></iframe>
+		</div>
+		<div class="header__profile">
+			<button class="header__profile-button">
+				<img src="https://avatars.githubusercontent.com/u/63663261?v=4&s=48" alt="photo-profile">
+			</button>
+			<div class="header__modal modal-profile">
+				<div class="modal-profile__profile">
+					<img src="https://avatars.githubusercontent.com/u/63663261?v=4&s=48" class="modal-profile__user-photo" width="48" height="48" alt="photo-profile">
+					<div class="modal-profile__profile-info">
+						<div class="modal-profile__profile-name">Yaroslav Podorvanov</div>
+						<a href="https://github.com/YaroslavPodorvanov" target="_blank" class="modal-profile__link">
+							<img src="/assets/images/pages/online/github-black.svg" width="20" height="20" alt="link">
+							<span class="modal-profile__profile-github">github.com/YaroslavPodorvanov</span>
+						</a>
+						<a href="https://gitlab.com/YaroslavPodorvanov" target="_blank" class="modal-profile__link">
+							<img src="/assets/images/pages/online/gitlab.png" width="20" height="20" alt="link">
+							<span class="modal-profile__profile-gitlab">gitlab.com/YaroslavPodorvanov</span>
+						</a>
+					</div>
+				</div>
+				<div class="modal-profile__log-out">
+					<a href="#" class="modal-profile__button">
+						<img src="/assets/images/pages/online/log-out.svg" alt="log-out">
+						<span>Log out</span>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</header>
+<script>
+	document.querySelector(".header__profile-button").addEventListener("click", () => {
+		document.querySelector(".header__modal").classList.toggle("active");
+	});
+</script>
+
+
+    <main class="main-wrapper">
+
+
+<div class="main-container">
+    <nav aria-label="хлібні крихти"
+     aria-labelledby="навігація по хлібним крихтам"
+     class="breadcrumb"
+>
+	<ul class="breadcrumb__list">
+		<li class="breadcrumb__item">
+			<a class="breadcrumb__link"
+			   href="javascript:"
+			>Main</a>
+		</li>
+		<li class="breadcrumb__item">
+			<a class="breadcrumb__link"
+			   href="javascript:"
+			>All companies</a>
+		</li>
+        <li class="breadcrumb__item">
+            <a class="breadcrumb__link"
+               href="javascript:"
+            >u8views</a>
+        </li>
+		<li class="breadcrumb__item">
+			<span class="breadcrumb__page"
+			      aria-current="page"
+			>Project vacancies</span>
+		</li>
+	</ul>
+</nav>
+    <section class="common-entities">
+        <div class="wrapper">
+            <h3 class="common-entities__headline headline">Project vacancies</h3>
+            <div class="wrapper-content common-entities__list">
+                <div class="card js-card">
+    <div class="card__vacancy">
+        <aside class="card__action">
+            <button class="favorite card__action-button button-group__item" title="Add to favorite">
+                <svg class="favorite__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 28 28"
+                     xml:space="preserve"><path d="m14.5 22.1-.5-.3-.5.3-6.8 4.2c-.5.3-1.1-.1-.9-.7L7.5 18l.1-.6-.4-.4-5.9-5.2c-.3-.3-.3-.6-.2-.8.1-.2.3-.4.5-.4l7.9-.7.6-.1.2-.6 2.9-7.4c.2-.5 1-.5 1.2 0l3.1 7.3.2.5.6.1 7.9.7c.2 0 .4.2.5.5.1.3 0 .6-.2.7l-5.9 5.2-.4.4.1.6 1.8 7.7c.1.3 0 .5-.2.6-.2.1-.5.2-.8 0l-6.6-4z"/></svg>
+            </button>
+            <button title="Hide vacancy"
+                    class="button-group__item button-group__item-sloth card__action-button-sloth js-hide-vacancy"></button>
+        </aside>
+        <figure class="card__header">
+            <div class="card__image-overlay">
+                <img class="card__image"
+                     alt="card image preview icon"
+                     src="/assets/images/pages/vacancy/company-logo.svg"
+                />
+            </div>
+            <figcaption class="card__header-caption">
+                <a href="/vacancy"
+                   class="card__headline vacancy__link"
+                >
+                    Go Developer
+                </a>
+                <a href="/page-stub.html"
+                   class="card__sub-headline vacancy__link">
+                    RoboSoft
+                    <img class="card__verify"
+                         width="16"
+                         height="16"
+                         alt="status"
+                         src="/assets/images/pages/common/company-status.svg"
+                    />
+                </a>
+            </figcaption>
+        </figure>
+        <div class="card__info">
+            <figure class="card__figure card__figure-salary">
+                <img class="card__icon"
+                     alt="card type icon"
+                     width="16"
+                     height="16"
+                     src="/assets/images/pages/common/dollar.svg"
+                />
+                <figcaption class="card__figcaption">5,000 — 5,500</figcaption>
+            </figure>
+            <figure class="card__figure">
+                <img class="card__icon"
+                     alt="card type icon"
+                     width="16"
+                     height="16"
+                     src="/assets/images/pages/vacancy/building.svg"
+                />
+                <figcaption class="card__figcaption">Product</figcaption>
+            </figure>
+            <figure class="card__figure">
+                <img class="card__icon"
+                     alt="card type icon"
+                     width="16"
+                     height="16"
+                     src="/assets/images/pages/vacancy/company-type.svg"
+                />
+                <figcaption class="card__figcaption">Cyber Security</figcaption>
+            </figure>
+        </div>
+        <p class="card__text">
+            The candidate will have strong expertise in Go programming, experience with microservices architecture, and a passion for building scalable and efficient software solutions.
+        </p>
+        <div class="card__footer">
+            <div class="card__details">
+                <figure class="card__figure" title="09:05 29.02.2024">
+                    <img class="card__icon"
+                         alt="card type icon"
+                         width="16"
+                         height="16"
+                         src="/assets/images/pages/online/calendar.svg"
+                    />
+                    <figcaption class="card__figcaption">Yesterday</figcaption>
+                </figure>
+                <figure class="card__figure" title="Views: 47">
+                    <img class="card__icon"
+                         alt="card type icon"
+                         width="16"
+                         height="16"
+                         src="/assets/images/pages/common/eye.svg"
+                    />
+                    <figcaption class="card__figcaption">47</figcaption>
+                </figure>
+                <figure class="card__figure" title="Applications: 16">
+                    <img class="card__icon"
+                         alt="card type icon"
+                         width="16"
+                         height="16"
+                         src="/assets/images/pages/common/response.svg"
+                    />
+                    <figcaption class="card__figcaption">16</figcaption>
+                </figure>
+            </div>
+            <button class="button button--black"
+                    type="button"
+                    aria-label="Apply"
+            >
+                Apply
+            </button>
+        </div>
+    </div>
+    <div class="card-hidden">
+        <div class="card-hidden__main">
+            <div class="card-hidden__title">
+                <img class="card-hidden__icon" src="/assets/images/pages/vacancy/yes.svg" alt="yes">
+                <div class="card-hidden__title-text">Ми приховали вакансію <strong>Go Developer</strong> з пошуку
+                </div>
+            </div>
+            <button class="button button--bordered-white js-undo-hide-vacancy">Cancel</button>
+        </div>
+        <div class="card-hidden__hide-all-group js-hide-company-vacancies-block">
+            <div class="card-hidden__question-group js-hide-all-question-group">
+                <p class="card-hidden__question-text">Бажаєте приховати всі вакансії компанії <strong>RoboSoft</strong></p>
+                <button class="card-hidden__close-button js-hide-block-button">
+                    <img class="card-hidden__close-img" src="/assets/images/pages/common/close.svg" alt="cross">
+                </button>
+                <button class="button button--black js-hide-all-vacancy-button">Yes, hide</button>
+            </div>
+            <div class="card-hidden__main card-hidden__hide-all-vacancy-group js-hide-all-vacancy-group">
+                <div class="card-hidden__title">
+                    <img class="card-hidden__icon" src="/assets/images/pages/vacancy/yes.svg" alt="yes">
+                    <div class="card-hidden__title-text">Ми приховали вакансії компанії <strong>iRoboSoft</strong> з пошуку
+                    </div>
+                </div>
+                <button class="button button--bordered-white js-undo-hide-company-vacancies">Cancel</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+                <div class="card js-card">
+    <div class="card__vacancy">
+        <aside class="card__action">
+            <button class="favorite card__action-button button-group__item" title="Add to favorite">
+                <svg class="favorite__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 28 28"
+                     xml:space="preserve"><path d="m14.5 22.1-.5-.3-.5.3-6.8 4.2c-.5.3-1.1-.1-.9-.7L7.5 18l.1-.6-.4-.4-5.9-5.2c-.3-.3-.3-.6-.2-.8.1-.2.3-.4.5-.4l7.9-.7.6-.1.2-.6 2.9-7.4c.2-.5 1-.5 1.2 0l3.1 7.3.2.5.6.1 7.9.7c.2 0 .4.2.5.5.1.3 0 .6-.2.7l-5.9 5.2-.4.4.1.6 1.8 7.7c.1.3 0 .5-.2.6-.2.1-.5.2-.8 0l-6.6-4z"/></svg>
+            </button>
+            <button title="Hide vacancy"
+                    class="button-group__item button-group__item-sloth card__action-button-sloth js-hide-vacancy"></button>
+        </aside>
+        <figure class="card__header">
+            <div class="card__image-overlay">
+                <img class="card__image"
+                     alt="card image preview icon"
+                     src="/assets/images/pages/entitys-logo/Logo-2.png"
+                />
+            </div>
+            <figcaption class="card__header-caption">
+                <a href="/vacancy"
+                   class="card__headline vacancy__link"
+                >
+                    Senior Software Engineer
+                </a>
+                <a href="/page-stub.html"
+                   class="card__sub-headline vacancy__link">
+                    ReadyToTouch
+                    <img class="card__verify"
+                         width="16"
+                         height="16"
+                         alt="status"
+                         src="/assets/images/pages/common/company-status.svg"
+                    />
+                </a>
+            </figcaption>
+        </figure>
+        <div class="card__info">
+            <figure class="card__figure card__figure-salary">
+                <img class="card__icon"
+                     alt="card type icon"
+                     width="16"
+                     height="16"
+                     src="/assets/images/pages/common/dollar.svg"
+                />
+                <div class="card__hidden-salary">Salary is hidden</div>
+            </figure>
+            <figure class="card__figure">
+                <img class="card__icon"
+                     alt="card type icon"
+                     width="16"
+                     height="16"
+                     src="/assets/images/pages/vacancy/building.svg"
+                />
+                <figcaption class="card__figcaption">Startup</figcaption>
+            </figure>
+            <figure class="card__figure">
+                <img class="card__icon"
+                     alt="card type icon"
+                     width="16"
+                     height="16"
+                     src="/assets/images/pages/vacancy/company-type.svg"
+                />
+                <figcaption class="card__figcaption">AI</figcaption>
+            </figure>
+        </div>
+        <p class="card__text">
+            AI Nexus Labs is seeking a Senior Software Engineer to lead the development of cutting-edge software
+            solutions.
+            The ideal candidate will have expertise in full-stack development, a passion for innovation, and a proven
+            track
+            record of delivering high-quality software products.
+        </p>
+        <div class="card__footer">
+            <div class="card__details">
+                <figure class="card__figure" title="09:05 29.02.2024">
+                    <img class="card__icon"
+                         alt="card type icon"
+                         width="16"
+                         height="16"
+                         src="/assets/images/pages/online/calendar.svg"
+                    />
+                    <figcaption class="card__figcaption">Yesterday</figcaption>
+                </figure>
+                <figure class="card__figure" title="Views: 47">
+                    <img class="card__icon"
+                         alt="card type icon"
+                         width="16"
+                         height="16"
+                         src="/assets/images/pages/common/eye.svg"
+                    />
+                    <figcaption class="card__figcaption">47</figcaption>
+                </figure>
+                <figure class="card__figure" title="Applications: 16">
+                    <img class="card__icon"
+                         alt="card type icon"
+                         width="16"
+                         height="16"
+                         src="/assets/images/pages/common/response.svg"
+                    />
+                    <figcaption class="card__figcaption">16</figcaption>
+                </figure>
+            </div>
+            <button class="button button--black"
+                    type="button"
+                    aria-label="Apply"
+            >
+                Apply
+            </button>
+        </div>
+    </div>
+    <div class="card-hidden">
+        <div class="card-hidden__main">
+            <div class="card-hidden__title">
+                <img class="card-hidden__icon" src="/assets/images/pages/vacancy/yes.svg" alt="yes">
+                <div class="card-hidden__title-text">Ми приховали вакансію <strong>Senior Software Engineer</strong> з пошуку
+                </div>
+            </div>
+            <button class="button button--bordered-white js-undo-hide-vacancy">Cancel</button>
+        </div>
+        <div class="card-hidden__hide-all-group js-hide-company-vacancies-block">
+            <div class="card-hidden__question-group js-hide-all-question-group">
+                <p class="card-hidden__question-text">Бажаєте приховати всі вакансії компанії <strong>ReadyToTouch</strong></p>
+                <button class="card-hidden__close-button js-hide-block-button">
+                    <img class="card-hidden__close-img" src="/assets/images/pages/common/close.svg" alt="cross">
+                </button>
+                <button class="button button--black js-hide-all-vacancy-button">Yes, hide</button>
+            </div>
+            <div class="card-hidden__main card-hidden__hide-all-vacancy-group js-hide-all-vacancy-group">
+                <div class="card-hidden__title">
+                    <img class="card-hidden__icon" src="/assets/images/pages/vacancy/yes.svg" alt="yes">
+                    <div class="card-hidden__title-text">Ми приховали вакансії компанії <strong>ReadyToTouch</strong> з пошуку
+                    </div>
+                </div>
+                <button class="button button--bordered-white js-undo-hide-company-vacancies">Cancel</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+                <div class="card js-card">
+    <div class="card__vacancy">
+        <aside class="card__action">
+            <button class="favorite card__action-button button-group__item" title="Add to favorite">
+                <svg class="favorite__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 28 28"
+                     xml:space="preserve"><path d="m14.5 22.1-.5-.3-.5.3-6.8 4.2c-.5.3-1.1-.1-.9-.7L7.5 18l.1-.6-.4-.4-5.9-5.2c-.3-.3-.3-.6-.2-.8.1-.2.3-.4.5-.4l7.9-.7.6-.1.2-.6 2.9-7.4c.2-.5 1-.5 1.2 0l3.1 7.3.2.5.6.1 7.9.7c.2 0 .4.2.5.5.1.3 0 .6-.2.7l-5.9 5.2-.4.4.1.6 1.8 7.7c.1.3 0 .5-.2.6-.2.1-.5.2-.8 0l-6.6-4z"/></svg>
+            </button>
+            <button title="Hide vacancy"
+                    class="button-group__item button-group__item-sloth card__action-button-sloth js-hide-vacancy"></button>
+        </aside>
+        <figure class="card__header">
+            <div class="card__image-overlay">
+                <img class="card__image"
+                     alt="card image preview icon"
+                     src="/assets/images/pages/entitys-logo/Logo-1.png"
+                />
+            </div>
+            <figcaption class="card__header-caption">
+                <a href="/vacancy"
+                   class="card__headline vacancy__link"
+                >
+                    Senior Go Backend Developer
+                </a>
+                <a href="/page-stub.html"
+                   class="card__sub-headline vacancy__link">
+                    Finsolut
+                    <img class="card__verify"
+                         width="16"
+                         height="16"
+                         alt="status"
+                         src="/assets/images/pages/common/company-status.svg"
+                    />
+                </a>
+            </figcaption>
+        </figure>
+        <div class="card__info">
+            <figure class="card__figure card__figure-salary">
+                <img class="card__icon"
+                     alt="card type icon"
+                     width="16"
+                     height="16"
+                     src="/assets/images/pages/common/dollar.svg"
+                />
+                <figcaption class="card__figcaption">5,000 — 5,500</figcaption>
+            </figure>
+            <figure class="card__figure">
+                <img class="card__icon"
+                     alt="card type icon"
+                     width="16"
+                     height="16"
+                     src="/assets/images/pages/vacancy/building.svg"
+                />
+                <figcaption class="card__figcaption">Product</figcaption>
+            </figure>
+            <figure class="card__figure">
+                <img class="card__icon"
+                     alt="card type icon"
+                     width="16"
+                     height="16"
+                     src="/assets/images/pages/vacancy/company-type.svg"
+                />
+                <figcaption class="card__figcaption">Cyber Security</figcaption>
+            </figure>
+        </div>
+        <p class="card__text">
+            ReadyToTouch is a product project that was founded in early 2020 with the goal of creating a
+            platform for anonymous job searching.
+            Our goal is to facilitate the job search process for candidates by providing convenient and
+            effective communication tools between candidates
+            and recruiters. We strive to create a simple and effective job search algorithm that meets
+            the needs of candidates.
+        </p>
+        <div class="card__footer">
+            <div class="card__details">
+                <figure class="card__figure" title="09:05 29.02.2024">
+                    <img class="card__icon"
+                         alt="card type icon"
+                         width="16"
+                         height="16"
+                         src="/assets/images/pages/online/calendar.svg"
+                    />
+                    <figcaption class="card__figcaption">Yesterday</figcaption>
+                </figure>
+                <figure class="card__figure" title="Views: 47">
+                    <img class="card__icon"
+                         alt="card type icon"
+                         width="16"
+                         height="16"
+                         src="/assets/images/pages/common/eye.svg"
+                    />
+                    <figcaption class="card__figcaption">47</figcaption>
+                </figure>
+                <figure class="card__figure" title="Applications: 16">
+                    <img class="card__icon"
+                         alt="card type icon"
+                         width="16"
+                         height="16"
+                         src="/assets/images/pages/common/response.svg"
+                    />
+                    <figcaption class="card__figcaption">16</figcaption>
+                </figure>
+            </div>
+            <button class="button button--black"
+                    type="button"
+                    aria-label="Apply"
+            >
+                Apply
+            </button>
+        </div>
+    </div>
+    <div class="card-hidden">
+        <div class="card-hidden__main">
+            <div class="card-hidden__title">
+                <img class="card-hidden__icon" src="/assets/images/pages/vacancy/yes.svg" alt="yes">
+                <div class="card-hidden__title-text">Ми приховали вакансію <strong>DevOps Engineer</strong> з пошуку
+                </div>
+            </div>
+            <button class="button button--bordered-white js-undo-hide-vacancy">Cancel</button>
+        </div>
+        <div class="card-hidden__hide-all-group js-hide-company-vacancies-block">
+            <div class="card-hidden__question-group js-hide-all-question-group">
+                <p class="card-hidden__question-text">Бажаєте приховати всі вакансії компанії <strong>Finsolut</strong></p>
+                <button class="card-hidden__close-button js-hide-block-button">
+                    <img class="card-hidden__close-img" src="/assets/images/pages/common/close.svg" alt="cross">
+                </button>
+                <button class="button button--black js-hide-all-vacancy-button">Yes, hide</button>
+            </div>
+            <div class="card-hidden__main card-hidden__hide-all-vacancy-group js-hide-all-vacancy-group">
+                <div class="card-hidden__title">
+                    <img class="card-hidden__icon" src="/assets/images/pages/vacancy/yes.svg" alt="yes">
+                    <div class="card-hidden__title-text">Ми приховали вакансії компанії <strong>Finsolut</strong> з пошуку
+                    </div>
+                </div>
+                <button class="button button--bordered-white js-undo-hide-company-vacancies">Cancel</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+            </div>
+            <div class="search-result__empty-content d-none">
+                <img class="search-result__empty-image" src="/assets/images/pages/common-images/📂.png" alt="folder">
+                <h2 class="search-result__title">No vacancies yet</h2>
+            </div>
+        </div>
+    </section>
+</div>
+
+
+</main>
+<footer class="footer">
+    <div class="footer__wrapper main-container">
+        <div class="footer__group-u8">
+            <div class="footer__info">
+                <a href="#" class="footer__title">
+                    <h3 class="footer__title-link">Ready To Touch</h3>
+                </a>
+                <p class="footer__subtitle">Anonymous job search</p>
+                <div class="footer__map">
+                    <img class="footer__map-Ukraine" src="/assets/images/pages/online/map-of-Ukraine.png"
+                         alt="Map of Ukraine">
+                </div>
+            </div>
+            <div class="footer__middle-section">
+                <iframe class="footer__stars" src="https://ghbtns.com/github-btn.html?user=readytotouch&repo=readytotouch.github.io&type=star&count=true&size=large"
+                        frameborder="0" scrolling="0" width="170" height="30" title="GitHub"></iframe>
+                <a href="https://github.com/readytotouch/readytotouch.github.io" target="_blank" class="footer__statistics-link">View the project on GitHub</a>
+                <a href="https://readytotouch.com/" target="_blank" class="footer__github-link">
+                    readytotouch.com
+                </a>
+            </div>
+            <div class="footer__support">
+                <a href="https://savelife.in.ua/en/" target="_blank" class="footer__link">
+                    <figure class="footer__figure">
+                        <img width="60" height="24" src="https://savelife.in.ua/wp-content/themes/savelife/assets/images/new-logo-en.svg" alt="support">
+                        <figcaption class="footer__caption">Support</figcaption>
+                        <img src="/assets/images/pages/online/arrow-up.svg" alt="arrow">
+                    </figure>
+                </a>
+                <a href="https://war.ukraine.ua/" target="_blank" class="footer__link">
+                    <figure class="footer__figure">
+                        <figcaption class="footer__caption">war.ukraine.ua</figcaption>
+                        <img src="/assets/images/pages/online/arrow-up.svg"  alt="arrow">
+                    </figure>
+                </a>
+            </div>
+        </div>
+        <div class="footer__copyrights">
+            <span>© 2024 Yaroslav Podorvanov</span>
+            <img class="footer__flag-UA" src="/assets/images/pages/online/flag-of-Ukraine.svg" alt="Flag of Ukraine">
+        </div>
+    </div>
+</footer>
+<script src="/assets/js/vacancies_25c98c60e6ba38a49ebb96d50f3830e7.js"></script>
+</body>
+</html>

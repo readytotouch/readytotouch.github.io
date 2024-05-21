@@ -1,3 +1,7 @@
+import favorite from "../common/favorite";
+
+favorite();
+
 function toggleCheckbox(target, child) {
 	target.forEach((element) => {
 		element.addEventListener("click", (event) => {
@@ -23,12 +27,6 @@ const checkboxFilledElementClassName = ".js-checkbox-filled-element";
 if (checkboxFilled.length > 0) {
 	toggleCheckbox(checkboxFilled, checkboxFilledElementClassName);
 }
-
-document.querySelectorAll(".card__action-button").forEach((button) => {
-	button.addEventListener("click", (event) => {
-		event.target.classList.toggle("in-favorite");
-	});
-});
 
 const $hideVacancyButtons = document.querySelectorAll(".js-hide-vacancy");
 $hideVacancyButtons.forEach(($button) => {
