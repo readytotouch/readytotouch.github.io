@@ -35,21 +35,27 @@
 
     &__nav {
         display: flex;
-        gap: 32px;
-        margin-left: 260px;
+        gap: 8px;
+        margin-left: auto;
     }
 
     &__nav-link {
+        padding: 6.5px 16px;
         font-size: $font-md;
         font-weight: 500;
         line-height: 150%;
         color: $body-dark;
         position: relative;
-        border-bottom: 1px solid transparent;
-        transition: border .225s ease;
+        transition: all .225s ease;
+        border-radius: 48px;
 
         &:hover {
-            border-color: $body-light;
+            color: $primary-color;
+        }
+
+        &.active {
+            background-color: #EDEDF8;
+            color: $primary-color;
         }
     }
 
