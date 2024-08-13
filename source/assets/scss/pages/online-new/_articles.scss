@@ -1,0 +1,65 @@
+.articles {
+  margin-bottom: 104px;
+  &__title {
+    margin-bottom: 32px;
+    font-size: 44px;
+    font-weight: 600;
+    line-height: 130%;
+  }
+  &__group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+}
+.article {
+  width: calc(50% - 8px);
+  &__link {
+    display: block;
+    margin-bottom: 24px;
+  }
+  &__preview {
+    width: 100%;
+    border-radius: 16px;
+  }
+  &__top-group {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  &__date-group,
+  &__author {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  &__date,
+  &__author-name,
+  &__subtitle {
+    color: #738099;
+    line-height: 150%;
+  }
+  &__author-name {
+    transition: color 0.3s;
+    &:hover {
+      color: #0057ff;
+    }
+  }
+  &__author-photo {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+  }
+  &__title {
+    display: block;
+    margin-bottom: 12px;
+    transition: color 0.225s;
+    font-size: 26px;
+    font-weight: 500;
+    line-height: 120%;
+    &:hover {
+      color: #0057ff;
+    }
+  }
+}

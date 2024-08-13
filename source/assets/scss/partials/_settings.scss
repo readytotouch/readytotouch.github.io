@@ -26,6 +26,17 @@ $title-dark: #1c1f29;
 $title-light: #303647;
 $link-blue: #0737b9;
 
+$app-colors: (
+  light: (
+    inverse-primary: #c4c6d3,
+    primary: #1c1f29,
+    secondary-fixed-dim: #b3c5ff,
+    on-background: #1d1b1e,
+    surface-tint: #4d515c,
+    surface-1: #f5f5f9,
+  ),
+);
+
 // header
 $header-height-desktop: 88px;
 

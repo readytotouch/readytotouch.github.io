@@ -1,0 +1,230 @@
+@@include('base/base-online.html', {
+"page-lang": "en",
+"page-title": "Yet another anonymous work search",
+"page-description": "Yet another anonymous work search",
+"style": "online.html",
+"header": "base/layout/header-auth.html",
+"page-class": "authorized"
+})
+
+<section class="hero auth">
+    <div class="hero__wrapper">
+        <div class="hero__header">
+            <div class="hero__status">
+                Service status:
+                <span class="hero__progress">Work in progress</span>
+            </div>
+            <a href="https://readytotouch.com/" target="_blank" class="hero__link">
+                <span class="hero__link-title">readytotouch.com</span>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M7 17L17 7M7 7h10v10" stroke="#C6CAD2" stroke-width="2" stroke-linecap="round"
+                          stroke-linejoin="round"/>
+                </svg>
+            </a>
+        </div>
+        <div class="hero__main">
+            <h1 class="hero__title">Anonymous job search</h1>
+            <p class="hero__subtitle">Tracking registrations and online users of the platform</p>
+        </div>
+    </div>
+</section>
+<div class="container">
+    <section class="stats">
+        <div class="stats__item">
+            <div class="stats__header">
+                <h3 class="stats__title">
+                    Online users
+                </h3>
+                <div class="stats__period">Last month</div>
+            </div>
+            <div class="stats__chart js-chart-online-statistics"></div>
+        </div>
+        <div class="stats__item">
+            <div class="stats__header">
+                <h3 class="stats__title">
+                    User registration statistics
+                </h3>
+                <div class="stats__period">Last month</div>
+            </div>
+            <div class="stats__chart">
+                <div class="stats__chart js-chart-registration-statistics"></div>
+            </div>
+        </div>
+    </section>
+    <section class="history">
+        <h2 class="history__title">Registration history</h2>
+        <div class="history__table">
+            <div class="history__table-header">
+                <span class="history__name history__header-item">User name</span>
+                <span class="history__profile history__header-item">Profile</span>
+                <span class="history__date history__header-item">Registration date</span>
+            </div>
+            <ul class="history__table-list">
+                <li class="history__table-user">
+                    <div class="history__user-group">
+                        <img src="https://avatars.githubusercontent.com/u/123738314?v=4&s=48" width="40" height="40"
+                             alt="photo"
+                             class="history__user-photo">
+                        <span class="history__user-name">Anastasiia Sihetii</span>
+                    </div>
+                    <a href="https://github.com/AnastasiiaSihetii" target="_blank"
+                       class="history__user-link history__user-item">github.com/AnastasiiaSihetii</a>
+                    <span class="history__user-date history__user-item">August 2, 2023</span>
+                </li>
+                <li class="history__table-user">
+                    <div class="history__user-group">
+                        <img src="https://avatars.githubusercontent.com/u/97196828?v=4&s=48" width="40" height="40"
+                             alt="photo"
+                             class="history__user-photo">
+                        <span class="history__user-name">Victor Poprozhuk</span>
+                    </div>
+                    <a href="https://github.com/VictorPoprozhuk" target="_blank"
+                       class="history__user-link history__user-item">github.com/VictorPoprozhuk</a>
+                    <span class="history__user-date history__user-item">August 2, 2023</span>
+                </li>
+                <li class="history__table-user">
+                    <div class="history__user-group">
+                        <img src="https://avatars.githubusercontent.com/u/63663261?v=4&s=48" width="40" height="40"
+                             alt="photo"
+                             class="history__user-photo">
+                        <span class="history__user-name">Yaroslav Podorvanov</span>
+                    </div>
+                    <a href="https://github.com/YaroslavPodorvanov" target="_blank"
+                       class="history__user-link history__user-item">github.com/YaroslavPodorvanov</a>
+                    <span class="history__user-date history__user-item">August 2, 2023</span>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <section class="projects">
+        <h2 class="projects__title">Other projects</h2>
+        <div class="projects__wrapper">
+            <div class="projects__item project big-card">
+                <div class="project__info-card">
+                    <div class="project__stars">
+                        <iframe src="https://ghbtns.com/github-btn.html?user=u8views&repo=go-u8views&type=star&count=true&size=large"
+                                frameborder="0" scrolling="0" width="170" height="30" title="GitHub"></iframe>
+                    </div>
+                    <div class="project__info-group">
+                        <h3 class="project__title">u8views — views counter</h3>
+                        <p class="project__subtitle">GitHub profile views statistics</p>
+                    </div>
+                    <a href="https://u8views.com/" target="_blank" class="project__link">u8views.com</a>
+                </div>
+                <div class="project__view">
+                    <img src="/assets/images/pages/online/u8views.png" class="project__view-img" alt="project view">
+                </div>
+            </div>
+            <div class="projects__item project big-card">
+                <div class="project__info-card">
+                    <div class="project__stars">
+                        <iframe src="https://ghbtns.com/github-btn.html?user=doutivity&repo=doutivity.github.io&type=star&count=true&size=large"
+                                frameborder="0" scrolling="0" width="170" height="30" title="GitHub"></iframe>
+                    </div>
+                    <div class="project__info-group">
+                        <h3 class="project__title">doutivity</h3>
+                        <p class="project__subtitle">Search for a comment among comments published on DOU</p>
+                    </div>
+                    <a href="https://doutivity.github.io/" target="_blank"
+                       class="project__link">doutivity.github.io</a>
+                </div>
+                <div class="project__view">
+                    <img src="/assets/images/pages/online/doutivity.png" class="project__view-img" alt="project view">
+                </div>
+            </div>
+            <div class="projects__group">
+                <div class="projects__item project small-card">
+                    <div class="project__info-card">
+                        <div class="project__stars">
+                            <iframe src="https://ghbtns.com/github-btn.html?user=json-to-proto&repo=json-to-proto.github.io&type=star&count=true&size=large"
+                                    frameborder="0" scrolling="0" width="170" height="30" title="GitHub"></iframe>
+                        </div>
+                        <div class="project__info-group">
+                            <h3 class="project__title">JSON-to-Proto</h3>
+                            <p class="project__subtitle">Convert JSON to Protobuf</p>
+                        </div>
+                        <a href="https://json-to-proto.github.io/" target="_blank"
+                           class="project__link">json-to-proto.github.io</a>
+                    </div>
+                    <div class="project__view">
+                        <img src="/assets/images/pages/online/open-project.png" class="project__view-img"
+                             alt="project view">
+                    </div>
+                </div>
+                <div class="projects__item project small-card">
+                    <div class="project__info-card">
+                        <div class="project__stars">
+                            <iframe src="https://ghbtns.com/github-btn.html?user=xml-to-go&repo=xml-to-go.github.io&type=star&count=true&size=large"
+                                    frameborder="0" scrolling="0" width="170" height="30" title="GitHub"></iframe>
+                        </div>
+                        <div class="project__info-group">
+                            <h3 class="project__title">XML-to-Go</h3>
+                            <p class="project__subtitle">Convert XML to Go</p>
+                        </div>
+                        <a href="https://xml-to-go.github.io/" target="_blank"
+                           class="project__link">xml-to-go.github.io</a>
+                    </div>
+                    <div class="project__view">
+                        <img src="/assets/images/pages/online/open-project.png" class="project__view-img"
+                             alt="project view">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="articles">
+        <h2 class="articles__title">Articles</h2>
+        <div class="articles__group">
+            <div class="articles__item article">
+                <a href="https://dou.ua/forums/topic/35260/" target="_blank" class="article__link">
+                    <img src="https://s.dou.ua/img/announces/image_Yne6Ph2.jpg" alt="article preview" class="article__preview">
+                </a>
+                <div class="article__info">
+                    <div class="article__top-group">
+                        <div class="article__date-group">
+                            <img src="/assets/images/pages/online/calendar.svg" alt="calendar icon"
+                                 class="article__date-icon">
+                            <span class="article__date">5 квітня 2023</span>
+                        </div>
+                        <div class="article__author">
+                            <img src="https://avatars.githubusercontent.com/u/63663261?v=4&s=48" alt="author"
+                                 class="article__author-photo">
+                            <a href="https://dou.ua/users/yaroslav-harakternik/" target="_blank"
+                               class="article__author-name">Ярослав Характерник</a>
+                        </div>
+                    </div>
+                    <a href="https://dou.ua/forums/topic/35260/" target="_blank" class="article__title">Збереження стану онлайну користувача в Redis</a>
+                    <p class="article__subtitle">Ярослав Характерник — про методику вибору оптимального типу даних для
+                        збереження статусу онлайну користувачів в інтернет-магазині.</p>
+                </div>
+            </div>
+
+            <div class="articles__item article">
+                <a href="https://dou.ua/forums/topic/44655/" target="_blank" class="article__link">
+                    <img src="https://s.dou.ua/img/announces/0tech_redis_image.jpg" alt="article preview" class="article__preview">
+                </a>
+                <div class="article__info">
+                    <div class="article__top-group">
+                        <div class="article__date-group">
+                            <img src="/assets/images/pages/online/calendar.svg" alt="calendar icon"
+                                 class="article__date-icon">
+                            <span class="article__date">15 серпня 2023</span>
+                        </div>
+                        <div class="article__author">
+                            <img src="https://avatars.githubusercontent.com/u/63663261?v=4&s=48" alt="author"
+                                 class="article__author-photo">
+                            <a href="https://dou.ua/users/yaroslav-harakternik/" target="_blank"
+                               class="article__author-name">Ярослав Характерник</a>
+                        </div>
+                    </div>
+                    <a href="https://dou.ua/forums/topic/44655/" target="_blank" class="article__title">Hash, Set чи Sorted set. Який тип даних вибрати для збереження стану онлайну користувача в Redis</a>
+                    <p class="article__subtitle">В цій статті Ярослав Характерник пропонує розглянути швидкодію, скільки пам’яті займає кожен з типів даних та яку базу даних вибрати: Redis, KeyDB або DragonflyDB.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+@@include('base/layout/footer.html', {
+"script": "online.html"
+})

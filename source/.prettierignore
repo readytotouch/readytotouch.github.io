@@ -1,4 +1,7 @@
 node_modules/
 package-lock.json
 faviconData.json
+assets/html/base/layout/footer.html
+assets/html/base/base-new-online.html
+assets/html/base/base-online.html
 /.vscode
