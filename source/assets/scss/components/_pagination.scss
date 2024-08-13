@@ -1,91 +1,80 @@
+// stylelint-disable scss/dollar-variable-empty-line-after, max-nesting-depth
 .pagination {
-	$_this: &;
+  $_this: &;
+  display: flex;
+  align-items: center;
+  height: 30px;
+  &__button,
+  &__item {
+    display: flex;
+    justify-content: center;
+    min-width: 40px;
+    margin: 0 1px;
+    padding: 8px;
+    transition: all 0.225s ease;
+    border: 2px solid $border-color-light;
+    border-radius: 8px;
+    text-align: center;
+    cursor: pointer;
+    &:hover {
+      border-color: #1c1f29;
+      color: black;
+    }
+    &--active {
+      color: #3c3a59;
+      font-weight: 600;
+    }
+    &--prev-group,
+    &--next-group {
+      display: flex;
+      position: relative;
+      align-items: center;
+      justify-content: center;
+      width: 24px;
+      height: 24px;
+      padding-right: initial;
+      padding-left: initial;
 
-	display: flex;
-	align-items: center;
-	height: 30px;
-
-	&__button, &__item {
-		display: flex;
-		padding: 8px;
-        border-radius: 8px;
-        border: 2px solid $border-color-light;
-		cursor: pointer;
-        text-align: center;
-        justify-content: center;
-        min-width: 40px;
-        margin: 0 1px;
-        transition: all 0.225s ease;
-
-        &:hover {
-            color: #000000;
-            border-color: #1C1F29;
+      #{$_this}__icon {
+        position: absolute;
+      }
+    }
+    &--prev-group {
+      #{$_this}__icon {
+        &:nth-child(1) {
+          left: 2px;
         }
-
-        &--active {
-            font-weight: 600;
-            color: #3c3a59;
+        &:nth-child(2) {
+          left: 8px;
         }
-
-		&--prev-group,
-		&--next-group {
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			position: relative;
-			width: 24px;
-			height: 24px;
-			padding-left: initial;
-			padding-right: initial;
-
-			#{$_this}__icon {
-				position: absolute;
-			}
-		}
-
-		&--prev-group {
-			#{$_this}__icon {
-
-				&:nth-child(1) {
-					left: 2px;
-				}
-
-				&:nth-child(2) {
-					left: 8px;
-				}
-			}
-		}
-
-		&--next-group {
-			#{$_this}__icon {
-
-				&:nth-child(1) {
-					right: 2px;
-				}
-
-				&:nth-child(2) {
-					right: 8px;
-				}
-			}
-		}
-	}
-
-	&__icon {
-		width: 20px;
-		height: 20px;
-
-		&--next,
-		&--next-group {
-			transform: rotate(180deg);
-		}
-	}
-
-	&__item {
-        font-style: $font-md;
-		color: #7c7b88;
-		padding-left: 8px;
-		padding-right: 8px;
-		cursor: pointer;
-		position: relative;
-	}
+      }
+    }
+    &--next-group {
+      #{$_this}__icon {
+        &:nth-child(1) {
+          right: 2px;
+        }
+        &:nth-child(2) {
+          right: 8px;
+        }
+      }
+    }
+  }
+  &__icon {
+    width: 20px;
+    height: 20px;
+    &--next,
+    &--next-group {
+      transform: rotate(180deg);
+    }
+  }
+  &__item {
+    position: relative;
+    padding-right: 8px;
+    padding-left: 8px;
+    color: #7c7b88;
+    font-style: $font-md;
+    cursor: pointer;
+  }
 }
+// stylelint-enable scss/dollar-variable-empty-line-after, max-nesting-depth

@@ -1,43 +1,44 @@
+// stylelint-disable scss/dollar-variable-empty-line-after
 .checkbox-filled {
-    $_this: &;
+  $_this: &;
+  display: inline-flex;
+  align-items: center;
+  height: 35px;
+  padding: 4px 16px;
+  transition:
+    background-color 0.225s ease,
+    border-color 0.225s ease;
+  border: 1px solid $border-color-light;
+  border-radius: 8px;
+  color: $body-dark;
 
-    font-size: 18px;
-    color: $body-dark;
-    display: inline-flex;
-    align-items: center;
-    height: 35px;
-    padding: 4px 16px;
-    cursor: pointer;
-    border-radius: 8px;
-    border: 1px solid $border-color-light;
-    transition: background-color 0.225s ease, border-color 0.225s ease;
+  font-size: 18px;
+  cursor: pointer;
+  &.is-checked {
+    padding-left: 12px;
+    border-color: #ebedf5;
+    background-color: #ebedf5;
+    color: #2f2c6d;
 
-    &.is-checked {
-        background-color: #EBEDF5;
-        border-color: #EBEDF5;
-        color: #2F2C6D;
-        padding-left: 12px;
-
-        #{$_this}__element {
-            width: 16px;
-            height: 16px;
-            margin-right: 7px;
-            background-size: 16px 13px;
-            background-repeat: no-repeat;
-            background-position: 3px center;
-            fill: #2F2C6D;
-            background-image: url("data:image/svg+xml,%3Csvg width='17' height='14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M16.173.26a1 1 0 0 1 .067 1.413L5.534 13.449.293 8.207a1 1 0 1 1 1.414-1.414l3.759 3.758L14.76.327A1 1 0 0 1 16.173.26Z' fill='%23111028'/%3E%3C/svg%3E");
-        }
+    #{$_this}__element {
+      width: 16px;
+      height: 16px;
+      margin-right: 7px;
+      background-image: url("data:image/svg+xml,%3Csvg width='17' height='14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M16.173.26a1 1 0 0 1 .067 1.413L5.534 13.449.293 8.207a1 1 0 1 1 1.414-1.414l3.759 3.758L14.76.327A1 1 0 0 1 16.173.26Z' fill='%23111028'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: 3px center;
+      background-size: 16px 13px;
+      fill: #2f2c6d;
     }
-
-    &__input {
-        position: absolute;
-        appearance: none;
-        user-select: none;
-
-        @include focus-visible {
-            width: 18px;
-            height: 18px;
-        }
+  }
+  &__input {
+    position: absolute;
+    appearance: none;
+    user-select: none;
+    @include focus-visible {
+      width: 18px;
+      height: 18px;
     }
+  }
 }
+// stylelint-enable scss/dollar-variable-empty-line-after

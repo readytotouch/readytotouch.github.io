@@ -1,87 +1,69 @@
 .projects {
-    margin-bottom: 104px;
-
-    &__title {
-        color: #1A1B26;
-        margin-bottom: 32px;
-        font-size: 44px;
-        font-weight: 600;
-        line-height: 130%;
-    }
-
-    &__item {
-        padding: 32px;
-        display: flex;
-        justify-content: space-between;
-    }
-
-    &__wrapper {
-        display: flex;
-        flex-direction: column;
-        gap: 16px;
-    }
-
-    &__group {
-        display: flex;
-        gap: 16px;
-        flex-wrap: wrap;
-    }
+  margin-bottom: 104px;
+  &__title {
+    margin-bottom: 32px;
+    color: #1a1b26;
+    font-size: 44px;
+    font-weight: 600;
+    line-height: 130%;
+  }
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    padding: 32px;
+  }
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  &__group {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
 }
-
 .project {
-    background: #FFF;
+  border-radius: 16px;
+  background: white;
+  &.big-card {
+    width: 100%;
+  }
+  &.small-card {
+    width: calc(50% - 8px);
+  }
+  &__info-card {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  &__stars {
+    margin-bottom: 24px;
+  }
+  &__title {
+    margin-bottom: 12px;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 120%;
+    text-overflow: ellipsis;
+  }
+  &__subtitle {
+    color: #738099;
+    line-height: 150%;
+  }
+  &__link {
+    display: block;
+    width: fit-content;
+    margin-top: auto;
+    transition: color 0.3s;
+    border-bottom: 1px solid #1a1b26;
+    color: #1a1b26;
+    &:hover {
+      border-bottom: 1px solid #0057ff;
+      color: #0057ff;
+    }
+  }
+  &__view {
     border-radius: 16px;
-
-    &.big-card {
-        width: 100%;
-    }
-
-    &.small-card {
-        width: calc(50% - 8px);
-    }
-
-    &__info-card {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-    }
-
-    &__stars {
-        margin-bottom: 24px;
-    }
-
-    &__title {
-        margin-bottom: 12px;
-        font-size: 32px;
-        font-weight: 500;
-        line-height: 120%;
-        text-overflow: ellipsis;
-    }
-
-    &__subtitle {
-        color: #738099;
-        line-height: 150%;
-    }
-
-    &__link {
-        display: block;
-        width: fit-content;
-        margin-top: auto;
-        border-bottom: 1px solid #1A1B26;
-        color: #1A1B26;
-        transition: color 0.3s;
-
-        &:hover {
-            color: #0057ff;
-            border-bottom: 1px solid #0057ff;
-        }
-    }
-
-    &__view {
-        border-radius: 16px;
-    }
-
-    &__view-img {
-
-    }
+  }
 }

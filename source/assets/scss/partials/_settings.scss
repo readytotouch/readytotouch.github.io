@@ -1,35 +1,36 @@
-//typography
-$base-font-family: "Inter", arial, helvetica neue, helvetica, sans-serif;
-$secondary-font-family: "Montserrat", verdana, roboto, sans-serif;
+// stylelint-disable scss/dollar-variable-empty-line-after, scss/dollar-variable-colon-space-after
+// typography
+$base-font-family:
+  'Inter',
+  arial,
+  helvetica neue,
+  helvetica,
+  sans-serif;
+$secondary-font-family: 'Montserrat', verdana, roboto, sans-serif;
 $base-font-size: 16px;
 
-//colors
+// colors
 $primary-color: #21212b;
 $primary-blue: #7388ff;
 $header-color: #b0baeb;
 $body-color: #f2f2f8;
-
-$border-color-light: #D8DDEB;
-
-$bg-light: #F5F5F9;
-
-$disabled: #96969C;
-$white: #FFFFFF;
+$border-color-light: #d8ddeb;
+$bg-light: #f5f5f9;
+$disabled: #96969c;
+$white: white;
 
 // font colors
-$body-dark: #4D515C;
-$body-light: #6F727A;
-
-$title-dark: #1C1F29;
+$body-dark: #4d515c;
+$body-light: #6f727a;
+$title-dark: #1c1f29;
 $title-light: #303647;
-
 $link-blue: #0737b9;
 
 // header
 $header-height-desktop: 88px;
 
-//statics
-$path-to-static: "assets/images/";
+// statics
+$path-to-static: 'assets/images/';
 
 // font size
 $font-sm: 14px;
@@ -38,5 +39,6 @@ $font-lg: 22px;
 $font-xl: 32px;
 
 .d-none {
-    display: none !important;
+  display: none !important;
 }
+// stylelint-enable scss/dollar-variable-empty-line-after, scss/dollar-variable-colon-space-after

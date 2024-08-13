@@ -1,118 +1,104 @@
+// stylelint-disable scss/dollar-variable-empty-line-after
 .hero {
-    background: #1A1B26;
-    margin-bottom: 104px;
+  $_this: &;
+  margin-bottom: 104px;
 
-    $_this: &;
-
-    &.auth {
-        #{$_this}__main {
-            margin-bottom: 0;
-        }
+  background: #1a1b26;
+  &.auth {
+    #{$_this}__main {
+      margin-bottom: 0;
     }
-
-    &__wrapper {
-        max-width: 1216px;
-        margin: 0 auto;
-        display: flex;
-        flex-direction: column;
-        padding: 80px 0 104px;
+  }
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    max-width: 1216px;
+    margin: 0 auto;
+    padding: 80px 0 104px;
+  }
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 24px;
+  }
+  &__status {
+    display: flex;
+    align-items: center;
+    color: #9b9db5;
+    font-size: 18px;
+    line-height: 150%;
+    gap: 12px;
+  }
+  &__progress {
+    padding: 2px 16px 3px;
+    border-radius: 100px;
+    background: #ecf2ff;
+    color: #5484ff;
+  }
+  &__link {
+    display: flex;
+    gap: 8px;
+    &:hover {
+      span {
+        border-bottom: 1px solid white;
+        color: white;
+      }
+      svg path {
+        transition: 0.225s;
+        stroke: white;
+      }
     }
-
-    &__header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-bottom: 24px;
+  }
+  &__link-title {
+    transition:
+      border 0.225s,
+      color 0.225s;
+    border-bottom: 1px solid #c6cad2;
+    color: #c6cad2;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 130%;
+  }
+  &__main {
+    margin-bottom: 64px;
+  }
+  &__title {
+    margin-bottom: 16px;
+    color: white;
+    font-size: 56px;
+    font-weight: 600;
+    line-height: 110%;
+  }
+  &__subtitle {
+    max-width: 744px;
+    color: #9b9db5;
+    font-size: 21px;
+    line-height: 130%;
+  }
+  &__buttons-group {
+    display: flex;
+    gap: 24px;
+  }
+  &__button {
+    display: flex;
+    align-items: center;
+    padding: 8px 24px;
+    transition: border 0.225s;
+    border: 2px solid #575d65;
+    border-radius: 8px;
+    background: transparent;
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+    gap: 16px;
+    &:hover {
+      border: 2px solid white;
     }
-
-    &__status {
-        display: flex;
-        align-items: center;
-        font-size: 18px;
-        gap: 12px;
-        line-height: 150%;
-        color: #9B9DB5;
-    }
-
-    &__progress {
-        padding: 2px 16px 3px 16px;
-        border-radius: 100px;
-        background: #ECF2FF;
-        color: #5484FF;
-    }
-
-    &__link {
-        display: flex;
-        gap: 8px;
-
-        &:hover {
-
-            span {
-                color: #FFF;
-                border-bottom: 1px solid #FFF;
-            }
-
-            svg path {
-                transition: 0.225s;
-                stroke: #FFF;
-            }
-        }
-    }
-
-    &__link-title {
-        font-size: 18px;
-        transition: border 0.225s, color 0.225s;
-        color: #C6CAD2;
-        font-weight: 500;
-        line-height: 130%;
-        border-bottom: 1px solid #C6CAD2;
-    }
-
-    &__main {
-        margin-bottom: 64px;
-    }
-
-    &__title {
-        color: #FFF;
-        font-weight: 600;
-        line-height: 110%;
-        font-size: 56px;
-        margin-bottom: 16px;
-    }
-
-    &__subtitle {
-        font-size: 21px;
-        line-height: 130%;
-        color: #9B9DB5;
-        max-width: 744px;
-    }
-
-    &__buttons-group {
-        display: flex;
-        gap: 24px;
-    }
-
-    &__button {
-        display: flex;
-        align-items: center;
-        gap: 16px;
-        padding: 8px 24px;
-        background: transparent;
-        border-radius: 8px;
-        border: 2px solid #575D65;
-        color: #FFF;
-        font-weight: 500;
-        font-size: 18px;
-        transition: border 0.225s;
-
-        &:hover {
-            border: 2px solid #FFF;
-        }
-    }
-
-    &__button-icon {
-        width: 24px;
-        height: 24px;
-    }
-
+  }
+  &__button-icon {
+    width: 24px;
+    height: 24px;
+  }
 }
+// stylelint-enable scss/dollar-variable-empty-line-after

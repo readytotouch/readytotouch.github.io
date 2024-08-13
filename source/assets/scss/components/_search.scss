@@ -1,86 +1,70 @@
+// stylelint-disable scss/dollar-variable-empty-line-after
 .search {
-    $_this: &;
-
+  $_this: &;
+  position: relative;
+  &__input,
+  &__select {
+    width: 100%;
+    height: 50px;
+    padding: 12px 48px 12px 12px;
+    border: 1px solid $border-color-light;
+    border-radius: 8px;
+    background: transparent;
+    color: #7c7b88;
+    font-family: $base-font-family;
+    font-size: $font-md;
+    &::placeholder {
+      color: $body-light;
+    }
+  }
+  &__input-group {
     position: relative;
-
-    &__input, &__select {
-        font-family: $base-font-family;
-        font-size: $font-md;
-        color: #7c7b88;
-        height: 50px;
-        width: 100%;
-        padding: 12px 48px 12px 12px;
-        border: 1px solid $border-color-light;
-        border-radius: 8px;
-        background: transparent;
-
-        &::placeholder {
-            color: $body-light;
-        }
-
-        //@include focus-visible;
+    width: 690px;
+  }
+  &__icon {
+    position: absolute;
+    top: 50%;
+    right: 12px;
+    transform: translateY(-50%);
+    color: #8d8d8d;
+  }
+  &__button {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  &__select {
+    max-width: 400px;
+  }
+  &--profile {
+    #{$_this}__button {
+      font-weight: 600;
+    }
+  }
+  &--vacancies {
+    #{$_this}__input {
+      padding-right: 490px;
+    }
+  }
+  &--projects {
+    #{$_this}__input-group {
+      position: relative;
+      width: 100%;
     }
 
-    &__input-group {
-        position: relative;
-        width: 690px;
+    #{$_this}__input {
+      max-width: 100%;
     }
-
-    &__icon {
-        color: #8d8d8d;
-        position: absolute;
-        right: 12px;
-        top: 50%;
-        transform: translateY(-50%);
+  }
+  &--companies {
+    #{$_this}__input {
+      max-width: 692px;
     }
-
-    &__button {
-        position: absolute;
-        top: 0;
-        right: 0;
-    }
-
-    &__select {
-        max-width: 400px;
-    }
-
-    &--profile {
-        //#{$_this}__input {
-        //	border-radius: 4px;
-        //	padding-right: 270px;
-        //	padding-left: 40px;
-        //}
-
-        #{$_this}__button {
-            font-weight: 600;
-        }
-    }
-
-    &--vacancies {
-        #{$_this}__input {
-            padding-right: 490px;
-        }
-    }
-    &--projects {
-        #{$_this}__input-group {
-            position: relative;
-            width: 100%;
-        }
-
-        #{$_this}__input {
-            max-width: 100%;
-        }
-    }
-
-    &--companies {
-        #{$_this}__input {
-            max-width: 692px;
-        }
-    }
-
-    &--companies,
-    &--projects {
-        display: flex;
-        gap: 8px;
-    }
+  }
+  &--companies,
+  &--projects {
+    display: flex;
+    gap: 8px;
+  }
 }
+// stylelint-enable scss/dollar-variable-empty-line-after

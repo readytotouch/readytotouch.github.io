@@ -1,49 +1,41 @@
 html {
-	height: 100%;
+  height: 100%;
 }
-
 body {
-	font-family: $base-font-family;
-	font-size: $base-font-size;
-	color: $primary-color;
-	display: grid;
-	grid-template-rows: auto 1fr auto;
-	min-height: 100%;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100%;
+  color: $primary-color;
+  font-family: $base-font-family;
+  font-size: $base-font-size;
 }
-
 .main-wrapper {
-
-    &.authorized {
-        background-color: #f2f2f8;
-    }
+  &.authorized {
+    background-color: #f2f2f8;
+  }
 }
-
 .disabled-scroll {
-	overflow-y: hidden;
+  overflow-y: hidden;
 }
-
 .wrapper-content {
-    max-width: 1008px;
-    margin-bottom: 104px;
+  max-width: 1008px;
+  margin-bottom: 104px;
 }
-
 .partial-block {
-    max-width: 1008px;
+  max-width: 1008px;
 }
-
 .search-container {
-    margin-top: 24px;
+  margin-top: 24px;
 }
-
-.visually-hidden:not(:focus):not(:active) {
-	position: absolute;
-	width: 1px;
-	height: 1px;
-	margin: -1px;
-	border: 0;
-	padding: 0;
-	white-space: nowrap;
-	clip-path: inset(100%);
-	clip: rect(0 0 0 0);
-	overflow: hidden;
+.visually-hidden:not(:focus, :active) {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  border: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
 }

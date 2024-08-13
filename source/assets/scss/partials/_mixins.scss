@@ -1,47 +1,44 @@
 @mixin for-desktop-up-large {
-	@media (min-width: 1170px) {
-		@content;
-	}
+  @media (width >= 1170px) {
+    @content;
+  }
 }
-
 @mixin for-desktop-up {
-	@media (min-width: 992px) {
-		@content;
-	}
+  @media (width >= 992px) {
+    @content;
+  }
 }
-
 @mixin for-laptop-up {
-	@media (min-width: 768px) {
-		@content;
-	}
+  @media (width >= 768px) {
+    @content;
+  }
 }
-
 @mixin for-desktop-down {
-	@media (max-width: 991px) {
-		@content;
-	}
+  @media (width <= 991px) {
+    @content;
+  }
 }
-
 @mixin focus-visible {
-	&:focus-visible {
-		@content;
+  &:focus-visible {
+    @content;
+    border-radius: 4px;
 
-		outline: 0;
-		box-shadow: 0 0 0 2px #000000, 0 0 0 3px #ffffff;
-		border-radius: 4px;
-	}
+    outline: 0;
+    box-shadow:
+      0 0 0 2px black,
+      0 0 0 3px white;
+  }
 }
-
 @mixin trim($numLines: null) {
-	@if $numLines != null {
-		display: -webkit-box;
-		-webkit-line-clamp: $numLines;
-		-webkit-box-orient: vertical;
-		overflow: hidden;
-	} @else {
-		text-overflow: ellipsis;
-		white-space: nowrap;
-		overflow: hidden;
-		display: block;
-	}
+  @if $numLines {
+    display: box;
+    -webkit-line-clamp: $numLines;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  } @else {
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
 }

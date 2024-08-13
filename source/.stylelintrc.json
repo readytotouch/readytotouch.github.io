@@ -1,5 +1,5 @@
 {
-  "ignoreFiles": ["**/*.js"],
+  "ignoreFiles": ["**/*.js", "**/assets/scss/libs/*.scss"],
   "extends": ["stylelint-config-standard-scss", "stylelint-config-property-sort-order-smacss"],
   "plugins": ["stylelint-scss"],
   "rules": {
