@@ -1,0 +1,23 @@
+.top-projects {
+  &__container {
+    padding-top: 52px;
+    padding-bottom: 52px;
+  }
+  &__group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 696px;
+    margin-left: auto;
+    margin-right: auto;
+    column-gap: 48px;
+    row-gap: 32px;
+  }
+  &__figure {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    height: 48px;
+  }
+}
