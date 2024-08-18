@@ -54,4 +54,14 @@
     margin-top: 24px;
     column-gap: 24px;
   }
+  &__try-btn {
+    column-gap: 8px;
+  }
+  &__try-btn-icon-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+  }
 }

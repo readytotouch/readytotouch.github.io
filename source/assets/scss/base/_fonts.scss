@@ -13,3 +13,11 @@
 /* Inter-500 - latin-ext */
 
 @include font-face-inter(500, ext-500, false);
+
+/* Montserrat-700 - latin */
+
+@include font-face-montserrat(700, 700, true);
+
+/* Montserrat-700 - latin-ext */
+
+@include font-face-montserrat(700, ext-700, false);

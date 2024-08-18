@@ -18,7 +18,9 @@ export default function html(cb, inputHtml, basepath, outputHtml) {
         context: {
           images_home_new_path__: '/assets/images/pages/online-new/',
           images_common_path__: '/assets/images/pages/common/',
+          images_common_images_path__: '/assets/images/pages/common-images/',
           fonts_inter__: '/assets/fonts/inter/',
+          fonts_montserrat__: '/assets/fonts/montserrat/',
         },
       }),
       dest(outputHtml),

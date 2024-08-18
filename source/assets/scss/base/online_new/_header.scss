@@ -1,3 +1,5 @@
+@use 'sass:math';
+
 // stylelint-disable scss/dollar-variable-empty-line-after
 .header {
   $_this: &;
@@ -19,9 +21,12 @@
     align-items: center;
   }
   &__logo-title {
-    color: #1a1b26;
+    color: color(light, on-background);
+    font-family: $secondary-font-family;
     font-size: 19px;
     font-weight: 700;
+    letter-spacing: -0.03em;
+    line-height: math.div(19, 19);
   }
   &__profile {
     position: relative;

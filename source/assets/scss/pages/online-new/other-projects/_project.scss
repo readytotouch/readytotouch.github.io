@@ -1,36 +1,8 @@
-.projects {
-  margin-bottom: 104px;
-  &__title {
-    margin-bottom: 32px;
-    color: #1a1b26;
-    font-size: 44px;
-    font-weight: 600;
-    line-height: 130%;
-  }
-  &__item {
-    display: flex;
-    justify-content: space-between;
-    padding: 32px;
-  }
-  &__wrapper {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-  }
-  &__group {
-    display: flex;
-    gap: 16px;
-    flex-wrap: wrap;
-  }
-}
 .project {
   border-radius: 16px;
   background: white;
   &.big-card {
     width: 100%;
-  }
-  &.small-card {
-    width: calc(50% - 8px);
   }
   &__info-card {
     display: flex;
@@ -65,5 +37,8 @@
   }
   &__view {
     border-radius: 16px;
+  }
+  &__view-img {
+    display: block;
   }
 }

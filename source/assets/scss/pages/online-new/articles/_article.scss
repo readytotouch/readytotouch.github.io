@@ -1,19 +1,6 @@
-.articles {
-  margin-bottom: 104px;
-  &__title {
-    margin-bottom: 32px;
-    font-size: 44px;
-    font-weight: 600;
-    line-height: 130%;
-  }
-  &__group {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 16px;
-  }
-}
+@use 'sass:math';
+
 .article {
-  width: calc(50% - 8px);
   &__link {
     display: block;
     margin-bottom: 24px;
@@ -35,10 +22,15 @@
     gap: 8px;
   }
   &__date,
-  &__author-name,
+  &__author-name {
+    color: color(light, surface-tint);
+    font-size: 14px;
+    line-height: math.div(20, 14);
+  }
   &__subtitle {
-    color: #738099;
-    line-height: 150%;
+    color: color(light, surface-tint);
+    font-size: 18px;
+    line-height: math.div(24, 18);
   }
   &__author-name {
     transition: color 0.3s;
@@ -55,9 +47,10 @@
     display: block;
     margin-bottom: 12px;
     transition: color 0.225s;
+    color: color(light, on-background);
     font-size: 26px;
     font-weight: 500;
-    line-height: 120%;
+    line-height: math.div(32, 26);
     &:hover {
       color: #0057ff;
     }
