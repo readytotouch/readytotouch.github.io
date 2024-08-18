@@ -1,0 +1,15 @@
+/* Inter - latin */
+
+@include font-face-inter(400, regular, true);
+
+/* Inter - latin-ext */
+
+@include font-face-inter(400, ext-regular, false);
+
+/* Inter-500 - latin */
+
+@include font-face-inter(500, 500, true);
+
+/* Inter-500 - latin-ext */
+
+@include font-face-inter(500, ext-500, false);

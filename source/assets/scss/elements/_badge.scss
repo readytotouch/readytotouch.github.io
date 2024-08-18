@@ -1,0 +1,17 @@
+.badge {
+  display: inline-flex;
+  align-items: center;
+  height: 32px;
+  padding-right: 16px;
+  padding-left: 16px;
+  border-radius: 100px;
+  font-size: 16px;
+  &--work-in-progress {
+    background-color: color(light, secondary-fixed);
+    color: color(light, on-secondary-fixed-variant);
+  }
+  &--new {
+    background-color: color(light, tertiary-container);
+    color: color(light, on-tertiary-variant);
+  }
+}

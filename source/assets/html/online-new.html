@@ -1,191 +1,17 @@
-@@include('base/base-new-online.html', { "page-lang": "en", "page-title": "Yet another anonymous work search",
-"page-description": "Yet another anonymous work search", "style": "online-new.html", "header":
-"base/layout/header-new.html", "page-class": "authorized" })
+@@include('base/base-new-online.html', {
+  "page-lang": "en",
+  "page-title": "Yet another anonymous work search",
+  "page-description": "Yet another anonymous work search",
+  "style": "online-new.html",
+  "header": "base/layout/header-new.html",
+  "page-class": "authorized"
+})
 
-<section class="hero">
-  <div class="hero__wrapper">
-    <img
-      class="hero__top-flag"
-      alt="Flag of Ukraine with waves"
-      width="24"
-      height="24"
-      src="/assets/images/pages/online-new/ua_flag_with_waves.svg"
-    />
-    <div class="hero__main">
-      <h1 class="hero__title">ReadyToTouch is a space to help you find jobs</h1>
-      <p class="hero__subtitle">Our projects are u8views, Organizer, and others. Log in to support.</p>
-    </div>
-    <div class="hero__buttons-group">
-      <a href="#" class="button button--bordered-gray hero__button">
-        <img
-          width="20"
-          height="20"
-          src="/assets/images/pages/online/github-black.svg"
-          alt="GitHub logo"
-          class="button-icon"
-        />Log in with GitHub
-      </a>
-      <a href="#" class="button button--bordered-gray hero__button">
-        <img
-          width="20"
-          height="20"
-          src="/assets/images/pages/online/gitlab.svg"
-          alt="GitLab logo"
-          class="hero__button-icon"
-        />Log in with GitLab
-      </a>
-      <a href="#" class="button button--bordered-gray hero__button">
-        <img
-          width="21"
-          height="20"
-          src="/assets/images/pages/online/bitbucket.svg"
-          alt="Bitbucket logo"
-          class="hero__button-icon"
-        />Log in with Bitbucket
-      </a>
-    </div>
-  </div>
-</section>
-<section class="top-projects">
-  <div class="container top-projects__container">
-    <div class="top-projects__group">
-      <a class="top-projects__link" href="#">
-        <figure class="top-projects__figure">
-          <img
-            class="top-projects__image"
-            width="129"
-            height="32"
-            alt="organizer logo"
-            src="/assets/images/pages/online-new/organizer.svg"
-          />
-        </figure>
-      </a>
-      <a class="top-projects__link" href="#">
-        <figure class="top-projects__figure">
-          <img
-            class="top-projects__image"
-            width="109"
-            height="35"
-            alt="u8views logo"
-            src="/assets/images/pages/online-new/u8views.svg"
-          />
-        </figure>
-      </a>
-      <a class="top-projects__link" href="#">
-        <figure class="top-projects__figure">
-          <img
-            class="top-projects__image"
-            width="111"
-            height="41"
-            alt="doutivity logo"
-            src="/assets/images/pages/online-new/doutivity.svg"
-          />
-        </figure>
-      </a>
-      <a class="top-projects__link" href="#">
-        <figure class="top-projects__figure">
-          <img
-            class="top-projects__image"
-            width="157"
-            height="18"
-            alt="JSON-to-PROTO logo"
-            src="/assets/images/pages/online-new/json_to_proto.svg"
-          />
-        </figure>
-      </a>
-      <a class="top-projects__link" href="#">
-        <figure class="top-projects__figure">
-          <img
-            class="top-projects__image"
-            width="117"
-            height="18"
-            alt="XML-to-GO logo"
-            src="/assets/images/pages/online-new/xml_to_go.svg"
-          />
-        </figure>
-      </a>
-    </div>
-  </div>
-</section>
+@@include('partials/online-new/hero.html')
+@@include('partials/online-new/top-projects.html')
+@@include('partials/online-new/project-statistics.html')
+@@include('partials/online-new/organizer.html')
 <div class="container">
-  <section class="stats">
-    <div class="stats__item">
-      <div class="stats__header">
-        <h3 class="stats__title">Online users</h3>
-        <div class="stats__period">Last month</div>
-      </div>
-      <div class="stats__chart js-chart-online-statistics"></div>
-    </div>
-    <div class="stats__item">
-      <div class="stats__header">
-        <h3 class="stats__title">User registration statistics</h3>
-        <div class="stats__period">Last month</div>
-      </div>
-      <div class="stats__chart">
-        <div class="stats__chart js-chart-registration-statistics"></div>
-      </div>
-    </div>
-  </section>
-  <section class="history">
-    <h2 class="history__title">Registration history</h2>
-    <div class="history__table">
-      <div class="history__table-header">
-        <span class="history__name history__header-item">User name</span>
-        <span class="history__profile history__header-item">Profile</span>
-        <span class="history__date history__header-item">Registration date</span>
-      </div>
-      <ul class="history__table-list">
-        <li class="history__table-user">
-          <div class="history__user-group">
-            <img
-              src="https://avatars.githubusercontent.com/u/123738314?v=4&s=48"
-              width="40"
-              height="40"
-              alt="photo"
-              class="history__user-photo"
-            />
-            <span class="history__user-name">Anastasiia Sihetii</span>
-          </div>
-          <a href="https://github.com/AnastasiiaSihetii" target="_blank" class="history__user-link history__user-item"
-            >github.com/AnastasiiaSihetii</a
-          >
-          <span class="history__user-date history__user-item">August 2, 2023</span>
-        </li>
-        <li class="history__table-user">
-          <div class="history__user-group">
-            <img
-              src="https://avatars.githubusercontent.com/u/97196828?v=4&s=48"
-              width="40"
-              height="40"
-              alt="photo"
-              class="history__user-photo"
-            />
-            <span class="history__user-name">Victor Poprozhuk</span>
-          </div>
-          <a href="https://github.com/VictorPoprozhuk" target="_blank" class="history__user-link history__user-item"
-            >github.com/VictorPoprozhuk</a
-          >
-          <span class="history__user-date history__user-item">August 2, 2023</span>
-        </li>
-        <li class="history__table-user">
-          <div class="history__user-group">
-            <img
-              src="https://avatars.githubusercontent.com/u/63663261?v=4&s=48"
-              width="40"
-              height="40"
-              alt="photo"
-              class="history__user-photo"
-            />
-            <span class="history__user-name">Yaroslav Podorvanov</span>
-          </div>
-          <a href="https://github.com/YaroslavPodorvanov" target="_blank" class="history__user-link history__user-item"
-            >github.com/YaroslavPodorvanov</a
-          >
-          <span class="history__user-date history__user-item">August 2, 2023</span>
-        </li>
-      </ul>
-    </div>
-  </section>
   <section class="projects">
     <h2 class="projects__title">Other projects</h2>
     <div class="projects__wrapper">
@@ -353,4 +179,4 @@
   </section>
 </div>
 
-@@include('base/layout/footer.html', { "script": "online.html" })
+@@include('base/layout/footer.html', { "script": "online-new.html" })

@@ -9,6 +9,7 @@ export const publicSource = {
   faviconBuild: '../public',
   pathOutputCss: 'assets/html/base/partials/front/css/',
   pathOutputJs: 'assets/html/base/partials/front/js/',
+  fonts: '../public/assets/fonts/',
   images: '../public/assets/images/',
 }
 
@@ -19,9 +20,10 @@ export const devSource = {
   jsPages: 'assets/js/_page-scripts/*.js',
   htmlSource: 'assets/html/*.html',
   htmlBase: 'assets/html',
-  images: 'assets/images/**/*.+(png|jpg|gif|svg|ico)',
+  images: 'assets/images/**/*.+(png|jpg|webp|gif|svg|ico)',
   excludeSprites: '!assets/images/sprites/**/*',
   excludeFavicon: '!assets/images/favicon/**/*',
+  fonts: 'assets/fonts/**/*',
   favicon: 'assets/images/favicon/favicon.svg',
   browserSyncBaseDir: '../public/',
 }
@@ -31,7 +33,8 @@ export const watchSource = {
   js: 'assets/js/**/*.js',
   html: 'assets/html/**/*.html',
   // svgSprite      : 'assets/images/sprites/**/*.svg',
-  images: 'assets/images/**/*.+(png|jpg|gif|svg|ico)',
+  images: 'assets/images/**/*.+(png|jpg|webp|gif|svg|ico)',
   excludeSprites: '!assets/images/sprites/**/*',
   excludeFavicon: '!assets/images/favicon/**/*',
+  fonts: 'assets/fonts/**/*.+(woff2)',
 }

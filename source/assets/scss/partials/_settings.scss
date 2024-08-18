@@ -25,15 +25,19 @@ $body-light: #6f727a;
 $title-dark: #1c1f29;
 $title-light: #303647;
 $link-blue: #0737b9;
-
 $app-colors: (
   light: (
     inverse-primary: #c4c6d3,
     primary: #1c1f29,
+    secondary-fixed: #dbe1ff,
     secondary-fixed-dim: #b3c5ff,
+    on-secondary-fixed-variant: #003ea6,
+    on-tertiary-variant: #4c21bb,
+    tertiary-container: #e7deff,
     on-background: #1d1b1e,
     surface-tint: #4d515c,
     surface-1: #f5f5f9,
+    outline: #7e8596,
   ),
 );
 
@@ -41,7 +45,8 @@ $app-colors: (
 $header-height-desktop: 88px;
 
 // statics
-$path-to-static: 'assets/images/';
+$path-to-static-images: '/assets/images/';
+$path-to-static-fonts: '/assets/fonts/';
 
 // font size
 $font-sm: 14px;

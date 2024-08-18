@@ -1,12 +1,9 @@
+@import 'layout';
 @import 'hero';
 @import 'top-projects';
-@import 'stats';
+@import 'project-statistics/layout';
+@import 'project-statistics/stats';
 @import 'history';
+@import 'organizer-card';
 @import 'projects';
 @import 'articles';
-
-.container {
-  max-width: 1216px;
-  margin: 0 auto;
-  overflow: hidden;
-}

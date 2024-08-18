@@ -3,7 +3,6 @@
 // stylelint-disable scss/dollar-variable-empty-line-after
 .hero {
   $_this: &;
-
   &.auth {
     #{$_this}__main {
       margin-bottom: 0;
@@ -14,13 +13,13 @@
     flex-direction: column;
     max-width: 1216px;
     margin: 0 auto;
-    padding: 52px 0 52px;
+    padding: 52px 0;
   }
   &__top-flag {
     display: block;
-    margin-left: auto;
     margin-right: auto;
     margin-bottom: 16px;
+    margin-left: auto;
   }
   &__header {
     display: flex;
@@ -67,10 +66,10 @@
     line-height: 130%;
   }
   &__main {
-    margin-bottom: 32px;
     max-width: 720px;
-    margin-left: auto;
     margin-right: auto;
+    margin-bottom: 32px;
+    margin-left: auto;
     text-align: center;
   }
   &__title {
@@ -92,8 +91,8 @@
     row-gap: 16px;
   }
   &__button {
-    column-gap: 8px;
     min-width: 316px;
+    column-gap: 8px;
   }
   &__button-icon {
     width: 24px;

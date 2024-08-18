@@ -11,6 +11,7 @@ import { injectString } from './gulp-tasks/injectString'
 // import spritesBuild from './gulp-tasks/spritesBuild';
 import images from './gulp-tasks/image'
 import html from './gulp-tasks/html'
+import fonts from './gulp-tasks/fonts'
 import { publicSource, devSource, watchSource } from './gulp-tasks/pathSrc'
 
 // save reference to created browser-sync instance, and save reference to the 'reload' method
@@ -76,6 +77,9 @@ task('images', cb =>
   images(cb, [devSource.images, devSource.excludeSprites, devSource.excludeFavicon], publicSource.images),
 )
 
+// copy fonts
+task('fonts', cb => fonts(cb, devSource.fonts, publicSource.fonts))
+
 // watch any changes in html, css, js files
 task('watch', () => {
   watch(watchSource.scss, series('scss', 'inject-css')).on('change', event => {
@@ -90,10 +94,19 @@ task('watch', () => {
 })
 
 // build task
-task('build', series(clean, parallel('build-scss', 'build-js'), 'inject-js', 'html', 'images'))
+task('build', series(clean, parallel('build-scss', 'build-js'), 'inject-js', 'fonts', 'html', 'images'))
 
 // default task
 task(
   'default',
-  series(clean, parallel('scss', 'js'), 'inject-css', 'inject-js', 'html', 'images', parallel('watch', 'serve')),
+  series(
+    clean,
+    parallel('scss', 'js'),
+    'inject-css',
+    'inject-js',
+    'fonts',
+    'html',
+    'images',
+    parallel('watch', 'serve'),
+  ),
 )

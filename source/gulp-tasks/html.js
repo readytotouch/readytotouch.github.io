@@ -15,7 +15,11 @@ export default function html(cb, inputHtml, basepath, outputHtml) {
       fileinclude({
         prefix: '@@',
         basepath,
-        context: {},
+        context: {
+          images_home_new_path__: '/assets/images/pages/online-new/',
+          images_common_path__: '/assets/images/pages/common/',
+          fonts_inter__: '/assets/fonts/inter/',
+        },
       }),
       dest(outputHtml),
     ],

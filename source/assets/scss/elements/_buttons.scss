@@ -275,20 +275,20 @@
     }
   }
   &--bordered-gray {
-    color: color(light, primary);
+    padding-right: 24px;
+    padding-left: 24px;
     border-width: 2px;
     border-color: color(light, inverse-primary);
-    padding-left: 24px;
-    padding-right: 24px;
+    color: color(light, primary);
     color: black;
     &:hover,
     &:active {
       border-color: color(light, primary);
     }
     &:focus-visible {
+      border-radius: 8px;
       border-color: color(light, secondary-fixed-dim);
       box-shadow: initial;
-      border-radius: 8px;
     }
   }
   &.in-respond {
