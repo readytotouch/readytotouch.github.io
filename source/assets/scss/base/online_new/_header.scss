@@ -29,6 +29,7 @@
     line-height: math.div(19, 19);
   }
   &__profile {
+    font-size: 0;
     position: relative;
   }
   &__nav {
@@ -59,10 +60,13 @@
     margin-left: auto;
   }
   &__profile-button {
-    width: 48px;
-    height: 48px;
+    width: 40px;
+    height: 40px;
     overflow: hidden;
+    border-radius: 50%;
+    margin-left: 24px;
     img {
+      display: block;
       width: inherit;
       height: inherit;
     }
@@ -75,77 +79,68 @@
 .modal-profile {
   display: none;
   position: absolute;
-  top: 136%;
-  right: -57%;
+  top: 48px;
+  right: 0;
   flex-direction: column;
   width: 540px;
   border-radius: 8px;
   background: white;
   pointer-events: none;
-  filter: drop-shadow(0 6px 16px rgba(17, 16, 40, 0.1));
-  &:after {
-    content: '';
-    position: absolute;
-    top: -11px;
-    right: 40px;
-    width: 0;
-    height: 0;
-    border-right: 12px solid transparent;
-    border-bottom: 12px solid white;
-    border-left: 12px solid transparent;
-    border-radius: 1px;
-  }
+  filter: drop-shadow(-1px 0px 20px rgba(28, 24, 34, 0.05)) drop-shadow(0px 1px 5px rgba(14, 11, 17, 0.15));
+
   &__profile {
     display: flex;
-    gap: 16px;
-    padding: 24px;
-    border-bottom: 1px solid #dddce4;
+    flex-direction: column;
   }
   &__profile-info {
-    width: 100%;
-    padding-top: 15px;
+    display: flex;
+    align-items: center;
+    column-gap: 12px;
+    padding-top: 24px;
+    padding-left: 24px;
+    padding-right: 24px;
   }
   &__profile-name {
     width: 100%;
-    margin-bottom: 21px;
-    color: #020111;
-    font-size: 22px;
-    font-weight: 600;
-    line-height: 120%;
+    color: color(light, on-background);
+    font-size: 18px;
+    font-weight: 500;
+    line-height: math.div(24, 18);
   }
   &__user-photo {
-    width: 48px;
-    height: 48px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+  }
+  &__profile-list {
+    display: flex;
+    flex-direction: column;
+    margin: 16px 0;
   }
   &__link {
     display: flex;
     align-items: center;
-    margin-bottom: 16px;
-    transition: color 0.3s;
-    color: #575d65;
+    color: color(light, surface-tint);
     font-size: 18px;
-    font-weight: 400;
-    line-height: 140%;
-    gap: 10px;
-    &:last-child {
-      margin-bottom: 0;
-    }
+    line-height: math.div(24, 18);
+    column-gap: 12px;
+    padding: 8px 24px;
+    transition:
+      color 0.255s ease,
+      background-color 0.255s ease;
     &:hover {
-      color: #0057ff;
+      color: color(light, on-background);
+      background-color: color(light, secondary-hover);
     }
   }
   &__log-out {
-    padding: 24px;
+    padding: 24px 24px 32px;
+    border-top: 1px solid color(light, primary-container);
   }
   &__button {
-    display: flex;
-    align-items: center;
-    gap: 11px;
-    transition: color 0.3s;
-    color: #575d65;
-    &:hover {
-      color: #0057ff;
-    }
+    font-size: 18px;
+    line-height: math.div(24, 18);
+    color: color(light, surface-tint);
   }
 }
 // stylelint-enable scss/dollar-variable-empty-line-after
