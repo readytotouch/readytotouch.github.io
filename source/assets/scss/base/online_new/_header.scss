@@ -29,8 +29,8 @@
     line-height: math.div(19, 19);
   }
   &__profile {
-    font-size: 0;
     position: relative;
+    font-size: 0;
   }
   &__nav {
     display: flex;
@@ -62,9 +62,9 @@
   &__profile-button {
     width: 40px;
     height: 40px;
+    margin-left: 24px;
     overflow: hidden;
     border-radius: 50%;
-    margin-left: 24px;
     img {
       display: block;
       width: inherit;
@@ -86,8 +86,7 @@
   border-radius: 8px;
   background: white;
   pointer-events: none;
-  filter: drop-shadow(-1px 0px 20px rgba(28, 24, 34, 0.05)) drop-shadow(0px 1px 5px rgba(14, 11, 17, 0.15));
-
+  filter: drop-shadow(-1px 0 20px rgba(28, 24, 34, 0.05)) drop-shadow(0 1px 5px rgba(14, 11, 17, 0.15));
   &__profile {
     display: flex;
     flex-direction: column;
@@ -95,10 +94,10 @@
   &__profile-info {
     display: flex;
     align-items: center;
-    column-gap: 12px;
     padding-top: 24px;
-    padding-left: 24px;
     padding-right: 24px;
+    padding-left: 24px;
+    column-gap: 12px;
   }
   &__profile-name {
     width: 100%;
@@ -120,17 +119,17 @@
   &__link {
     display: flex;
     align-items: center;
-    color: color(light, surface-tint);
-    font-size: 18px;
-    line-height: math.div(24, 18);
-    column-gap: 12px;
     padding: 8px 24px;
+    column-gap: 12px;
     transition:
       color 0.255s ease,
       background-color 0.255s ease;
+    color: color(light, surface-tint);
+    font-size: 18px;
+    line-height: math.div(24, 18);
     &:hover {
-      color: color(light, on-background);
       background-color: color(light, secondary-hover);
+      color: color(light, on-background);
     }
   }
   &__log-out {
@@ -138,9 +137,9 @@
     border-top: 1px solid color(light, primary-container);
   }
   &__button {
+    color: color(light, surface-tint);
     font-size: 18px;
     line-height: math.div(24, 18);
-    color: color(light, surface-tint);
   }
 }
 // stylelint-enable scss/dollar-variable-empty-line-after
