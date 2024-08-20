@@ -17,6 +17,7 @@ export default function html(cb, inputHtml, basepath, outputHtml) {
         basepath,
         context: {
           images_home_new_path__: '/assets/images/pages/online-new/',
+          images_organizer_path__: '/assets/images/pages/organizer/',
           images_common_path__: '/assets/images/pages/common/',
           images_common_images_path__: '/assets/images/pages/common-images/',
           fonts_inter__: '/assets/fonts/inter/',

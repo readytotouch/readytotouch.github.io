@@ -3,7 +3,7 @@
 .footer {
   display: flex;
   align-items: stretch;
-  height: 368px;
+  height: 392px;
   background-color: color(light, surface-1);
   &__overlay {
     display: flex;
@@ -84,96 +84,4 @@
     font-size: 16px;
     line-height: math.div(22, 16);
   }
-
-  /* &__group-u8 {
-    //display: flex;
-    //justify-content: space-between;
-  }
-  &__info {
-    color: white;
-  }
-  &__title {
-    display: block;
-    margin-bottom: 16px;
-    color: white;
-    font-size: 24px;
-    font-weight: 600;
-    line-height: 120%;
-  }
-  &__subtitle {
-    width: 275px;
-    margin-bottom: 55px;
-    color: #c6cad2;
-    line-height: 140%;
-  }
-  &__map {
-    margin-bottom: 56px;
-  }
-  &__copyrights {
-    display: flex;
-    padding-top: 16px;
-    border-top: 1px solid #262a30;
-    color: #cfd2d7;
-    font-size: 14px;
-    gap: 14px;
-  }
-  &__middle-section {
-    display: flex;
-    flex-direction: column;
-    width: 300px;
-    color: white;
-    font-size: 18px;
-  }
-  &__statistics-link {
-    width: fit-content;
-    margin-bottom: 24px;
-    transition: color 0.3s;
-    border-bottom: 1px solid white;
-    color: #c6cad2;
-    &:hover {
-      border-bottom: 1px solid white;
-      color: white;
-    }
-  }
-  &__stars {
-    margin-bottom: 32px;
-  }
-  &__github-link {
-    display: flex;
-    align-items: center;
-    width: fit-content;
-    transition: color 0.3s;
-    border-bottom: 1px solid #c6cad2;
-    color: #c6cad2;
-    gap: 15px;
-    &:hover {
-      border-bottom: 1px solid white;
-      color: white;
-    }
-  }
-  &__support {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    background: transparent;
-  }
-  &__link {
-    width: 100%;
-    padding: 16px 32px 16px 40px;
-    transition: border 0.2s;
-    border: 2px solid #575d65;
-    border-radius: 8px;
-    color: white;
-    &:hover {
-      border: 2px solid white;
-    }
-  } */
-
-  /* &__figure {
-    display: flex;
-    gap: 16px;
-    &:last-child {
-      justify-content: space-between;
-    }
-  } */
 }

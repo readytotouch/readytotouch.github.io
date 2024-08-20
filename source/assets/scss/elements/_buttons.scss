@@ -20,6 +20,10 @@
   font-family: $base-font-family;
   font-size: 18px;
   font-weight: 500;
+  &--small-padding {
+    padding-right: 24px;
+    padding-left: 24px;
+  }
   &--small {
     height: 40px;
     padding-right: 24px;

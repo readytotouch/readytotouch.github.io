@@ -1,0 +1,26 @@
+.main-container {
+  z-index: 40;
+  max-width: 1216px;
+  margin: 0 auto;
+  color: #020111;
+}
+body {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100%;
+  background-color: color(light, surface-1);
+  background-image: linear-gradient(229.85deg, rgba(245, 245, 249, 0.5) 56.34%, rgba(134, 99, 245, 0.5) 107.13%),
+    linear-gradient(126.21deg, rgba(255, 255, 255, 0.4) 76.3%, rgba(134, 99, 245, 0.4) 112.13%),
+    url('#{$path-to-static-images}pages/organizer/circles.svg');
+  background-repeat: no-repeat, no-repeat, no-repeat;
+  background-position:
+    bottom left,
+    bottom right,
+    100% calc(100% - 392px);
+  color: $primary-color;
+  font-family: $base-font-family;
+  font-size: $base-font-size;
+}
+.main-wrapper {
+  min-height: calc(100vh - 300px);
+}

@@ -1,0 +1,54 @@
+@use 'sass:math';
+
+.hero {
+  &__container {
+    padding-top: 104px;
+  }
+  &__overlay {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__info-wrapper {
+    max-width: 720px;
+  }
+  &__status {
+    display: flex;
+    align-items: center;
+    column-gap: 8px;
+  }
+  &__status-text {
+    color: color(light, surface-tint);
+    font-size: 16px;
+    line-height: math.div(22, 16);
+  }
+  &__headline {
+    margin-top: 16px;
+    color: color(light, on-background);
+    font-size: 56px;
+    font-weight: 500;
+    line-height: math.div(67.2, 56);
+  }
+  &__description {
+    margin-top: 16px;
+    color: color(light, surface-tint);
+    font-size: 18px;
+    line-height: math.div(24, 18);
+  }
+  &__buttons-group {
+    display: flex;
+    flex-direction: column;
+    row-gap: 16px;
+    width: 320px;
+  }
+  &__button {
+    width: 100%;
+    column-gap: 8px;
+  }
+  &__buttons-icon-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+  }
+}
