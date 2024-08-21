@@ -55,6 +55,7 @@ const clean = () =>
     [
       publicSource.htmlFiles,
       publicSource.images,
+      publicSource.fonts,
       publicSource.css,
       publicSource.js,
       publicSource.pathOutputCss,
@@ -67,6 +68,11 @@ const clean = () =>
 
 const cleanImages = () =>
   del(publicSource.images, {
+    force: true,
+  })
+
+const cleanFonts = () =>
+  del(publicSource.fonts, {
     force: true,
   })
 
@@ -90,6 +96,7 @@ task('watch', () => {
   })
   watch(watchSource.js, series('js', 'inject-js', reload))
   watch(watchSource.html, series('html', reload))
+  watch(watchSource.fonts, series(cleanFonts, reload))
   watch([watchSource.images, watchSource.excludeSprites, watchSource.excludeFavicon], series(cleanImages, 'images'))
 })
 
