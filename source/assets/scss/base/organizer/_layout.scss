@@ -20,6 +20,14 @@ body {
   color: $primary-color;
   font-family: $base-font-family;
   font-size: $base-font-size;
+  &.organizer-inner {
+    background-image: linear-gradient(229.85deg, rgba(245, 245, 249, 0.5) 56.34%, rgba(134, 99, 245, 0.5) 107.13%),
+      linear-gradient(126.21deg, rgba(255, 255, 255, 0.4) 76.3%, rgba(134, 99, 245, 0.4) 112.13%);
+    background-repeat: no-repeat, no-repeat;
+    background-position:
+      bottom left,
+      bottom right;
+  }
 }
 .main-wrapper {
   min-height: calc(100vh - 300px);
