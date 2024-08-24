@@ -10,18 +10,21 @@
     "start-ws": "set NODE_ENV=start npm i && gulp build",
     "dev-ws": "set NODE_ENV=dev npm rebuild node-sass && gulp",
     "build-ws": "set NODE_ENV=prod npm rebuild node-sass && gulp build",
-    "stylelint": "npx stylelint --config '.stylelintrc.json' 'source/assets/scss/**/*.scss'",
+    "eslint": "npx eslint --config \".eslintrc.json\" \"assets/js/**/*.js\"",
+    "eslint:file": "npx eslint --config \".eslintrc.json\"",
+    "stylelint": "npx stylelint --config \".stylelintrc.json\" \"assets/scss/**/*.scss\"",
     "stylelint:file": "npx stylelint --config '.stylelintrc.json'",
     "prepare": "cd .. && husky source/.husky",
     "pre-commit": "lint-staged"
   },
   "lint-staged": {
-    "source/assets/js/**/*.js": [
+    "assets/js/**/*.js": [
       "eslint --fix",
       "prettier --write --ignore-unknown"
     ],
-    "source/assets/scss/**/*.scss": [
+    "assets/scss/**/*.scss": [
       "stylelint --fix",
+      "prettier --write --ignore-unknown",
       "git add --all"
     ]
   },
