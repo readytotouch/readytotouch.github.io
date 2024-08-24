@@ -11,8 +11,7 @@
     "dev-ws": "set NODE_ENV=dev npm rebuild node-sass && gulp",
     "build-ws": "set NODE_ENV=prod npm rebuild node-sass && gulp build",
     "stylelint": "npx stylelint --config '.stylelintrc.json' '**/*.scss'",
-    "stylelint:file": "npx stylelint --config '.stylelintrc.json'",
-    "prepare": "husky"
+    "stylelint:file": "npx stylelint --config '.stylelintrc.json'"
   },
   "husky": {
     "hooks": {
@@ -20,9 +19,9 @@
     }
   },
   "lint-staged": {
-    "assets/**/*.scss": ["stylelint --fix", "prettier --write --ignore-unknown"],
-    "assets/**/*.js": ["eslint --fix", "prettier --write --ignore-unknown"],
-    "assets/**/!(*.css|*.js)": ["prettier --write --ignore-unknown", "git add --all"]
+    "*.js": ["eslint --fix", "prettier --write --ignore-unknown"],
+    "*.scss": ["stylelint --fix", "prettier --write --ignore-unknown"],
+    "!(*.css|*.js)": ["prettier --write --ignore-unknown", "git add --all"]
   },
   "engines": {
     "node": "18.x"
