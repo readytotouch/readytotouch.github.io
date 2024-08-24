@@ -14,6 +14,11 @@
     "stylelint:file": "npx stylelint --config '.stylelintrc.json'",
     "prepare": "husky"
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
   "lint-staged": {
     "assets/**/*.scss": ["stylelint --fix", "prettier --write --ignore-unknown"],
     "assets/**/*.js": ["eslint --fix", "prettier --write --ignore-unknown"],
