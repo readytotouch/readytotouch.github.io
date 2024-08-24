@@ -76,6 +76,11 @@ const cleanFonts = () =>
     force: true,
   })
 
+const cleanHtml = () =>
+  del(publicSource.htmlFiles, {
+    force: true,
+  })
+
 task('html', cb => html(cb, devSource.htmlSource, devSource.htmlBase, publicSource.htmlBuild))
 
 // create image min
@@ -95,8 +100,8 @@ task('watch', () => {
     }
   })
   watch(watchSource.js, series('js', 'inject-js', reload))
-  watch(watchSource.html, series('html', reload))
-  watch(watchSource.fonts, series(cleanFonts, reload))
+  watch(watchSource.html, series(cleanHtml, 'html', reload))
+  watch(watchSource.fonts, series(cleanFonts, 'fonts', reload))
   watch([watchSource.images, watchSource.excludeSprites, watchSource.excludeFavicon], series(cleanImages, 'images'))
 })
 

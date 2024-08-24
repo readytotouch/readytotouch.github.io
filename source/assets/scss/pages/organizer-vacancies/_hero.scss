@@ -4,5 +4,37 @@
   &__container {
     padding-top: 52px;
     padding-bottom: 52px;
+    text-align: center;
+  }
+  &__overlay {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 720px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  &__image {
+    display: block;
+  }
+  &__description-image {
+    display: inline-block;
+  }
+  &__headline {
+    font-size: 48px;
+    font-weight: 400;
+    line-height: math.div(57.6, 48);
+  }
+  &__description {
+    margin-top: 24px;
+    font-size: 18px;
+    line-height: math.div(24, 18);
+    &--with-icon {
+      display: flex;
+      column-gap: 4px;
+    }
+  }
+  &__button {
+    margin-top: 24px;
   }
 }

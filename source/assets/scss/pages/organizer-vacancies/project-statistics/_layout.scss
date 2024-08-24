@@ -1,0 +1,9 @@
+@use 'sass:math';
+
+.project-statistics {
+  &__container {
+    padding-top: 52px;
+    padding-bottom: 104px;
+    overflow: initial;
+  }
+}

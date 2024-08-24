@@ -1,7 +1,6 @@
 const chartCommonOptions = {
   chart: {
     type: 'area',
-    height: 340,
     zoom: { enabled: false },
     toolbar: { show: false },
     parentHeightOffset: null,
@@ -32,7 +31,6 @@ const chartCommonOptions = {
     },
   },
   yaxis: {
-    stepSize: 20,
     labels: {
       style: { cssClass: 'stats__labels' },
     },
