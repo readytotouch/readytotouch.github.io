@@ -13,6 +13,11 @@
     "stylelint": "npx stylelint --config '.stylelintrc.json' '**/*.scss'",
     "stylelint:file": "npx stylelint --config '.stylelintrc.json'"
   },
+  "lint-staged": {
+    "assets/**/*.scss": ["stylelint --fix", "prettier --write --ignore-unknown"],
+    "assets/**/*.js": ["eslint --fix", "prettier --write --ignore-unknown"],
+    "assets/**/!(*.css|*.js)": ["prettier --write --ignore-unknown", "git add --all"]
+  },
   "engines": {
     "node": "18.x"
   },
@@ -67,6 +72,7 @@
     "gulp-svg-sprite": "1.5.0",
     "gulp-svgo": "^2.2.1",
     "gulp-uglify": "3.0.2",
+    "lint-staged": "^15.2.9",
     "micromodal": "0.4.10",
     "path": "0.12.7",
     "postcss": "8.4.41",
@@ -80,6 +86,7 @@
     "vinyl-source-stream": "2.0.0"
   },
   "dependencies": {
-    "apexcharts": "^3.52.0"
+    "apexcharts": "^3.52.0",
+    "husky": "^9.1.5"
   }
 }
