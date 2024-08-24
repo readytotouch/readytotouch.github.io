@@ -11,7 +11,19 @@
     "dev-ws": "set NODE_ENV=dev npm rebuild node-sass && gulp",
     "build-ws": "set NODE_ENV=prod npm rebuild node-sass && gulp build",
     "stylelint": "npx stylelint --config '.stylelintrc.json' '**/*.scss'",
-    "stylelint:file": "npx stylelint --config '.stylelintrc.json'"
+    "stylelint:file": "npx stylelint --config '.stylelintrc.json'",
+    "prepare": "cd .. && husky source/.husky",
+    "pre-commit": "lint-staged"
+  },
+  "lint-staged": {
+    "source/**/*.js": [
+      "eslint --fix",
+      "prettier --write --ignore-unknown"
+    ],
+    "source/**/*.scss": [
+      "stylelint --fix",
+      "git add --all"
+    ]
   },
   "engines": {
     "node": "18.x"
