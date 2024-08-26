@@ -1,3 +1,6 @@
+html {
+  height: 100%;
+}
 .main-container {
   z-index: 40;
   max-width: 1216px;
@@ -27,6 +30,21 @@ body {
     background-position:
       bottom left,
       bottom right;
+  }
+  &.organizer-companies-inner {
+    background-image: initial;
+    background-repeat: no-repeat;
+    background-position: initial;
+  }
+  &.organizer-welcome {
+    grid-template-rows: auto 1fr;
+    background-image: url('#{$path-to-static-images}pages/common/home_top_bg.svg');
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: 1440px 280px;
+    .main-wrapper {
+      min-height: initial;
+    }
   }
 }
 .main-wrapper {

@@ -1,0 +1,46 @@
+@use 'sass:math';
+
+// stylelint-disable scss/dollar-variable-empty-line-after
+.hero {
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    max-width: 1216px;
+    margin: 0 auto;
+    padding-top: 253px;
+  }
+  &__main {
+    max-width: 420px;
+    margin-right: auto;
+    margin-bottom: 40px;
+    margin-left: auto;
+    text-align: center;
+  }
+  &__title {
+    margin-bottom: 12px;
+    color: color(light, on-background);
+    font-size: 44px;
+    font-weight: 500;
+    line-height: math.div(52.8, 44);
+  }
+  &__subtitle {
+    color: color(light, surface-tint);
+    font-size: 18px;
+    line-height: math.div(24, 18);
+  }
+  &__buttons-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 16px;
+  }
+  &__button {
+    min-width: 316px;
+    column-gap: 8px;
+  }
+  &__button-icon {
+    width: 24px;
+    height: 24px;
+  }
+}
+// stylelint-enable scss/dollar-variable-empty-line-after

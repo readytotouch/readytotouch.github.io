@@ -1,0 +1,17 @@
+@use 'sass:math';
+
+.company-statistics {
+  &__container {
+    padding-top: 52px;
+    padding-bottom: 104px;
+    overflow: initial;
+  }
+  &__headline {
+    margin-bottom: 24px;
+    color: color(light, on-background);
+    font-size: 44px;
+    font-weight: 500;
+    line-height: math.div(52.8, 44);
+    white-space: nowrap;
+  }
+}

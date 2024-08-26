@@ -64,3 +64,14 @@
     white-space: nowrap;
   }
 }
+
+@each $ellipsis-line in (2, 3) {
+  .txt-ellipsis-#{$ellipsis-line} {
+    display: block;
+    display: box;
+    -webkit-line-clamp: #{$ellipsis-line};
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
