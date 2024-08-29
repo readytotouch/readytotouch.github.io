@@ -1,0 +1,10 @@
+.search-result {
+  &__empty-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 500px;
+    text-align: center;
+  }
+}

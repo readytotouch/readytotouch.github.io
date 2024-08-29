@@ -44,6 +44,18 @@
     width: 100%;
     column-gap: 8px;
   }
+  // stylelint-disable selector-max-compound-selectors
+  .button--bordered-gray-disabled {
+    > img {
+      filter: grayscale(1);
+    }
+    .hero__buttons-icon-box {
+      img {
+        filter: invert(0.5);
+      }
+    }
+  }
+  // stylelint-enable selector-max-compound-selectors
   &__buttons-icon-box {
     display: flex;
     align-items: center;

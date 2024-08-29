@@ -56,6 +56,12 @@
       max-width: 100%;
     }
   }
+  &--organizer {
+    #{$_this}__input {
+      border-width: 2px;
+      border-color: color(light, outline-variant);
+    }
+  }
   &--companies {
     #{$_this}__input {
       max-width: 692px;

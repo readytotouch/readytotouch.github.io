@@ -135,16 +135,19 @@
     position: relative;
     align-items: center;
     column-gap: 4px;
-    *:only-child {
+    > *:only-child {
       margin-left: 24px;
     }
   }
-  &__links-icon {
+  &__links-link {
     &--google {
       position: absolute;
       top: 0;
       right: 0;
     }
+  }
+  &__links-icon {
+    display: block;
   }
 }
 // stylelint-enable scss/dollar-variable-empty-line-after

@@ -1,4 +1,4 @@
-html {
+html:has(.organizer-welcome) {
   height: 100%;
 }
 .main-container {

@@ -295,6 +295,12 @@
       box-shadow: initial;
     }
   }
+  &--bordered-gray-disabled {
+    border-color: color(light, disable);
+    color: color(light, on-disable);
+    cursor: default;
+    pointer-events: none;
+  }
   &.in-respond {
     border-color: #eeeff1;
     background-color: #eeeff1;

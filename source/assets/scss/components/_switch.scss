@@ -1,0 +1,60 @@
+@use 'sass:math';
+
+.switch-wrapper {
+  display: flex;
+  align-items: center;
+  column-gap: 8px;
+  &__text {
+    color: color(light, surface-tint);
+    font-size: 18px;
+    line-height: math.div(24, 18);
+  }
+}
+.switch {
+  display: inline-block;
+  position: relative;
+  width: 37px;
+  height: 20px;
+  &__input {
+    width: 0;
+    height: 0;
+    opacity: 0;
+    &:checked + .switch__slider {
+      border-color: #2f2c6d;
+      background-color: #2f2c6d;
+      &:before {
+        transform: translateX(16px);
+        background-color: white;
+      }
+    }
+    &:focus + .switch__slider {
+      box-shadow: 0 0 1px blue;
+    }
+  }
+  &__slider {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transition: 0.225s;
+    border: 1px solid color(light, outline);
+    cursor: pointer;
+    &:before {
+      content: '';
+      position: absolute;
+      bottom: 2px;
+      left: 2px;
+      width: 14px;
+      height: 14px;
+      transition: 0.225s;
+      background-color: color(light, outline);
+    }
+    &--round {
+      border-radius: 100px;
+      &:before {
+        border-radius: 50%;
+      }
+    }
+  }
+}
