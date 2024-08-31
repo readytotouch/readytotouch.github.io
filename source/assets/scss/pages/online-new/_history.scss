@@ -1,0 +1,76 @@
+.history {
+  overflow: hidden;
+  border-radius: 16px;
+  &__title {
+    padding: 24px;
+    background: white;
+    font-size: 26px;
+    font-weight: 500;
+  }
+  &__table {
+    background: white;
+  }
+  &__table-header {
+    display: flex;
+    border-top: 1px solid #ededf8;
+    border-bottom: 1px solid #ededf8;
+    background: #f9f9fb;
+  }
+  &__header-item {
+    display: block;
+    padding: 24px;
+    color: #404c5f;
+    font-weight: 600;
+    text-align: left;
+  }
+  &__name,
+  &__user-group {
+    width: 320px;
+  }
+  &__profile,
+  &__user-link {
+    width: 656px;
+  }
+  &__user-link {
+    transition: color 0.3s;
+    &:hover {
+      color: #0057ff;
+    }
+  }
+  &__date,
+  &__user-date {
+    width: 240px;
+  }
+  &__table-list {
+    height: 648px;
+    overflow: auto;
+    &::-webkit-scrollbar {
+      width: 8px;
+    }
+    &::-webkit-scrollbar-track {
+      background-color: transparent;
+    }
+    &::-webkit-scrollbar-thumb {
+      border-radius: 8px;
+      background-color: #b8b6e2;
+    }
+  }
+  &__table-user {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #ededf8;
+    color: #404c5f;
+  }
+  &__table-user:last-child {
+    border-bottom: none;
+  }
+  &__user-item {
+    padding: 12px 24px;
+  }
+  &__user-group {
+    display: flex;
+    align-items: center;
+    padding: 12px 24px;
+    gap: 12px;
+  }
+}

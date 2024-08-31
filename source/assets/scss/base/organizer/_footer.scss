@@ -1,0 +1,86 @@
+@use 'sass:math';
+
+.footer {
+  display: flex;
+  align-items: stretch;
+  height: 392px;
+  &__overlay {
+    display: flex;
+    align-items: stretch;
+    width: 100%;
+    padding-right: 24px;
+    padding-bottom: 24px;
+    padding-left: 24px;
+    border-radius: 60px;
+    background: white;
+    background-clip: content-box;
+  }
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 64px 88px 32px;
+  }
+  &__group {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__info {
+    display: flex;
+    flex-direction: column;
+  }
+  &__title-link {
+    color: color(light, on-background);
+    font-family: $secondary-font-family;
+    font-size: 19px;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    line-height: math.div(19, 19);
+  }
+  &__subtitle {
+    margin-top: 16px;
+    color: color(light, surface-tint);
+    font-size: 18px;
+    line-height: math.div(24, 18);
+  }
+  &__ukraine-map {
+    display: block;
+    margin-top: 32px;
+  }
+  &__right-side {
+    display: flex;
+  }
+  &__support {
+    display: flex;
+    flex-direction: column;
+    width: 210px;
+    row-gap: 16px;
+    margin-left: 40px;
+  }
+  &__support-figure {
+    display: flex;
+    column-gap: 8px;
+  }
+  &__link {
+    width: 100%;
+    column-gap: 8px;
+  }
+  &__support-icon-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+  }
+  &__copyrights {
+    display: flex;
+    align-items: center;
+    margin-top: auto;
+    padding-top: 24px;
+    column-gap: 6px;
+    border-top: 1px solid color(light, surface-1);
+    color: color(light, outline);
+    font-size: 16px;
+    line-height: math.div(22, 16);
+  }
+}

@@ -1,0 +1,67 @@
+@use 'sass:math';
+
+.organizer-card {
+  &__container {
+    padding-top: 52px;
+    padding-bottom: 52px;
+  }
+  &__figure {
+    display: grid;
+    grid-template-areas: 'a b';
+    grid-template-columns: repeat(2, 1fr);
+    border-radius: 20px;
+  }
+  &__picture {
+    grid-area: b;
+  }
+  &__image {
+    display: block;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+  }
+  &__caption {
+    display: flex;
+    grid-area: a;
+    flex-direction: column;
+    justify-content: center;
+    padding-right: 64px;
+    padding-left: 64px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    background-color: white;
+  }
+  &__header {
+    display: flex;
+    align-items: center;
+    column-gap: 8px;
+  }
+  &__headline {
+    margin-top: 24px;
+    color: color(light, on-background);
+    font-size: 44px;
+    font-weight: 500;
+    line-height: math.div(52.8, 44);
+  }
+  &__description {
+    margin-top: 24px;
+    color: color(light, surface-tint);
+    font-size: 18px;
+    line-height: math.div(24, 18);
+  }
+  &__footer {
+    display: flex;
+    align-items: center;
+    margin-top: 24px;
+    column-gap: 24px;
+  }
+  &__try-btn {
+    column-gap: 8px;
+  }
+  &__try-btn-icon-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+  }
+}

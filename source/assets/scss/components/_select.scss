@@ -1,22 +1,19 @@
 .select {
-	display: flex;
-	align-items: center;
-	width: 230px;
-	padding-right: 16px;
-	border-left: 1px solid #dddce4;
-
-	&__icon {
-		margin-left: 12px;
-		margin-right: 12px;
-	}
-
-	&__item {
-		font-size: 18px;
-		font-weight: 500;
-		color: #8d8d8d;
-		height: 50px;
-		cursor: pointer;
-
-		@include focus-visible;
-	}
+  display: flex;
+  align-items: center;
+  width: 230px;
+  padding-right: 16px;
+  border-left: 1px solid #dddce4;
+  &__icon {
+    margin-right: 12px;
+    margin-left: 12px;
+  }
+  &__item {
+    @include focus-visible;
+    height: 50px;
+    color: #8d8d8d;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+  }
 }

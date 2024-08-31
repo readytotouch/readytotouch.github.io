@@ -1,0 +1,23 @@
+/* Inter - latin */
+
+@include font-face(Inter, 400, regular, true);
+
+/* Inter - latin-ext */
+
+@include font-face(Inter, 400, ext-regular, false);
+
+/* Inter-500 - latin */
+
+@include font-face(Inter, 500, 500, true);
+
+/* Inter-500 - latin-ext */
+
+@include font-face(Inter, 500, ext-500, false);
+
+/* Montserrat-700 - latin */
+
+@include font-face(Montserrat, 700, 700, true);
+
+/* Montserrat-700 - latin-ext */
+
+@include font-face(Montserrat, 700, ext-700, false);

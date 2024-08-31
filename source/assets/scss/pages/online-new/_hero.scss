@@ -1,0 +1,102 @@
+@use 'sass:math';
+
+// stylelint-disable scss/dollar-variable-empty-line-after
+.hero {
+  $_this: &;
+  &.auth {
+    #{$_this}__main {
+      margin-bottom: 0;
+    }
+  }
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    max-width: 1216px;
+    margin: 0 auto;
+    padding: 52px 0;
+  }
+  &__top-flag {
+    display: block;
+    margin-right: auto;
+    margin-bottom: 16px;
+    margin-left: auto;
+  }
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 24px;
+  }
+  &__status {
+    display: flex;
+    align-items: center;
+    color: #9b9db5;
+    font-size: 18px;
+    line-height: 150%;
+    gap: 12px;
+  }
+  &__progress {
+    padding: 2px 16px 3px;
+    border-radius: 100px;
+    background: #ecf2ff;
+    color: #5484ff;
+  }
+  &__link {
+    display: flex;
+    gap: 8px;
+    &:hover {
+      span {
+        border-bottom: 1px solid white;
+        color: white;
+      }
+      svg path {
+        transition: 0.225s;
+        stroke: white;
+      }
+    }
+  }
+  &__link-title {
+    transition:
+      border 0.225s,
+      color 0.225s;
+    border-bottom: 1px solid #c6cad2;
+    color: #c6cad2;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 130%;
+  }
+  &__main {
+    max-width: 720px;
+    margin-right: auto;
+    margin-bottom: 32px;
+    margin-left: auto;
+    text-align: center;
+  }
+  &__title {
+    margin-bottom: 24px;
+    color: color(light, on-background);
+    font-size: 56px;
+    font-weight: 500;
+    line-height: math.div(67.2, 56);
+  }
+  &__subtitle {
+    color: color(light, surface-tint);
+    font-size: 18px;
+    line-height: math.div(24, 18);
+  }
+  &__buttons-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 16px;
+  }
+  &__button {
+    min-width: 316px;
+    column-gap: 8px;
+  }
+  &__button-icon {
+    width: 24px;
+    height: 24px;
+  }
+}
+// stylelint-enable scss/dollar-variable-empty-line-after

@@ -1,0 +1,66 @@
+@use 'sass:math';
+
+.projects {
+  &__container {
+    max-width: 992px;
+    padding-top: 52px;
+    padding-bottom: 104px;
+  }
+  &__overlay {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__about {
+    max-width: 440px;
+  }
+  &__readytotouch-logo {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+  }
+  &__readytotouch-logo-title {
+    color: color(light, on-background);
+    font-family: $secondary-font-family;
+    font-size: 19px;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    line-height: math.div(19, 19);
+  }
+  &__headline {
+    margin-top: 24px;
+    color: color(light, on-background);
+    font-size: 44px;
+    font-weight: 500;
+    line-height: 120%;
+  }
+  &__description {
+    margin-top: 24px;
+    color: color(light, surface-tint);
+    font-size: 18px;
+    line-height: math.div(24, 18);
+  }
+  &__button {
+    margin-top: 24px;
+    column-gap: 8px;
+  }
+  &__group {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+    max-width: 448px;
+    column-gap: 48px;
+    row-gap: 32px;
+  }
+  &__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    height: 64px;
+    background-color: white;
+  }
+  &__image {
+    display: block;
+  }
+}

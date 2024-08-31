@@ -1,35 +1,61 @@
-//typography
-$base-font-family: "Inter", arial, helvetica neue, helvetica, sans-serif;
-$secondary-font-family: "Montserrat", verdana, roboto, sans-serif;
+// stylelint-disable scss/dollar-variable-empty-line-after, scss/dollar-variable-colon-space-after
+// typography
+$base-font-family:
+  'Inter',
+  arial,
+  helvetica neue,
+  helvetica,
+  sans-serif;
+$secondary-font-family: montserrat, verdana, roboto, sans-serif;
 $base-font-size: 16px;
 
-//colors
+// colors
 $primary-color: #21212b;
 $primary-blue: #7388ff;
 $header-color: #b0baeb;
 $body-color: #f2f2f8;
-
-$border-color-light: #D8DDEB;
-
-$bg-light: #F5F5F9;
-
-$disabled: #96969C;
-$white: #FFFFFF;
+$border-color-light: #d8ddeb;
+$bg-light: #f5f5f9;
+$disabled: #96969c;
+$white: white;
 
 // font colors
-$body-dark: #4D515C;
-$body-light: #6F727A;
-
-$title-dark: #1C1F29;
+$body-dark: #4d515c;
+$body-light: #6f727a;
+$title-dark: #1c1f29;
 $title-light: #303647;
-
 $link-blue: #0737b9;
+$app-colors: (
+  light: (
+    inverse-primary: #c4c6d3,
+    primary: #1c1f29,
+    secondary-fixed: #dbe1ff,
+    secondary-fixed-dim: #b3c5ff,
+    on-secondary-fixed-variant: #003ea6,
+    secondary: #4a79ff,
+    on-tertiary-variant: #4c21bb,
+    tertiary-container: #e7deff,
+    on-background: #1d1b1e,
+    surface-tint: #4d515c,
+    surface-1: #f5f5f9,
+    surface-2: #efeff5,
+    surface-5: #dddde9,
+    outline: #7e8596,
+    outline-variant: #b8bdcc,
+    secondary-hover: #ebedf5,
+    primary-container: #edeefe,
+    logo-bg: #d8d8d8,
+    on-disable: #969696,
+    disable: #e8e8e8,
+  ),
+);
 
 // header
 $header-height-desktop: 88px;
 
-//statics
-$path-to-static: "assets/images/";
+// statics
+$path-to-static-images: '/assets/images/';
+$path-to-static-fonts: '/assets/fonts/';
 
 // font size
 $font-sm: 14px;
@@ -37,6 +63,4 @@ $font-md: 18px;
 $font-lg: 22px;
 $font-xl: 32px;
 
-.d-none {
-    display: none !important;
-}
+// stylelint-enable scss/dollar-variable-empty-line-after, scss/dollar-variable-colon-space-after

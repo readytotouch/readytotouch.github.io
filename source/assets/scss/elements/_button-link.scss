@@ -1,0 +1,21 @@
+@use 'sass:math';
+@use 'sass:color';
+
+.button-link {
+  color: color(light, on-secondary-fixed-variant);
+  font-size: 18px;
+  font-weight: 500;
+  line-height: math.div(24, 18);
+  &:hover,
+  &:active {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+  &:focus-visible {
+    outline: none;
+    box-shadow: 0 0 0 2px color.change(color(light, on-secondary-fixed-variant), $alpha: 0.5);
+  }
+  &:disabled {
+    color: color(light, on-disable);
+  }
+}

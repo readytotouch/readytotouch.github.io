@@ -1,0 +1,3 @@
+@function color($color, $saturation) {
+  @return map-get(map-get($app-colors, $color), $saturation);
+}
