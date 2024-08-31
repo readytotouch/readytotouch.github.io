@@ -248,6 +248,17 @@
       color: white;
     }
   }
+  &--bordered-black-transparent {
+    border-width: 3px;
+    border-color: black;
+    background-color: transparent;
+    color: black;
+    &:hover,
+    &:active {
+      background-color: black;
+      color: white;
+    }
+  }
   &--bordered-light {
     border-width: 2px;
     border-color: $title-dark;

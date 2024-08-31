@@ -5,9 +5,12 @@
   &__group {
     padding-top: 24px;
     padding-bottom: 24px;
+    &:last-child {
+      padding-bottom: initial;
+    }
 
     + #{$_this}__group {
-      border-top: 1px solid #dddce4;
+      border-top: 2px solid color(light, surface-1);
     }
   }
   &__header {
@@ -58,6 +61,10 @@
     &--no-scroll {
       overflow: initial;
     }
+  }
+  &__elements-inner {
+    max-height: 190px;
+    overflow: auto;
     &::-webkit-scrollbar {
       width: 4px;
     }

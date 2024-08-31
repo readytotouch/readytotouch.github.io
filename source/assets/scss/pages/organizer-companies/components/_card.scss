@@ -40,7 +40,6 @@
   }
   &__image-overlay {
     display: flex;
-    position: relative;
     flex-shrink: 0;
     align-items: center;
     justify-content: center;
@@ -49,6 +48,10 @@
     overflow: hidden;
     border-radius: 8px;
     background-color: color.change(color(light, logo-bg), $alpha: 0.2);
+    &--small {
+      width: 80px;
+      height: 40px;
+    }
   }
   &__header-caption {
     display: flex;
@@ -87,7 +90,7 @@
     gap: 8px;
   }
   &__text {
-    @extend .txt-ellipsis-3;
+    @extend .txt-ellipsis-2;
     position: relative;
     grid-column: 1;
     margin-top: 16px;

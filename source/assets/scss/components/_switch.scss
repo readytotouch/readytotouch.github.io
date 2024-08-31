@@ -3,8 +3,8 @@
 .switch-wrapper {
   display: flex;
   align-items: center;
-  column-gap: 8px;
   &__text {
+    margin-left: 8px;
     color: color(light, surface-tint);
     font-size: 18px;
     line-height: math.div(24, 18);

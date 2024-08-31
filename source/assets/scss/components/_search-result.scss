@@ -1,3 +1,5 @@
+@use 'sass:math';
+
 .search-result {
   &__wrapper {
     display: grid;
@@ -9,6 +11,20 @@
     padding: 24px;
     border-radius: 16px;
     background-color: $white;
+    &--wide {
+      padding-right: initial;
+      padding-left: initial;
+      .search-result__filter-header {
+        padding-bottom: 24px;
+        border-bottom: 2px solid color(light, surface-1);
+      }
+      .filters__header,
+      .filters__elements,
+      .search-result__filter-header {
+        padding-right: 24px;
+        padding-left: 24px;
+      }
+    }
   }
   &__vacancies-found {
     margin-top: 24px;
@@ -25,7 +41,12 @@
     color: $title-dark;
     font-size: $font-lg;
     font-weight: 500;
-    line-height: 26px;
+    line-height: math.div(28, 22);
+  }
+  &__filter-headline-reset {
+    color: color(light, on-disable);
+    font-size: 16px;
+    line-height: math.div(20, 16);
   }
   &__cards {
     display: flex;
@@ -39,7 +60,7 @@
     margin-top: 56px;
   }
   &__pagination {
-    padding-top: 56px;
+    margin-top: 40px;
   }
   &__empty {
     display: flex;
@@ -54,6 +75,13 @@
     font-size: $font-lg;
     font-weight: 500;
     line-height: 26px;
+  }
+  &__empty-content {
+    &--short {
+      max-width: 428px;
+      margin-right: auto;
+      margin-left: auto;
+    }
   }
   &__empty-image {
     width: 60px;
