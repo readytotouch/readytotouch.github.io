@@ -1,0 +1,37 @@
+@use 'sass:math';
+
+.stats {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  margin-bottom: 32px;
+  &__item {
+    padding: 24px 0 16px;
+    border-radius: 20px;
+    background: white;
+  }
+  &__header {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    padding-right: 16px;
+    padding-left: 16px;
+  }
+  &__title {
+    color: color(light, on-background);
+    font-size: 22px;
+    font-weight: 500;
+    line-height: math.div(28, 22);
+  }
+  &__period {
+    color: color(light, surface-tint);
+    font-size: 16px;
+    line-height: math.div(22, 16);
+  }
+  &__labels {
+    color: color(light, outline);
+    font-family: $base-font-family !important;
+    font-size: 12px;
+    line-height: math.div(16, 12);
+  }
+}

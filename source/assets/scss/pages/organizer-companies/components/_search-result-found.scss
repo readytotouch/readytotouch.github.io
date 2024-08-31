@@ -1,0 +1,7 @@
+.search-result-found {
+  color: color(light, surface-tint);
+  font-size: 16px;
+  &__amount {
+    font-weight: 700;
+  }
+}

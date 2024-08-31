@@ -1,11 +1,11 @@
-import favorite from "../common/favorite";
-import feedback from "../common/feedback";
+import favorite from '../common/favorite'
+// import feedback from '../common/feedback'
 
-favorite();
+favorite()
 
-const feedbackButton = document.querySelectorAll(".js-feedback-button");
-const radioButton = document.querySelectorAll(".js-profile-radio");
-const sendButton = document.querySelector(".js-send-profile");
+// const feedbackButton = document.querySelectorAll('.js-feedback-button')
+// const radioButton = document.querySelectorAll('.js-profile-radio')
+// const sendButton = document.querySelector('.js-send-profile')
 
 // document.addEventListener("DOMContentLoaded", () => {
 // 	if (feedbackButton !== null) {

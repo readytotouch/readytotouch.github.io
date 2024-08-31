@@ -1,0 +1,21 @@
+<div class="search-result mt-32">
+  <div class="container">
+    <div class="search-result__wrapper">
+      <!-- filters -->
+      @@include('partials/common/organizer/filters-checked.html')
+      <!-- /filters -->
+      <div class="search-result--group">
+        @@include('partials/common/organizer/applied-filters.html')
+        <div id="search_result_list" class="search-result__list">
+          <p class="search-result-found"><span class="search-result-found__amount">0</span> results</p>
+          <div class="search-result__empty-content search-result__empty-content--short mt-26">
+            <h2 class="search-result__title">No results</h2>
+            <p class="search-result__subtitle">
+              We didn't find any results for your search. Please update your search criteria.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

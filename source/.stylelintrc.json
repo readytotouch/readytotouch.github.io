@@ -1,16 +1,124 @@
 {
-  "extends": [
-    "stylelint-config-standard-scss",
-    "stylelint-config-prettier-scss"
-  ],
+  "ignoreFiles": ["**/*.js", "**/assets/scss/libs/*.scss"],
+  "extends": ["stylelint-config-standard-scss", "stylelint-config-property-sort-order-smacss"],
+  "plugins": ["stylelint-scss"],
   "rules": {
-    "color-hex-length": "long",
-    "declaration-block-no-redundant-longhand-properties": null,
-    "shorthand-property-no-redundant-values": null,
+    "selector-class-pattern": "^(?:(?:o|c|u|t|s|is|has|_|js|qa)-)?[a-zA-Z0-9]+(?:-[a-zA-Z0-9]+)*(?:__[a-zA-Z0-9]+(?:-[a-zA-Z0-9]+)*)?(?:--[a-zA-Z0-9]+(?:-[a-zA-Z0-9]+)*)?(?:\\[.+\\])?$",
+
+    "rule-empty-line-before": [
+      "always",
+      {
+        "except": [
+          "after-rule",
+          "after-single-line-comment",
+          "inside-block-and-after-rule",
+          "inside-block",
+          "first-nested"
+        ]
+      }
+    ],
     "selector-pseudo-element-colon-notation": "single",
+    "at-rule-empty-line-before": [
+      "always",
+      {
+        "except": ["after-same-name", "inside-block"]
+      }
+    ],
+    "at-rule-no-unknown": null,
+    "at-rule-no-vendor-prefix": true,
+    "block-no-empty": true,
+    "block-opening-brace-space-before": "always",
+    "color-hex-case": "lower",
+    "color-hex-length": "short",
+    "color-named": "always-where-possible",
+    "color-no-invalid-hex": true,
+    "declaration-bang-space-after": "never",
+    "declaration-bang-space-before": "always",
+    "declaration-block-semicolon-newline-after": "always",
+    "declaration-block-semicolon-space-before": "never",
+    "declaration-block-single-line-max-declarations": 1,
+    "declaration-block-trailing-semicolon": "always",
+    "declaration-colon-space-after": "always-single-line",
+    "declaration-colon-space-before": "never",
+    "declaration-empty-line-before": [
+      "never",
+      {
+        "ignore": ["after-declaration"]
+      }
+    ],
+    "function-comma-space-after": "always-single-line",
+    "function-parentheses-space-inside": "never-single-line",
+    "function-url-quotes": "always",
+    "length-zero-no-unit": true,
+    "max-nesting-depth": [
+      3,
+      {
+        "ignoreAtRules": ["each", "media", "supports", "include"]
+      }
+    ],
+    "media-feature-name-no-vendor-prefix": true,
+    "media-feature-parentheses-space-inside": "never",
+    "no-missing-end-of-source-newline": true,
+    "number-leading-zero": "always",
+    "number-no-trailing-zeros": true,
+    "order/order": [
+      [
+        "custom-properties",
+        "dollar-variables",
+        {
+          "type": "at-rule",
+          "name": "extend"
+        },
+        {
+          "type": "at-rule",
+          "name": "include",
+          "hasBlock": false
+        },
+        "declarations",
+        {
+          "type": "at-rule",
+          "name": "include",
+          "hasBlock": true
+        },
+        "rules"
+      ]
+    ],
+    "property-no-unknown": true,
+    "property-no-vendor-prefix": true,
+    "scss/at-function-pattern": "^[a-z]+([a-z0-9-]+[a-z0-9]+)?$",
+    "scss/at-import-no-partial-leading-underscore": true,
+    "scss/at-import-partial-extension-blacklist": ["scss"],
+    "scss/at-mixin-pattern": "^[a-z]+([a-z0-9-]+[a-z0-9]+)?$",
+    "scss/at-rule-no-unknown": true,
+    "scss/dollar-variable-colon-space-after": "always",
+    "scss/dollar-variable-colon-space-before": "never",
+    "scss/dollar-variable-pattern": "^[_]?[a-z]+([a-z0-9-]+[a-z0-9]+)?$",
+    "scss/percent-placeholder-pattern": "^[a-z]+([a-z0-9-]+[a-z0-9]+)?$",
+    "scss/selector-no-redundant-nesting-selector": true,
+    "selector-list-comma-newline-after": "always",
+    "selector-max-compound-selectors": 3,
+    "selector-max-id": 0,
+    "selector-no-qualifying-type": [
+      true,
+      {
+        "ignore": ["attribute", "class", "id"]
+      }
+    ],
+    "selector-no-vendor-prefix": true,
+    "selector-pseudo-element-no-unknown": true,
+    "shorthand-property-no-redundant-values": true,
+    "string-quotes": "single",
+    "value-no-vendor-prefix": true,
+    "scss/dollar-variable-empty-line-after": [
+      "always",
+      {
+        "except": ["before-dollar-variable", "before-comment"]
+      }
+    ],
+    "no-descending-specificity": null,
+    "scss/at-extend-no-missing-placeholder": null,
     "color-function-notation": "legacy",
     "alpha-value-notation": "number",
-    "length-zero-no-unit": true,
-    "scss/dollar-variable-pattern": "(_[a-z0-9]+)*$"
+    "declaration-block-no-redundant-longhand-properties": null
   }
 }

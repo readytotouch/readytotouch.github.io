@@ -1,0 +1,30 @@
+@use 'sass:math';
+
+.other-projects {
+  &__container {
+    padding-top: 52px;
+    padding-bottom: 52px;
+  }
+  &__title {
+    margin-bottom: 32px;
+    color: color(light, on-background);
+    font-size: 44px;
+    font-weight: 500;
+    line-height: math.div(52.8, 44);
+  }
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    padding: 24px;
+  }
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  &__group {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+}

@@ -1,0 +1,52 @@
+html:has(.organizer-welcome) {
+  height: 100%;
+}
+.main-container {
+  z-index: 40;
+  max-width: 1216px;
+  margin: 0 auto;
+  color: #020111;
+}
+body {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100%;
+  background-color: color(light, surface-1);
+  background-image: url('#{$path-to-static-images}pages/organizer/circles.svg'),
+    linear-gradient(229.85deg, rgba(245, 245, 249, 0.5) 56.34%, rgba(134, 99, 245, 0.5) 107.13%),
+    linear-gradient(126.21deg, rgba(255, 255, 255, 0.4) 76.3%, rgba(134, 99, 245, 0.4) 112.13%);
+  background-repeat: no-repeat, no-repeat, no-repeat;
+  background-position:
+    100% calc(100% - 392px),
+    bottom left,
+    bottom right;
+  color: $primary-color;
+  font-family: $base-font-family;
+  font-size: $base-font-size;
+  &.organizer-inner {
+    background-image: linear-gradient(229.85deg, rgba(245, 245, 249, 0.5) 56.34%, rgba(134, 99, 245, 0.5) 107.13%),
+      linear-gradient(126.21deg, rgba(255, 255, 255, 0.4) 76.3%, rgba(134, 99, 245, 0.4) 112.13%);
+    background-repeat: no-repeat, no-repeat;
+    background-position:
+      bottom left,
+      bottom right;
+  }
+  &.organizer-companies-inner {
+    background-image: initial;
+    background-repeat: no-repeat;
+    background-position: initial;
+  }
+  &.organizer-welcome {
+    grid-template-rows: auto 1fr;
+    background-image: url('#{$path-to-static-images}pages/common/home_top_bg.svg');
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: 1440px 280px;
+    .main-wrapper {
+      min-height: initial;
+    }
+  }
+}
+.main-wrapper {
+  min-height: calc(100vh - 300px);
+}

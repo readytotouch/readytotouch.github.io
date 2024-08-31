@@ -1,20 +1,18 @@
 .main-container {
-	max-width: 1216px;
-	margin: 0 auto;
-	color: #020111;
-	z-index: 40;
+  z-index: 40;
+  max-width: 1216px;
+  margin: 0 auto;
+  color: #020111;
 }
-
 body {
-	font-family: $base-font-family;
-	font-size: $base-font-size;
-	color: $primary-color;
-	display: grid;
-	grid-template-rows: auto 1fr auto;
-	min-height: 100%;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100%;
+  color: $primary-color;
+  font-family: $base-font-family;
+  font-size: $base-font-size;
 }
-
 .main-wrapper {
-	background: #F2F3F8;
-	min-height: calc(100vh - 300px);
+  min-height: calc(100vh - 300px);
+  background: #f2f3f8;
 }

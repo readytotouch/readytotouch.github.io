@@ -1,0 +1,44 @@
+.project {
+  border-radius: 16px;
+  background: white;
+  &.big-card {
+    width: 100%;
+  }
+  &__info-card {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  &__stars {
+    margin-bottom: 24px;
+  }
+  &__title {
+    margin-bottom: 12px;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 120%;
+    text-overflow: ellipsis;
+  }
+  &__subtitle {
+    color: #738099;
+    line-height: 150%;
+  }
+  &__link {
+    display: block;
+    width: fit-content;
+    margin-top: auto;
+    transition: color 0.3s;
+    border-bottom: 1px solid #1a1b26;
+    color: #1a1b26;
+    &:hover {
+      border-bottom: 1px solid #0057ff;
+      color: #0057ff;
+    }
+  }
+  &__view {
+    border-radius: 16px;
+  }
+  &__view-img {
+    display: block;
+  }
+}

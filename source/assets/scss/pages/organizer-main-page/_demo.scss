@@ -1,0 +1,10 @@
+.demo {
+  &__container {
+    padding-top: 48px;
+    padding-bottom: 52px;
+  }
+  &__image {
+    display: block;
+    border-radius: 60px;
+  }
+}

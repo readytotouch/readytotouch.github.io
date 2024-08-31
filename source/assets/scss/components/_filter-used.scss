@@ -1,50 +1,69 @@
+@use 'sass:math';
+
+// stylelint-disable scss/dollar-variable-empty-line-after
 .filter-used {
-    $_this: &;
+  $_this: &;
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 24px;
+  color: #1b1b1d;
 
-    font-size: 18px;
-    line-height: 28px;
-    font-weight: 500;
-    color: #1B1B1D;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 28px;
+  &__title {
     display: flex;
-    align-items: flex-start;
-    margin-bottom: 24px;
-
-    &__list {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 8px;
+    align-items: center;
+    min-height: 32px;
+    margin-right: 8px;
+    color: color(light, outline);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: math.div(22, 16);
+    white-space: nowrap;
+  }
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  &__item {
+    display: flex;
+    align-items: center;
+    padding: 6px 12px;
+    border-radius: 48px;
+    background-color: #ededf8;
+    color: color(light, on-background);
+    font-size: 14px;
+    line-height: math.div(24, 14);
+  }
+  &__content-image {
+    margin-left: 8px;
+  }
+  &__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 16px;
+    height: 16px;
+    margin-left: 8px;
+    transition: background-color 0.225s ease;
+    border-radius: 50%;
+    background-color: transparent;
+    &:hover {
+      background-color: #dcdbf0;
     }
-
-    &__item {
-        font-size: 18px;
-        line-height: 25px;
-        color: #3c3a59;
-        display: flex;
-        align-items: center;
-        padding: 6px 12px;
-        background-color: #ededf8;
-        border-radius: 48px;
+  }
+  &__cross-icon {
+    display: block;
+    width: 8px;
+    height: 8px;
+  }
+  &--small {
+    #{$_this}__item {
+      max-height: 32px;
+      padding: 6px 8px 6px 12px;
     }
-
-    &__link {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 4px;
-        margin-left: 8px;
-
-
-        span {
-            width: 20px;
-            height: 20px;
-            background-size: cover;
-            background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTEyLjIgMy44MDY2OEMxMS45NCAzLjU0NjY4IDExLjUyIDMuNTQ2NjggMTEuMjYgMy44MDY2OEw3Ljk5OTk4IDcuMDYwMDFMNC43Mzk5OCAzLjgwMDAxQzQuNDc5OTggMy41NDAwMSA0LjA1OTk4IDMuNTQwMDEgMy43OTk5OCAzLjgwMDAxQzMuNTM5OTggNC4wNjAwMSAzLjUzOTk4IDQuNDgwMDEgMy43OTk5OCA0Ljc0MDAxTDcuMDU5OTggOC4wMDAwMUwzLjc5OTk4IDExLjI2QzMuNTM5OTggMTEuNTIgMy41Mzk5OCAxMS45NCAzLjc5OTk4IDEyLjJDNC4wNTk5OCAxMi40NiA0LjQ3OTk4IDEyLjQ2IDQuNzM5OTggMTIuMkw3Ljk5OTk4IDguOTQwMDFMMTEuMjYgMTIuMkMxMS41MiAxMi40NiAxMS45NCAxMi40NiAxMi4yIDEyLjJDMTIuNDYgMTEuOTQgMTIuNDYgMTEuNTIgMTIuMiAxMS4yNkw4LjkzOTk4IDguMDAwMDFMMTIuMiA0Ljc0MDAxQzEyLjQ1MzMgNC40ODY2OCAxMi40NTMzIDQuMDYwMDEgMTIuMiAzLjgwNjY4WiIgZmlsbD0iIzZGNzI3QSIvPgo8L3N2Zz4K");
-        }
-
-        &:hover {
-            border-radius: 50%;
-            background-color: #DCDBF0;
-        }
-    }
-
+  }
 }
+// stylelint-enable scss/dollar-variable-empty-line-after

@@ -1,28 +1,25 @@
+// stylelint-disable scss/dollar-variable-empty-line-after
 .sort {
-	$_this: &;
-
-	display: flex;
-	padding-bottom: 24px;
-
-	&__headline {
-		font-size: 18px;
-		line-height: 25px;
-		font-weight: 400;
-		color: #3c3a59;
-	}
-
-	&__select {
-		margin-left: 24px;
-		border-left: 0 none;
-	}
-
-	&__select-item {
-		color: #3c3a59;
-		height: 25px;
-	}
-
-	&__clear-filters {
-		min-height: 25px;
-		margin-left: auto;
-	}
+  $_this: &;
+  display: flex;
+  padding-bottom: 24px;
+  &__headline {
+    color: #3c3a59;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 25px;
+  }
+  &__select {
+    margin-left: 24px;
+    border-left: 0 none;
+  }
+  &__select-item {
+    height: 25px;
+    color: #3c3a59;
+  }
+  &__clear-filters {
+    min-height: 25px;
+    margin-left: auto;
+  }
 }
+// stylelint-enable scss/dollar-variable-empty-line-after

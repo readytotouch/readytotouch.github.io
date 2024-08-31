@@ -1,0 +1,58 @@
+@use 'sass:math';
+
+.article {
+  &__link {
+    display: block;
+    margin-bottom: 24px;
+  }
+  &__preview {
+    width: 100%;
+    border-radius: 16px;
+  }
+  &__top-group {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  &__date-group,
+  &__author {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  &__date,
+  &__author-name {
+    color: color(light, surface-tint);
+    font-size: 14px;
+    line-height: math.div(20, 14);
+  }
+  &__subtitle {
+    color: color(light, surface-tint);
+    font-size: 18px;
+    line-height: math.div(24, 18);
+  }
+  &__author-name {
+    transition: color 0.3s;
+    &:hover {
+      color: #0057ff;
+    }
+  }
+  &__author-photo {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+  }
+  &__title {
+    display: block;
+    margin-bottom: 12px;
+    transition: color 0.225s;
+    color: color(light, on-background);
+    font-size: 26px;
+    font-weight: 500;
+    line-height: math.div(32, 26);
+    &:hover {
+      color: #0057ff;
+    }
+  }
+}

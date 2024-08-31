@@ -1,78 +1,102 @@
 {
-	"name": "readytotouch.github.io",
-	"version": "0.0.1",
-	"description": "Yet another anonymous work search",
-	"main": "gulpfile.babel.js",
-	"scripts": {
-		"start": "NODE_ENV=start npm i && gulp build",
-		"dev": "NODE_ENV=dev npm rebuild node-sass && gulp",
-		"build": "NODE_ENV=prod npm rebuild node-sass && gulp build",
-		"start-ws": "set NODE_ENV=start npm i && gulp build",
-		"dev-ws": "set NODE_ENV=dev npm rebuild node-sass && gulp",
-		"build-ws": "set NODE_ENV=prod npm rebuild node-sass && gulp build"
-	},
-	"babel": {
-		"presets": [
-			"@babel/preset-env"
-		]
-	},
-	"browserslist": [
-		"last 2 versions",
-		"not dead",
-		"not ie < 11",
-		"iOS > 8"
-	],
-	"author": "Yaroslav Podorvanov",
-	"license": "MIT",
-	"homepage": "https://readytotouch.github.io/",
-	"devDependencies": {
-		"@babel/core": "7.18.2",
-		"@babel/eslint-parser": "7.18.2",
-		"@babel/preset-env": "7.18.2",
-		"@babel/register": "7.17.7",
-		"autoprefixer": "10.4.7",
-		"babelify": "10.0.0",
-		"browser-sync": "2.27.10",
-		"browserify": "17.0.0",
-		"cuttr": "1.2.0",
-		"del": "6.1.1",
-		"eslint": "8.16.0",
-		"eslint-config-prettier": "8.5.0",
-		"eslint-plugin-prettier": "4.0.0",
-		"event-stream": "4.0.1",
-		"glob": "8.0.3",
-		"gulp": "4.0.2",
-		"gulp-cached": "1.1.1",
-		"gulp-csso": "4.0.1",
-		"gulp-dependents": "1.2.5",
-		"gulp-file-include": "2.3.0",
-		"gulp-flatten": "0.4.0",
-		"gulp-hash-filename": "4.0.0",
-		"gulp-imagemin": "7.1.0",
-		"gulp-inject": "5.0.5",
-		"gulp-inject-string": "1.1.2",
-		"gulp-notify": "4.0.0",
-		"gulp-plumber": "1.2.1",
-		"gulp-postcss": "9.0.1",
-		"gulp-real-favicon": "0.3.2",
-		"gulp-rename": "2.0.0",
-		"gulp-sass": "5.1.0",
-		"gulp-sourcemaps": "3.0.0",
-		"gulp-svg-sprite": "1.5.0",
-		"gulp-svgo": "^2.2.1",
-		"gulp-uglify": "3.0.2",
-		"micromodal": "0.4.10",
-		"path": "0.12.7",
-		"postcss": "8.4.14",
-		"prettier": "2.6.2",
-		"pump": "3.0.0",
-		"sass": "1.52.1",
-		"stylelint": "^14.8.5",
-		"stylelint-config-prettier-scss": "0.0.1",
-		"stylelint-config-standard-scss": "4.0.0",
-		"stylelint-scss": "4.2.0",
-		"vinyl-buffer": "1.0.1",
-		"vinyl-source-stream": "2.0.0"
-	},
-	"dependencies": {}
+  "name": "readytotouch.github.io",
+  "version": "0.0.1",
+  "description": "Yet another anonymous work search",
+  "main": "gulpfile.babel.js",
+  "scripts": {
+    "start": "NODE_ENV=start npm i && gulp build",
+    "dev": "NODE_ENV=dev npm rebuild node-sass && gulp",
+    "build": "NODE_ENV=prod npm rebuild node-sass && gulp build",
+    "start-ws": "set NODE_ENV=start npm i && gulp build",
+    "dev-ws": "set NODE_ENV=dev npm rebuild node-sass && gulp",
+    "build-ws": "set NODE_ENV=prod npm rebuild node-sass && gulp build",
+    "eslint": "npx eslint --config \".eslintrc.json\" \"assets/js/**/*.js\"",
+    "eslint:file": "npx eslint --config \".eslintrc.json\"",
+    "stylelint": "npx stylelint --config \".stylelintrc.json\" \"assets/scss/**/*.scss\"",
+    "stylelint:file": "npx stylelint --config '.stylelintrc.json'",
+    "prepare": "cd .. && husky source/.husky",
+    "pre-commit": "lint-staged"
+  },
+  "lint-staged": {
+    "assets/js/**/*.js": [
+      "eslint --fix",
+      "prettier --write --ignore-unknown"
+    ],
+    "assets/scss/**/*.scss": [
+      "stylelint --fix",
+      "prettier --write --ignore-unknown",
+      "git add --all"
+    ]
+  },
+  "engines": {
+    "node": "18.x"
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-env"
+    ]
+  },
+  "browserslist": [
+    "last 2 versions",
+    "not dead",
+    "not ie < 11",
+    "iOS > 8"
+  ],
+  "author": "Yaroslav Podorvanov",
+  "license": "MIT",
+  "homepage": "https://readytotouch.github.io/",
+  "devDependencies": {
+    "@babel/core": "7.25.2",
+    "@babel/eslint-parser": "7.25.1",
+    "@babel/preset-env": "7.25.3",
+    "@babel/register": "7.24.6",
+    "autoprefixer": "10.4.20",
+    "babelify": "10.0.0",
+    "browser-sync": "3.0.2",
+    "browserify": "17.0.0",
+    "cuttr": "1.2.0",
+    "del": "6.1.1",
+    "eslint": "8.57.0",
+    "eslint-config-airbnb-base": "15.0.0",
+    "eslint-config-prettier": "9.1.0",
+    "eslint-plugin-import": "2.29.1",
+    "event-stream": "4.0.1",
+    "glob": "8.0.3",
+    "gulp": "4.0.2",
+    "gulp-cached": "1.1.1",
+    "gulp-csso": "4.0.1",
+    "gulp-dependents": "1.2.5",
+    "gulp-file-include": "2.3.0",
+    "gulp-flatten": "0.4.0",
+    "gulp-hash-filename": "4.1.0",
+    "gulp-imagemin": "7.1.0",
+    "gulp-inject": "5.0.5",
+    "gulp-inject-string": "1.1.2",
+    "gulp-notify": "4.0.0",
+    "gulp-plumber": "1.2.1",
+    "gulp-postcss": "10.0.0",
+    "gulp-real-favicon": "0.3.2",
+    "gulp-rename": "2.0.0",
+    "gulp-sass": "5.1.0",
+    "gulp-sourcemaps": "3.0.0",
+    "gulp-svg-sprite": "1.5.0",
+    "gulp-svgo": "^2.2.1",
+    "gulp-uglify": "3.0.2",
+    "lint-staged": "15.2.9",
+    "micromodal": "0.4.10",
+    "path": "0.12.7",
+    "postcss": "8.4.41",
+    "prettier": "3.2.5",
+    "pump": "3.0.0",
+    "sass": "1.71.1",
+    "stylelint": "15.11.0",
+    "stylelint-config-property-sort-order-smacss": "9.1.0",
+    "stylelint-config-standard-scss": "11.1.0",
+    "vinyl-buffer": "1.0.1",
+    "vinyl-source-stream": "2.0.0"
+  },
+  "dependencies": {
+    "apexcharts": "^3.52.0",
+    "husky": "^9.1.5"
+  }
 }
