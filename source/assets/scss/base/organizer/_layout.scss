@@ -1,5 +1,10 @@
 html:has(.organizer-welcome) {
   height: 100%;
+  .main-wrapper {
+    .header {
+      background: transparent;
+    }
+  }
 }
 .main-container {
   z-index: 40;
