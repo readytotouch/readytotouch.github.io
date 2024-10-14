@@ -327,6 +327,10 @@
       color: #3f3a92;
     }
   }
+  &--gap-images {
+    max-width: 316px;
+    column-gap: 8px;
+  }
 }
 .favorite {
   $_this: &;

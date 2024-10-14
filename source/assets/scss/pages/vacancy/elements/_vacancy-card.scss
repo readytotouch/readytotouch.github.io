@@ -34,6 +34,9 @@
     display: flex;
     grid-column: 1;
     margin-bottom: 16px;
+    &--organizer {
+      margin-bottom: 0;
+    }
   }
   &__image-overlay {
     display: flex;
@@ -87,6 +90,12 @@
     color: $body-dark;
     font-size: $font-md;
     line-height: 25px;
+    &--organizer {
+      margin-top: 24px;
+    }
+    &--full-text {
+      @include trim;
+    }
   }
   &__info {
     display: flex;
@@ -98,7 +107,7 @@
     align-items: center;
   }
   &__figcaption {
-    margin-left: 12px;
+    margin-left: 8px;
     color: $body-dark;
     font-size: $font-md;
     line-height: 25px;
