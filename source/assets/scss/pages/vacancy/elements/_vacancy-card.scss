@@ -95,6 +95,7 @@
     }
     &--full-text {
       @include trim;
+      margin-bottom: 24px;
     }
   }
   &__info {
