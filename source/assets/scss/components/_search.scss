@@ -17,6 +17,12 @@
       color: $body-light;
     }
   }
+  &__common-select {
+    margin-left: 20px;
+    padding: 0;
+    border: none;
+    color: color(light, primary);
+  }
   &__input-group {
     position: relative;
     width: 690px;
@@ -54,6 +60,16 @@
 
     #{$_this}__input {
       max-width: 100%;
+    }
+  }
+  &--org-vacancies {
+    display: flex;
+    #{$_this}__input-group {
+      position: relative;
+      width: 1064px;
+    }
+    #{$_this}__select {
+      width: auto;
     }
   }
   &--organizer {

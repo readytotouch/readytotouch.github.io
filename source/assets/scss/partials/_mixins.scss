@@ -60,8 +60,8 @@
   } @else {
     display: block;
     overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
+    text-overflow: unset;
+    white-space: wrap;
   }
 }
 /* stylelint-disable */

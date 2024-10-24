@@ -20,6 +20,19 @@ const chartConfigs = [
     },
   },
   {
+    selector: '.js-page-vacancy-views-statistics',
+    options: {
+      ...chartCommonOptions,
+      chart: { ...chartCommonOptions.chart, height: 360 },
+      labels: pageViewsStatisticsData.map(item => item.y),
+      series: [{ name: 'Views', data: pageViewsStatisticsData.map(item => item.x) }],
+      colors: ['#8D6DFF'],
+      fill: { ...chartCommonOptions.fill, colors: ['#8D6DFF'] },
+      markers: { ...chartCommonOptions.markers, strokeColors: '#8D6DFF' },
+      yaxis: { ...chartCommonOptions.yaxis, stepSize: 10 },
+    },
+  },
+  {
     selector: '.js-subscribers-statistics',
     options: {
       ...chartCommonOptions,

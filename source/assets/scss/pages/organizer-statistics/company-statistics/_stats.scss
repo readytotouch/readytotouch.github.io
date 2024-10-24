@@ -12,6 +12,10 @@
     column-gap: 24px;
     border-radius: 20px;
     background-color: white;
+    &--double {
+      grid-template-columns: none;
+    }
+
     #{$_this}__counters {
       display: flex;
       flex-direction: column;
