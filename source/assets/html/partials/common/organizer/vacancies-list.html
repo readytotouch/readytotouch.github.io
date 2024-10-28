@@ -1,0 +1,35 @@
+<div class="search-result mt-32">
+  <div class="container">
+    <div class="search-result__wrapper">
+      <!-- filters -->
+      @@include('partials/common/organizer/vacancies-filters.html')
+      <!-- /filters -->
+      <div class="search-result--group">
+        @@include('partials/common/organizer/applied-filters.html')
+        <div id="search_result_list" class="search-result__list">
+          <p class="search-result-found"><span class="search-result-found__amount">160</span> results</p>
+          <!-- card list -->
+          <div class="search-result__cards row-gap-8 mt-24">
+            @@include('partials/organizer-vacancies/vacancies-card1.html')
+            @@include('partials/organizer-vacancies/vacancies-card2.html')
+            @@include('partials/organizer-vacancies/vacancies-card3.html')
+						@@include('partials/organizer-vacancies/vacancies-card2.html')
+						@@include('partials/organizer-vacancies/vacancies-card3.html')
+						@@include('partials/organizer-vacancies/vacancies-card1.html')
+					</div>
+
+          <!-- /card list -->
+          <!-- search footer -->
+          <footer class="search-result__footer">
+            <button class="button button--bordered-black-transparent" type="button">More</button>
+
+            <!-- pagination -->
+            @@include('partials/common/pagination.html')
+            <!-- /pagination -->
+          </footer>
+          <!-- /search footer -->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
