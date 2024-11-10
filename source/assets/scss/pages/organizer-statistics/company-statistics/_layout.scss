@@ -1,7 +1,8 @@
 @use 'sass:math';
 
 .company-statistics,
-.vacancy-statistics {
+.vacancy-statistics,
+.company-vacancies {
   &__container {
     padding-top: 52px;
     padding-bottom: 104px;
@@ -14,5 +15,10 @@
     font-weight: 500;
     line-height: math.div(52.8, 44);
     white-space: nowrap;
+  }
+}
+.company-vacancies {
+  &__container {
+    padding-bottom: 52px;
   }
 }
