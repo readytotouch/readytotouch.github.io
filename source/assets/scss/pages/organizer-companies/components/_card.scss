@@ -89,6 +89,18 @@
     line-height: 25px;
     gap: 8px;
   }
+  &__top-links {
+    display: flex;
+    margin-bottom: 16px;
+  }
+  &__top-link {
+    margin-right: 24px;
+    &.disabled {
+      color: color(light, on-disable);
+      cursor: default;
+      pointer-events: none;
+    }
+  }
   &__text {
     @extend .txt-ellipsis-2;
     position: relative;
@@ -121,9 +133,16 @@
       aspect-ratio: initial;
     }
   }
+  &__links-item-group {
+    display: flex;
+    align-items: center;
+    img {
+      margin-right: 8px;
+    }
+  }
   &__links {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     align-items: start;
     margin-top: 24px;
   }
@@ -143,26 +162,76 @@
     position: relative;
     align-items: center;
     column-gap: 4px;
-    > *:only-child {
-      margin-left: 24px;
-    }
     &--disabled {
       .card__links-link:not(.card__links-link--google),
       .card__links-icon:not(.card__links-icon--google) {
-        filter: grayscale(1) invert(0.4);
         color: color(light, on-disable);
+        pointer-events: none;
+        filter: grayscale(1) invert(0.4);
       }
     }
+  }
+  &__links-link-star {
+    margin-left: 16px;
+    font-weight: 500;
   }
   &__links-link {
     &--google {
       position: absolute;
-      top: 0;
+      top: 3px;
       right: 0;
+    }
+    &--verify {
+      position: absolute;
+      top: 8px;
+      right: 0;
+    }
+    &--verify img,
+    &--google img {
+      margin-right: 0 !important;
+    }
+  }
+  &__links-item--title {
+    flex-direction: column;
+    align-items: flex-start;
+
+    #{$_this}__links-link {
+      font-size: $font-lg;
+      font-weight: 500;
     }
   }
   &__links-icon {
     display: block;
+  }
+  &__footer {
+    display: flex;
+    justify-content: flex-end !important;
+  }
+  &__footer-button {
+    padding: 0;
+    svg {
+      margin-left: 10px;
+    }
+  }
+  &__footer-images {
+    position: relative;
+  }
+  &__footer-icon {
+    position: absolute;
+    top: -16px;
+    border-radius: 50%;
+    &:nth-child(1) {
+      left: -125px;
+    }
+    &:nth-child(2) {
+      left: -100px;
+    }
+    &:nth-child(3) {
+      left: -75px;
+    }
+    &:nth-child(4) {
+      left: -50px;
+    }
   }
 }
 // stylelint-enable scss/dollar-variable-empty-line-after
