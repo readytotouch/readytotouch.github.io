@@ -1,0 +1,17 @@
+.hero {
+  padding: 64px;
+  border-radius: 16px;
+  background: $white;
+  &__fill {
+    width: 100%;
+    height: 150px;
+    margin-bottom: 24px;
+    &--go {
+      background-image: url('#{$path-to-static-images}pages/organizer/go-original.svg');
+      background-size: 73px 74px;
+    }
+  }
+  .headline {
+    margin-bottom: 0;
+  }
+}
