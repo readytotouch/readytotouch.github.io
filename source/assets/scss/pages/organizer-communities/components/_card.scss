@@ -25,7 +25,6 @@
     margin-right: 16px;
     overflow: hidden;
     border-radius: 8px;
-    background-color: color.change(color(light, logo-bg), $alpha: 0.2);
   }
   &__image {
     width: inherit;
@@ -50,6 +49,9 @@
     gap: 8px;
     &:hover {
       text-decoration: underline;
+    }
+    &--empty {
+      color: color(light, on-disable);
     }
   }
   &__sub-headline {

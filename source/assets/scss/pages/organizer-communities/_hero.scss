@@ -10,6 +10,22 @@
       background-image: url('#{$path-to-static-images}pages/organizer/go-original.svg');
       background-size: 73px 74px;
     }
+    &--rust {
+      background-image: url('#{$path-to-static-images}pages/organizer/rust.svg');
+      background-size: 73px 74px;
+    }
+    &--scala {
+      background-image: url('#{$path-to-static-images}pages/organizer/scala.svg');
+      background-size: 73px 74px;
+    }
+    &--elixir {
+      background-image: url('#{$path-to-static-images}pages/organizer/elixir.svg');
+      background-size: 73px 74px;
+    }
+    &--clojure {
+      background-image: url('#{$path-to-static-images}pages/organizer/clojure.svg');
+      background-size: 73px 74px;
+    }
   }
   .headline {
     margin-bottom: 0;
