@@ -1,0 +1,26 @@
+@use 'sass:math';
+
+.organizer-communities {
+  &__container {
+    padding-top: 52px;
+    padding-bottom: 104px;
+    overflow: initial;
+  }
+  &__container-block {
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
+  &__headline {
+    width: 450px;
+    margin-bottom: 24px;
+    color: color(light, on-background);
+    font-size: 44px;
+    font-weight: 500;
+    line-height: math.div(52.8, 44);
+  }
+}
+.container {
+  max-width: 1216px;
+  margin: 0 auto;
+  overflow: hidden;
+}

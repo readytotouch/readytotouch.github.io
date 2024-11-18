@@ -1,4 +1,5 @@
 @use 'sass:math';
+@use 'sass:color';
 
 .search-result {
   &__wrapper {
@@ -52,6 +53,23 @@
     display: flex;
     flex-direction: column;
     row-gap: 16px;
+  }
+  &__time-period {
+    display: grid;
+    grid-template-columns: minmax(auto, 1fr) 1fr minmax(auto, 1fr);
+    align-items: center;
+  }
+  &__time-period-line {
+    height: 2px;
+    background-color: color(light, surface-3);
+  }
+  &__time-period-content {
+    margin: 0 24px;
+    padding: 4px 16px;
+    border-radius: 80px;
+    background-color: color(light, surface-3);
+    line-height: 22px;
+    text-align: center;
   }
   &__footer {
     display: flex;

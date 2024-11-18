@@ -1,0 +1,17 @@
+.contact {
+  &__empty {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    &-title {
+      max-width: 640px;
+      margin-bottom: 24px;
+      color: color(light, on-background);
+      font-size: $font-xl;
+      font-weight: 500;
+      text-align: center;
+    }
+  }
+}

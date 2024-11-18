@@ -1,0 +1,14 @@
+@use 'sass:color';
+
+.organizer-communities {
+  &__list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 16px;
+  }
+  &__count {
+    margin-bottom: 24px;
+    color: color(light, surface-tint);
+    font-size: 16px;
+  }
+}
