@@ -1,0 +1,19 @@
+.main-container {
+  z-index: 40;
+  max-width: 1216px;
+  margin: 0 auto;
+  color: #020111;
+}
+body {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100%;
+  background-color: color(light, surface-1);
+  color: $primary-color;
+  font-family: $base-font-family;
+  font-size: $base-font-size;
+}
+.main-wrapper {
+  min-height: calc(100vh - 300px);
+  background-color: color(light, surface-1);
+}
