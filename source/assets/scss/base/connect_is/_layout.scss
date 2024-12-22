@@ -1,6 +1,6 @@
 .main-container {
   z-index: 40;
-  max-width: 1216px;
+  max-width: 1440px;
   margin: 0 auto;
   color: #020111;
 }
@@ -16,4 +16,9 @@ body {
 .main-wrapper {
   min-height: calc(100vh - 300px);
   background-color: color(light, surface-1);
+  &--svg {
+    background-image: url('data:image/svg+xml,<svg width="1155" height="505" viewBox="0 0 1155 505" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 0.701172L1252.37 113.991L821.939 429.068L809.692 962.352L1 0.701172Z" stroke="%23A9BFFF" stroke-width="0.876164" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+    background-repeat: no-repeat;
+    background-position: bottom right;
+  }
 }

@@ -3,6 +3,7 @@
 @import '../online-new/articles/article';
 
 .articles {
+  margin: 0 112px;
   &__container {
     padding-top: 52px;
     padding-bottom: 104px;
@@ -19,5 +20,19 @@
     grid-template-columns: repeat(3, 1fr);
     column-gap: 24px;
     row-gap: 32px;
+  }
+  .article {
+    border-radius: 16px;
+    background-color: $white;
+    &__subtitle {
+      @extend .txt-ellipsis-3;
+    }
+    &__link,
+    &__top-group {
+      margin-bottom: 16px;
+    }
+    &__info {
+      padding: 0 24px 24px;
+    }
   }
 }

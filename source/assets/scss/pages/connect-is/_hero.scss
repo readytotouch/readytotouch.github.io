@@ -1,1 +1,61 @@
 @use 'sass:math';
+
+.hero {
+  margin: 0 24px;
+  color: $white;
+  &__container {
+    padding: 104px 0 184px;
+    border-radius: 60px;
+    background-color: color(light, secondary);
+    background-image: url('data:image/svg+xml,<svg width="1392" height="600" viewBox="0 0 1392 600" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1520.19 -237.783L545.064 1299.36L424.337 536.042L-254.61 166.906L1520.19 -237.783Z" stroke="%23A9BFFF" stroke-width="1.26936" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+    text-align: center;
+  }
+  &__top-subtitle {
+    display: inline-block;
+    margin-bottom: 32px;
+    border-radius: 4px;
+    color: color(light, secondary);
+    font-size: 24px;
+    font-weight: 500;
+    text-shadow:
+      $white 4px,
+      $white 3.8757px 0.99px,
+      $white 3.51px 1.92px,
+      $white 2.93px 2.73px,
+      $white 2.16px 3.37px,
+      $white 1.26px 3.8px,
+      $white 0.28px 3.99px,
+      $white -0.71px 3.94px,
+      $white -1.66px 3.64px,
+      $white -2.51px 3.11px,
+      $white -3.2px 2.39px,
+      $white -3.7px 1.53px,
+      $white -3.96px 0.56px,
+      $white -3.98px -0.43px,
+      $white -3.75px -1.4px,
+      $white -3.28px -2.29px,
+      $white -2.61px -3.03px,
+      $white -1.78px -3.58px,
+      $white -0.84px -3.91px,
+      $white 0.15px -3.99px,
+      $white 1.13px -3.84px,
+      $white 2.05px -3.44px,
+      $white 2.83px -2.82px,
+      $white 3.44px -2.03px,
+      $white 3.84px -1.12px,
+      $white 3.99px -0.13px;
+  }
+  &__main-title {
+    max-width: 800px;
+    margin: 0 auto 32px;
+    font-size: 72px;
+    font-weight: 500;
+  }
+  &__subtitle {
+    max-width: 650px;
+    margin: 0 auto;
+    color: color(light, surface-2);
+    font-size: $font-md;
+    line-height: 28px;
+  }
+}
