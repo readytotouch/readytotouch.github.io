@@ -21,12 +21,12 @@
     font-weight: 500;
     line-height: 80px;
     text-shadow:
-      color(light, secondary) 1px,
-      color(light, secondary) 0.54px 0.84px,
-      color(light, secondary) -0.42px 0.91px,
-      color(light, secondary) -0.99px 0.14px,
-      color(light, secondary) -0.65px -0.76px,
-      color(light, secondary) 0.28px -0.96px,
+      color(light, secondary) 1px 0,
+      color(light, secondary) 0.54px 0.84px 0,
+      color(light, secondary) -0.42px 0.91px 0,
+      color(light, secondary) -0.99px 0.14px 0,
+      color(light, secondary) -0.65px -0.76px 0,
+      color(light, secondary) 0.28px -0.96px 0,
       color(light, secondary) 0.96px -0.28px;
   }
   &__step-title {
@@ -48,13 +48,13 @@
     #{$_this}__step-number {
       color: color(light, secondary);
       text-shadow:
-        $white 1px,
-        $white 0.54px 0.84px,
-        $white -0.42px 0.91px,
-        $white -0.99px 0.14px,
-        $white -0.65px -0.76px,
-        $white 0.28px -0.96px,
-        $white 0.96px -0.28px;
+        $white 1px 0 0,
+        $white 0.54px 0.84px 0,
+        $white -0.42px 0.91px 0,
+        $white -0.99px 0.14px 0,
+        $white -0.65px -0.76px 0,
+        $white 0.28px -0.96px 0,
+        $white 0.96px -0.28px 0;
     }
 
     #{$_this}__step-subtitle {

@@ -3,6 +3,9 @@
   max-width: 1440px;
   margin: 0 auto;
   color: #020111;
+  &--connections {
+    max-width: 1216px;
+  }
 }
 body {
   display: grid;

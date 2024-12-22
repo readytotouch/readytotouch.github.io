@@ -1,0 +1,12 @@
+@import 'search';
+@import 'search-result';
+
+.connections {
+  &__title {
+    margin: 16px 0 32px;
+    color: color(light, on-background);
+    font-size: 44px;
+    font-weight: 500;
+    line-height: 52px;
+  }
+}
