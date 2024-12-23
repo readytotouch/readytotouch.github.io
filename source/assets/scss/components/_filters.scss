@@ -13,6 +13,11 @@
       border-top: 2px solid color(light, surface-1);
     }
   }
+  &__with-footer {
+    #{$_this}__group:last-child {
+      margin-bottom: 24px;
+    }
+  }
   &__header {
     display: flex;
     align-items: center;
