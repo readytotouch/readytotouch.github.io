@@ -7,7 +7,12 @@
 			<div class="search-result--group">
 				<div id="search_result_list" class="search-result__list">
 					<p class="search-result-found"><span class="search-result-found__amount">0</span> companies</p>
-					<div id="search_result_empty_block" class="search-result__empty">
+					<div class="search-result__cards row-gap-8 mt-24">
+						@@include('partials/connections/card-attach.html')
+						@@include('partials/connections/card.html')
+						@@include('partials/connections/card.html')
+					</div>
+					<div id="search_result_empty_block" class="search-result__empty d-none">
 						<div id="search_result_no_companies" class="search-result__empty-content">
 							<img class="search-result__empty-image" src="/assets/images/pages/common-images/📂.png" alt="">
 							<h2 class="search-result__title">No companies yet</h2>
@@ -18,6 +23,7 @@
 					</div>
 				</div>
 			</div>
+
 		</div>
 	</div>
 </div>

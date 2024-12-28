@@ -1,0 +1,53 @@
+@use 'sass:color';
+@use 'sass:math';
+
+// stylelint-disable scss/dollar-variable-empty-line-after
+.card {
+  $_this: &;
+  position: relative;
+
+  padding: 24px;
+  border-radius: 16px;
+  background-color: $white;
+  &--attach {
+    border: 2px solid color(light, surface-5);
+    background-color: transparent;
+
+    #{$_this}__group-block {
+      border: 2px solid color(light, surface-5);
+    }
+  }
+  &__action {
+    display: flex;
+    position: absolute;
+    top: 18px;
+    right: 18px;
+  }
+  &__header {
+    margin-bottom: 16px;
+  }
+  &__headline {
+    color: color(light, on-secondary-fixed-variant);
+    font-size: 26px;
+    font-weight: 500;
+    line-height: 32px;
+  }
+  &__group {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  &__group-block {
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    border: 2px solid color(light, surface-2);
+    border-radius: 12px;
+    gap: 20px;
+  }
+  &__group-item {
+    color: color(light, on-secondary-fixed-variant);
+    font-size: $font-md;
+    font-weight: 500;
+    line-height: 24px;
+  }
+}
