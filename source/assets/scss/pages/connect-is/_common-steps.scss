@@ -1,0 +1,68 @@
+.steps {
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 112px;
+    padding: 54px 0;
+  }
+  &__headline {
+    color: color(light, secondary);
+    font-size: $font-xl;
+    font-weight: 500;
+    text-shadow:
+      $white 8px 0 0,
+      $white 7.937px 0.997px 0,
+      $white 7.751px 1.979px 0,
+      $white 7.444px 2.93px 0,
+      $white 7.021px 3.835px 0,
+      $white 6.488px 4.681px 0,
+      $white 5.854px 5.453px 0,
+      $white 5.128px 6.14px 0,
+      $white 4.322px 6.732px 0,
+      $white 3.449px 7.218px 0,
+      $white 2.523px 7.592px 0,
+      $white 1.556px 7.847px 0,
+      $white 0.566px 7.98px 0,
+      $white -0.433px 7.988px 0,
+      $white -1.426px 7.872px 0,
+      $white -2.396px 7.633px 0,
+      $white -3.329px 7.274px 0,
+      $white -4.21px 6.803px 0,
+      $white -5.025px 6.225px 0,
+      $white -5.762px 5.549px 0,
+      $white -6.409px 4.788px 0,
+      $white -6.956px 3.951px 0,
+      $white -7.394px 3.053px 0,
+      $white -7.717px 2.108px 0,
+      $white -7.92px 1.129px 0,
+      $white -7.999px 0.133px 0,
+      $white -7.953px -0.866px 0,
+      $white -7.783px -1.85px 0,
+      $white -7.492px -2.806px 0,
+      $white -7.083px -3.718px 0,
+      $white -6.564px -4.572px 0,
+      $white -5.943px -5.355px 0,
+      $white -5.229px -6.054px 0,
+      $white -4.434px -6.659px 0,
+      $white -3.569px -7.16px 0,
+      $white -2.648px -7.549px 0,
+      $white -1.686px -7.82px 0,
+      $white -0.698px -7.969px 0,
+      $white 0.301px -7.994px 0,
+      $white 1.295px -7.894px 0,
+      $white 2.269px -7.671px 0,
+      $white 3.208px -7.329px 0,
+      $white 4.097px -6.871px 0,
+      $white 4.921px -6.307px 0,
+      $white 5.669px -5.644px 0,
+      $white 6.329px -4.893px 0,
+      $white 6.89px -4.066px 0,
+      $white 7.343px -3.176px 0,
+      $white 7.681px -2.235px 0,
+      $white 7.9px -1.26px 0,
+      $white 7.996px -0.265px 0;
+    &--about {
+      margin-bottom: 40px;
+    }
+  }
+}

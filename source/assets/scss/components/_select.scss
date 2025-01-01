@@ -16,4 +16,11 @@
     font-weight: 500;
     cursor: pointer;
   }
+  &--filter {
+    width: 100%;
+    height: auto;
+    padding: 10px 12px;
+    border: 2px solid color(light, outline-variant);
+    border-radius: 8px;
+  }
 }

@@ -279,6 +279,20 @@
       color: $title-dark;
     }
   }
+  &--bordered-universe {
+    border-width: 2px;
+    border-color: color(light, inverse-primary);
+    color: color(light, primary);
+    &:hover,
+    &:active {
+      border-color: $title-dark;
+      color: $title-dark;
+    }
+    &:disabled {
+      border-color: color(light, on-disabled);
+      color: color(light, on-disabled);
+    }
+  }
   &--bordered-black-blank {
     border-width: 3px;
     border-color: black;
@@ -316,6 +330,9 @@
     border-color: #eeeff1;
     background-color: #eeeff1;
     color: #828282;
+  }
+  &--full {
+    width: 100%;
   }
   &--light-link {
     height: auto;

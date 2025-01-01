@@ -1,0 +1,36 @@
+@use 'sass:math';
+
+.why-step {
+  &__item {
+    display: flex;
+    &:not(:last-child) {
+      margin-bottom: 8px;
+    }
+    &-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 56px;
+      height: 56px;
+      margin: 8px 10px 0 0;
+    }
+    &-content {
+      width: 100%;
+      max-width: 800px;
+      padding: 24px;
+      border: 1px solid color(light, secondary-hover);
+      border-radius: 16px;
+      color: color(light, surface-tint);
+      font-size: $font-md;
+      line-height: 28px;
+      &--silver {
+        border: none;
+        background-color: color(light, secondary-hover);
+      }
+    }
+  }
+  &__first-word {
+    color: color(light, secondary);
+    font-weight: 700;
+  }
+}

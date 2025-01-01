@@ -1,0 +1,12 @@
+.search {
+  padding: 24px;
+  border-radius: 16px;
+  background-color: $white;
+  &__group-title {
+    margin-bottom: 24px;
+    color: inherit;
+    font-size: $font-lg;
+    font-weight: 500;
+    line-height: 28px;
+  }
+}

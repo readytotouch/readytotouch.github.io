@@ -27,6 +27,27 @@
     position: relative;
     width: 690px;
   }
+  &__input-group-button {
+    #{$_this}__input {
+      flex: 1;
+      margin-right: 10px;
+      border: 2px solid color(light, outline-variant);
+      color: color(light, primary);
+      &::placeholder {
+        color: color(light, outline);
+      }
+    }
+
+    #{$_this}__label {
+      display: block;
+      margin-bottom: 4px;
+      color: color(light, outline);
+      font-size: 14px;
+    }
+    #{$_this}__input-button-group {
+      display: flex;
+    }
+  }
   &__icon {
     position: absolute;
     top: 50%;
