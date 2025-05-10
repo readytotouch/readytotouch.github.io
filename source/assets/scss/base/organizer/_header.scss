@@ -18,8 +18,13 @@
   }
   &__logo {
     display: flex;
-    gap: 12px;
+    gap: 8px;
     align-items: center;
+  }
+  &__logo-label {
+    font-family: $secondary-font-family;
+    font-size: $font-md;
+    font-weight: 700;
   }
   &__profile {
     position: relative;
