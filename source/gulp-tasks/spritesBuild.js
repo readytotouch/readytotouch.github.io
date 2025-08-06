@@ -1,9 +1,11 @@
-import { src, dest } from 'gulp'
+import pkg from 'gulp'
 import pump from 'pump'
 import svgSprite from 'gulp-svg-sprite'
 import glob from 'glob'
 import es from 'event-stream'
 import fs from 'fs'
+
+const { src, dest } = pkg
 
 export default function spriteBuilder(inputSvg, outputSvg, svgSymbols, cb) {
   const objectUrl = fs.readdirSync(inputSvg).map(elem => ({

@@ -1,7 +1,9 @@
-import { src } from 'gulp'
+import pkg from 'gulp'
 import pump from 'pump'
 import inject from 'gulp-inject'
 import fs from 'fs'
+
+const { src } = pkg
 
 function setStringSrc(typeFIle, dataSrc) {
   return typeFIle === '.css' ? `<link href="${dataSrc}" rel="stylesheet" />` : `<script src="/${dataSrc}"></script>`

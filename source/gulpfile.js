@@ -1,18 +1,20 @@
 // define gulp plugins
-import { series, parallel, watch, task } from 'gulp'
+import pkg from 'gulp'
 import browserSyncImport from 'browser-sync'
 import cache from 'gulp-cached'
-import del from 'del'
+import { deleteAsync } from 'del'
 
 // import gulp tasks and source files
-import { scssDev, scssBuild } from './gulp-tasks/scss'
-import { script, scriptBuild } from './gulp-tasks/scripts'
-import { injectString } from './gulp-tasks/injectString'
+import { scssDev, scssBuild } from './gulp-tasks/scss.js'
+import { script, scriptBuild } from './gulp-tasks/scripts.js'
+import { injectString } from './gulp-tasks/injectString.js'
 // import spritesBuild from './gulp-tasks/spritesBuild';
-import images from './gulp-tasks/image'
-import html from './gulp-tasks/html'
-import fonts from './gulp-tasks/fonts'
-import { publicSource, devSource, watchSource } from './gulp-tasks/pathSrc'
+import images from './gulp-tasks/image.js'
+import html from './gulp-tasks/html.js'
+import fonts from './gulp-tasks/fonts.js'
+import { publicSource, devSource, watchSource } from './gulp-tasks/pathSrc.js'
+
+const { series, parallel, watch, task } = pkg
 
 // save reference to created browser-sync instance, and save reference to the 'reload' method
 const browserSync = browserSyncImport.create()
@@ -51,7 +53,7 @@ task('inject-js', cb => injectString(cb, devSource.baseInputJs, publicSource.pat
 
 // clean generated css, js, svg-sprite in public directory && clean generated html in /templates/pages directory
 const clean = () =>
-  del(
+  deleteAsync(
     [
       publicSource.htmlFiles,
       publicSource.images,
@@ -67,17 +69,17 @@ const clean = () =>
   )
 
 const cleanImages = () =>
-  del(publicSource.images, {
+  deleteAsync(publicSource.images, {
     force: true,
   })
 
 const cleanFonts = () =>
-  del(publicSource.fonts, {
+  deleteAsync(publicSource.fonts, {
     force: true,
   })
 
 const cleanHtml = () =>
-  del(publicSource.htmlFiles, {
+  deleteAsync(publicSource.htmlFiles, {
     force: true,
   })
 
@@ -102,11 +104,14 @@ task('watch', () => {
   watch(watchSource.js, series('js', 'inject-js', reload))
   watch(watchSource.html, series(cleanHtml, 'html', reload))
   watch(watchSource.fonts, series(cleanFonts, 'fonts', reload))
-  watch([watchSource.images, watchSource.excludeSprites, watchSource.excludeFavicon], series(cleanImages, 'images'))
+  watch(
+    [watchSource.images, watchSource.excludeSprites, watchSource.excludeFavicon],
+    series(cleanImages, 'images', reload),
+  )
 })
 
 // build task
-task('build', series(clean, parallel('build-scss', 'build-js'), 'inject-js', 'fonts', 'html', 'images'))
+task('build', series(clean, parallel('build-scss', 'build-js'), 'inject-js', 'fonts', 'images', 'html'))
 
 // default task
 task(
@@ -117,8 +122,8 @@ task(
     'inject-css',
     'inject-js',
     'fonts',
-    'html',
     'images',
+    'html',
     parallel('watch', 'serve'),
   ),
 )

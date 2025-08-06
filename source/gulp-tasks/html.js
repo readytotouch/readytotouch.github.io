@@ -1,8 +1,10 @@
-import { src, dest } from 'gulp'
+import pkg from 'gulp'
 import pump from 'pump'
 import plumber from 'gulp-plumber'
 import fileinclude from 'gulp-file-include'
 import notify from 'gulp-notify'
+
+const { src, dest } = pkg
 
 // assemble html parts
 export default function html(cb, inputHtml, basepath, outputHtml) {

@@ -5,3 +5,9 @@ Yet another anonymous work search
 ```bash
 make build view-online
 ```
+
+### Time
+| Data                    | Time |
+|-------------------------|------|
+| 06.08.2025 - 07.08.2025 | 2h   |
+| **Total**               | 2h   |
