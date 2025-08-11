@@ -1,0 +1,28 @@
+@use 'sass:math';
+
+.project-statistics {
+  &__container {
+    padding-top: 52px;
+    padding-bottom: 52px;
+    overflow: initial;
+  }
+  &__header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+  }
+  &__headline {
+    color: color(light, on-background);
+    font-size: 44px;
+    font-weight: 500;
+    line-height: math.div(52.8, 44);
+    white-space: nowrap;
+  }
+  &__description {
+    max-width: 560px;
+    margin-left: auto;
+    color: color(light, surface-tint);
+    font-size: 18px;
+    line-height: math.div(24, 18);
+  }
+}
