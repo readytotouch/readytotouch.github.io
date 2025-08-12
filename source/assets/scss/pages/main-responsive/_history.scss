@@ -1,45 +1,31 @@
 .history {
   overflow: hidden;
-  border-radius: 16px;
+  border-radius: 20px;
   &__title {
-    padding: 24px;
+    padding: 24px 16px;
     background: white;
-    font-size: 26px;
+    font-size: 22px;
     font-weight: 500;
+    line-height: 28px;
   }
   &__table {
     background: white;
   }
   &__table-header {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     border-top: 1px solid #ededf8;
     border-bottom: 1px solid #ededf8;
-    background: #f9f9fb;
+    background: color(light, surface-variant);
   }
   &__header-item {
     display: block;
-    padding: 24px;
+    padding: 10px 16px;
     color: #404c5f;
-    font-weight: 600;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 20px;
     text-align: left;
-  }
-  &__name,
-  &__user-group {
-    width: 320px;
-  }
-  &__profile,
-  &__user-link {
-    width: 656px;
-  }
-  &__user-link {
-    transition: color 0.3s;
-    &:hover {
-      color: #0057ff;
-    }
-  }
-  &__date,
-  &__user-date {
-    width: 240px;
   }
   &__table-list {
     height: 648px;
@@ -51,12 +37,13 @@
       background-color: transparent;
     }
     &::-webkit-scrollbar-thumb {
-      border-radius: 8px;
-      background-color: #b8b6e2;
+      border-radius: 4px;
+      background-color: #c1c1c1;
     }
   }
   &__table-user {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     align-items: center;
     border-bottom: 1px solid #ededf8;
     color: #404c5f;
@@ -70,7 +57,10 @@
   &__user-group {
     display: flex;
     align-items: center;
-    padding: 12px 24px;
-    gap: 12px;
+    padding: 12px 16px;
+    gap: 8px;
+  }
+  &__user-photo {
+    border-radius: 50%;
   }
 }

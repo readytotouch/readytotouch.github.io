@@ -1,0 +1,50 @@
+@use 'sass:math';
+
+.explore-technologies {
+  &__container {
+    padding-top: 52px;
+    padding-bottom: 52px;
+  }
+  &__header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+  }
+  &__headline {
+    color: color(light, on-background);
+    font-size: 44px;
+    font-weight: 500;
+    line-height: math.div(52.8, 44);
+    white-space: nowrap;
+  }
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 24px;
+  }
+  &__item {
+    display: flex;
+    flex-direction: column;
+    row-gap: 24px;
+    width: 100%;
+    max-width: 346px;
+    padding: 24px;
+    border-radius: 16px;
+    background: white;
+  }
+  &__figure {
+    display: flex;
+    justify-content: center;
+    column-gap: 12px;
+  }
+  &__caption {
+    font-size: 32px;
+    font-weight: 500;
+    line-height: math.div(40, 32);
+  }
+  &__button-group {
+    display: flex;
+    column-gap: 8px;
+  }
+}
