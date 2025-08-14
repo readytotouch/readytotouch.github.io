@@ -2,27 +2,45 @@
 
 .project-statistics {
   &__container {
-    padding-top: 52px;
-    padding-bottom: 52px;
+    padding-block: 32px;
+    padding-inline: 24px;
     overflow: initial;
+    @include for-desktop-up {
+      padding-block: 52px;
+    }
   }
   &__header {
     display: flex;
-    align-items: center;
-    margin-bottom: 40px;
+    flex-direction: column;
+
+    margin-bottom: 32px;
+    row-gap: 16px;
+    @include for-desktop-up {
+      flex-direction: initial;
+      align-items: center;
+      margin-bottom: 40px;
+      row-gap: initial;
+    }
   }
   &__headline {
     color: color(light, on-background);
-    font-size: 44px;
+    font-size: 32px;
     font-weight: 500;
-    line-height: math.div(52.8, 44);
+    line-height: math.div(40, 32);
     white-space: nowrap;
+    @include for-desktop-up {
+      font-size: 44px;
+      line-height: math.div(52.8, 44);
+    }
   }
   &__description {
     max-width: 560px;
     margin-left: auto;
     color: color(light, surface-tint);
-    font-size: 18px;
-    line-height: math.div(24, 18);
+    font-size: 16px;
+    line-height: math.div(24, 16);
+    @include for-desktop-up {
+      font-size: 18px;
+    }
   }
 }

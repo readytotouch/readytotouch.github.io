@@ -1,4 +1,4 @@
-import getRandomIntegerInclusive from '../../../functions/getRandomIntegerInclusive'
+import getRandomIntegerInclusive from '../../../functions/getRandomIntegerInclusive.js'
 
 export default (min, max) => {
   const date = new Date()

@@ -48,6 +48,32 @@ const chartCommonOptions = {
     shape: 'circle',
     radius: 2,
   },
+  responsive: [
+    {
+      breakpoint: 992,
+      options: {
+        chart: {
+          height: 325,
+        },
+        xaxis: {
+          min: 1,
+          max: 10,
+        },
+      },
+    },
+    {
+      breakpoint: 768,
+      options: {
+        chart: {
+          height: 325,
+        },
+        xaxis: {
+          min: 1,
+          max: 6,
+        },
+      },
+    },
+  ],
 }
 
 export default chartCommonOptions

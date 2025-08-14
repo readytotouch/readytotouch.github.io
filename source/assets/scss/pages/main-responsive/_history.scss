@@ -28,8 +28,11 @@
     text-align: left;
   }
   &__table-list {
-    height: 648px;
+    height: 336px;
     overflow: auto;
+    @include for-desktop-up {
+      height: 648px;
+    }
     &::-webkit-scrollbar {
       width: 8px;
     }
@@ -57,10 +60,16 @@
   &__user-group {
     display: flex;
     align-items: center;
+    min-width: 0;
     padding: 12px 16px;
     gap: 8px;
   }
   &__user-photo {
     border-radius: 50%;
+  }
+  &__user-name {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
   }
 }
