@@ -4,6 +4,8 @@ const chartCommonOptions = {
     zoom: { enabled: false },
     toolbar: { show: false },
     parentHeightOffset: null,
+    redrawOnWindowResize: true,
+    redrawOnParentResize: true,
   },
   stroke: {
     width: 2,

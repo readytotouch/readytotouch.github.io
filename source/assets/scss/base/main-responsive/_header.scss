@@ -37,9 +37,50 @@
     letter-spacing: -0.03em;
     line-height: math.div(19, 19);
   }
+  &__nav-overlay {
+    display: flex;
+    position: fixed;
+    top: 64px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    flex-direction: column;
+    padding: 24px;
+    transition: opacity 0.225s ease;
+    opacity: 0;
+    background-color: color(light, surface-1);
+    &.is-opened {
+      opacity: 1;
+    }
+
+    #{$_this}__stars {
+      margin-left: initial;
+    }
+    #{$_this}__profile-button {
+      margin-left: initial;
+    }
+    #{$_this}__profile-avatar-text {
+      color: color(light, on-background);
+      font-size: 18px;
+      font-weight: 500;
+      line-height: math.div(24, 18);
+    }
+    #{$_this}__profile-avatar {
+      display: flex;
+      align-items: center;
+      column-gap: 12px;
+    }
+    #{$_this}__profile-button-log-out {
+      width: 100%;
+    }
+  }
   &__profile {
+    display: flex;
     position: relative;
+    flex-direction: column;
+    margin-top: 16px;
     font-size: 0;
+    row-gap: 16px;
   }
   &__nav {
     display: flex;
@@ -78,6 +119,11 @@
       display: block;
       width: inherit;
       height: inherit;
+    }
+  }
+  &__hamburger {
+    @include for-desktop-up-large {
+      display: none;
     }
   }
 }
@@ -159,4 +205,5 @@
     }
   }
 }
+
 // stylelint-enable scss/dollar-variable-empty-line-after
