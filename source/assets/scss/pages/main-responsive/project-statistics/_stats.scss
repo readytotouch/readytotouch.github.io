@@ -5,6 +5,7 @@
   flex-direction: column;
   gap: 32px;
   margin-bottom: 32px;
+  overflow: hidden;
   &__item {
     padding: 24px 0 16px;
     border-radius: 20px;

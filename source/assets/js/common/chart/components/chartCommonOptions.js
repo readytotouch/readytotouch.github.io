@@ -5,7 +5,6 @@ const chartCommonOptions = {
     toolbar: { show: false },
     parentHeightOffset: null,
     redrawOnWindowResize: true,
-    redrawOnParentResize: true,
   },
   stroke: {
     width: 2,
@@ -56,6 +55,7 @@ const chartCommonOptions = {
       options: {
         chart: {
           height: 325,
+          width: '100%',
         },
         xaxis: {
           min: 1,
@@ -68,6 +68,7 @@ const chartCommonOptions = {
       options: {
         chart: {
           height: 325,
+          width: '100%',
         },
         xaxis: {
           min: 1,

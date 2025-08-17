@@ -1,4 +1,4 @@
-export default (func, wait, immediate = false) => {
+export default (func, wait = 100, immediate = false) => {
   let timeout
 
   return (...args) => {

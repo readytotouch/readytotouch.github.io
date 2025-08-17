@@ -8,8 +8,8 @@ body {
   font-size: $base-font-size;
 }
 .main-wrapper {
-  display: grid;
-  grid-template-rows: auto 1fr auto;
+  display: flex;
+  flex-direction: column;
   min-height: 100%;
   background-color: color(light, surface-1);
   background-image: url('#{$path-to-static-images}pages/common/home_top_bg_mob.svg');
@@ -20,6 +20,9 @@ body {
     background-position: center top;
     background-size: 1440px 280px;
   }
+}
+.main-content {
+  flex: 1;
 }
 .main-container {
   z-index: 40;
