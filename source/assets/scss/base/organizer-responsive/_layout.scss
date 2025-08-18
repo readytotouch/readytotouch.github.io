@@ -1,0 +1,31 @@
+html,
+body {
+  height: 100%;
+}
+body {
+  color: $primary-color;
+  font-family: $base-font-family;
+  font-size: $base-font-size;
+}
+.main-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  background-color: color(light, surface-1);
+  background-image: url('#{$path-to-static-images}pages/common/home_top_bg_mob.svg');
+  background-repeat: no-repeat;
+  background-position: center -180px;
+  @include for-desktop-up-large {
+    background-image: url('#{$path-to-static-images}pages/common/home_top_bg.svg');
+    background-position: center top;
+    background-size: 1440px 280px;
+  }
+  &--organizer-companies-inner {
+    background-image: initial;
+    background-repeat: no-repeat;
+    background-position: initial;
+  }
+}
+.main-content {
+  flex: 1;
+}
