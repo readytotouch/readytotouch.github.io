@@ -4,6 +4,7 @@
   display: flex;
   align-items: center;
   height: 24px;
+  column-gap: 8px;
   color: $body-dark;
 
   font-size: 18px;
@@ -29,7 +30,6 @@
   &__element {
     width: 24px;
     height: 24px;
-    margin-right: 12px;
     transition: background-color 0.225s ease;
     border: 1px solid #3c3a59;
     border-radius: 4px;

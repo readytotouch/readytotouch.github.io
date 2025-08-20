@@ -102,6 +102,7 @@
   },
   "dependencies": {
     "apexcharts": "^3.52.0",
+    "flag-icons": "^7.5.0",
     "husky": "^9.1.5"
   }
 }

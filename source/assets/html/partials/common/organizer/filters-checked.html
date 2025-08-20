@@ -6,10 +6,49 @@
     </div>
 
     <div class="filters">
-      <!-- English level -->
+      <!-- Location -->
       <div class="filters__group">
-        <header class="filters__header">
-          <h4 class="filters__headline">Project type</h4>
+        <header class="filters__header filters__header--with-info">
+          <h4 class="filters__headline">Location</h4>
+          <img
+            class="ml-14"
+            alt="info icon"
+            width="14"
+            height="14"
+            title="info"
+            src="@@images_common_path__info.svg"
+          />
+        </header>
+        <div class="filters__elements filters__elements--location">
+          <div class="filters__elements-inner">
+            <label class="checkbox filters__element">
+              <input checked class="checkbox__input" type="checkbox" />
+              <span class="checkbox__element"></span>
+              All
+            </label>
+            @@loop('partials/common/organizer/partials/location-element.html', '../json/locations.json')
+          </div>
+          <label class="checkbox filters__element">
+            <input class="checkbox__input" type="checkbox" />
+            <span class="checkbox__element"></span>
+            Full Remote available
+          </label>
+        </div>
+      </div>
+      <!-- /Location -->
+
+      <!-- Company type -->
+      <div class="filters__group">
+        <header class="filters__header filters__header--with-info">
+          <h4 class="filters__headline">Company type</h4>
+          <img
+            class="ml-14"
+            alt="info icon"
+            width="14"
+            height="14"
+            title="info"
+            src="@@images_common_path__info.svg"
+          />
         </header>
         <div class="filters__elements">
           <label class="checkbox filters__element">
@@ -24,12 +63,138 @@
           </label>
         </div>
       </div>
-      <!-- /English level -->
+      <!-- /Company type -->
 
-      <!-- Direction -->
+      <!-- Company size -->
       <div class="filters__group">
-        <header class="filters__header">
-          <h4 class="filters__headline">Direction</h4>
+        <header class="filters__header filters__header--with-info">
+          <h4 class="filters__headline">Company size</h4>
+          <img
+            class="ml-8"
+            alt="info icon"
+            width="16"
+            height="16"
+            title="info"
+            src="@@images_common_path__linkedin-small.svg"
+          />
+          <img
+            class="ml-14"
+            alt="info icon"
+            width="14"
+            height="14"
+            title="info"
+            src="@@images_common_path__info.svg"
+          />
+        </header>
+        <div class="filters__elements filters__elements--full-height">
+          <label class="checkbox filters__element">
+            <input checked class="checkbox__input" type="checkbox" />
+            <span class="checkbox__element"></span>
+            1-50 employees
+          </label>
+          <label class="checkbox filters__element">
+            <input class="checkbox__input" type="checkbox" />
+            <span class="checkbox__element"></span>
+            51-200 employees
+          </label>
+          <label class="checkbox filters__element">
+            <input class="checkbox__input" type="checkbox" />
+            <span class="checkbox__element"></span>
+            201-500 employees
+          </label>
+          <label class="checkbox filters__element">
+            <input class="checkbox__input" type="checkbox" />
+            <span class="checkbox__element"></span>
+            501-1,000 employees
+          </label>
+          <label class="checkbox filters__element">
+            <input class="checkbox__input" type="checkbox" />
+            <span class="checkbox__element"></span>
+            1,000-5,000 employees
+          </label>
+          <label class="checkbox filters__element">
+            <input class="checkbox__input" type="checkbox" />
+            <span class="checkbox__element"></span>
+            1,000-5,000 employees
+          </label>
+        </div>
+      </div>
+      <!-- /Company size -->
+
+      <!-- Rating -->
+      <div class="filters__group">
+        <header class="filters__header filters__header--with-info">
+          <h4 class="filters__headline">Rating</h4>
+          <img
+            class="ml-8"
+            alt="info icon"
+            width="16"
+            height="16"
+            title="info"
+            src="@@images_common_path__glassdoor.svg"
+          />
+          <img
+            class="ml-14"
+            alt="info icon"
+            width="14"
+            height="14"
+            title="info"
+            src="@@images_common_path__info.svg"
+          />
+        </header>
+        <div class="filters__elements filters__elements--full-height">
+          <label class="checkbox filters__element">
+            <input checked class="checkbox__input" type="checkbox" />
+            <span class="checkbox__element"></span>
+            <img
+              alt="star icon"
+              width="22"
+              height="22"
+              title="info"
+              src="@@images_common_path__star.svg"
+            />
+            4.5 stars and above
+          </label>
+          <label class="checkbox filters__element">
+            <input class="checkbox__input" type="checkbox" />
+            <span class="checkbox__element"></span>
+            <img
+              alt="star icon"
+              width="22"
+              height="22"
+              title="info"
+              src="@@images_common_path__star.svg"
+            />
+            4 stars and above
+          </label>
+          <label class="checkbox filters__element">
+            <input class="checkbox__input" type="checkbox" />
+            <span class="checkbox__element"></span>
+            <img
+              alt="star icon"
+              width="22"
+              height="22"
+              title="info"
+              src="@@images_common_path__star.svg"
+            />
+            3 stars and above
+          </label>
+        </div>
+      </div>
+      <!-- /Rating -->
+
+      <!-- Industry -->
+      <div class="filters__group">
+        <header class="filters__header filters__header--with-info">
+          <h4 class="filters__headline">Industry</h4>
+          <img
+            class="ml-14"
+            alt="info icon"
+            width="14"
+            height="14"
+            title="info"
+            src="@@images_common_path__info.svg"
+          />
         </header>
 
         <div class="filters__elements">
@@ -87,12 +252,147 @@
           </div>
         </div>
       </div>
-      <!-- /Direction -->
+      <!-- /Industry -->
+
+      <!-- Hosting -->
+      <div class="filters__group">
+        <header class="filters__header filters__header--with-info">
+          <h4 class="filters__headline">Hosting</h4>
+          <img
+            class="ml-14"
+            alt="info icon"
+            width="14"
+            height="14"
+            title="info"
+            src="@@images_common_path__info.svg"
+          />
+        </header>
+
+        <div class="filters__elements">
+          <div class="filters__elements-inner">
+            <label class="checkbox filters__element">
+              <input class="checkbox__input" type="checkbox" />
+              <span class="checkbox__element"></span>
+              <img
+                alt="AWS icon"
+                width="24"
+                height="24"
+                title=""
+                src="@@images_common_path__amazon-web-services.svg"
+              />
+              AWS
+            </label>
+            <label class="checkbox filters__element">
+              <input class="checkbox__input" type="checkbox" />
+              <span class="checkbox__element"></span>
+              <img
+                alt="Azure icon"
+                width="24"
+                height="24"
+                title=""
+                src="@@images_common_path__azure.svg"
+              />
+              Azure
+            </label>
+            <label class="checkbox filters__element">
+              <input checked class="checkbox__input" type="checkbox" />
+              <span class="checkbox__element"></span>
+              <img
+                alt="GCP icon"
+                width="24"
+                height="24"
+                title=""
+                src="@@images_common_path__googlecloud.svg"
+              />
+              GCP
+            </label>
+            <label class="checkbox filters__element">
+              <input class="checkbox__input" type="checkbox" />
+              <span class="checkbox__element"></span>
+              <img
+                alt="Digital Ocean icon"
+                width="24"
+                height="24"
+                title=""
+                src="@@images_common_path__digitalocean.svg"
+              />
+              Digital Ocean
+            </label>
+            <label class="checkbox filters__element">
+              <input class="checkbox__input" type="checkbox" />
+              <span class="checkbox__element"></span>
+              <img
+                alt="Vultr icon"
+                width="24"
+                height="24"
+                title=""
+                src="@@images_common_path__vultr.svg"
+              />
+              Vultr
+            </label>
+          </div>
+        </div>
+      </div>
+      <!-- /Hosting -->
+
+      <!-- API Type -->
+      <div class="filters__group">
+        <header class="filters__header filters__header--with-info">
+          <h4 class="filters__headline">API Type</h4>
+          <img
+            class="ml-14"
+            alt="info icon"
+            width="14"
+            height="14"
+            title="info"
+            src="@@images_common_path__info.svg"
+          />
+        </header>
+
+        <div class="filters__elements">
+          <div class="filters__elements-inner">
+            <label class="checkbox filters__element">
+              <input class="checkbox__input" type="checkbox" />
+              <span class="checkbox__element"></span>
+              gRPC
+            </label>
+            <label class="checkbox filters__element">
+              <input class="checkbox__input" type="checkbox" />
+              <span class="checkbox__element"></span>
+              REST
+            </label>
+            <label class="checkbox filters__element">
+              <input checked class="checkbox__input" type="checkbox" />
+              <span class="checkbox__element"></span>
+              GraphQL
+            </label>
+            <label class="checkbox filters__element">
+              <input class="checkbox__input" type="checkbox" />
+              <span class="checkbox__element"></span>
+              Swagger
+            </label>
+            <label class="checkbox filters__element">
+              <input class="checkbox__input" type="checkbox" />
+              <span class="checkbox__element"></span>
+              OpenAPI
+            </label>
+          </div>
+        </div>
+      </div>
+      <!-- /API Type -->
 
       <!-- Company type -->
       <div class="filters__group">
-        <header class="filters__header">
-          <h4 class="filters__headline">Other</h4>
+        <header class="filters__header filters__header--with-info">
+          <h4 class="filters__headline">Hosting</h4>
+          <img
+            class="ml-14"
+            alt="info icon"
+            width="14"
+            height="14"
+            title="info"
+            src="@@images_common_path__info.svg"
+          />
         </header>
         <div class="filters__elements">
           <label class="checkbox filters__element">
@@ -104,29 +404,31 @@
               alt="Flag of Ukraine with waves"
               width="24"
               height="24"
-              src="@@images_home_new_path__ua_flag_with_waves.svg"
+              src="@@images_common_path__flags/4x3/ua.svg"
             />
+          </label>
+          <label class="checkbox filters__element">
+            <input class="checkbox__input" type="checkbox" />
+            <span class="checkbox__element"></span>
+            Has Czechs employees
+            <img
+              class="checkbox__content-image"
+              alt="Flag of Ukraine with waves"
+              width="24"
+              height="24"
+              src="@@images_common_path__flags/4x3/cz.svg"
+            />
+          </label>
+          <label class="checkbox filters__element">
+            <input class="checkbox__input" type="checkbox" />
+            <span class="checkbox__element"></span>
+            Only with salary listed
           </label>
           <label class="checkbox filters__element">
             <input class="checkbox__input" type="checkbox" />
             <span class="checkbox__element"></span>
             Favorites
           </label>
-          <div class="switch-wrapper filters__element">
-            <label class="switch">
-              <input type="checkbox" name="active_search" id="active_search" class="switch__input" />
-              <span class="switch__slider switch__slider--round"></span>
-            </label>
-            <span class="switch-wrapper__text">Active search</span>
-            <img
-              class="ml-16"
-              alt="info icon"
-              width="20"
-              height="20"
-              title="info"
-              src="@@images_common_path__info.svg"
-            />
-          </div>
         </div>
       </div>
     </div>
