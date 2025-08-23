@@ -1,0 +1,30 @@
+@use 'sass:math';
+
+.hidden-card {
+  &__body {
+    display: grid;
+    grid-template-columns: 40px 1fr;
+    align-items: center;
+    padding: 16px;
+    column-gap: 16px;
+    border-radius: 8px;
+    background-color: color(light, warning-container);
+  }
+  &__caption {
+    display: flex;
+    flex-direction: column;
+    row-gap: 14px;
+  }
+  &__image {
+    justify-self: center;
+  }
+  &__text {
+    color: color(light, on-surface-variant);
+    font-size: 16px;
+    line-height: math.div(24, 16);
+  }
+  &__action {
+    display: flex;
+    column-gap: 16px;
+  }
+}

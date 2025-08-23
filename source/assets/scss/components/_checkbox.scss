@@ -28,6 +28,7 @@
     }
   }
   &__element {
+    flex-shrink: 0;
     width: 24px;
     height: 24px;
     transition: background-color 0.225s ease;

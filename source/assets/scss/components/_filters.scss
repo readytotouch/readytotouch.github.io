@@ -106,8 +106,22 @@
     margin-top: 16px;
   }
   &__element {
+    min-width: 0;
+    padding-right: 8px;
     &:not(:first-child) {
       margin-top: 16px;
+    }
+    &--location {
+      .fi {
+        flex-shrink: 0;
+      }
+    }
+  }
+  &__element-text {
+    &--truncated {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
     }
   }
 }

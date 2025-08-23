@@ -21,10 +21,6 @@
   font-size: 18px;
   font-weight: 500;
   cursor: pointer;
-  &--small-padding {
-    padding-right: 24px;
-    padding-left: 24px;
-  }
   &--small {
     height: 40px;
     padding-right: 24px;
@@ -32,6 +28,14 @@
   }
   &--medium {
     height: 44px;
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+  &--small-padding {
+    padding-right: 24px;
+    padding-left: 24px;
+  }
+  &--x-small-padding {
     padding-right: 20px;
     padding-left: 20px;
   }
