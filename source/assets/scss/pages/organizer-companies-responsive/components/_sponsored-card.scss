@@ -1,0 +1,21 @@
+@use 'sass:math';
+
+.sponsored-card {
+  padding: 0;
+  border: 2px solid color(light, secondary-fixed-dim);
+  &__body {
+    display: grid;
+    grid-template-columns: 36px 1fr;
+    align-items: center;
+    padding: 20px 24px;
+    column-gap: 4px;
+  }
+  &__caption {
+    color: color(light, primary);
+    font-size: 16px;
+    line-height: math.div(24, 16);
+  }
+  &__image {
+    justify-self: center;
+  }
+}

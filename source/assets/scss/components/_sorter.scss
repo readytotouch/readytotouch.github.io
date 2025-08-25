@@ -1,0 +1,56 @@
+@use 'sass:math';
+
+.sorter {
+  position: relative;
+  &__title {
+    display: flex;
+    align-items: center;
+    height: 50px;
+    color: color(light, primary);
+    font-size: 18px;
+    font-weight: 500;
+    white-space: nowrap;
+  }
+  &__list {
+    position: absolute;
+    z-index: 1;
+    top: 100%;
+    right: 0;
+    width: 216px;
+    border-radius: 8px;
+    opacity: 0;
+    background-color: white;
+    box-shadow:
+      -1px 0 20px 0 rgba(28, 24, 34, 0.05),
+      0 1px 5px 0 rgba(14, 11, 17, 0.15);
+    pointer-events: none;
+    &.is-visible {
+      opacity: 1;
+      pointer-events: initial;
+    }
+  }
+  &__item {
+    display: block;
+    min-height: 52px;
+    padding: 12px 16px;
+    transition: background-color 0.225s ease;
+    color: color(light, outline);
+    font-size: 18px;
+    line-height: math.div(28, 18);
+    cursor: pointer;
+    &.is-selected {
+      background-color: color(light, secondary-hover);
+    }
+    &:hover {
+      background-color: color(light, secondary-hover);
+    }
+    &:first-child {
+      border-top-left-radius: 8px;
+      border-top-right-radius: 8px;
+    }
+    &:last-child {
+      border-bottom-right-radius: 8px;
+      border-bottom-left-radius: 8px;
+    }
+  }
+}
