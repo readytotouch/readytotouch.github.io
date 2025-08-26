@@ -1,0 +1,21 @@
+<section class="search-container container">
+  <div class="search search--projects search--organizer search--with-sort">
+    <div class="search__input-group">
+      <input class="search__input" id="company" type="text" placeholder="Search" />
+      <img class="search__icon" alt="Search icon" width="20" height="20" src="@@images_common_path__search.svg" />
+    </div>
+    <button type="button"
+            class="mobile-filter js-mobile-filter"
+    >
+      <img src="@@images_common_path__filter.svg"
+           alt="Filter icon"
+           width="16"
+           height="16"
+      />
+      <span class="mobile-filter__counter">27</span>
+    </button>
+    @@include('partials/common/organizer/sort.html', {
+      "additionalClass": "sorter--desktop"
+    })
+  </div>
+</section>

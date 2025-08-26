@@ -1,7 +1,18 @@
-<div class="sorter">
-  <div class="sorter__title js-sorter-title">Newest first</div>
+<div class="sorter @@additionalClass js-sorter">
+  <button type="button"
+          class="sorter__title js-sorter-toggle"
+  >
+    <span class="sorter__title-text js-sorter-title-text">Newest first</span>
+    <span class="sorter__icon-wrapper">
+      <img alt="caret-down icon"
+           width="12"
+           height="7"
+           src="@@images_organizer_path__caret-down.svg"
+      >
+    </span>
+  </button>
   <ul class="sorter__list js-sorter-list">
-    <li class="sorter__item js-sorter-item">Newest first</li>
+    <li class="sorter__item is-selected js-sorter-item ">Newest first</li>
     <li class="sorter__item js-sorter-item">Oldest first</li>
     <li class="sorter__item js-sorter-item">By LinkedIn followers</li>
     <li class="sorter__item js-sorter-item">By Glassdoor reviews</li>

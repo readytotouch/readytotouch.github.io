@@ -1,2 +1,2 @@
-export const minWidth = '1170'
-export const maxWidth = '1169'
+export const minWidth = '992'
+export const maxWidth = '991'

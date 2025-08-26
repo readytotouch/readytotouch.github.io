@@ -1,7 +1,3 @@
-@use '../../../node_modules/flag-icons/sass/flag-icons' with (
-  $flag-icons-path: '#{$path-to-static-images}/pages/common/flags'
-);
-
 // stylelint-disable scss/dollar-variable-empty-line-after
 .filters {
   $_this: &;
@@ -30,9 +26,6 @@
       flex-direction: column;
       align-items: flex-start;
       justify-content: space-between;
-    }
-    &--with-info {
-      justify-content: start;
     }
   }
   &__headline {
@@ -70,18 +63,8 @@
     max-height: 190px;
     margin-top: 16px;
     overflow: auto;
-    &--full-height {
-      max-height: initial;
-    }
     &--no-scroll {
       overflow: initial;
-    }
-    &--location {
-      max-height: 240px;
-
-      #{$_this}__elements-inner {
-        max-height: 185px;
-      }
     }
   }
   &__elements-inner {
@@ -106,22 +89,8 @@
     margin-top: 16px;
   }
   &__element {
-    min-width: 0;
-    padding-right: 8px;
     &:not(:first-child) {
       margin-top: 16px;
-    }
-    &--location {
-      .fi {
-        flex-shrink: 0;
-      }
-    }
-  }
-  &__element-text {
-    &--truncated {
-      overflow: hidden;
-      text-overflow: ellipsis;
-      white-space: nowrap;
     }
   }
 }

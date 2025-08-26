@@ -3,14 +3,16 @@
 // stylelint-disable scss/dollar-variable-empty-line-after
 .filter-used {
   $_this: &;
-  display: flex;
-  align-items: flex-start;
+  display: none;
+  align-items: start;
   margin-bottom: 24px;
   color: #1b1b1d;
-
   font-size: 18px;
   font-weight: 500;
   line-height: 28px;
+  @include for-desktop-up {
+    display: flex;
+  }
   &__title {
     display: flex;
     align-items: center;
@@ -32,10 +34,10 @@
     align-items: center;
     padding: 6px 12px;
     border-radius: 48px;
-    background-color: #ededf8;
+    background-color: color(light, primary-container);
     color: color(light, on-background);
     font-size: 14px;
-    line-height: math.div(24, 14);
+    line-height: 1;
   }
   &__content-image {
     margin-left: 8px;
@@ -56,8 +58,6 @@
   }
   &__cross-icon {
     display: block;
-    width: 8px;
-    height: 8px;
   }
   &--small {
     #{$_this}__item {

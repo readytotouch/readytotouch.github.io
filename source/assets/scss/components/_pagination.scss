@@ -83,6 +83,12 @@
     font-size: $font-md;
     font-weight: 500;
     cursor: pointer;
+    &--hidden {
+      display: none;
+      @include for-desktop-up {
+        display: block;
+      }
+    }
   }
 }
 // stylelint-enable scss/dollar-variable-empty-line-after, max-nesting-depth

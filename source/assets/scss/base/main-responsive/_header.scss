@@ -11,7 +11,7 @@
   height: 64px;
   transition: background-color 0.225s ease;
   background-color: white;
-  @include for-desktop-up-large {
+  @include for-desktop-up {
     position: initial;
     background-color: transparent;
   }
@@ -50,7 +50,7 @@
     opacity: 0;
     background-color: color(light, surface-1);
     pointer-events: none;
-    @include for-desktop-up-large {
+    @include for-desktop-up {
       position: static;
       flex-direction: row;
       flex-shrink: 0;
@@ -68,7 +68,7 @@
     }
     #{$_this}__profile {
       padding-inline: 16px;
-      @include for-desktop-up-large {
+      @include for-desktop-up {
         margin-top: 0;
         padding-inline: 0;
       }
@@ -76,7 +76,7 @@
 
     #{$_this}__profile-button {
       margin-left: initial;
-      @include for-desktop-up-large {
+      @include for-desktop-up {
         margin-left: 24px;
       }
     }
@@ -86,7 +86,7 @@
       font-size: 18px;
       font-weight: 500;
       line-height: math.div(24, 18);
-      @include for-desktop-up-large {
+      @include for-desktop-up {
         display: none;
       }
     }
@@ -98,7 +98,7 @@
       height: 24px;
       margin-left: auto;
       transition: rotate 0.225s ease;
-      @include for-desktop-up-large {
+      @include for-desktop-up {
         display: none;
       }
     }
@@ -124,7 +124,7 @@
     #{$_this}__profile-button-log-out {
       width: 100%;
       margin-block: 8px;
-      @include for-desktop-up-large {
+      @include for-desktop-up {
         display: none;
       }
     }
@@ -134,7 +134,7 @@
       flex-direction: column;
       padding-left: 16px;
       transition: grid-template-rows 0.225s ease;
-      @include for-desktop-up-large {
+      @include for-desktop-up {
         display: none;
       }
       &:before {
@@ -216,7 +216,7 @@
     }
   }
   &__hamburger {
-    @include for-desktop-up-large {
+    @include for-desktop-up {
       display: none;
     }
   }

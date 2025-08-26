@@ -1,24 +1,36 @@
-export default (sorterToggleBtn, sorterList, sorterSelectedElement) => {
-  sorterToggleBtn.addEventListener('click', () => {
+import { qSA } from '../functions/selectElement.js'
+
+function initSorter(sorter) {
+  const toggleBtn = sorter.querySelector('.js-sorter-toggle')
+  const sorterList = sorter.querySelector('.js-sorter-list')
+  const sorterItems = sorter.querySelectorAll('.js-sorter-item')
+  const titleText = sorter.querySelector('.js-sorter-title-text')
+
+  // Toggle sorter list on button click
+  toggleBtn.addEventListener('click', () => {
     sorterList.classList.toggle('is-visible')
   })
 
-  sorterSelectedElement.forEach((el, idx, arr) => {
+  // Handle selecting an item
+  sorterItems.forEach(el => {
     el.addEventListener('click', () => {
-      arr.forEach(listEl => {
-        listEl.classList.remove('is-selected')
-      })
+      sorterItems.forEach(listEl => listEl.classList.remove('is-selected'))
+
       el.classList.add('is-selected')
-      // eslint-disable-next-line no-param-reassign
-      sorterToggleBtn.textContent = el.textContent
+      titleText.textContent = el.textContent
       sorterList.classList.remove('is-visible')
     })
   })
 
-  // click outside → hide block
+  // Hide when clicking outside
   document.addEventListener('click', e => {
-    if (!sorterList.contains(e.target) && e.target !== sorterToggleBtn) {
+    if (!sorter.contains(e.target)) {
       sorterList.classList.remove('is-visible')
     }
   })
+}
+
+// Initialize all sorters on the page
+export default function initAllSorters() {
+  qSA('.js-sorter').forEach(initSorter)
 }

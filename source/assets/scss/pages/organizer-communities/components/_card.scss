@@ -37,7 +37,7 @@
   &__headline {
     display: flex;
     align-items: center;
-    align-self: flex-start;
+    align-self: start;
     transition:
       border 0.225s ease,
       color 0.225s ease;
@@ -57,7 +57,7 @@
   &__sub-headline {
     display: flex;
     align-items: center;
-    align-self: flex-start;
+    align-self: start;
     color: color(light, surface-tint);
     font-size: $font-md;
     line-height: 25px;

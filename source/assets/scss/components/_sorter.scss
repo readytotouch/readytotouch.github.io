@@ -1,15 +1,55 @@
+// stylelint-disable scss/dollar-variable-empty-line-after
+
 @use 'sass:math';
 
 .sorter {
+  $_this: &;
   position: relative;
+  margin-left: auto;
+  @include for-desktop-up {
+    margin-left: initial;
+  }
+  &--mobile {
+    @include for-desktop-up {
+      display: none;
+    }
+  }
+  &--desktop {
+    display: none;
+    @include for-desktop-up {
+      display: block;
+    }
+  }
   &__title {
     display: flex;
     align-items: center;
-    height: 50px;
+    column-gap: 4px;
     color: color(light, primary);
     font-size: 18px;
     font-weight: 500;
     white-space: nowrap;
+    cursor: pointer;
+    @include for-desktop-up {
+      height: 50px;
+    }
+
+    &:has(+ #{$_this}__list.is-visible) {
+      #{$_this}__icon-wrapper {
+        rotate: 180deg;
+      }
+    }
+  }
+  &__title-text {
+    pointer-events: none;
+  }
+  &__icon-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    transition: rotate 0.225s ease;
+    pointer-events: none;
   }
   &__list {
     position: absolute;
@@ -54,3 +94,4 @@
     }
   }
 }
+// stylelint-enable scss/dollar-variable-empty-line-after
