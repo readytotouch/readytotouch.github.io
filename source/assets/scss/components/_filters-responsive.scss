@@ -10,7 +10,9 @@
     padding-top: 24px;
     padding-bottom: 24px;
     &:last-child {
-      padding-bottom: initial;
+      @include for-desktop-up {
+        padding-bottom: initial;
+      }
     }
 
     + #{$_this}__group {

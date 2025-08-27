@@ -1,7 +1,7 @@
 import { minWidth } from './constans.js'
 import debounce from '../functions/debounce.js'
 
-export default (hamburger, body, mainHeaderNav, profileAvatar) => {
+export default (hamburger, body, mainHeaderNav) => {
   // define functions for show/hide mobile menu
   const changeVisible = boolean => {
     const direction = boolean ? 'remove' : 'add'
@@ -11,7 +11,6 @@ export default (hamburger, body, mainHeaderNav, profileAvatar) => {
     hamburger.setAttribute('aria-label', `${ariaLabelText}`)
     body.classList[direction]('disabled-scroll')
     mainHeaderNav.classList[direction]('is-opened')
-    profileAvatar.classList.remove('is-mobile-profile-opened')
   }
 
   // hamburger menu action for mobile

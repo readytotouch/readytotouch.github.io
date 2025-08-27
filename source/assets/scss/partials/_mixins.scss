@@ -35,6 +35,16 @@
     @content;
   }
 }
+@mixin for-mobile-large-up {
+  @media (width >= 640px) {
+    @content;
+  }
+}
+@mixin for-mobile-up {
+  @media (width >= 480px) {
+    @content;
+  }
+}
 @mixin for-desktop-down {
   @media (width <= 991px) {
     @content;

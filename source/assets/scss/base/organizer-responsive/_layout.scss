@@ -7,6 +7,9 @@ body {
   font-family: $base-font-family;
   font-size: $base-font-size;
 }
+.disabled-scroll {
+  overflow: hidden;
+}
 .main-wrapper {
   display: flex;
   flex-direction: column;
