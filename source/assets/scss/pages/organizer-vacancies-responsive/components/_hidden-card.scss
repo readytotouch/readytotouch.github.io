@@ -1,0 +1,60 @@
+@use 'sass:math';
+
+.hidden-card {
+  &__body {
+    display: grid;
+    position: relative;
+    grid-template-columns: 1fr;
+    align-items: center;
+    padding: 16px;
+    column-gap: 16px;
+    border-radius: 8px;
+    background-color: color(light, warning-container);
+    @include for-mobile-up {
+      position: initial;
+      grid-template-columns: 40px 1fr;
+    }
+  }
+  &__caption {
+    display: flex;
+    flex-direction: column;
+    row-gap: 16px;
+    @include for-mobile-up {
+      row-gap: 14px;
+    }
+  }
+  &__image {
+    position: absolute;
+    top: 18px;
+    left: 20px;
+    width: 14px;
+    height: auto;
+    justify-self: center;
+    @include for-mobile-up {
+      position: initial;
+      width: 28px;
+      height: 36px;
+    }
+  }
+  &__text {
+    padding-left: 28px;
+    color: color(light, on-surface-variant);
+    font-size: 14px;
+    line-height: math.div(24, 16);
+    @include for-mobile-up {
+      padding-left: initial;
+      font-size: 16px;
+    }
+  }
+  &__action {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+  &__action-button {
+    width: 100%;
+    @include for-mobile-large-up {
+      width: fit-content;
+    }
+  }
+}

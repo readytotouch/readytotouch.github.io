@@ -162,15 +162,20 @@
   }
   &__time-period {
     display: grid;
-    grid-template-columns: minmax(auto, 1fr) 1fr minmax(auto, 1fr);
+    grid-template-columns: minmax(auto, 1fr) minmax(min-content, var(--max-value, max-content)) minmax(auto, 1fr);
     align-items: center;
+    margin-block: 8px;
+    column-gap: 24px;
+    &--long {
+      --max-value: 65%;
+    }
   }
   &__time-period-line {
     height: 2px;
     background-color: color(light, surface-3);
   }
   &__time-period-content {
-    margin: 0 24px;
+    width: 100%;
     padding: 4px 16px;
     border-radius: 80px;
     background-color: color(light, surface-3);

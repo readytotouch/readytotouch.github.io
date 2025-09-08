@@ -1,0 +1,32 @@
+@use 'sass:math';
+
+.sponsored-card {
+  padding: 0;
+  border: 2px solid color(light, secondary-fixed-dim);
+  &__body {
+    display: grid;
+    grid-template-columns: 24px 1fr;
+    align-items: center;
+    padding: 16px 24px;
+    column-gap: 16px;
+    @include for-mobile-up {
+      grid-template-columns: 36px 1fr;
+      padding: 20px 24px;
+      column-gap: 4px;
+    }
+  }
+  &__caption {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    color: color(light, primary);
+    font-size: 16px;
+    line-height: math.div(24, 16);
+    @include for-mobile-up {
+      display: block;
+    }
+  }
+  &__image {
+    justify-self: center;
+  }
+}
