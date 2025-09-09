@@ -18,6 +18,7 @@ export default function html(cb, inputHtml, basepath, outputHtml) {
         prefix: '@@',
         basepath,
         context: {
+          sponsored: true,
           images_main_responsive_path__: '/assets/images/pages/main-responsive/',
           images_home_new_path__: '/assets/images/pages/online-new/',
           images_organizer_path__: '/assets/images/pages/organizer/',

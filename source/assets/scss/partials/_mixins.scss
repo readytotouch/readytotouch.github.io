@@ -61,9 +61,11 @@
       0 0 0 3px white;
   }
 }
+/* stylelint-disable */
 @mixin trim($numLines: null) {
   @if $numLines {
-    display: box;
+    display: block;
+    display: -webkit-box;
     -webkit-line-clamp: $numLines;
     -webkit-box-orient: vertical;
     overflow: hidden;
@@ -74,7 +76,6 @@
     white-space: wrap;
   }
 }
-/* stylelint-disable */
 @each $ellipsis-line in (2, 3) {
   .txt-ellipsis-#{$ellipsis-line} {
     display: block;

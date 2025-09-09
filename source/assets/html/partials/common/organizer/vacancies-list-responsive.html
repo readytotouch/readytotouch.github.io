@@ -15,7 +15,7 @@
           </div>
           <!-- card list -->
           <div class="search-result__cards row-gap-8 mt-24">
-            @@include('partials/organizer-vacancies-responsive/vacancies-card1.html', {"cardClass": ""})
+            @@include('partials/organizer-vacancies-responsive/vacancies-card1.html', {"cardClass": "card--sponsored", "sponsored": true})
             @@include('partials/organizer-vacancies-responsive/sponsored-card.html')
             @@include('partials/organizer-vacancies-responsive/hidden-card.html')
             @@include('partials/organizer-vacancies-responsive/vacancies-card2.html')
@@ -24,9 +24,9 @@
 						@@include('partials/organizer-vacancies-responsive/vacancies-card2.html')
 						@@include('partials/organizer-vacancies-responsive/vacancies-card3.html')
 						@@include('partials/organizer-vacancies-responsive/time-period.html')
-						@@include('partials/organizer-vacancies-responsive/vacancies-card1.html', {"cardClass": ""})
+						@@include('partials/organizer-vacancies-responsive/vacancies-card1.html', {"cardClass": "", "sponsored": false})
             @@include('partials/organizer-vacancies-responsive/time-period-long.html')
-            @@include('partials/organizer-vacancies-responsive/vacancies-card1.html', {"cardClass": "card--transparent"})
+            @@include('partials/organizer-vacancies-responsive/vacancies-card1.html', {"cardClass": "card--transparent", "sponsored": false})
 					</div>
 
           <!-- /card list -->

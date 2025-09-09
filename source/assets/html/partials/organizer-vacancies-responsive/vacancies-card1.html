@@ -9,27 +9,51 @@
 							class="button-group__item button-group__item-sloth card__action-button-sloth"></button>
 		</aside>
 		<figure class="card__header card__header--organizer">
-			<div class="card__image-overlay">
-				<img class="card__image"
-					alt="card image preview icon"
-					src="@@vacancies_images_path__company-logo.svg"
-				/>
-			</div>
+      <div class="card__logo-overlay card__logo-overlay--black">
+        <img class="card__logo"
+             alt="ReadyToTouch logo"
+             src="@@vacancies_images_path__ready_to_touch_logo.svg"
+        />
+      </div>
 			<figcaption class="card__header-caption">
-				<a href=""
-					 class="card__headline vacancy__link"
+				<a href="javascript:"
+					 class="card__headline"
 				>
-					Go Developer
+          Golang Engineer
 				</a>
-				<a href=""
-					 class="card__sub-headline vacancy__link">
-					RoboSoft
+				<a href="javascript:"
+					 class="card__sub-headline">
+          ReadyToTouch
 				</a>
+        <p class="card__header-caption-text">
+          <img class="card__header-caption-icon"
+               alt="marker"
+               width="12"
+               height="12"
+               src="@@images_organizer_path__marker.svg"
+          >Country, City (Full Remote)
+        </p>
+        <p class="card__header-caption-text">
+          <img class="card__header-caption-icon"
+               alt="briefcase"
+               width="12"
+               height="12"
+               src="@@vacancies_images_path__credit-card.svg"
+          >$25/hour
+        </p>
 			</figcaption>
+      @@if (sponsored === true) {
+        <div class="label card__header-label">
+          <img alt="thumbtack icon"
+               width="20"
+               height="20"
+               src="@@images_organizer_path__thumbtack.svg"
+          >Sponsored
+        </div>
+      }
 		</figure>
 		<p class="card__text card__text--organizer">
-			The candidate will have strong expertise in Go programming, experience with microservices architecture, and a
-			passion for building scalable and efficient software solutions.
+      We are looking for a highly skilled Backend Engineer to join our team. The perfect candidate will have extensive experience in full-stack Go development and a strong understanding of Kubernetes and AWS deployment. This role requires someone who can build scalable backend systems and ensure seamless integration with our machine learning algorithms.
 		</p>
 		<div class="card__footer">
 			<div class="card__details">
@@ -52,7 +76,7 @@
 					<figcaption class="card__figcaption">Views last month: 164</figcaption>
 				</figure>
 			</div>
-			<button target="_blank" href="#" class="button button--bordered-gray button--gap-images">
+			<a target="_blank" href="javascript:" class="button button--bordered-gray button--gap-images card__footer-button">
 				<img
 					width="20"
 					height="20"
@@ -68,7 +92,7 @@
 					alt="arrow black icon"
 					class="hero__button-icon"
 				/>
-			</button>
+			</a>
 		</div>
 	</div>
 </div>
