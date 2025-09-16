@@ -1,0 +1,94 @@
+@use 'sass:math';
+
+.stats {
+  $_this: &;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  overflow: hidden;
+  &__head {
+    display: grid;
+    grid-template-rows: repeat(2, auto);
+    padding: 24px 16px;
+    gap: 24px;
+    border-radius: 20px;
+    background-color: white;
+    @include for-laptop-up {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: initial;
+    }
+    &--double {
+      grid-template-columns: none;
+    }
+
+    #{$_this}__counters {
+      display: flex;
+      flex-direction: column;
+      margin-top: initial;
+      padding-right: initial;
+      padding-left: initial;
+    }
+    #{$_this}__counters-group {
+      margin-top: 16px;
+      padding-right: initial;
+      padding-left: initial;
+    }
+  }
+  &__counters,
+  &__counters-group {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 24px;
+    padding-right: 16px;
+    padding-left: 16px;
+  }
+  &__counters-item {
+    padding: 12px 16px;
+    border: 1px solid color(light, surface-5);
+    border-radius: 12px;
+    &:nth-child(2) {
+      margin-left: -1px;
+    }
+  }
+  &__counters-views {
+    color: color(light, surface-tint);
+    font-size: 18px;
+    line-height: math.div(24, 18);
+  }
+  &__counters-item-number {
+    margin-top: 8px;
+    color: color(light, on-background);
+    font-size: 36px;
+    line-height: math.div(44, 36);
+  }
+  &__item {
+    padding: 24px 0 16px;
+    border-radius: 20px;
+    background: white;
+  }
+  &__header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    padding-right: 16px;
+    padding-left: 16px;
+    @include for-laptop-up {
+      align-items: end;
+    }
+  }
+  &__title {
+    color: color(light, on-background);
+    font-size: 22px;
+    font-weight: 500;
+    line-height: math.div(28, 22);
+  }
+  &__period {
+    flex-shrink: 0;
+  }
+  &__labels {
+    color: color(light, outline);
+    font-family: $base-font-family !important;
+    font-size: 12px;
+    line-height: math.div(16, 12);
+  }
+}

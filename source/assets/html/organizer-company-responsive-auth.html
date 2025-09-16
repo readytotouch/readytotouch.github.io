@@ -1,0 +1,17 @@
+@@include('base/base-responsive-organizer.html', {
+  "page-lang": "en",
+  "page-title": "Yet another anonymous work search",
+  "page-description": "Yet another anonymous work search",
+  "style": "organizer-company-responsive.html",
+  "header": "base/layout/header/header-organizer-responsive-auth.html",
+  "page-class": "main-wrapper--organizer-inner"
+})
+
+<main class="main-content">
+  @@include('partials/common/breadcrumbs-organizer-statistics.html')
+<!--  @@include('partials/organizer-company-responsive/companies-cards.html')-->
+  @@include('partials/organizer-company-responsive/vacancies.html')
+  @@include('partials/organizer-company-responsive/statistics.html')
+</main>
+
+@@include('base/layout/footer/footer-responsive.html', { "script": "organizer-company-responsive.html" })
