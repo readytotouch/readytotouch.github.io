@@ -12,7 +12,6 @@
     display: grid;
     z-index: 20;
     grid-template-rows: repeat(3, auto);
-    max-width: 1008px;
     column-gap: 26px;
   }
   &.hidden {

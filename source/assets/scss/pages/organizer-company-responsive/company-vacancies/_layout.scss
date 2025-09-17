@@ -1,13 +1,13 @@
 @use 'sass:math';
 
-.company-statistics {
+.company-vacancies {
   &__container {
     padding-top: 32px;
-    padding-bottom: 40px;
+    padding-bottom: 32px;
     overflow: initial;
     @include for-laptop-up {
       padding-top: 52px;
-      padding-bottom: 104px;
+      padding-bottom: 52px;
     }
   }
   &__headline {
@@ -19,6 +19,14 @@
     @include for-laptop-up {
       font-size: 44px;
       line-height: math.div(52.8, 44);
+    }
+  }
+  &__list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 8px;
+    @include for-laptop-up {
+      row-gap: 16px;
     }
   }
 }

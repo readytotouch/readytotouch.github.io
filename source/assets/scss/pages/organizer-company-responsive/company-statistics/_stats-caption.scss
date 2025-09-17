@@ -1,0 +1,59 @@
+@use 'sass:math';
+
+// stylelint-disable scss/dollar-variable-empty-line-after
+.stats-caption {
+  $_this: &;
+  display: grid;
+  grid-template-rows: repeat(2, auto);
+  padding: 24px 8px;
+  gap: 24px;
+  border-radius: 20px;
+  background-color: white;
+  @include for-laptop-up {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: initial;
+    padding: 24px 16px;
+  }
+  &__counters {
+    display: flex;
+    flex-direction: column;
+    row-gap: 16px;
+  }
+  &__title {
+    font-size: 22px;
+    font-weight: 500;
+    line-height: math.div(28, 22);
+  }
+  &__counters-group {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  &__counters-item {
+    padding: 6px 11px;
+    border: 1px solid color(light, surface-5);
+    border-radius: 12px;
+    &:nth-child(2) {
+      margin-left: -1px;
+    }
+  }
+  &__counters-views {
+    color: color(light, surface-tint);
+    font-size: 12px;
+    line-height: math.div(16, 12);
+    @include for-laptop-up {
+      font-size: 18px;
+      line-height: math.div(28, 18);
+    }
+  }
+  &__counters-item-number {
+    color: color(light, on-background);
+    font-size: 24px;
+    line-height: math.div(32, 24);
+    @include for-laptop-up {
+      margin-top: 8px;
+      font-size: 36px;
+      line-height: math.div(44, 36);
+    }
+  }
+}
+// stylelint-enable scss/dollar-variable-empty-line-after

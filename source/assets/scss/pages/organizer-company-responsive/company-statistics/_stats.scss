@@ -1,65 +1,14 @@
 @use 'sass:math';
 
+// stylelint-disable scss/dollar-variable-empty-line-after
 .stats {
   $_this: &;
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 4px;
   overflow: hidden;
-  &__head {
-    display: grid;
-    grid-template-rows: repeat(2, auto);
-    padding: 24px 16px;
-    gap: 24px;
-    border-radius: 20px;
-    background-color: white;
-    @include for-laptop-up {
-      grid-template-columns: repeat(2, 1fr);
-      grid-template-rows: initial;
-    }
-    &--double {
-      grid-template-columns: none;
-    }
-
-    #{$_this}__counters {
-      display: flex;
-      flex-direction: column;
-      margin-top: initial;
-      padding-right: initial;
-      padding-left: initial;
-    }
-    #{$_this}__counters-group {
-      margin-top: 16px;
-      padding-right: initial;
-      padding-left: initial;
-    }
-  }
-  &__counters,
-  &__counters-group {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    margin-top: 24px;
-    padding-right: 16px;
-    padding-left: 16px;
-  }
-  &__counters-item {
-    padding: 12px 16px;
-    border: 1px solid color(light, surface-5);
-    border-radius: 12px;
-    &:nth-child(2) {
-      margin-left: -1px;
-    }
-  }
-  &__counters-views {
-    color: color(light, surface-tint);
-    font-size: 18px;
-    line-height: math.div(24, 18);
-  }
-  &__counters-item-number {
-    margin-top: 8px;
-    color: color(light, on-background);
-    font-size: 36px;
-    line-height: math.div(44, 36);
+  @include for-laptop-up {
+    gap: 16px;
   }
   &__item {
     padding: 24px 0 16px;
@@ -92,3 +41,4 @@
     line-height: math.div(16, 12);
   }
 }
+// stylelint-enable scss/dollar-variable-empty-line-after

@@ -1,12 +1,13 @@
 <section class="company-vacancies">
 	<div class="container company-vacancies__container">
-		<h2 class="company-statistics__headline">Vacancies</h2>
+		<h2 class="company-vacancies__headline">Vacancies</h2>
 		<div class="vacancies__empty d-none">
 			<img class="vacancies__empty-logo" width="64" height="64" src="@@images_common_images_path__📂.png" alt="folder">
 			<h2 class="vacancies__empty-title">No vacancies yet</h2>
 			<p class="vacancies__empty-subtitle">This company currently has no vacancies, or we are unaware of them.</p>
 		</div>
-		<div class="vacancies__list">
+		<div class="company-vacancies__list">
+			@@include('partials/organizer-vacancies-responsive/vacancies-card1.html', {"cardClass": "", "sponsored": false})
 			@@include('partials/organizer-vacancies-responsive/vacancies-card2.html')
 			@@include('partials/organizer-vacancies-responsive/vacancies-card3.html')
 		</div>
