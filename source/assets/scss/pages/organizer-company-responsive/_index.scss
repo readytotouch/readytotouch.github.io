@@ -1,10 +1,7 @@
 @import 'layout';
-
-// @import '../../elements/button-link';
-// @import 'companies-cards';
-// @import 'components/card';
-// @import 'components/cards-group';
-
+@import 'company/layout';
+@import 'company/card';
+@import 'company/grid';
 @import 'company-vacancies/layout';
 @import 'company-vacancies/vacancy-card';
 @import 'sources-evidence/layout';

@@ -1,0 +1,12 @@
+@use 'sass:math';
+
+.company {
+  &__container {
+    padding-bottom: 32px;
+    overflow: initial;
+    @include for-laptop-up {
+      padding-top: 24px;
+      padding-bottom: 52px;
+    }
+  }
+}
