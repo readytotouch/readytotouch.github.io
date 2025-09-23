@@ -39,7 +39,7 @@
   &__header {
     display: flex;
     grid-column: 1;
-    margin-bottom: 16px;
+    margin-bottom: 20px;
     padding-right: 45px;
   }
   &__logo-overlay {
@@ -93,7 +93,7 @@
       border 0.225s ease,
       color 0.225s ease;
     border-bottom: 1px solid transparent;
-    color: color(light, on-secondary-fixed-variant);
+    color: color(light, on-surface);
     font-size: 26px;
     font-weight: 500;
     line-height: math.div(32, 26);
@@ -101,9 +101,6 @@
     @include for-mobile-up {
       min-height: initial;
       margin-bottom: initial;
-    }
-    &:hover {
-      text-decoration: underline;
     }
   }
   &__header-caption-text {
@@ -136,7 +133,7 @@
   }
   &__top-links {
     display: flex;
-    margin-bottom: 16px;
+    margin-bottom: 20px;
     column-gap: 14px;
     @include for-mobile-up {
       column-gap: 24px;
@@ -149,8 +146,55 @@
       pointer-events: none;
     }
   }
+  &__stacks {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    gap: 10px;
+    @include for-desktop-up {
+      flex-direction: row;
+      align-items: center;
+    }
+  }
+  &__stacks-text {
+    color: color(light, surface-tint);
+    font-size: 18px;
+    line-height: math.div(28, 18);
+  }
+  &__stacks-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px 14px;
+  }
+  &__stacks-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    transition: border-color 0.225s ease;
+    border: 2px solid color(light, inverse-primary);
+    border-radius: 8px;
+    cursor: pointer;
+    @include hover-supported {
+      &:hover {
+        border-color: color(light, primary);
+      }
+    }
+    &--current {
+      border-color: color(light, secondary-fixed-dim);
+      cursor: default;
+      pointer-events: none;
+    }
+    &--disabled {
+      cursor: default;
+      pointer-events: none;
+      filter: brightness(0) saturate(100%) invert(99%) sepia(23%) saturate(2171%) hue-rotate(194deg) brightness(127%)
+        contrast(82%);
+    }
+  }
   &__info-group {
-    margin-top: 16px;
+    margin-top: 20px;
   }
   &__text {
     position: relative;

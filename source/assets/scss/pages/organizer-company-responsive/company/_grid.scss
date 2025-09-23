@@ -48,11 +48,22 @@
       border-color: transparent;
     }
   }
+  &__links-group-inner {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 16px;
+    row-gap: 8px;
+  }
   &__links-item {
     display: flex;
     position: relative;
     align-items: center;
     column-gap: 4px;
+    &--inner {
+      flex-direction: column;
+      align-items: start;
+      row-gap: 8px;
+    }
     &--disabled {
       .card__links-link:not(.card__links-link--google),
       .card__links-icon:not(.card__links-icon--google) {

@@ -19,7 +19,7 @@
       />
     </div>
     <figcaption class="company-card__header-caption">
-      <a href="/page-stub.html" class="company-card__headline vacancy__link">Google</a>
+      <h1 class="company-card__headline vacancy__link">Google</h1>
       <p class="company-card__header-caption-text">
         <img class="company-card__header-caption-icon"
              alt="marker"
@@ -43,6 +43,23 @@
     <a href="#" class="company-card__top-link button-link">Careers</a>
     <a href="#" class="company-card__top-link button-link">About</a>
     <a href="#" class="company-card__top-link button-link">Dev Blog</a>
+  </div>
+  <div class="company-card__stacks">
+    <p class="company-card__stacks-text">Same company in other stacks:</p>
+    <ul class="company-card__stacks-list">
+      @@loop('partials/organizer-company-responsive/company/partials/stacks.html', [
+        { "stackName": "go", "stackClass": "company-card__stacks-link--current" },
+        { "stackName": "rust", "stackClass": "" },
+        { "stackName": "scala", "stackClass": "" },
+        { "stackName": "elixir", "stackClass": "" },
+        { "stackName": "erlang", "stackClass": "" },
+        { "stackName": "clojure", "stackClass": "" },
+        { "stackName": "zig", "stackClass": "company-card__stacks-link--disabled" },
+        { "stackName": "haskell", "stackClass": "company-card__stacks-link--disabled" },
+        { "stackName": "fsharp", "stackClass": "company-card__stacks-link--disabled" },
+        { "stackName": "ocaml", "stackClass": "company-card__stacks-link--disabled" }
+      ])
+    </ul>
   </div>
   <div class="company-card__info">
     <figure class="company-card__figure">

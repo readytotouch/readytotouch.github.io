@@ -20,6 +20,11 @@
 
 // stylelint-enable unit-no-unknown
 
+@mixin hover-supported {
+  @media (hover: hover) {
+    @content;
+  }
+}
 @mixin for-desktop-up-large {
   @media (width >= 1170px) {
     @content;
