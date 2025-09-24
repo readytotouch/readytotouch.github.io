@@ -1,0 +1,119 @@
+@use 'sass:math';
+
+.explore-technologies {
+  &__container {
+    padding-block: 32px;
+    padding-inline: 24px;
+    @include for-desktop-up {
+      padding-block: 52px;
+    }
+  }
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 32px;
+    @include for-desktop-up {
+      justify-content: initial;
+      margin-bottom: 40px;
+    }
+  }
+  &__headline {
+    color: color(light, on-background);
+    font-size: 32px;
+    font-weight: 500;
+    line-height: math.div(40, 32);
+    white-space: nowrap;
+    @include for-desktop-up {
+      font-size: 44px;
+      line-height: math.div(52.8, 44);
+    }
+  }
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    @include for-laptop-up {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    @include for-desktop-up {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 24px;
+    }
+  }
+  &__item {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 16px;
+    border-radius: 16px;
+    background: white;
+    row-gap: 16px;
+    @include for-desktop-up {
+      width: 100%;
+      max-width: 346px;
+      padding: 24px;
+      row-gap: 24px;
+    }
+    &:last-child {
+      @include for-laptop-up {
+        grid-column: 1/-1;
+        justify-self: center;
+        width: 100%;
+        max-width: calc(#{math.div(100%, 3)} - 10px);
+      }
+      @include for-desktop-up {
+        justify-self: initial;
+        grid-column: initial;
+        width: initial;
+        max-width: initial;
+      }
+    }
+  }
+  &__figure {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 12px;
+    @include for-desktop-up {
+      align-items: initial;
+    }
+  }
+  &__image {
+    width: 20px;
+    height: 20px;
+    @include for-desktop-up {
+      width: 40px;
+      height: 40px;
+    }
+  }
+  &__caption {
+    font-size: 22px;
+    font-weight: 500;
+    line-height: math.div(28, 22);
+    @include for-desktop-up {
+      font-size: 32px;
+      line-height: math.div(40, 32);
+    }
+  }
+  &__button-group {
+    display: flex;
+    flex-direction: column;
+    row-gap: 8px;
+    @include for-desktop-up {
+      flex-direction: initial;
+      column-gap: 8px;
+    }
+  }
+  &__button {
+    width: 100%;
+    padding-inline: 20px;
+    font-size: 16px;
+    @include for-desktop-up {
+      width: initial;
+      padding-inline: 24px;
+      font-size: 18px;
+    }
+  }
+}

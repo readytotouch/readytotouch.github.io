@@ -41,7 +41,7 @@
   &__image-overlay {
     display: flex;
     flex-shrink: 0;
-    align-items: flex-start;
+    align-items: start;
     justify-content: center;
     overflow: hidden;
     border-radius: 4px;
@@ -58,7 +58,7 @@
   &__headline {
     display: flex;
     align-items: center;
-    align-self: flex-start;
+    align-self: start;
     margin-bottom: 4px;
     transition:
       border 0.225s ease,
@@ -79,7 +79,7 @@
   &__sub-headline {
     display: flex;
     align-items: center;
-    align-self: flex-start;
+    align-self: start;
     color: $body-dark;
     font-size: $font-md;
     line-height: 25px;

@@ -15,7 +15,11 @@
     outline: none;
     box-shadow: 0 0 0 2px color.change(color(light, on-secondary-fixed-variant), $alpha: 0.5);
   }
-  &:disabled {
+  &:disabled,
+  &--disabled {
     color: color(light, on-disable);
+  }
+  &--disabled {
+    pointer-events: none;
   }
 }

@@ -1,0 +1,26 @@
+.mobile-filter {
+  display: flex;
+  position: relative;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  @include for-desktop-up {
+    display: none;
+  }
+  &__counter {
+    display: flex;
+    position: absolute;
+    top: -4px;
+    right: -4px;
+    align-items: center;
+    justify-content: center;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: black;
+    color: white;
+    font-size: 10px;
+  }
+}

@@ -1,6 +1,6 @@
-import chartCommonOptions from '../common/chart/components/chartCommonOptions'
-import createData from '../common/chart/components/createData'
-import chart from '../common/chart'
+import chartCommonOptions from '../common/chart/components/chartCommonOptions.js'
+import createData from '../common/chart/components/createData.js'
+import chart from '../common/chart/index.js'
 
 const pageViewsStatisticsData = createData(0, 30)
 const subscribersStatisticsData = createData(0, 40)

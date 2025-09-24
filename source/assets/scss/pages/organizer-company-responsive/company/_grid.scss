@@ -1,0 +1,110 @@
+// stylelint-disable scss/dollar-variable-empty-line-after
+.company-grid {
+  $_this: &;
+  display: grid;
+  grid-gap: 4px;
+  margin-top: 4px;
+  @include for-laptop-up {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @include for-desktop-up {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  &__item {
+    position: relative;
+    padding: 24px;
+    border-radius: 16px;
+    background-color: white;
+  }
+  &__links-item-group {
+    display: flex;
+    align-items: center;
+    img {
+      margin-right: 8px;
+    }
+  }
+  &__links-item-info {
+    display: block;
+    margin-top: 20px;
+    li {
+      padding-bottom: 10px;
+      color: color(light, on-background);
+      &:last-child {
+        padding: 0;
+      }
+    }
+  }
+  &__link-stats-item--one-line {
+    span {
+      margin-right: 16px;
+    }
+  }
+  &__links-group {
+    display: flex;
+    flex-direction: column;
+    border-radius: 12px;
+    row-gap: 20px;
+    &--unbordered {
+      border-color: transparent;
+    }
+  }
+  &__links-group-inner {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 16px;
+    row-gap: 8px;
+  }
+  &__links-item {
+    display: flex;
+    position: relative;
+    align-items: center;
+    column-gap: 4px;
+    &--inner {
+      flex-direction: column;
+      align-items: start;
+      row-gap: 8px;
+    }
+    &--disabled {
+      .card__links-link:not(.card__links-link--google),
+      .card__links-icon:not(.card__links-icon--google) {
+        color: color(light, on-disable);
+        pointer-events: none;
+        filter: grayscale(1) invert(0.4);
+      }
+    }
+  }
+  &__links-link-star {
+    margin-left: 16px;
+    font-weight: 500;
+  }
+  &__links-link {
+    &--google {
+      position: absolute;
+      top: 3px;
+      right: 0;
+      margin-right: 0 !important;
+    }
+    &--verify {
+      position: absolute;
+      top: 8px;
+      right: 0;
+      margin-right: 0 !important;
+    }
+    &--verify img,
+    &--google img {
+      margin-right: 0 !important;
+    }
+  }
+  &__links-item--title {
+    flex-direction: column;
+    align-items: start;
+
+    #{$_this}__links-link {
+      font-size: $font-lg;
+      font-weight: 500;
+    }
+  }
+  &__links-icon {
+    display: block;
+  }
+}

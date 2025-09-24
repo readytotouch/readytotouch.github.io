@@ -1,12 +1,16 @@
 node_modules/
 package-lock.json
 faviconData.json
-assets/html/base/layout/footer.html
+assets/html/base/layout/footer/footer.html
+assets/html/base/layout/footer/footer-responsive.html
 assets/html/base/base-new-online.html
 assets/html/base/base-online.html
 assets/html/base/base-organizer.html
+assets/html/base/base-responsive.html
 assets/html/online-new.html
 assets/html/online-new-auth.html
+assets/html/main-responsive.html
+assets/html/main-responsive-auth.html
 assets/html/organizer-main-page.html
 assets/html/organizer-main-page-auth.html
 assets/html/organizer-vacancies-subscribe.html
@@ -16,4 +20,5 @@ assets/html/organizer-welcome.html
 assets/html/organizer-no-companies.html
 assets/html/organizer-no-results.html
 assets/html/organizer-companies.html
+assets/html/organizer-companies-responsive.html
 /.vscode

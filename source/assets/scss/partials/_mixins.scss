@@ -20,6 +20,11 @@
 
 // stylelint-enable unit-no-unknown
 
+@mixin hover-supported {
+  @media (hover: hover) {
+    @content;
+  }
+}
 @mixin for-desktop-up-large {
   @media (width >= 1170px) {
     @content;
@@ -32,6 +37,16 @@
 }
 @mixin for-laptop-up {
   @media (width >= 768px) {
+    @content;
+  }
+}
+@mixin for-mobile-large-up {
+  @media (width >= 640px) {
+    @content;
+  }
+}
+@mixin for-mobile-up {
+  @media (width >= 480px) {
     @content;
   }
 }
@@ -51,9 +66,11 @@
       0 0 0 3px white;
   }
 }
+/* stylelint-disable */
 @mixin trim($numLines: null) {
   @if $numLines {
-    display: box;
+    display: block;
+    display: -webkit-box;
     -webkit-line-clamp: $numLines;
     -webkit-box-orient: vertical;
     overflow: hidden;
@@ -64,7 +81,6 @@
     white-space: wrap;
   }
 }
-/* stylelint-disable */
 @each $ellipsis-line in (2, 3) {
   .txt-ellipsis-#{$ellipsis-line} {
     display: block;

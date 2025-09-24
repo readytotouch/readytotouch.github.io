@@ -77,7 +77,7 @@
   }
   &__links-item--title {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: start;
 
     #{$_this}__links-link {
       font-size: $font-lg;

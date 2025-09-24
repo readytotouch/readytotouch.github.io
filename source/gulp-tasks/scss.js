@@ -1,7 +1,7 @@
-import { src, dest } from 'gulp'
+import pkg from 'gulp'
 import pump from 'pump'
 import plumber from 'gulp-plumber'
-import dartSass from 'sass'
+import * as dartSass from 'sass'
 import gulpSass from 'gulp-sass'
 import sourcemaps from 'gulp-sourcemaps'
 import postcss from 'gulp-postcss'
@@ -12,6 +12,8 @@ import cache from 'gulp-cached'
 import dependents from 'gulp-dependents'
 import flatten from 'gulp-flatten'
 import injectString from 'gulp-inject-string'
+
+const { src, dest } = pkg
 
 const sass = gulpSass(dartSass)
 

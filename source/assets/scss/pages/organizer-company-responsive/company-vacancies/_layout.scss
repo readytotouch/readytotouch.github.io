@@ -1,0 +1,32 @@
+@use 'sass:math';
+
+.company-vacancies {
+  &__container {
+    padding-top: 32px;
+    padding-bottom: 32px;
+    overflow: initial;
+    @include for-laptop-up {
+      padding-top: 52px;
+      padding-bottom: 52px;
+    }
+  }
+  &__headline {
+    margin-bottom: 24px;
+    color: color(light, on-background);
+    font-size: 32px;
+    font-weight: 500;
+    line-height: math.div(40, 32);
+    @include for-laptop-up {
+      font-size: 44px;
+      line-height: math.div(52.8, 44);
+    }
+  }
+  &__list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 8px;
+    @include for-laptop-up {
+      row-gap: 16px;
+    }
+  }
+}

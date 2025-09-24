@@ -4,6 +4,7 @@ const chartCommonOptions = {
     zoom: { enabled: false },
     toolbar: { show: false },
     parentHeightOffset: null,
+    redrawOnWindowResize: true,
   },
   stroke: {
     width: 2,
@@ -48,6 +49,34 @@ const chartCommonOptions = {
     shape: 'circle',
     radius: 2,
   },
+  responsive: [
+    {
+      breakpoint: 992,
+      options: {
+        chart: {
+          height: 325,
+          width: '100%',
+        },
+        xaxis: {
+          min: 1,
+          max: 10,
+        },
+      },
+    },
+    {
+      breakpoint: 768,
+      options: {
+        chart: {
+          height: 325,
+          width: '100%',
+        },
+        xaxis: {
+          min: 1,
+          max: 6,
+        },
+      },
+    },
+  ],
 }
 
 export default chartCommonOptions

@@ -1,0 +1,84 @@
+// stylelint-disable scss/dollar-variable-empty-line-after, max-nesting-depth
+.hamburger {
+  $_this: &;
+  display: inline-block;
+  transition-property: opacity, filter, background-color;
+  transition-duration: 0.15s;
+  transition-timing-function: linear;
+  background-color: transparent;
+  color: inherit;
+  font-size: 0;
+  &__box {
+    display: inline-flex;
+    position: relative;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+  }
+  &__inner {
+    display: block;
+    top: 50%;
+    margin-top: -1px;
+    &:after,
+    &:before {
+      content: '';
+      display: block;
+    }
+    &:after {
+      bottom: -6px;
+    }
+    &:before {
+      top: -6px;
+    }
+  }
+  &__inner,
+  &__inner:after,
+  &__inner:before {
+    position: absolute;
+    width: 24px;
+    height: 2px;
+    transition-property: transform;
+    transition-duration: 0.15s;
+    transition-timing-function: ease;
+    border-radius: 4px;
+    background-color: color(light, outline);
+  }
+  &--spin {
+    #{$_this}__inner {
+      transition-duration: 0.22s;
+      transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+      &:before {
+        transition:
+          top 0.1s ease-in 0.25s,
+          opacity 0.1s ease-in;
+      }
+      &:after {
+        transition:
+          bottom 0.1s ease-in 0.25s,
+          transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+      }
+    }
+    &.is-active {
+      #{$_this}__inner {
+        transform: rotate(225deg);
+        transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+        transition-delay: 0.12s;
+        &:before {
+          top: 0;
+          transition:
+            top 0.1s ease-out,
+            opacity 0.1s ease-out 0.12s;
+          opacity: 0;
+        }
+        &:after {
+          bottom: 0;
+          transform: rotate(-90deg);
+          transition:
+            bottom 0.1s ease-out,
+            transform 0.22s cubic-bezier(0.215, 0.61, 0.355, 1) 0.12s;
+        }
+      }
+    }
+  }
+}
+// stylelint-enable scss/dollar-variable-empty-line-after, max-nesting-depth

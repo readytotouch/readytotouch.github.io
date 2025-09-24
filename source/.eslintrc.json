@@ -24,6 +24,16 @@
     "no-unused-expressions": 0,
     "comma-dangle": ["error", "always-multiline"],
     "import/no-anonymous-default-export": 0,
-    "import/no-extraneous-dependencies": "off"
+    "import/no-extraneous-dependencies": "off",
+    "import/extensions": [
+      "error",
+      "ignorePackages",
+      {
+        "js": "always",
+        "jsx": "never",
+        "ts": "never",
+        "tsx": "never"
+      }
+    ]
   }
 }

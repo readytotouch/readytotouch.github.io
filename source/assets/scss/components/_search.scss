@@ -109,5 +109,13 @@
     display: flex;
     gap: 8px;
   }
+  &--with-sort {
+    display: flex;
+    align-items: center;
+    column-gap: 8px;
+    @include for-desktop-up {
+      column-gap: 40px;
+    }
+  }
 }
 // stylelint-enable scss/dollar-variable-empty-line-after

@@ -1,0 +1,125 @@
+<header class="header">
+  <div class="header__wrapper">
+    <a href="#" class="header__logo">
+      <img
+        width="30"
+        height="30"
+        class="header__logo-img"
+        src="@@images_organizer_path__go-original.svg"
+        alt="organizer logo"
+      />
+      <span class="header__logo-label">Organizer</span>
+    </a>
+    <div class="header__nav-overlay js-header-nav">
+      <ul class="header__nav">
+        <li class="header__nav-item">
+          <a href="/companies" class="header__nav-link active">Companies</a>
+        </li>
+        <li class="header__nav-item">
+          <a href="/vacancies" class="header__nav-link">Vacancies</a>
+        </li>
+        <li class="header__nav-item">
+          <a href="/vacancies" class="header__nav-link">Communities</a>
+        </li>
+      </ul>
+      <div class="header__stars js-header-stars">
+        @@include('partials/common/github-button.html')
+      </div>
+      <div class="header__profile">
+        <div class="header__profile-avatar js-header-profile-avatar">
+          <button class="header__profile-button js-header-profile-button">
+            <img src="https://avatars.githubusercontent.com/u/63663261?v=4&s=48" alt="photo-profile" />
+          </button>
+          <p class="header__profile-avatar-text">Firstname Lastname</p>
+          <button class="header__profile-arrow-button">
+            <img class="header__profile-avatar-arrow-img"
+                 width="12"
+                 height="12"
+                 src="@@images_common_path__chevron_right.svg"
+                 alt="arrow right icon"
+            />
+          </button>
+        </div>
+        <div class="header__profile-list-mobile profile-list-mobile">
+          <a href="https://github.com/FirstnameLastname"
+             target="_blank"
+             class="profile-list-mobile__link"
+          >
+            <img class="profile-list-mobile__profile-image"
+                 src="@@images_home_new_path__github-black.svg"
+                 width="20"
+                 height="20"
+                 alt="GitHub logo"
+            />
+            <span class="profile-list-mobile__profile-text">github.com/FirstnameLastname</span>
+          </a>
+          <a href="https://gitlab.com/FirstnameLastname"
+             target="_blank"
+             class="profile-list-mobile__link"
+          >
+            <img class="profile-list-mobile__profile-image"
+                 src="@@images_home_new_path__gitlab.svg"
+                 width="20"
+                 height="20"
+                 alt="GitLab logo"
+            />
+            <span class="profile-list-mobile__profile-text">gitlub.com/FirstnameLastname</span>
+          </a>
+          <a href="https://gitlab.com/FirstnameLastname"
+             target="_blank"
+             class="profile-list-mobile__link"
+          >
+            <img class="profile-list-mobile__profile-image"
+                 src="@@images_home_new_path__bitbucket.svg"
+                 width="20"
+                 height="20"
+                 alt="Bitbucket logo"
+            />
+            <span class="profile-list-mobile__profile-text">bitbucket.com/FirstnameLastname</span>
+          </a>
+        </div>
+        <div class="header__modal modal-profile js-modal-profile">
+          <div class="modal-profile__profile">
+            <figure class="modal-profile__profile-info">
+              <img
+                src="https://avatars.githubusercontent.com/u/63663261?v=4&s=48"
+                class="modal-profile__user-photo"
+                width="48"
+                height="48"
+                alt="photo-profile"
+              />
+              <figcaption class="modal-profile__profile-name">Yaroslav Podorvanov</figcaption>
+            </figure>
+            <div class="modal-profile__profile-list">
+              <a href="https://github.com/FirstnameLastname" target="_blank" class="modal-profile__link">
+                <img src="@@images_home_new_path__github-black.svg" width="20" height="20" alt="GitHub logo" />
+                <span class="modal-profile__profile-github">github.com/FirstnameLastname</span>
+              </a>
+              <a href="https://gitlab.com/FirstnameLastname" target="_blank" class="modal-profile__link">
+                <img src="@@images_home_new_path__gitlab.svg" width="20" height="20" alt="GitLab logo" />
+                <span class="modal-profile__profile-gitlab">gitlab.com/FirstnameLastname</span>
+              </a>
+              <a href="https://gitlab.com/FirstnameLastname" target="_blank" class="modal-profile__link">
+                <img src="@@images_home_new_path__bitbucket.svg" width="20" height="20" alt="Bitbucket logo" />
+                <span class="modal-profile__profile-bitbucket">bitbucket.com/FirstnameLastname</span>
+              </a>
+            </div>
+          </div>
+          <div class="modal-profile__log-out">
+            <a href="#" class="modal-profile__button">Log out</a>
+          </div>
+        </div>
+        <button type="button" class="button button--black header__profile-button-log-out">Log out</button>
+      </div>
+    </div>
+    <button class="hamburger hamburger--spin header__hamburger js-hamburger"
+            type="button"
+            aria-expanded="false"
+            aria-label="Open the menu"
+    >
+			<span class="hamburger__box">
+				<span class="hamburger__inner"></span>
+			</span>
+    </button>
+  </div>
+</header>

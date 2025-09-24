@@ -1,0 +1,42 @@
+<div class="search-result mt-32">
+  <div class="container">
+    <div class="search-result__wrapper">
+      <!-- filters -->
+      @@include('partials/common/organizer/filters-checked-responsive.html')
+      <!-- /filters -->
+      <div class="search-result--group">
+        @@include('partials/common/organizer/applied-filters.html')
+        <div id="search_result_list" class="search-result__list">
+          <div class="search-result__top-actions">
+            <p class="search-result-found"><span class="search-result-found__amount">160</span> results</p>
+            @@include('partials/common/organizer/sort.html', {
+              "additionalClass": "sorter--mobile"
+            })
+          </div>
+          <!-- card list -->
+          <div class="search-result__cards row-gap-8 mt-24">
+            @@include('partials/organizer-companies-responsive/companies-card1.html')
+            @@include('partials/organizer-companies-responsive/sponsored-card.html')
+            @@include('partials/organizer-companies-responsive/hidden-card.html')
+            @@include('partials/organizer-companies-responsive/companies-card2.html')
+            @@include('partials/organizer-companies-responsive/companies-card3.html')
+          </div>
+
+          <!-- /card list -->
+          <!-- search footer -->
+          <footer class="search-result__footer">
+            <div class="search-result__footer-action-list">
+              <button class="button button--bordered-black-transparent" type="button">More</button>
+              <button class="button button--bordered-gray" type="button">Show all (+196)</button>
+            </div>
+
+            <!-- pagination -->
+            @@include('partials/common/pagination.html')
+            <!-- /pagination -->
+          </footer>
+          <!-- /search footer -->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

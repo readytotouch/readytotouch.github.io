@@ -1,0 +1,44 @@
+@use 'sass:math';
+
+// stylelint-disable scss/dollar-variable-empty-line-after
+.stats {
+  $_this: &;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  overflow: hidden;
+  @include for-laptop-up {
+    gap: 16px;
+  }
+  &__item {
+    padding: 24px 0 16px;
+    border-radius: 20px;
+    background: white;
+  }
+  &__header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    padding-right: 16px;
+    padding-left: 16px;
+    @include for-laptop-up {
+      align-items: end;
+    }
+  }
+  &__title {
+    color: color(light, on-background);
+    font-size: 22px;
+    font-weight: 500;
+    line-height: math.div(28, 22);
+  }
+  &__period {
+    flex-shrink: 0;
+  }
+  &__labels {
+    color: color(light, outline);
+    font-family: $base-font-family !important;
+    font-size: 12px;
+    line-height: math.div(16, 12);
+  }
+}
+// stylelint-enable scss/dollar-variable-empty-line-after

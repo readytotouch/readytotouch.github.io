@@ -1,4 +1,4 @@
-import favorite from '../common/favorite'
+import favorite from '../common/favorite.js'
 // import feedback from '../common/feedback'
 
 favorite()

@@ -3,21 +3,59 @@
 
 .search-result {
   &__wrapper {
-    display: grid;
-    grid-template-columns: minmax(auto, 384px) minmax(auto, 1fr);
-    gap: 32px;
-    margin-bottom: 100px;
+    margin-bottom: 40px;
+    @include for-desktop-up {
+      display: grid;
+      grid-template-columns: minmax(250px, 384px) minmax(647px, 1fr);
+      align-items: start;
+      margin-bottom: 100px;
+      gap: 32px;
+    }
+  }
+  &__filters {
+    position: fixed;
+    z-index: 1;
+    top: 64px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+    background-color: white;
+    pointer-events: none;
+    @include for-desktop-up {
+      position: static;
+      border-radius: 16px;
+      opacity: 1;
+      pointer-events: initial;
+    }
+    &.is-opened {
+      opacity: 1;
+      pointer-events: initial;
+    }
+  }
+  &__top-actions {
+    display: flex;
   }
   &__filter-group {
-    padding: 24px;
+    position: relative;
     border-radius: 16px;
     background-color: $white;
+    @include for-desktop-up {
+      position: initial;
+      padding-bottom: 24px;
+      overflow: hidden;
+    }
     &--wide {
       padding-right: initial;
       padding-left: initial;
       .search-result__filter-header {
-        padding-bottom: 24px;
+        padding-block: 16px;
+        border-top: 2px solid color(light, surface-1);
         border-bottom: 2px solid color(light, surface-1);
+        @include for-desktop-up {
+          padding-top: 24px;
+          border-top: 0 none;
+        }
       }
       .filters__header,
       .filters__elements,
@@ -36,7 +74,58 @@
   }
   &__filter-header {
     display: flex;
+    position: sticky;
+    top: 0;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    @include for-desktop-up {
+      position: initial;
+      justify-content: space-between;
+    }
+  }
+  &__filters-list {
+    position: fixed;
+    top: 128px;
+    bottom: 106px;
+    width: 100%;
+    overflow-y: auto;
+    @include for-desktop-up {
+      position: initial;
+      overflow-y: initial;
+    }
+    &::-webkit-scrollbar {
+      width: 4px;
+    }
+    &::-webkit-scrollbar-track {
+      border-radius: 8px;
+      background-color: #dddce4;
+    }
+    &::-webkit-scrollbar-thumb {
+      border-radius: 8px;
+      background-color: #b8b6e2;
+    }
+  }
+  &__filter-footer {
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    align-items: center;
     justify-content: space-between;
+    width: 100%;
+    padding-block: 24px 40px;
+    padding-inline: 24px;
+    border-top: 2px solid #f5f5f9;
+    background-color: white;
+    @include for-desktop-up {
+      display: none;
+    }
+  }
+  &__filter-footer-button {
+    color: color(light, on-disable);
+    font-size: 16px;
+    font-weight: 500;
+    line-height: math.div(20, 16);
   }
   &__filter-headline {
     color: $title-dark;
@@ -45,9 +134,26 @@
     line-height: math.div(28, 22);
   }
   &__filter-headline-reset {
+    display: none;
     color: color(light, on-disable);
     font-size: 16px;
     line-height: math.div(20, 16);
+    @include for-desktop-up {
+      display: inline-flex;
+    }
+  }
+  &__filter-headline-reset-mobile {
+    display: flex;
+    position: absolute;
+    top: 10px;
+    right: 16px;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    @include for-desktop-up {
+      display: none;
+    }
   }
   &__cards {
     display: flex;
@@ -56,15 +162,20 @@
   }
   &__time-period {
     display: grid;
-    grid-template-columns: minmax(auto, 1fr) 1fr minmax(auto, 1fr);
+    grid-template-columns: minmax(auto, 1fr) minmax(min-content, var(--max-value, max-content)) minmax(auto, 1fr);
     align-items: center;
+    margin-block: 8px;
+    column-gap: 24px;
+    &--long {
+      --max-value: 65%;
+    }
   }
   &__time-period-line {
     height: 2px;
     background-color: color(light, surface-3);
   }
   &__time-period-content {
-    margin: 0 24px;
+    width: 100%;
     padding: 4px 16px;
     border-radius: 80px;
     background-color: color(light, surface-3);
@@ -75,7 +186,11 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 56px;
+    margin-top: 32px;
+  }
+  &__footer-action-list {
+    display: flex;
+    column-gap: 24px;
   }
   &__pagination {
     margin-top: 40px;

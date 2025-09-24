@@ -20,20 +20,7 @@
   font-family: $base-font-family;
   font-size: 18px;
   font-weight: 500;
-  &--small-padding {
-    padding-right: 24px;
-    padding-left: 24px;
-  }
-  &--small {
-    height: 40px;
-    padding-right: 24px;
-    padding-left: 24px;
-  }
-  &--medium {
-    height: 44px;
-    padding-right: 20px;
-    padding-left: 20px;
-  }
+  cursor: pointer;
   &--black {
     border-width: 2px;
     border-color: #1c1f29;
@@ -347,6 +334,24 @@
   &--gap-images {
     max-width: 316px;
     column-gap: 8px;
+  }
+  &--small {
+    height: 40px;
+    padding-right: 24px;
+    padding-left: 24px;
+  }
+  &--medium {
+    height: 44px;
+    padding-inline: 20px;
+  }
+  &--small-padding {
+    padding-inline: 24px;
+  }
+  &--x-small-padding {
+    padding-inline: 20px;
+  }
+  &--xx-small-padding {
+    padding-inline: 16px;
   }
 }
 .favorite {
