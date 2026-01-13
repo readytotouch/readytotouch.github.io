@@ -1,5 +1,6 @@
 .idea
 /.vscode
+.cache
 *.log
 .DS_Store
 node_modules
